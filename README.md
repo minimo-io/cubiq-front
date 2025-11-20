@@ -1,2 +1,3 @@
-# cubiq-front
-Front-end sveltekit site for cubiq.lat development lab
+# Cubiq
+
+Cubiq.lat SvelteKit Front-end.

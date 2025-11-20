@@ -1,0 +1,23 @@
+<!-- src/lib/components/Header/HeaderLogo.svelte -->
+<script lang="ts">
+	import { localizeHref } from '$paraglide/runtime';
+	import CubiqLogoWhite from '../logos/CubiqLogoWhite.svelte';
+	import HeaderLogoDashboard from './HeaderLogoDashboard.svelte';
+	interface Props {
+		isDashboard?: boolean;
+		isCollapsed?: boolean;
+	}
+	let { isDashboard = false, isCollapsed = false }: Props = $props();
+</script>
+
+{#if isDashboard}
+	<HeaderLogoDashboard {isCollapsed} />
+{:else}
+	<div class="flex items-start justify-start">
+		<a href={localizeHref('/')}>
+			<div class="flex flex-row justify-start">
+				<CubiqLogoWhite class="self-start h-[40px] md:h-[42px] md:-left-7 -left-6 relative" />
+			</div>
+		</a>
+	</div>
+{/if}

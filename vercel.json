@@ -1,0 +1,29 @@
+{
+	"headers": [
+		{
+			"source": "/.well-known/(.*)",
+			"headers": [
+				{
+					"key": "Access-Control-Allow-Origin",
+					"value": "*"
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			]
+		}
+	],
+	"redirects": [
+		{
+			"source": "/nicolas/qr",
+			"destination": "https://www.cubiq.lat/",
+			"permanent": false
+		},
+		{
+			"source": "/bagity",
+			"destination": "https://www.cubiq.lat/store",
+			"permanent": true
+		}
+	]
+}

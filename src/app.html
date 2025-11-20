@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="%lang%" data-theme="cubiq-dark">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- PWA -->
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<!-- Favicons -->
+		<link
+			rel="icon"
+			type="image/png"
+			href="%sveltekit.assets%/logos/favicons/favicon-96x96.png"
+			sizes="96x96"
+		/>
+		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/logos/favicons/favicon.svg" />
+		<link rel="shortcut icon" href="%sveltekit.assets%/logos/favicons/favicon.ico" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/logos/favicons/apple-touch-icon.png" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<!-- <meta name="apple-mobile-web-app-capable" content="yes" /> -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="Cubiq" />
+		<link rel="manifest" href="%sveltekit.assets%/logos/favicons/site.webmanifest" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
