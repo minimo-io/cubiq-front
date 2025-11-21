@@ -74,6 +74,8 @@
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>Tailored Premium E-Commerce</span>: We customize without limits — Design, UX, and Features — with integrated AI, scalable security, and <span class='text-base-content opacity-80'>express checkout</span> via <a href='/finx' class='text-primary font-medium'>Cubiq Pay</a> (PIX, Boleto, Card, and Bitcoin). <span class='text-base-content opacity-80'>Predictable plans</span> from $20/month or <span class='text-base-content opacity-80'>Store Pro with no upfront costs</span>.",
 
+	"homeProductsSlogan": "Unified Platform of Digital Products and APIs for SMEs and Startups focused on LATAM.",
+
 	"learnMore": "Learn more",
 	"scheduleMeeting": "Book a demo",
 
@@ -337,9 +339,9 @@
 	"productStoreSloganSimple": "Custom E-commerce",
 	"productStoreDetails": "Custom E-Commerce, Payments via BTC/USDT + Headless Front-end",
 
-	"productPaySlogan": "Pagamentos BTC/USDT via Lightning",
-	"productPaySloganSimple": "Pagamentos BTC/USDT via Lightning",
-	"productPayDetails": "Pagamentos BTC/USDT via Lightning com Settlement em Tempo Real",
+	"productPaySlogan": "BTC/USDT payments via Lightning",
+	"productPaySloganSimple": "BTC/USDT payments via Lightning",
+	"productPayDetails": "BTC/USDT payments via Lightning with real-time settlement",
 
 	"productAPISlogan": "Dozens of business integrations",
 	"productAPISloganSimple": "Dozens of business integrations",
@@ -366,7 +368,7 @@
 	"searchNotes": "Search notes...",
 	"notesWarningUnencrypteed": "<strong>Warning!</strong> Unencrypted notes will be plain text accessible on browser local storage even after logout!",
 
-	"labProductsSlogan": "Beyond the products of the Cubiq Platform, there are projects from our technology lab, ranging from proof-of-concepts to in-market products... <a href='/en/lab' class='hover:text-underline text-white'>learn more</a>",
+	"labProductsSlogan": "Projects from our technology lab range from proof-of-concepts to in-market products... <a href='/en/lab' class='hover:text-underline text-white'>learn more</a>",
 
 	"invoicing": "Invoicing"
 }

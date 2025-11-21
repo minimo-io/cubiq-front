@@ -77,7 +77,7 @@
 	<!-- Square decorator -->
 	<div
 		style="transform: rotate({rotation.current}deg);"
-		class="relative -left-4 mr-5 hidden opacity-100 md:block"
+		class="relative -left-4 mr-5 hidden opacity-0 md:block"
 	>
 		<img src="/bgs/square.svg" alt="square-decorator" class="h-4" />
 	</div>
@@ -86,7 +86,7 @@
 	<div>
 		<h1
 			class={[
-				'flex gap-0 text-[30px] font-extralight tracking-wide md:flex-row md:gap-3 md:text-4xl',
+				'relative flex gap-0 text-[30px] font-extralight tracking-wide md:-left-10 md:flex-row md:gap-3 md:text-4xl',
 				forceFlexRow ? 'gap-3 ' : 'flex-col'
 			]}
 		>

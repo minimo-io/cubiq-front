@@ -5,6 +5,9 @@
 	import { m } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
 	import type { ProductData } from '$types/products.types';
+	import { Tween } from 'svelte/motion';
+	import { cubicIn, cubicOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 
 	const locale = $state(getLocale());
 	const PRODUCTS = getProducts(locale);
@@ -23,7 +26,7 @@
 		</div>
 		<!-- Main menu -->
 		<ul
-			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[450px] px-5 py-3 shadow-md"
+			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[430px] px-5 py-3 shadow-md"
 		>
 			{#each productsForLang as drawer, i}
 				<li>

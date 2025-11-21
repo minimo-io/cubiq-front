@@ -27,7 +27,7 @@
 		</div>
 
 		<div
-			class="text-secondary mx-5 mt-2 mb-6 max-w-2xl text-center font-sans text-base md:mx-auto md:text-lg md:leading-6"
+			class="text-accent mx-auto mt-3 mb-5 w-full text-center font-sans text-xl md:mt-5 md:mb-0 md:max-w-[50%] md:text-2xl"
 		>
 			{@html m.labProductsSlogan()}
 		</div>

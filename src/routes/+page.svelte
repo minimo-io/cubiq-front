@@ -38,7 +38,7 @@
 
 <main class="font-sans-pro bg-base-100 text-base-content relative mx-(--cubiq-app-margin)">
 	<div class="mb-[8px]">
-		<Clients />
+		<Clients addDesktopPadding={true} />
 	</div>
 	<ProductsNew />
 	<LabProducts />

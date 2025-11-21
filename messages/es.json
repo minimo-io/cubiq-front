@@ -76,6 +76,8 @@
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Personalizamos sin límites — Diseño, UX y Funcionalidades — con IA integrada, seguridad escalable y <span class='text-base-content opacity-80'>checkout exprés</span> (PIX, Boleto, Tarjeta y Bitcoin). <span class='text-base-content opacity-80'>Planes previsibles</span> desde $u999/mes o <span class='text-base-content opacity-80'>Store Pro sin costos iniciales</span>.",
 
+	"homeProductsSlogan": "Plataforma Unificada de Produtos Digitais e APIs para PMEs e Startups focada em LATAM.",
+
 	"learnMore": "Más info",
 	"scheduleMeeting": "Solicita una demo",
 
@@ -340,9 +342,9 @@
 	"productStoreSloganSimple": "E-commerce a Medida",
 	"productStoreDetails": "E-Commerce a medida, Pagos vía BTC/USDT + Front-end Headless",
 
-	"productPaySlogan": "Pagamentos BTC/USDT via Lightning",
-	"productPaySloganSimple": "Pagamentos BTC/USDT via Lightning",
-	"productPayDetails": "Pagamentos BTC/USDT via Lightning com Settlement em Tempo Real",
+	"productPaySlogan": "Pagos BTC/USDT vía Lightning",
+	"productPaySloganSimple": "Pagos BTC/USDT vía Lightning",
+	"productPayDetails": "Pagos BTC/USDT vía Lightning Network con liquidación en tiempo real",
 
 	"productAPISlogan": "Dozens of business integrations",
 	"productAPISloganSimple": "Dozens of business integrations",
@@ -369,7 +371,7 @@
 	"searchNotes": "Buscar notas...",
 	"notesWarningUnencrypteed": "<strong>¡Advertencia!</strong> Las notas sin encriptar estarán disponibles en texto plano en el almacenamiento local del navegador incluso después de cerrar sesión!",
 
-	"labProductsSlogan": "Además de los productos de la Plataforma Cubiq, existen proyectos de nuestro laboratorio de tecnología, desde pruebas de concepto hasta productos activos en el mercado... <a href='/es/lab' class='hover:text-underline text-white'>saiba más</a>",
+	"labProductsSlogan": "Los proyectos de nuestro laboratorio van desde pruebas de concepto hasta productos activos en el mercado... <a href='/es/lab' class='hover:text-underline text-white'>saiba más</a>",
 
 	"invoicing": "Facturación"
 }

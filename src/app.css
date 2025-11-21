@@ -18,7 +18,7 @@
 *,
 *::after,
 *::before {
-	transition: opacity 0.2s linear;
+	/* transition: opacity 0.2s linear; */
 	/* outline: 2px solid lime; */
 }
 html {
