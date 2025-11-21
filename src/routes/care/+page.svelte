@@ -101,10 +101,10 @@
 </div>
 
 <main>
-	<CarePricing />
+	<!-- <CarePricing /> -->
 
 	<!-- Diferentials -->
-	<div class="border-base-200 mb-4 border-t border-b">
+	<div class="border-base-200 Xborder-t mb-4 border-b">
 		<section class="max-w-fw mx-auto">
 			<div class="border-base-200 mt-5 mb-5 flex justify-center">
 				<div
@@ -121,9 +121,11 @@
 			<Switcher
 				options={[
 					m.careSyncAssetManagment(),
-					m.careSyncLearning(),
-					m.careSyncMarketplace(),
-					m.careSyncPredictiveSoftware()
+					'HaaS',
+					// m.careSyncLearning(),
+					m.careSyncPredictiveSoftware(),
+					m.careSyncMarketplace()
+
 					// m.careSyncAuto(),
 					// m.careSyncManaged()
 				]}
@@ -143,20 +145,25 @@
 							<Features product={Product.CARE} noPaddingMobile={true} />
 						{/if}
 
+						<!-- HaaS -->
+						{#if currentSwitcherSelection == 'HaaS'}
+							<!-- {@html m.careSyncAutoDesc()} -->
+							<Features product={Product.CARE} noPaddingMobile={true} />
+						{/if}
+
 						<!-- Learning -->
-						{#if currentSwitcherSelection == m.careSyncLearning()}
+						<!-- {#if currentSwitcherSelection == m.careSyncLearning()}
+							<Features product={Product.CARE} noPaddingMobile={true} />
+						{/if} -->
+
+						<!-- Predictive software -->
+						{#if currentSwitcherSelection == m.careSyncPredictiveSoftware()}
 							<!-- {@html m.careSyncAutoDesc()} -->
 							<Features product={Product.CARE} noPaddingMobile={true} />
 						{/if}
 
 						<!-- Marketplace -->
 						{#if currentSwitcherSelection == m.careSyncMarketplace()}
-							<!-- {@html m.careSyncAutoDesc()} -->
-							<Features product={Product.CARE} noPaddingMobile={true} />
-						{/if}
-
-						<!-- Predictive software -->
-						{#if currentSwitcherSelection == m.careSyncPredictiveSoftware()}
 							<!-- {@html m.careSyncAutoDesc()} -->
 							<Features product={Product.CARE} noPaddingMobile={true} />
 						{/if}
@@ -175,7 +182,7 @@
 		</div>
 	</div>
 
-	<CareCourses />
+	<!-- <CareCourses /> -->
 
 	<!-- <Features product={Product.CARE} /> -->
 

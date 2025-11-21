@@ -92,11 +92,11 @@
 			title: m.caresyncFeature2Title(),
 			desc: m.caresyncFeature2Desc()
 		},
-		{
-			img: '/feature-community.svg',
-			title: m.caresyncFeature3Title(),
-			desc: m.caresyncFeature3Desc()
-		},
+		// {
+		// 	img: '/feature-community.svg',
+		// 	title: m.caresyncFeature3Title(),
+		// 	desc: m.caresyncFeature3Desc()
+		// },
 		{
 			img: '/feature-health.svg',
 			title: m.caresyncFeature4Title(),
@@ -107,11 +107,11 @@
 			title: m.caresyncFeature5Title(),
 			desc: m.caresyncFeature5Desc()
 		},
-		{
-			img: '/feature-book.svg',
-			title: m.caresyncFeature6Title(),
-			desc: m.caresyncFeature6Desc()
-		},
+		// {
+		// 	img: '/feature-book.svg',
+		// 	title: m.caresyncFeature6Title(),
+		// 	desc: m.caresyncFeature6Desc()
+		// },
 		{
 			img: '/feature-invoice.svg',
 			title: m.caresyncFeature7Title(),

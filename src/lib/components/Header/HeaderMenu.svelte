@@ -26,7 +26,7 @@
 		</div>
 		<!-- Main menu -->
 		<ul
-			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[430px] px-5 py-3 shadow-md"
+			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[435px] px-5 py-3 shadow-md"
 		>
 			{#each productsForLang as drawer, i}
 				<li>

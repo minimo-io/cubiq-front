@@ -64,13 +64,15 @@
 	"construction": "construction",
 	"constructionContent": "We are building a unified platform for <span class='text-base-content opacity-80'>E-Commerce</span>, <span class='text-base-content opacity-80'>Cross-Border Payments</span>, and <span class='text-base-content opacity-80'>IT Asset Monitoring</span>. Contact us while we finish this page.",
 
-	"heroContentHomeXXXXX": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> powered by AI and a Development Lab focused on Innovation in the areas of <span class='text-base-content opacity-80'>E-Commerce, Instant BTC/USDT Payments, and AI Applied to IT Assets Monitoring</span>.",
+	"heroContentHomeXXX": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> powered by AI for Startups & SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on Innovation over Permissionless Protocols and Custom Solutions.",
 
-	"heroContentHome": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> powered by AI for Startups & SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on Innovation over Permissionless Protocols and Custom Solutions.",
+	"heroContentHome": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation around permissionless protocols.",
 
 	"heroContentFinX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via Lightning Network. Eg. <span class='text-base-content'>Receive in Argentina and settle abroad</span>, instantly, with 100% compliance and verifiable transparency.</div>",
 
-	"heroContentCareSync": "Platform for <span class='text-base-content opacity-80'>Predictive Maintenance</span> and Asset Management (ITSM + ITAM) <span class='text-base-content opacity-80'>for IT professionals and SMEs</span> — with AI applied to Real-Time Monitoring, Knowledge-Base and Client Marketplace.",
+	"heroContentCareSyncOLD": "Platform for <span class='text-base-content opacity-80'>Predictive Maintenance</span> and Asset Management (ITSM + ITAM) <span class='text-base-content opacity-80'>for IT professionals and SMEs</span> — with AI applied to Real-Time Monitoring, Knowledge-Base and Client Marketplace.",
+
+	"heroContentCareSync": "Complete IT Lifecycle Management for growing SMEs — featuring  <span class='text-base-content opacity-80'>Hardware-as-a-Service (HaaS)</span>, Managed Technical Support, and Predictive Maintenance powered by  <span class='text-base-content opacity-80'>AI real-time diagnostics</span>.",
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>Tailored Premium E-Commerce</span>: We customize without limits — Design, UX, and Features — with integrated AI, scalable security, and <span class='text-base-content opacity-80'>express checkout</span> via <a href='/finx' class='text-primary font-medium'>Cubiq Pay</a> (PIX, Boleto, Card, and Bitcoin). <span class='text-base-content opacity-80'>Predictable plans</span> from $20/month or <span class='text-base-content opacity-80'>Store Pro with no upfront costs</span>.",
 
@@ -343,9 +345,9 @@
 	"productPaySloganSimple": "BTC/USDT payments via Lightning",
 	"productPayDetails": "BTC/USDT payments via Lightning with real-time settlement",
 
-	"productAPISlogan": "Dozens of business integrations",
-	"productAPISloganSimple": "Dozens of business integrations",
-	"productAPIDetails": "A RESTful interface that abstracts dozens of business integrations",
+	"productAPISlogan": "Enterprise integrations for startups",
+	"productAPISloganSimple": "",
+	"productAPIDetails": "A RESTful interface that abstracts enterprise integrations for startups",
 
 	"productNotesSlogan": "Local, encrypted notes on the browser",
 	"productNotesSloganSimple": "Local, encrypted notes",

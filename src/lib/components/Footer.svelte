@@ -27,7 +27,11 @@
 						<li><a href={localizeHref('/care')} class="text-secondary">Care</a></li>
 						<li><a href={localizeHref('/pay')} class="text-secondary">Pay</a></li>
 						<li><a href={localizeHref('/store')} class="text-secondary">Store</a></li>
-						<li><a href={localizeHref(AppConfig.cubiq.docs)} target="_blank" class="text-secondary">APIs</a></li>
+						<li>
+							<a href={localizeHref(AppConfig.cubiq.docs)} target="_blank" class="text-secondary"
+								>APIs</a
+							>
+						</li>
 						<!-- <li>
 							<a
 								href="https://braaay.com"
@@ -120,12 +124,14 @@
 				class="order-first mb-10 flex flex-col items-start justify-center md:order-none md:mb-0 md:items-end"
 			>
 				<div class="hidden md:block">
-					<img
-						src="/logos/cubiq-logo-complete.svg"
-						class="w-[200px]"
-						width="180"
-						alt="footer-logo"
-					/>
+					<a href={localizeHref('/')}>
+						<img
+							src="/logos/cubiq-logo-complete.svg"
+							class="w-[200px]"
+							width="180"
+							alt="footer-logo"
+						/>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -135,12 +141,14 @@
 			class="mt-5 flex flex-col items-start border-black md:flex-col md:items-start md:justify-start"
 		>
 			<div class="block md:hidden">
-				<img
-					src="/logos/cubiq-logo-complete.svg"
-					class="w-[130px] md:w-[150px]"
-					width="180"
-					alt="footer-logo"
-				/>
+				<a href={localizeHref('/')}>
+					<img
+						src="/logos/cubiq-logo-complete.svg"
+						class="w-[130px] md:w-[150px]"
+						width="180"
+						alt="footer-logo"
+					/>
+				</a>
 			</div>
 			<div class="relative -left-2">
 				<SystemStatus />

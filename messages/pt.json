@@ -64,15 +64,17 @@
 	"construction": "construção",
 	"constructionContent": "Estamos construindo uma plataforma unificada de <span class='text-base-content opacity-80'>E-Commerce</span>, <span class='text-base-content opacity-80'>Pagamentos X-Border</span> e <span class='text-base-content opacity-80'>Monitoramento de Ativos de TI</span>. Entre em contato em quanto finalizamos esta página.",
 
-	"heroContentHomeXXXXXX": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> impulsionados por IA e um Laboratório de Desenvolvimento focado na Inovação nas áreas de <span class='text-base-content opacity-80'>E-Commerce, Pagamentos BTC/USDT Instantâneos</span> e <span class='text-base-content opacity-80'>Manutenção Preditiva de TI</span>.",
+	"heroContentHomeXXXX": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> impulsionada por IA para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida e na inovação sobre protocolos permissionless.",
 
-	"heroContentHome": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> impulsionados por IA para Startups e PMEs, e um  <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado na Inovação sobre protocolos permissionless e soluções sob medida.",
+	"heroContentHome": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida e na inovação sobre protocolos permissionless.",
 
 	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagamentos em tempo real com <span class='text-base-content opacity-80'>Settlements Globais Instantâneos</span> em BTC/USDT, via Lightning Network. Ex.: <span class='text-base-content'>Receba no Brasil e liquide no exterior</span>, no instante, com 100% de compliance e transparência verificável.</div>",
 
 	"heroContentCareSyncOLD": "Plataforma de <span class='text-base-content opacity-80'>Manutenção Preditiva</span> e Gestão de Ativos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profissionais de TI e PMEs</span> — com IA aplicada ao Monitoramento em Tempo Real, Base de Conhecimento e Marketplace de Clientes.",
 
-	"heroContentCareSync": "Plataforma completa para profissionais de TI e PMEs: Gestão de ativos, Ordens de Serviço e Alertas, Manutenção Preditiva e Monitoramento, Cursos online e Marketplace de insumos. <span class='text-base-content opacity-80'>Junte-se a comunidade que impulsiona o crescimento do profissional de TI.</span>",
+	"heroContentCareSyncOLDISH": "Plataforma completa para profissionais de TI e PMEs: Gestão de ativos, Ordens de Serviço e Alertas, Manutenção Preditiva e Monitoramento, Cursos online e Marketplace de insumos. <span class='text-base-content opacity-80'>Junte-se a comunidade que impulsiona o crescimento do profissional de TI.</span>",
+
+	"heroContentCareSync": "Gestão completa do ciclo de vida de TI para PMEs em crescimento — integrando <span class='text-base-content opacity-80'>Hardware como Serviço (HaaS)</span>, <span class='text-base-content opacity-80'>Suporte Técnico Online</span>, e <span class='text-base-content opacity-80'>Manutenção preditiva</span> impulsionada por diagnósticos de IA em tempo real.",
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium sob Medida</span>: Customizamos sem límites: Design, UX e Funcionalidades, com IA integrada + Cloud escalável e <span class='text-base-content opacity-80'>checkout express</span> (PIX, Boleto, Cartão e Bitcoin). <span class='text-base-content opacity-80'>Planos fixos previsíveis</span> ou <span class='text-base-content opacity-80'>Store Pro sem custos iniciais</span>.",
 
@@ -346,9 +348,9 @@
 	"productPaySloganSimple": "Pagamentos BTC/USDT via Lightning",
 	"productPayDetails": "Pagamentos BTC/USDT via Lightning com Settlement em Tempo Real",
 
-	"productAPISlogan": "Dezenas de integrações empresariais",
-	"productAPISloganSimple": "Dezenas de integrações empresariais",
-	"productAPIDetails": "Uma interface RESTful que abstrai dezenas de integrações empresariais",
+	"productAPISlogan": "Integrações Empresariais para Startups",
+	"productAPISloganSimple": "",
+	"productAPIDetails": "Uma interface RESTful que abstrai integrações empresariais para Startups",
 
 	"productNotesSlogan": "Notas locais, criptografadas",
 	"productNotesSloganSimple": "Notas locais, criptografadas no navegador",

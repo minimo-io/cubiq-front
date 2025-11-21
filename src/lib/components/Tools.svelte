@@ -14,7 +14,7 @@
 
 	let servicesOpen = $state(false);
 	// Reactive width based on servicesOpen state
-	const menuWidth = $state('12rem'); // w-64 : w-52	
+	const menuWidth = $state('12rem'); // w-64 : w-52
 
 	// Show button when user scrolls down 300px
 	$effect(() => {
@@ -39,7 +39,7 @@
 					}
 				}, 100);
 			});
-		}		
+		}
 
 		// Close when clicking a menu item
 		if (dropdownContainer) {
@@ -55,9 +55,6 @@
 		return () => {
 			window.removeEventListener('scroll', updateScrollY);
 		};
-
-
-
 	});
 
 	function showTools() {
@@ -68,10 +65,12 @@
 <svelte:window bind:scrollY />
 
 {#if showButton}
-
 	<!-- Menu -->
-	<div bind:this={dropdownContainer} class="dropdown dropdown-left dropdown-top bg-transparent hover:bg-primary-700 active:bg-primary-800 fixed right-(--cubiq-app-margin) bottom-4 z-50 flex h-12 w-12 items-center justify-center rounded-full border-none text-white shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl active:translate-y-0 sm:bottom-4 sm:h-10 sm:w-10 md:right-8 md:bottom-8 md:h-12 md:w-12 ">
-		<div bind:this={dropdownButton} tabindex="0" role="button" class="btn btn-circle" >
+	<div
+		bind:this={dropdownContainer}
+		class="dropdown dropdown-left dropdown-top hover:bg-primary-700 active:bg-primary-800 fixed right-(--cubiq-app-margin) bottom-4 z-50 flex h-12 w-12 items-center justify-center rounded-full border-none bg-transparent text-white shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl active:translate-y-0 sm:bottom-4 sm:h-10 sm:w-10 md:right-8 md:bottom-8 md:h-12 md:w-12"
+	>
+		<div bind:this={dropdownButton} tabindex="0" role="button" class="btn btn-circle">
 			{#if isMenuOpen}
 				<X class="animate__animated animate__rotateIn animate__faster h-5 w-5" />
 			{:else}
@@ -82,18 +81,19 @@
 			bind:this={mobileMenu}
 			tabindex="-1"
 			style="width: {menuWidth}; transition: width 300ms cubic-bezier(0.33, 1, 0.68, 1);"
-			class="w-[100px]! dropdown-content menu-sm menu z-50 mt-3 gap-2 rounded-box font-sans rounded-lg bg-black border border-accent tracking-wider! py-3 shadow-xl"
+			class="dropdown-content menu-sm menu rounded-box border-accent z-50 mt-3 w-[100px]! gap-2 rounded-lg border bg-black py-3 font-sans tracking-wider! shadow-xl"
 		>
 			<li>
-				<a href="mailto:{AppConfig.cubiq.socials.email}">
-					Email
-				</a>
+				<a target="_blank" rel="nofollow noreferrer" href={AppConfig.cubiq.socials.telegram}
+					>Telegram</a
+				>
 			</li>
-			<li><a href="{ AppConfig.cubiq.socials.telegram }">Telegram</a></li>
-			<li><a href="{ AppConfig.cubiq.socials.nostr }">Nostr</a></li>
+			<li>
+				<a href="mailto:{AppConfig.cubiq.socials.email}"> Email </a>
+			</li>
+			<li>
+				<a target="_blank" rel="nofollow noreferrer" href={AppConfig.cubiq.socials.nostr}>Nostr</a>
+			</li>
 		</ul>
-	</div>	
-
-
-
+	</div>
 {/if}
