@@ -38,7 +38,7 @@
 	target={openInNewWindow ? '_blank' : undefined}
 	rel={openInNewWindow ? 'noopener noreferrer' : undefined}
 	class={[
-		'relative scale-95 rounded-sm transition duration-300 ease-in-out hover:opacity-100 md:scale-90 md:hover:scale-105',
+		'relative scale-95 rounded-sm transition duration-250 ease-in-out hover:opacity-100 md:scale-90 md:hover:scale-100',
 		minWidth ? minWidth : 'min-w-full md:min-w-[250px]'
 	]}
 >
@@ -91,13 +91,13 @@
 						align != 'start' && align != 'end' && 'justify-center'
 					]}
 				>
-					<Pill
+					<!-- <Pill
 						color={primary ? 'primary' : 'light'}
 						text={brand.sloganSimple || brand.slogan || ''}
-					/>
+					/> -->
 					{#if hideDetails === false}
 						<div
-							class="text-primary mt-[10px] text-center text-[12px] tracking-wider uppercase opacity-70"
+							class="text-primary mt-[10px] text-center text-[18px] tracking-wider uppercase opacity-70"
 						>
 							{@html brand.details}
 						</div>
