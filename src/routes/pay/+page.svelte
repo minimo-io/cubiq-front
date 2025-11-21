@@ -29,6 +29,9 @@
 </div>
 
 <main class="max-w-fw border-x-base-200 mx-auto md:border-x">
+	<!-- Payment image -->
+	<img src="/products/pay/cubiq-pay.png" alt="cubic-pay" />
+
 	<div class=" relative mx-auto flex flex-col gap-0 md:flex-row">
 		<div class="fw-cmp-box">
 			<div class="fw-cmp-box-title">Enterprise</div>
