@@ -187,7 +187,7 @@
 	});
 </script>
 
-<div class={['max-w-fw mx-auto !pb-5 md:px-10 md:py-16 md:!pb-10', noPaddingMobile ? '' : 'py-10']}>
+<div class={['max-w-fw mx-auto !pb-5 md:px-10 md:py-10 md:!pb-10', noPaddingMobile ? '' : 'py-10']}>
 	<!-- Carousel container -->
 	<div
 		class="relative"
@@ -246,17 +246,19 @@
 		<!-- {/if} -->
 
 		<!-- Pagination dots -->
-		<div class="mt-12 flex justify-center space-x-2">
-			{#each Array(totalPages) as _, i}
-				<button
-					class="h-3 w-3 rounded-full transition-all duration-300"
-					class:bg-primary={i === currentIndex}
-					class:bg-base-300={i !== currentIndex}
-					onclick={() => (currentIndex = i)}
-					aria-label={`Go to page ${i + 1}`}
-				></button>
-			{/each}
-		</div>
+		{#if totalPages > 1}
+			<div class="mt-8 flex justify-center space-x-2">
+				{#each Array(totalPages) as _, i}
+					<button
+						class="h-3 w-3 rounded-full transition-all duration-300"
+						class:bg-primary={i === currentIndex}
+						class:bg-base-300={i !== currentIndex}
+						onclick={() => (currentIndex = i)}
+						aria-label={`Go to page ${i + 1}`}
+					></button>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>
 

@@ -10,12 +10,15 @@
 		class="border-base-200 flex w-full flex-col justify-center text-center after:absolute after:right-[48%] md:after:top-10 md:after:right-[49.4%] md:after:content-['']"
 	>
 		<div id="more" class="max-w-fw mx-auto w-full pt-10 pb-1">
-			<h2 class="mx-auto w-[90%] font-sans text-2xl font-semibold md:w-1/2 md:text-3xl">
+			<!-- <h2 class="mx-auto w-[90%] font-sans text-2xl font-semibold md:w-1/2 md:text-3xl">
 				{m.finxPayMainTitle()}
 			</h2>
 			<p class="text-secondary mx-auto mt-3 w-full font-sans text-xl md:w-[70%] md:text-2xl">
 				{m.finxPayMainSubtitle()}
-			</p>
+			</p> -->
+			<h2 class="mx-auto w-[90%] font-sans text-2xl font-semibold md:w-2/3 md:text-3xl">
+				{m.finxPayMainSubtitle()}
+			</h2>
 		</div>
 
 		<!-- Divider -->

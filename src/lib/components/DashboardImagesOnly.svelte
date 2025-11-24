@@ -46,7 +46,7 @@
 	class="dark:ring-base-200 ring-base-300 mx-3 mt-5 rounded-2xl bg-black p-2 ring-1 ring-inset md:mx-0 dark:bg-black"
 >
 	<div
-		class="dark:ring-base-300 relative isolate rounded-xl bg-white ring-1 ring-red-500 dark:bg-slate-950"
+		class="dark:ring-base-300 ring-base-300 relative isolate rounded-xl bg-black ring-1 dark:bg-slate-950"
 	>
 		<div
 			class="relative grid overflow-hidden rounded-xl"

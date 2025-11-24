@@ -97,7 +97,7 @@
 					/> -->
 					{#if hideDetails === false}
 						<div
-							class="text-primary mt-[10px] text-center text-[18px] tracking-wider uppercase opacity-70"
+							class="text-primary mt-[10px] text-center text-[17px] tracking-wider uppercase opacity-70"
 						>
 							{@html brand.details}
 						</div>

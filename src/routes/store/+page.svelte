@@ -19,6 +19,7 @@
 	background="commerce"
 	opacity="0"
 	titleLeft={'>'}
+	slidedTitle={false}
 	titleRight={Product.STORE}
 	heroContent={m.heroContentBagity()}
 />

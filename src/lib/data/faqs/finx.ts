@@ -8,7 +8,7 @@ export const finxFaqs: Record<string, Faq[]> = {
 		{
 			question: 'What is Cubiq:Pay and how does it work?',
 			answer:
-				'Cubiq:Pay enables real-time global settlements in stablecoins, or Bitcoin via Lightning Network. For example, receive in Brazil and settle instantly abroad with full compliance.'
+				'Cubiq:Pay offers instant global payments and settlements in stablecoins or Bitcoin via Lightning. Example: receive USDT/BTC from anywhere in the world and settle instantly, with full transparency.'
 		},
 		{
 			question: 'Which currencies and payment methods are supported?',
@@ -44,13 +44,18 @@ export const finxFaqs: Record<string, Faq[]> = {
 			question: 'How can I track and reconcile transactions?',
 			answer:
 				'Use our unified dashboard to view settlements, download reports, and use our analytics API powered by IA for advanced transaction insights.'
+		},
+		{
+			question: 'Why does Cubiq:Pay not operate in Brazil?',
+			answer:
+				'Unfortunately, the recent regulations from the Central Bank make it unfeasible for small technology providers, without large capital, to contribute to innovation in payments via virtual assets, concentrating the industry and harming users in the long run.'
 		}
 	],
 	es: [
 		{
 			question: '¿Qué es Cubiq:Pay y cómo funciona?',
 			answer:
-				'Cubiq:Pay permite liquidaciones globales en tiempo real en stablecoins, Bitcoin Mainnet o Bitcoin vía Lightning. Por ejemplo, su sitio recibe un pago en Brasil y liquida al instante en su país, con compliance total.'
+				'Cubiq:Pay ofrece pagos y liquidaciones globales instantáneas en stablecoins o Bitcoin, vía Lightning. Ej.: recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, con total transparencia.'
 		},
 		{
 			question: '¿Qué monedas y métodos de pago están disponibles?',
@@ -86,13 +91,23 @@ export const finxFaqs: Record<string, Faq[]> = {
 			question: '¿Cómo rastreo y concilió mis transacciones?',
 			answer:
 				'Usa nuestro panel unificado para ver liquidaciones, descargar informes y aprovecha nuestra API de análisis impulsada por IA para información avanzada.'
+		},
+		{
+			question: '¿Por qué Cubiq:Pay no opera en Brasil?',
+			answer:
+				'Lamentablemente, las recientes disposiciones del Banco Central hacen inviable que pequeños proveedores de tecnología, sin grandes capitales, contribuyan a la innovación en pagos con activos virtuales, concentrando la industria y perjudicando, a largo plazo, a los usuarios.'
 		}
 	],
 	pt: [
 		{
+			question: 'Por que a Cubiq:Pay não opera no Brasil?',
+			answer:
+				'Infelizmente, as recentes disposições do Bacen tornam inviável para pequenos fornecedores de tecnologia, sem grandes capitais, contribuírem com a inovação em pagamentos via ativos virtuais, concentrando a indústria e prejudicando, no longo prazo, os usuários.'
+		},
+		{
 			question: 'O que é o Cubiq:Pay e como funciona?',
 			answer:
-				'Cubiq:Pay oferece liquidações globais instantâneas em stablecoins ou Bitcoin via Lightning. Ex.: receba USDT/BTC no exterior e liquide no Brasil imediatamente, com compliance total.'
+				'Cubiq:Pay oferece pagamentos liquidações globais instantâneas em stablecoins ou Bitcoin, via Lightning. Ex.: receba USDT/BTC desde cualquer lugar do mundo e liquide no instante, com transparência total.'
 		},
 		{
 			question: 'Quais moedas e métodos de pagamento são suportados?',

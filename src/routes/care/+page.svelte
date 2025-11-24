@@ -80,6 +80,7 @@
 	background="astronaut"
 	opacity="0"
 	titleLeft={'>'}
+	slidedTitle={false}
 	titleRight={Product.CARE}
 	heroContent={m.heroContentCareSync()}
 >

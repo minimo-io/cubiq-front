@@ -50,7 +50,13 @@
 										class="text-primary h-32 w-32 stroke-[0.5] transition-transform duration-500 group-hover:scale-110"
 									/>
 								</div>
-
+								{#if product.unavailableBrazil && getLocale() == 'pt'}
+									<div
+										class="badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary absolute top-3 right-3 font-sans text-xs!"
+									>
+										Indisponível no Brasil
+									</div>
+								{/if}
 								<div class="mt-8 mb-0 flex items-center justify-between">
 									<h2
 										class="card-title group-hover:text-primary text-2xl font-bold tracking-wider text-white transition-colors duration-300"
@@ -61,6 +67,7 @@
 										class="h-5 w-5 text-white transition-transform duration-300 group-hover:translate-x-1"
 									/>
 								</div>
+
 								<p
 									class="font-sans text-base leading-tight text-gray-400 transition-colors duration-300 group-hover:text-gray-300"
 								>

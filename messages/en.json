@@ -68,7 +68,9 @@
 
 	"heroContentHome": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation around permissionless protocols.",
 
-	"heroContentFinX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via Lightning Network. Eg. <span class='text-base-content'>Receive in Argentina and settle abroad</span>, instantly, with 100% compliance and verifiable transparency.</div>",
+	"heroContentFinXXX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via Lightning Network. Eg. <span class='text-base-content'>Receive in Argentina and settle abroad</span>, instantly, with 100% compliance and verifiable transparency.</div>",
+
+	"heroContentFinX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via the Lightning Network. E.g.: <span class='text-base-content'>Receive from anywhere in the world and settle instantly</span>, with 100% verifiable transparency.</div>",
 
 	"heroContentCareSyncOLD": "Platform for <span class='text-base-content opacity-80'>Predictive Maintenance</span> and Asset Management (ITSM + ITAM) <span class='text-base-content opacity-80'>for IT professionals and SMEs</span> — with AI applied to Real-Time Monitoring, Knowledge-Base and Client Marketplace.",
 
@@ -100,7 +102,7 @@
 	"aboutUsTitleLeft": "ABOUT<br/>",
 	"aboutUsTitleRight": "CUBIQ",
 
-	"quote": "<span class='text-primary font-pixel text-5xl font-bold'>C</span>ubiq is not a standard dictionary word, but it is generally used as an adjective or adverb meaning \"<span class='font-bold'>with regard to the future</span>\" or \"<span class='font-bold'>in terms of the future</span>\"",
+	"quote": "<span class='text-primary font-pixel text-5xl font-bold'>C</span>ubiq delivers enterprise-grade technology in modular, efficient pieces — <span class='font-bold'>a simple, reliable platform, APIs and custom developments designed for Startups & SMEs</span>. We take care of the technology; you run the business.",
 
 	"aboutText": "<p><span class='fw-text-pixel'>W</span>e are a vertically integrated Digital Products Platform and a Development & Innovation <a href='/en/lab' class='fw-pixel !text-primary'>Lab</a> focused on LATAM.</p><p><span class='fw-text-pixel'>W</span>e offer a Unified Platform of <span class='fw-pixel text-primary'>Products</span> & <span class='fw-pixel text-primary'>APIs</span> focused on innovation in the areas of E‑Commerce, Cross‑Border Payments with Instant BTC/USDT Settlements, and Artificial Intelligence Applied to IT Physical Assets Monitoring.</p><p><span class='fw-text-pixel'>W</span>e specialize in delivering advanced technology solutions for small and medium‑sized businesses, helping them bridge to the future with premium services at fair prices, while we also promote and <a href='/en/blog/introducing-the-cubiq-platform' class='fw-pixel !text-primary'>facilitate the adoption of Bitcoin</a> among our clients and supporters.</p><p><span class='fw-text-pixel'>W</span>e believe in verifiable transparency for costs and in correcting inefficiencies in companies through technology.</p><p><span class='fw-text-pixel'>W</span>e believe in technology that improving people's lives and business outcomes.</p><p><span class='fw-text-pixel'>W</span>e believe <a target='_blank' class='underline hover:opacity-50 !text-primary' href='https://youtube.com/watch?v=fgbBtnCvcDI'>AI is the new electricity</a> — Intelligence powering new human actions and achievements. We also believe that money is one of the consequences of creating excellent products and solving people's and businesses' problems.</p><p><span class='fw-text-pixel'>W</span>e are efficient and minimalist. We build for the long term. We aim to create high‑performance systems while optimizing resources. We use what works best, we do not reinvent the wheel, nor do we charge for it. We are <a target='_blank' rel='nofollow noopener' href='https://a16z.com/the-techno-optimist-manifesto/' class='underline hover:opacity-50  !text-primary'>techno-optimists</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> We design, we experiment, we ship!</p><p><span class='fw-text-pixel'>W</span>e experiment with new technologies in our <a class='!text-primary font-pixel' href='/en/lab'>Lab</a>.</p><p><span class='fw-text-pixel'>F</span>rom the integration of Lightspark’s APIs for International Instant Settlements via Lightning Network, an MCP Server to allow LLMs place orders in our E‑Commerce clients — <a href='/en/store'>Store</a> — up to Pay‑Per‑Use tools for <a rel='nofollow noopener noreferrer' target='_blank' href='https://nostr.how/en/what-is-nostr' class='fw-pixel !text-primary'>Nostr</a> enthusiasts.</p><p>Some experiments fail, they do not become products — but rather knowledge gained in the form of tools & libraries for developers, designs and <a class='!text-primary' href='/en/blog'>articles</a>.</p><p>Sometimes ideas do not go beyond paper —so we let them mature in the <a href='/en/lab#idealab' class='underline !text-primary'>Idea Lab</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> The stack.</p><p class='relative'><span class='fw-text-pixel'>T</span>he Cubiq tech stack is simple yet powerful: <span class='!text-primary !mx-0 !font-sans font-bold'>Svelte</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Figma</span> for the front-end, <span class='!text-primary !mx-0 !font-sans font-bold'>Claude</span> for vibe coding, <span class='!text-primary !mx-0 !font-sans font-bold'>NestJS</span> for our APIs, <span class='!text-primary !mx-0 !font-sans font-bold'>Python</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Transformers.js</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Tensorflow.js</span> for AI, <span class='!text-primary !mx-0 !font-sans font-bold'>MicroPython</span> for embedded systems, <span class='!text-primary !mx-0 !font-sans font-bold'>Docker</span> for containerization, <span class='!text-primary !mx-0 !font-sans font-bold'>Bitcoin</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>USDT</span> via <span class='!text-primary !mx-0 !font-sans font-bold'>Lightning</span> for payments, value preservation & transmission, <span class='!text-primary !mx-0 !font-sans font-bold'>Vercel</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Render</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Cloudflare</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Self-Hosting</span> for cloud infrastructure.</p><p><span class='fw-text-pixel'>W</span>e support <span class='!text-primary'>open, global and permissionless protocols</span> (Bitcoin, MCP, Nostr, WebRTC, etc) & Self-Hosting & Home-Labbing.</p><p><span class='fw-text-pixel'>W</span>e solve our own and our partners' problems using technology — and from this experiences, we create Products & APIs of value for the real world.</p><p><span class='fw-text-pixel'>W</span>e like working with forward-thinking clients, with optimists!</p><p class='text-base-content font-sans font-bold italic'><span>//</span> OS.</p><p><span class='fw-text-pixel'>W</span>e feed on open-source, so we contribute to open-source. Many of the libraries we create are free and open. Sometimes even complete projects!</p><p>Got a crazy idea? Let’s talk, we'll love it — <a href='https://www.linkedin.com/in/nicolas-erramuspe/' class='underline hover:opacity-50 !text-primary'>Get in touch!</a></p><p>Be bold, let’s create the future together!,<br /><i class='font-bold text-white'>~@Cubiq</i></p>",
 
@@ -302,13 +304,14 @@
 	"caresyncFeature8Desc": "Both IT professionals on the platform and clients will have access to our store to buy equipment and parts at special prices, exclusive to community members!",
 
 	"finxPayMainTitle": "Real-time global payments with security and focus on Latin America",
-	"finxPayMainSubtitle": "Receive USDT/BTC in Brazil and settle abroad, instantly, with 100% compliance",
+	"finxPayMainSubtitle": "Receive USDT/BTC from anywhere in the world and settle instantly, in your wallet, with verifiable transparency",
+
 	"finxPayExampleTitle": "An example of how Cubiq Pay can help your business",
-	"finxPayExampleSubtitle": "A Colombian online course platform sells to Brazilian students. ",
-	"finxPayExampleStep1": "Student pays 4000 SATS via PIX.",
-	"finxPayExampleStep2": "Platform converts to USDT automatically.",
-	"finxPayExampleStep3": "Amount is settled in the company's account in Colombia instantly, with no hidden fees.",
-	"finxPayFeature1": "Volume discounts",
+	"finxPayExampleSubtitle": "A Colombian online course platform sells to Argentine students.",
+	"finxPayExampleStep1": "Student pays 4000 Sats.",
+	"finxPayExampleStep2": "The platform converts to USDT automatically.",
+	"finxPayExampleStep3": "The amount is settled instantly in the company’s wallet in Colombia, with no hidden fees.",
+
 	"finxPayFeature2": "24/7 instant settlement",
 	"finxPayFeature3": "Total, verifiable transparency",
 	"finxPayFeature4": "Regulatory compliance",
@@ -354,9 +357,9 @@
 	"productNotesDetails": "Local encrypted & syncronizable notes<br /> on the browser",
 
 	"productBetizenSlogan": "fair casino, bo & forex listings",
-	"productBetizenDetails": "Powered with karma, merit <br />and proof-of-work",
+	"productBetizenDetails": "iGaming and Forex rankings<br />powered by merit & PoW",
 	"productLnBeerSlogan": "Craft beer over lightning",
-	"productLnBeerDetails": "Pay with Bitcoin for your beers<br /> via our local partners",
+	"productLnBeerDetails": "Your local craft beers<br />over Lightning Network",
 
 	"heroContentRoadmap": "Here you can find the result of our development cycle: <span class=\"text-base-content\">Projection, Experimentation, and Delivery</span>. Below is the list of launches, milestones, and Proofs of Concept (PoCs) — the live record of our most recent creations ⛵️🚀",
 

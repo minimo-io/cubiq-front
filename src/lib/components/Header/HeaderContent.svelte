@@ -5,6 +5,7 @@
 	// import { localizeHref } from '$paraglide/runtime';
 	import { AppConfig } from '$lib/configs';
 	import type { Snippet } from 'svelte';
+	import { Product } from '$types/products.types';
 
 	const smoothAction = [conditionalSmoothScroll, '#more'] as const;
 
@@ -14,6 +15,7 @@
 		titleLeft: string;
 		heroContent: string;
 		buttons: boolean;
+		slidedTitle?: boolean;
 		buttonsSnippet?: Snippet;
 	}
 	let {
@@ -21,6 +23,7 @@
 		titleLeft,
 		heroContent,
 		buttons = true,
+		slidedTitle = true,
 		buttonsSnippet = undefined
 	}: Props = $props();
 </script>
@@ -28,7 +31,7 @@
 <!-- Hero Section -->
 <div class="relative mt-8 mb-10 max-w-4xl md:my-20">
 	<!-- Section title -->
-	<TitleSection {titleLeft} {titleRight} />
+	<TitleSection {titleLeft} {titleRight} {slidedTitle} />
 
 	<p
 		class="text-secondary font-regular my-4 font-sans text-[20px] leading-[120%] font-normal tracking-wide md:my-6 md:text-[25px] md:leading-[118%]"

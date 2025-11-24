@@ -30,4 +30,5 @@ export interface ProductData {
 	logo?: string;
 	underDevelopment?: boolean;
 	online?: boolean;
+	unavailableBrazil?: boolean;
 }

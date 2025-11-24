@@ -22,6 +22,7 @@
 		titleRight: string;
 		titleLeft: string;
 		heroContent: string;
+		slidedTitle?: boolean;
 		buttons?: boolean;
 
 		children?: Snippet;
@@ -33,6 +34,7 @@
 		titleLeft,
 		titleRight,
 		heroContent,
+		slidedTitle = true,
 		buttons = true,
 		children
 	}: Props = $props();
@@ -80,7 +82,7 @@
 
 <header
 	in:fade={{ duration: 150 }}
-	class="border-base-200 Xfw-border-b-divider-dot relative border-b px-(--cubiq-app-margin) md:border-b-0 md:px-0"
+	class="border-base-200 relative border-b px-(--cubiq-app-margin) md:border-b-0 md:px-0"
 >
 	<!-- Bg image -->
 	<div
@@ -110,7 +112,14 @@
 			<HeaderButtons />
 		</nav>
 
-		<HeaderContent {titleLeft} {titleRight} {heroContent} {buttons} buttonsSnippet={children} />
+		<HeaderContent
+			{slidedTitle}
+			{titleLeft}
+			{titleRight}
+			{heroContent}
+			{buttons}
+			buttonsSnippet={children}
+		/>
 	</div>
 	<!-- Navigation Dots -->
 	<HeaderDots />

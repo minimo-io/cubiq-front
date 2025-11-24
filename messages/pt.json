@@ -68,7 +68,7 @@
 
 	"heroContentHome": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida e na inovação sobre protocolos permissionless.",
 
-	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagamentos em tempo real com <span class='text-base-content opacity-80'>Settlements Globais Instantâneos</span> em BTC/USDT, via Lightning Network. Ex.: <span class='text-base-content'>Receba no exterior e liquide no Brasil</span>, no instante, com 100% de compliance e transparência verificável.</div>",
+	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagamentos em tempo real com <span class='text-base-content opacity-80'>Settlements Globais Instantâneos</span> em BTC/USDT, via Lightning Network. Ex.: <span class='text-base-content'>Receba desde qualquer lugar do mundo e liquide no instante</span>, com transparência 100% verificável! <span class='text-primary opacity-100 font-normal! underline'>Indisponível no Brasil</span>.</div>",
 
 	"heroContentCareSyncOLD": "Plataforma de <span class='text-base-content opacity-80'>Manutenção Preditiva</span> e Gestão de Ativos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profissionais de TI e PMEs</span> — com IA aplicada ao Monitoramento em Tempo Real, Base de Conhecimento e Marketplace de Clientes.",
 
@@ -101,7 +101,7 @@
 	"aboutUsTitleLeft": "SOBRE A<br/>",
 	"aboutUsTitleRight": "CUBIQ",
 
-	"quote": "<span class='text-primary font-pixel text-5xl font-bold'>C</span>ubiq não é uma palavra padrão de dicionário, mas é usada geralmente como adjetivo ou advérbio significando \"<span class='font-bold'>com relação ao futuro</span>\" ou \"<span class='font-bold'>em termos de futuro</span>\"",
+	"quote": "<span class='text-primary font-pixel text-5xl font-bold'>C</span>ubiq oferece tecnologia de nível empresarial em módulos modulares e eficientes <span class='font-bold'>— uma plataforma, APIs e desenvolvimentos sob medida simples e confiáveis, projetados para Startups & PMEs</span>. Nós cuidamos da tecnologia; você se concentra no seu negócio.",
 
 	"aboutText": "<p><span class='fw-text-pixel'>S</span>omos uma Plataforma de Produtos Digitais integrada verticalmente e um <a href='/lab' class='fw-pixel !text-primary'>Laboratório</a> de Desenvolvimento  & Inovação com foco em LATAM.</p><p><span class='fw-text-pixel'>O</span>erecemos uma Plataforma Unificada de <span class='fw-pixel text-primary'>Produtos</span> e <span class='fw-pixel text-primary'>APIs</span> focados na inovação nas áreas de E-Commerce, Pagamentos Cross-Border com Settlements Instantâneos BTC/USDT, e Inteligência Artificial Aplicada ao Monitoramento de Ativos Físicos de TI. </p><p><span class='fw-text-pixel'>N</span>ós nos especializamos em oferecer soluções tecnológicas avançadas para PMEs e Startups, ajudando-as a se conectar com o futuro por meio de serviços premium a custos justos; enquanto também promovemos e <a href='/blog/apresentando-a-plataforma-cubiq' class='fw-pixel !text-primary'>facilitamos a adoção de Bitcoin</a> entre nossos clientes e apoiadores.</p><p><span class='fw-text-pixel'>A</span>creditamos na transparência verificável de custos e na correção de ineficiências nas empresas através da tecnología.</p><p><span class='fw-text-pixel'>A</span>creditamos na tecnologia que melhora a vida das pessoas e os resultados dos negócios.</p><p>Acreditamos que a <a target='_blank' class='underline hover:opacity-50 !text-primary' href='https://youtube.com/watch?v=fgbBtnCvcDI'>IA é a nova eletricidade</a>, inteligência que impulsiona novas ações e conquistas humanas. Também acreditamos que o dinheiro é uma das consequências de criar ótimos produtos e resolver os problemas das pessoas e das empresas.</p><p><span class='fw-text-pixel'>S</span>omos eficientes e minimalistas. Construimos para o longo prazo. Procuramos criar sistemas de alto desempenho com recursos otimizados. Usamos o que funciona melhor, não reinventamos a roda, nem cobramos por isso. Somos <a target='_blank' rel='nofollow noopener' href='https://a16z.com/the-techno-optimist-manifesto/' class='underline hover:opacity-50 !text-primary'>tecno-otimistas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> Projetamos, experimentamos, entregamos!</p><p><p><span class='fw-text-pixel'>N</span>o nosso <a class='!text-primary font-pixel' href='/lab'>Laboratório</a> experimentamos com novas tecnologías. </p><p><span class='fw-text-pixel'>D</span>esde a integração das APIs da Lightspark para Settlements Internacionais via Lightning Network, um Servidor MCP para permitir que LLMs façam pedidos em nossos clientes de E-Commerce — <a href='/store'>Store</a> — até ferramentas Pay-Per-Use para entusiastas de <a rel='nofollow noopener noreferrer' target='_blank' href='https://nostr.how/pt/what-is-nostr' class='fw-pixel !text-primary'>Nostr</a>.</p>Alguns experimentos falham, não viram produtos — mas sim conhecimento adquirido na forma de ferramentas & bibliotecas para desenvolvedores, designs e <a class='!text-primary' href='/blog'>artigos</a>.</p><p>Às vezes as ideias não passam do papel — deixamos elas amadurecerem no <a href='/lab' class='fw-pixel !text-primary'>Idea Lab</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> O stack.</p><p class='relative'><span class='fw-text-pixel'>O</span> stack tecnológico da Cubiq é simples e poderoso: <span class='!text-primary !mx-0 !font-sans font-bold'>Svelte</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Figma</span> para o front-end, <span class='!text-primary !mx-0 !font-sans font-bold'>Claude</span> para vibe coding, <span class='!text-primary !mx-0 !font-sans font-bold'>NestJS</span> para as nossas APIs, <span class='!text-primary !mx-0 !font-sans font-bold'>Python</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Transformers.js</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Tensorflow.js</span> para IA, <span class='!text-primary !mx-0 !font-sans font-bold'>MicroPython</span> para sistemas embarcados, <span class='!text-primary !mx-0 !font-sans font-bold'>Docker</span> para containerização, <span class='!text-primary !mx-0 !font-sans font-bold'>Bitcoin</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>USDT</span> via <span class='!text-primary !mx-0 !font-sans font-bold'>Lightning</span> para pagamentos, preservação & transmissão de valor, <span class='!text-primary !mx-0 !font-sans font-bold'>Vercel</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Render</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Cloudflare</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Self-Hosting</span> para infraestrutura na nuvem.</p><p><span class='fw-text-pixel'>A</span>creditamos em <span class='!text-primary'>protocolos abertos, globais e permissionless</span> (Bitcoin, MCP, Nostr, WebRTC, etc) & Auto-Hospedagem & Home-Labbing.</p><p><span class='fw-text-pixel'>R</span>esolvemos nossos próprios problemas e os de nossos parceiros usando tecnologia — e a partir dessas experiências, criamos Produtos e APIs de valor para o mundo real.</p><p><span class='fw-text-pixel'>G</span>ostamos de trabalhar junto a clientes com visão de futuro, com otimistas!</p><p class='text-base-content font-sans font-bold italic'><span>//</span> OS.</p><p><span class='fw-text-pixel'>N</span>os alimentamos do open-source, então contribuímos ao open-source. Muitas das bibliotecas que criamos são gratuitas e abertas. Às vezes até projetos completos!</p><p>Tem uma ideia maluca? Vamos conversar, a gente adora — <a href='https://www.linkedin.com/in/nicolas-erramuspe/' class='underline hover:opacity-50 !text-primary'>Entre em contato!</a></p><p>Seja ousado, vamos criar juntos o futuro!,<br /><i class='font-bold text-white'>~@Cubiq</i></p>",
 
@@ -293,7 +293,7 @@
 	"caresyncFeature4Desc": "Monitoramento, detecção de anomalias e previsão de falhas com nossa IA treinada pela Cubiq para evitar interrupções e gerar alertas preventivas.",
 
 	"caresyncFeature5Title": "Controle de Inventário e Serviços",
-	"caresyncFeature5Desc": "Controle o inventário de ativos de seus clientes através de nossos dashboards e ITSM completo, com gestão de serviços, alertas, programação de manutenção e relatórios por dashboard e e-mail dos trabalhos realizados.",
+	"caresyncFeature5Desc": "Controle o inventário de ativos de seus clientes através de nossos dashboards de ITSM, com gestão de serviços, alertas, programação de manutenção e relatórios via e-mail com um resumo mensal.",
 
 	"caresyncFeature6Title": "Base de conhecimento",
 	"caresyncFeature6Desc": "Contamos com uma base de conhecimento para técnicos de TI, com tutoriais e cursos para você evoluir na sua jornada profissional e oferecer um ótimo serviço para seus clientes. Entao, problemas para abrir uma carcasa? Procure o vídeo na base.",
@@ -304,13 +304,14 @@
 	"caresyncFeature8Title": "Módulo de compras",
 	"caresyncFeature8Desc": "Tanto os profissionais de TI da plataforma quanto os clientes terão acesso à nossa loja para comprar equipamentos e peças a preços especiais, exclusivos para integrantes da comunidade!",
 
-	"finxPayMainTitle": "Pagamentos globais em tempo real com segurança e foco na América Latina",
-	"finxPayMainSubtitle": "Receba USDT/BTC no Brasil e liquide no exterior, no instante, com 100% de compliance",
+	"finxPayMainTitle": "Pagamentos globais em tempo real com segurança",
+	"finxPayMainSubtitle": "Receba USDT/BTC desde qualquer lugar do mundo e liquide no instante, na sua carteira, com transparência verificável",
+
 	"finxPayExampleTitle": "Um exemplo de cómo Cubiq Pay pode ajudar seu negócio",
-	"finxPayExampleSubtitle": "Uma plataforma Brasileira de cursos online vende para alunos argentinos.",
-	"finxPayExampleStep1": "Aluno paga 4000 SATS.",
-	"finxPayExampleStep2": "Plataforma converte para USDT automaticamente.",
-	"finxPayExampleStep3": "Valor é liquidado na conta da empresa no Brasil no instante, sem taxas ocultas.",
+	"finxPayExampleSubtitle": "Uma plataforma colombiana de cursos online vende para alunos argentinos.",
+	"finxPayExampleStep1": "Aluno paga 4000 Sats.",
+	"finxPayExampleStep2": "A plataforma converte para USDT automaticamente.",
+	"finxPayExampleStep3": "Valor é liquidado na carteira da empresa na Colômbia no instante, sem taxas ocultas.",
 	"finxPayFeature1": "Descontos por volume",
 	"finxPayFeature2": "Settlement instantâneo 24/7",
 	"finxPayFeature3": "Transparencia total, verificável",
@@ -357,9 +358,9 @@
 	"productNotesDetails": "Notas locais, criptografadas e sincronizáveis<br /> no navegador",
 
 	"productBetizenSlogan": "Rankings justos de cassino & forex",
-	"productBetizenDetails": "Movido a karma, mérito <br />e prova de trabalho",
+	"productBetizenDetails": "Rankings de iGaming e Forex <br />movidos pelo Mérito & Pow",
 	"productLnBeerSlogan": "Cerveja artesanal via lightning",
-	"productLnBeerDetails": "Pague com Bitcoin pelas suas cervejas<br />via nossos parceiros locais",
+	"productLnBeerDetails": "Tuas cervejas artesanais<br />via Lightning Network",
 
 	"heroContentRoadmap": "Aqui você encontra o resultado do nosso ciclo de desenvolvimento: <span class=\"text-base-content\">Projeção, Experimentação e Entrega</span>. Segue, então, a lista de lançamentos, marcos e Provas de Conceito (PoCs)  — o registro vivo das nossas criações mais recentes ⛵️🚀",
 

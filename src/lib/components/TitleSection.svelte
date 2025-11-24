@@ -8,9 +8,10 @@
 		titleRight: string;
 		titleLeft: string;
 		forceFlexRow?: boolean;
+		slidedTitle?: boolean;
 	}
 
-	let { titleRight, titleLeft, forceFlexRow = false }: Props = $props();
+	let { titleRight, titleLeft, forceFlexRow = false, slidedTitle = true }: Props = $props();
 
 	const capitalizedTitleRight = $derived(capitalize(titleRight));
 
@@ -86,7 +87,8 @@
 	<div>
 		<h1
 			class={[
-				'relative flex gap-0 text-[30px] font-extralight tracking-wide md:-left-10 md:flex-row md:gap-3 md:text-4xl',
+				'relative flex gap-0 text-[30px] font-extralight tracking-wide md:flex-row md:gap-3 md:text-4xl',
+				slidedTitle ? 'md:-left-10' : '',
 				forceFlexRow ? 'gap-3 ' : 'flex-col'
 			]}
 		>

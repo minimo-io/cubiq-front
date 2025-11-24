@@ -23,6 +23,7 @@
 	opacity="0"
 	titleLeft={'>'}
 	titleRight={Product.PAY}
+	slidedTitle={false}
 	heroContent={m.heroContentFinX()}
 />
 <div>
@@ -30,7 +31,7 @@
 </div>
 
 <section
-	class="animate-slide-up-fade relative -top-9 mx-auto mt-0 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:h-auto md:w-[100%] md:max-w-[82%]"
+	class="animate-slide-up-fade md:max-ww-[82%] relative -top-9 mx-auto mt-0 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:h-auto md:w-[100%] md:max-w-[1250px]"
 >
 	<!-- Payment image -->
 	<DashboardImagesOnly />
