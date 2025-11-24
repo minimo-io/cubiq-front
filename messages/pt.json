@@ -68,7 +68,7 @@
 
 	"heroContentHome": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida e na inovação sobre protocolos permissionless.",
 
-	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagamentos em tempo real com <span class='text-base-content opacity-80'>Settlements Globais Instantâneos</span> em BTC/USDT, via Lightning Network. Ex.: <span class='text-base-content'>Receba no Brasil e liquide no exterior</span>, no instante, com 100% de compliance e transparência verificável.</div>",
+	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagamentos em tempo real com <span class='text-base-content opacity-80'>Settlements Globais Instantâneos</span> em BTC/USDT, via Lightning Network. Ex.: <span class='text-base-content'>Receba no exterior e liquide no Brasil</span>, no instante, com 100% de compliance e transparência verificável.</div>",
 
 	"heroContentCareSyncOLD": "Plataforma de <span class='text-base-content opacity-80'>Manutenção Preditiva</span> e Gestão de Ativos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profissionais de TI e PMEs</span> — com IA aplicada ao Monitoramento em Tempo Real, Base de Conhecimento e Marketplace de Clientes.",
 
@@ -307,10 +307,10 @@
 	"finxPayMainTitle": "Pagamentos globais em tempo real com segurança e foco na América Latina",
 	"finxPayMainSubtitle": "Receba USDT/BTC no Brasil e liquide no exterior, no instante, com 100% de compliance",
 	"finxPayExampleTitle": "Um exemplo de cómo Cubiq Pay pode ajudar seu negócio",
-	"finxPayExampleSubtitle": "Uma plataforma colombiana de cursos online vende para alunos brasileiros. Com a FwPay:",
+	"finxPayExampleSubtitle": "Uma plataforma Brasileira de cursos online vende para alunos argentinos.",
 	"finxPayExampleStep1": "Aluno paga 4000 SATS.",
 	"finxPayExampleStep2": "Plataforma converte para USDT automaticamente.",
-	"finxPayExampleStep3": "Valor é liquidado na conta da empresa na Colômbia no instante, sem taxas ocultas.",
+	"finxPayExampleStep3": "Valor é liquidado na conta da empresa no Brasil no instante, sem taxas ocultas.",
 	"finxPayFeature1": "Descontos por volume",
 	"finxPayFeature2": "Settlement instantâneo 24/7",
 	"finxPayFeature3": "Transparencia total, verificável",

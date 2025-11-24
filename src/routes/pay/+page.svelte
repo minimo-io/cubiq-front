@@ -11,6 +11,7 @@
 	import Hr from '$lib/components/Hr.svelte';
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import { Product } from '$types/products.types';
+	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 	// import StandardButton from '$lib/components/Buttons/StandardButton.svelte';
 	// import Hr from '$lib/components/Hr.svelte';
 </script>
@@ -25,13 +26,17 @@
 	heroContent={m.heroContentFinX()}
 />
 <div>
-	<Clients />
+	<Clients addDesktopPadding={true} />
 </div>
 
-<main class="max-w-fw border-x-base-200 mx-auto md:border-x">
+<section
+	class="animate-slide-up-fade relative -top-9 mx-auto mt-0 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:h-auto md:w-[100%] md:max-w-[82%]"
+>
 	<!-- Payment image -->
-	<img src="/products/pay/cubiq-pay.png" alt="cubic-pay" />
+	<DashboardImagesOnly />
+</section>
 
+<main class="max-w-fw border-x-base-200 mx-auto md:border-x">
 	<div class=" relative mx-auto flex flex-col gap-0 md:flex-row">
 		<div class="fw-cmp-box">
 			<div class="fw-cmp-box-title">Enterprise</div>

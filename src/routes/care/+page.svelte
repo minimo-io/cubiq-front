@@ -18,6 +18,8 @@
 	import Switcher from '$lib/components/Switcher.svelte';
 	import CarePricing from '$lib/components/caresync/CarePricing.svelte';
 	import CareCourses from '$lib/components/caresync/CareCourses.svelte';
+	import DashboardImages from '$lib/components/DashboardImages.svelte';
+	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 
 	let isExpanded = $state(false);
 	let currentSwitcherSelection = $state(m.careSyncAssetManagment());
@@ -182,62 +184,21 @@
 		</div>
 	</div>
 
+	<!-- Dashboards -->
+	<section
+		class="animate-slide-up-fade relative -top-9 mx-auto mt-0 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:h-auto md:w-[100%] md:max-w-[82%]"
+	>
+		<!-- Payment image -->
+		<DashboardImagesOnly />
+	</section>
+
 	<!-- <CareCourses /> -->
 
 	<!-- <Features product={Product.CARE} /> -->
 
 	<!-- <ServiceOrders image="/caresync-dashboard-3.png" /> -->
 
-	<div class="border-base-200 mt-20 mb-10 border-b pb-5 md:mb-0 md:border-0 md:pb-0">
-		<!-- <Slogan text={m.careSyncSlogan()} /> -->
-		<TitleFullWidth
-			breadcrumb={m.aboutUs()}
-			titleLeft={m.aboutUsTitleLeft()}
-			titleRight={m.platform().toUpperCase()}
-		/>
-		<div class="relative">
-			<section
-				class="fw-home-about z-10 mx-(--cubiq-app-margin) mb-12 max-w-full pt-10 md:mx-auto md:max-w-[60%]"
-			>
-				<div class="relative">
-					<div
-						class="space-y-0 transition-all duration-500 {isExpanded
-							? ''
-							: 'max-h-[29rem] overflow-hidden md:max-h-[29rem]'}"
-					>
-						<p>
-							Nossa missão é impulsionar o crescimento dos profissionais de TI, enquanto construímos
-							uma comunidade de excelentes técnicos preparados para atender às demandas dos clientes
-							da plataforma.
-						</p>
-					</div>
-
-					{#if !isExpanded}
-						<div
-							class="pointer-events-none absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-t from-black via-black/70 to-transparent"
-						></div>
-					{/if}
-				</div>
-
-				<div
-					class={[
-						'relative -top-2 mt-0 flex justify-center md:top-0 md:mt-3',
-						isExpanded && 'mt-10'
-					]}
-				>
-					<button
-						class="bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary flex items-center gap-2 rounded-full border px-5 py-2 transition-all duration-300"
-					>
-						<span class="!font-sans !text-base tracking-wider uppercase md:!text-lg"
-							>{isExpanded ? m.readLess() : m.readMore()}</span
-						>
-					</button>
-				</div>
-			</section>
-		</div>
-	</div>
-
-	<div id="more" class="border-base-200 mt-20 font-sans md:mt-0 md:border-t">
+	<div id="more" class="mt-10 font-sans md:mt-0">
 		<Faq project="caresync" />
 	</div>
 

@@ -304,7 +304,7 @@
 	"finxPayMainTitle": "Real-time global payments with security and focus on Latin America",
 	"finxPayMainSubtitle": "Receive USDT/BTC in Brazil and settle abroad, instantly, with 100% compliance",
 	"finxPayExampleTitle": "An example of how Cubiq Pay can help your business",
-	"finxPayExampleSubtitle": "A Colombian online course platform sells to Brazilian students. With FwPay:",
+	"finxPayExampleSubtitle": "A Colombian online course platform sells to Brazilian students. ",
 	"finxPayExampleStep1": "Student pays 4000 SATS via PIX.",
 	"finxPayExampleStep2": "Platform converts to USDT automatically.",
 	"finxPayExampleStep3": "Amount is settled in the company's account in Colombia instantly, with no hidden fees.",
