@@ -19,6 +19,7 @@
 	"note": "Nota",
 	"notes": "Notas",
 	"rental": "Locação de Equipamentos",
+	"goToStore": "Ir para a loja",
 
 	"loggingIn": "Entrando...",
 	"platform": "Plataforma",
@@ -278,6 +279,8 @@
 	"caresyncFeature8Title": "Módulo de compras",
 	"caresyncFeature8Desc": "Todos os clientes da plataforma terão acesso à nossa loja para comprar equipamentos e peças a preços especiais.",
 
+	"careSyncFeaturedSlogan": "Gerenciamos e mantemos todos os seus equipamentos, oferecendo suporte completo aos seus colaboradores. Evite qualquer perda de produtividade, <span class='text-base-content'>enquanto você cuida da sua empresa, a gente cuida da sua TI.</span>",
+
 	"careHaaSFeature1Title": "Instalação e configuração dos equipamentos",
 	"careHaaSFeature1Desc": "Receba cada equipamento totalmente configurado com sistemas, softwares, políticas de segurança e testes prévios, garantindo implantação rápida, padronizada e pronta para uso pela sua equipe.",
 
@@ -296,8 +299,11 @@
 	"careHaaSFeature6Title": "Ausência de investimento inicial",
 	"careHaaSFeature6Desc": "Elimine o grande desembolso inicial, preserve caixa e linhas de crédito, evite perder capital para outros investimentos e dispense deslocamentos ou pesquisas para comprar equipamentos.",
 
+	"careHaaSSlogan": "Loque seu equipamento de qualquer lugar com manutenção inclusa. Escolha os softwares que precisar e já receba instalados, sem grande desembolso inicial e com suporte ativo online.",
+
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Se você já é cliente Cubiq:Care terá um cashback acumulável em todas as compras de equipamentos e peças realizadas através da nossa loja.",
+	"careStoreSlogan": "Tenha acesso à nossa loja de equipamentos e peças com descontos importantes para clientes da plataforma Cubiq:Care. Terá um cashback acumulável em todas as compras de equipamentos, garantia estendida e mais.",
 
 	"finxPayMainTitle": "Pagamentos globais em tempo real com segurança",
 	"finxPayMainSubtitle": "Receba USDT/BTC desde qualquer lugar do mundo e liquide no instante, na sua carteira, com transparência verificável",

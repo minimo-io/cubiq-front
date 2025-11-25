@@ -20,6 +20,7 @@
 	"note": "Nota",
 	"notes": "Notas",
 	"rental": "Alquiler de Equipos",
+	"goToStore": "Ir a la tienda",
 
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
@@ -277,6 +278,8 @@
 	"caresyncFeature8Title": "Módulo de compras",
 	"caresyncFeature8Desc": "Todos los clientes de la plataforma van a tener acceso a nuestra tienda para comprar equipos y piezas a precios especiales.",
 
+	"careSyncFeaturedSlogan": "Gestionamos y mantenemos todos sus equipos, ofreciendo soporte completo a sus colaboradores para evitar cualquier pérdida de productividad. <span class='text-base-content'>Mientras usted cuida de su empresa, nosotros cuidamos de su TI.</span>",
+
 	"careHaaSFeature1Title": "Instalación y configuración de los equipos",
 	"careHaaSFeature1Desc": "Reciba cada equipo totalmente configurado con sistemas, software, políticas de seguridad y pruebas previas, garantizando una implementación rápida, estandarizada y lista para usar por su equipo.",
 
@@ -295,8 +298,11 @@
 	"careHaaSFeature6Title": "Sin inversión inicial",
 	"careHaaSFeature6Desc": "Elimine la gran inversión inicial, preserve el flujo de caja y las líneas de crédito, evite perder capital en otros gastos y prescinda de desplazamientos o búsquedas para comprar equipos.",
 
+	"careHaaSSlogan": "Bloquee su equipo desde cualquier lugar con mantenimiento incluido. Elija el software que necesite y recíbalo ya instalado, sin un gran desembolso inicial y con soporte activo en línea.",
+
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Si ya es cliente de Cubiq:Care, recibirá cashback acumulable en todas las compras de equipos y piezas realizadas a través de nuestra tienda.",
+	"careStoreSlogan": "Tenga acceso a nuestra tienda de equipos y piezas con importantes descuentos para clientes de la plataforma Cubiq:Care. Tendrá un cashback acumulable en todas las compras de equipos, garantía extendida y mucho más.",
 
 	"finxPayMainTitle": "Pagos globales en tiempo real con seguridad y enfoque en América Latina",
 	"finxPayMainSubtitle": "Recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, en tu billetera, con transparencia verificable",

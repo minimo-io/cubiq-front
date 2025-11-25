@@ -51,6 +51,15 @@ export default defineConfig({
 				},
 
 				{
+					pattern: '/loja',
+					localized: [
+						['pt', '/loja'],
+						['es', '/es/tienda'],
+						['en', '/en/market']
+					]
+				},
+
+				{
 					pattern: '/blog',
 					localized: [
 						['pt', '/blog'],

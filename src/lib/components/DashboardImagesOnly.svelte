@@ -1,23 +1,8 @@
-<script>
+<script lang="ts">
+	import type { DashboardImageType } from '$types/dashboardImages.types';
 	import { fade } from 'svelte/transition';
 
-	const images = [
-		{
-			src: '/products/pay/cubiq-pay.webp',
-			alt: 'A screenshot of the Cubiq dashboard',
-			object: 'center'
-		},
-		{
-			src: '/products/pay/cubiq-pay-dashboard.webp',
-			alt: 'A screenshot of the Cubiq Pay dashboard',
-			object: 'left'
-		},
-		{
-			src: '/products/pay/cubiq-pay-dashboard-2.webp',
-			alt: 'A screenshot of the Cubiq Pay dashboard',
-			object: 'right'
-		}
-	];
+	let { images }: { images: DashboardImageType[] } = $props();
 
 	let currentIndex = $state(0);
 	let intervalId;

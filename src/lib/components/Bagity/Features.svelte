@@ -93,9 +93,9 @@
 							<img src={feature.img} alt={`feature-${i + 1}`} />
 						{:else}
 							<div
-								class="bg-primary flex h-15 w-15 items-center justify-center rounded-full md:h-22 md:w-22"
+								class="bg-primary/10 border-primary flex h-15 w-15 items-center justify-center rounded-full border md:h-22 md:w-22"
 							>
-								<feature.icon strokeWidth="1" class="text-black md:h-8 md:w-8" />
+								<feature.icon strokeWidth="1" class="text-primary md:h-8 md:w-8" />
 							</div>
 						{/if}
 					</div>

@@ -1,5 +1,8 @@
 <!-- src/lib/components/Switcher.svelte -->
 <script lang="ts">
+	import { m } from '$paraglide/messages';
+	import { localizeHref } from '$paraglide/runtime';
+	import { Info } from '@lucide/svelte';
 	import { fly } from 'svelte/transition';
 
 	let { options = ['Autopilot', 'Copilot'], selected = $bindable(), onChange } = $props();
@@ -10,6 +13,7 @@
 	}
 
 	let isOpen = $state(false);
+	let dialog = $state<HTMLDialogElement>();
 	let dropdownRef = $state<HTMLDivElement>();
 
 	function handleClickOutside(event: MouseEvent) {
@@ -28,7 +32,9 @@
 	});
 </script>
 
-<div class="bg-base-200 relative hidden items-center gap-0 rounded-full p-1 md:inline-flex">
+<div
+	class="border-base-300 relative hidden items-center gap-0 rounded-full border bg-black p-1 md:inline-flex"
+>
 	{#each options as option, index}
 		<button
 			class="relative z-10 rounded-full px-6 py-2 text-sm font-medium transition-colors duration-200 hover:opacity-100
@@ -39,7 +45,7 @@
 		>
 			{#if selected === option}
 				<div
-					class="bg-primary absolute inset-0 -z-10 rounded-full shadow-sm"
+					class="bg-primary/90 border-primary absolute inset-0 -z-10 rounded-full border shadow-sm"
 					transition:fly={{ x: index === 0 ? 20 : -20, duration: 100 }}
 				></div>
 			{/if}
@@ -48,6 +54,12 @@
 			</span>
 		</button>
 	{/each}
+	<button
+		class="btn btn-sm rounded-circle absolute -top-3 right-0 z-50 m-0 rounded-full bg-black p-0"
+		onclick={() => dialog?.showModal()}
+	>
+		<Info />
+	</button>
 </div>
 
 <div class="relative -top-8 mt-4 w-full px-4 md:-top-0 md:hidden" bind:this={dropdownRef}>
@@ -60,6 +72,11 @@
 		>
 			<span class="flex-1">{selected}</span>
 		</button>
+		<div class="relative -top-2 flex justify-end">
+			<button class="btn btn-sm btn-primary rounded-full" onclick={() => dialog?.showModal()}>
+				{m.learnMore()}
+			</button>
+		</div>
 		{#if isOpen}
 			<ul
 				class="dropdown-content menu bg-base-100 rounded-box border-base-300 z-50 mt-2 w-full border shadow-lg"
@@ -85,3 +102,32 @@
 		{/if}
 	</div>
 </div>
+
+<dialog bind:this={dialog} class="modal">
+	<div class="modal-box border-base-300 border">
+		<form method="dialog">
+			<button class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">✕</button>
+		</form>
+		<!-- <h3 class="text-lg font-bold">Hello!</h3> -->
+		<div class="flex flex-col py-3 text-left font-sans">
+			<h3 class="mb-2 text-xl font-bold">{selected}</h3>
+
+			{#if selected == m.careSyncAssetManagment()}
+				{@html m.careSyncFeaturedSlogan()}
+				<a href={localizeHref('/loja')} class="btn btn-sm btn-primary mt-3 w-fit rounded-full"
+					>{m.contactSupport()}</a
+				>
+			{:else if selected == m.rental()}
+				{@html m.careHaaSSlogan()}
+				<a href={localizeHref('/loja')} class="btn btn-sm btn-primary mt-3 w-fit rounded-full"
+					>{m.contactSupport()}</a
+				>
+			{:else if selected == m.careSyncMarketplace()}
+				{@html m.careStoreSlogan()}
+				<a href={localizeHref('/loja')} class="btn btn-sm btn-primary mt-3 w-fit rounded-full"
+					>{m.goToStore()}</a
+				>
+			{/if}
+		</div>
+	</div>
+</dialog>

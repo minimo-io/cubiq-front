@@ -20,6 +20,7 @@
 	"note": "Note",
 	"notes": "Notes",
 	"rental": "Equipment Rental",
+	"goToStore": "Go to store",
 
 	"latestNews": "Latest news",
 	"subscriveVia": "Subscribe via",
@@ -276,11 +277,16 @@
 	"caresyncFeature8Title": "Purchasing module",
 	"caresyncFeature8Desc": "All platform customers will have access to our store to buy equipment and parts at special prices.",
 
+	"careSyncFeaturedSlogan": "We manage and maintain all your equipment, providing full support to your employees to prevent any loss of productivity. <span class='text-base-content'>While you take care of your business, we take care of your IT.</span>",
+
 	"careHaaSFeature1Title": "Equipment installation and configuration",
 	"careHaaSFeature1Desc": "Receive each device fully configured with systems, software, security policies, and pre-testing, ensuring fast, standardized deployment and ready-to-use equipment for your team.",
+	"careHaaSSlogan": "Lock your equipment from anywhere with included maintenance. Choose the software you need and receive it already installed, without a large initial outlay and with active online support.",
 
 	"careHaaSFeature2Title": "Managed logistics",
 	"careHaaSFeature2Desc": "We deliver to all states with tracking, flexible scheduling, and structured reverse logistics for exchanges, returns, pickups, and equipment relocations in any region.",
+
+	"careStoreSlogan": "Get access to our equipment and parts store with significant discounts for Cubiq:Care platform customers. You will have accumulative cashback on all equipment purchases, extended warranty, and more.",
 
 	"careHaaSFeature3Title": "Parts repair and machine replacement",
 	"careHaaSFeature3Desc": "We offer repairs, quick technical analysis, and immediate replacement of equipment in case of failure, reducing downtime and ensuring operational continuity.",

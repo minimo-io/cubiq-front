@@ -12,8 +12,27 @@
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import { Product } from '$types/products.types';
 	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
+	import type { DashboardImageType } from '$types/dashboardImages.types';
 	// import StandardButton from '$lib/components/Buttons/StandardButton.svelte';
 	// import Hr from '$lib/components/Hr.svelte';
+
+	const dashboardImages: DashboardImageType[] = $state([
+		{
+			src: '/products/pay/cubiq-pay.webp',
+			alt: 'A screenshot of the Cubiq dashboard',
+			object: 'center'
+		},
+		{
+			src: '/products/pay/cubiq-pay-dashboard.webp',
+			alt: 'A screenshot of the Cubiq Pay dashboard',
+			object: 'left'
+		},
+		{
+			src: '/products/pay/cubiq-pay-dashboard-2.webp',
+			alt: 'A screenshot of the Cubiq Pay dashboard',
+			object: 'right'
+		}
+	]);
 </script>
 
 <Meta title={m.metaFinxTitle()} description={m.metaFinxDescription()} />
@@ -34,7 +53,7 @@
 	class="animate-slide-up-fade md:max-ww-[82%] relative -top-9 mx-auto mt-0 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:h-auto md:w-[100%] md:max-w-[1250px]"
 >
 	<!-- Payment image -->
-	<DashboardImagesOnly />
+	<DashboardImagesOnly images={dashboardImages} />
 </section>
 
 <main class="max-w-fw border-x-base-200 mx-auto md:border-x">

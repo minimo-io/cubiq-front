@@ -37,6 +37,7 @@
 	import type { Feature } from '$types/features.types';
 	import Features from '$lib/components/Bagity/Features.svelte';
 	import { conditionalSmoothScroll } from '$utils';
+	import { type DashboardImageType } from '$types/dashboardImages.types';
 
 	let isExpanded = $state(false);
 	let currentSwitcherSelection = $state(m.careSyncAssetManagment());
@@ -133,6 +134,24 @@
 			desc: m.careStoreFeature2Desc()
 		}
 	];
+
+	const dashboardImages: DashboardImageType[] = $state([
+		{
+			src: '/products/care/cubiq-care-dashboard-1.webp',
+			alt: 'A screenshot of the Cubiq dashboard',
+			object: 'left'
+		},
+		{
+			src: '/products/care/cubiq-care-dashboard-2.webp',
+			alt: 'A screenshot of the Cubiq Care dashboard',
+			object: 'right'
+		}
+		// {
+		// 	src: '/products/pay/cubiq-pay-dashboard-3.webp',
+		// 	alt: 'A screenshot of the Cubiq Care dashboard',
+		// 	object: 'right'
+		// }
+	]);
 </script>
 
 <Meta title={m.metaCareSyncTitle()} description={m.metaCareSyncDescription()} />
@@ -188,22 +207,37 @@
 
 			{#key currentSwitcherSelection}
 				<div
-					class="mx-auto mt-5 space-y-6 text-center"
+					class="mx-auto space-y-6 text-center md:mt-5"
 					in:fly={{ y: -20, duration: 100, delay: 100 }}
 				>
 					<span class="text-secondary py-4 font-sans text-base font-semibold tracking-wide">
 						<!-- Platform -->
 						{#if currentSwitcherSelection == m.careSyncAssetManagment()}
+							<div
+								class="mx-auto mb-10 hidden font-sans text-xl md:mb-0 md:block md:max-w-[70%] md:text-2xl"
+							>
+								{@html m.careSyncFeaturedSlogan()}
+							</div>
 							<Features featuresList={careFeaturesAssetManagment} noPaddingMobile={true} />
 						{/if}
 
 						<!-- HaaS -->
 						{#if currentSwitcherSelection == m.rental()}
+							<div
+								class="mx-auto mb-10 hidden font-sans text-xl md:mb-0 md:block md:max-w-[70%] md:text-2xl"
+							>
+								{@html m.careHaaSSlogan()}
+							</div>
 							<Features featuresList={careFeaturesHaaS} noPaddingMobile={true} />
 						{/if}
 
 						<!-- Store -->
 						{#if currentSwitcherSelection == m.careSyncMarketplace()}
+							<div
+								class="mx-auto mb-10 hidden font-sans text-xl md:mb-0 md:block md:max-w-[70%] md:text-2xl"
+							>
+								{@html m.careStoreSlogan()}
+							</div>
 							<Features featuresList={careFeaturesStore} noPaddingMobile={true} />
 						{/if}
 					</span>
@@ -217,7 +251,7 @@
 		class="animate-slide-up-fade relative -top-9 mx-auto mt-4 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:mt-0 md:h-auto md:w-[100%] md:max-w-[82%]"
 	>
 		<!-- Payment image -->
-		<DashboardImagesOnly />
+		<DashboardImagesOnly images={dashboardImages} />
 	</section>
 
 	<!-- Slogan -->
