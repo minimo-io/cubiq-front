@@ -21,6 +21,7 @@
 	"notes": "Notas",
 	"rental": "Alquiler de Equipos",
 	"goToStore": "Ir a la tienda",
+	"visitStore": "Visitar tienda",
 
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
@@ -134,10 +135,10 @@
 	"metaLabTitle": "Lab",
 	"metaLabDescription": "Un espacio para prototipar, explorar y llevar al límite lo posible con la tecnología",
 
-	"metaFinxTitle": "Pay",
+	"metaFinxTitle": "Cubiq Pay - Pagos instantáneos en BTC/USDT a través de Lightning Network",
 	"metaFinxDescription": "Pagos en tiempo real con Settlements Globales Instantáneas en USDT/BTC, vía Lightning Network. Ej.: Recibí en Argentina y liquidá en el exterior, al instante, con 100% de compliance y transparencia verificable.",
 
-	"metaCareSyncTitle": "Care",
+	"metaCareSyncTitle": "Cubiq Care - Gestión completa del ciclo de vida de TI para PyMEs",
 	"metaCareSyncDescription": "Todo lo que necesitas para ofrecer tus servicios de TI. Todo lo que los clientes necesitan para contratar a los mejores profesionales de TI. ITSM + Marketplace.",
 
 	"metaStoreTitle": "Cubiq Store: Headless E-Commerce",
@@ -302,7 +303,7 @@
 
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Si ya es cliente de Cubiq:Care, recibirá cashback acumulable en todas las compras de equipos y piezas realizadas a través de nuestra tienda.",
-	"careStoreSlogan": "Tenga acceso a nuestra tienda de equipos y piezas con importantes descuentos para clientes de la plataforma Cubiq:Care. Tendrá un cashback acumulable en todas las compras de equipos, garantía extendida y mucho más.",
+	"careStoreSlogan": "Tenga acceso a nuestra tienda de equipos y piezas con importantes descuentos para clientes de la plataforma Cubiq:Care.",
 
 	"finxPayMainTitle": "Pagos globales en tiempo real con seguridad y enfoque en América Latina",
 	"finxPayMainSubtitle": "Recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, en tu billetera, con transparencia verificable",

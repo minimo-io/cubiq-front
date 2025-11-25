@@ -1,3 +1,4 @@
+<!-- src/lib/components/blog/regularPosts.svelte -->
 <script lang="ts">
 	import type { Post } from '$lib/type/blog.types';
 	import { posts } from '$lib/data/posts';

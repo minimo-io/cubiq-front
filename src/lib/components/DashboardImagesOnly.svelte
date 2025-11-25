@@ -2,7 +2,7 @@
 	import type { DashboardImageType } from '$types/dashboardImages.types';
 	import { fade } from 'svelte/transition';
 
-	let { images }: { images: DashboardImageType[] } = $props();
+	let { images, noMargins }: { images: DashboardImageType[]; noMargins?: boolean } = $props();
 
 	let currentIndex = $state(0);
 	let intervalId;
@@ -28,7 +28,10 @@
 </script>
 
 <div
-	class="dark:ring-base-200 ring-base-300 mx-3 mt-5 rounded-2xl bg-black p-2 ring-1 ring-inset md:mx-0 dark:bg-black"
+	class={[
+		'dark:ring-base-200 ring-base-300 rounded-2xl bg-black p-2 ring-1 ring-inset md:mx-0 dark:bg-black',
+		noMargins ? '' : 'mx-3 mt-5'
+	]}
 >
 	<div
 		class="dark:ring-base-300 ring-base-300 relative isolate rounded-xl bg-black ring-1 dark:bg-slate-950"

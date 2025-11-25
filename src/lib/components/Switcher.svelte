@@ -58,12 +58,12 @@
 			</span>
 		</button>
 	{/each}
-	<button
-		class="btn btn-sm rounded-circle absolute -top-3 right-0 z-50 m-0 rounded-full bg-black p-0"
-		onclick={() => dialog?.showModal()}
+	<a
+		href={localizeHref('/loja')}
+		class="btn btn-sm border-primary/50 rounded-circle hover:bg-primary absolute -top-6 -right-4 z-50 rounded-full border bg-[#1A0402] font-sans tracking-wider hover:opacity-100"
 	>
-		<Info />
-	</button>
+		{m.visitStore()}
+	</a>
 </div>
 
 <!-- Mobile -->

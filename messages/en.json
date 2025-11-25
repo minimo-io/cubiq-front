@@ -21,6 +21,7 @@
 	"notes": "Notes",
 	"rental": "Equipment Rental",
 	"goToStore": "Go to store",
+	"visitStore": "Visit store",
 
 	"latestNews": "Latest news",
 	"subscriveVia": "Subscribe via",
@@ -133,13 +134,13 @@
 	"metaLabTitle": "Lab",
 	"metaLabDescription": "A space to prototype, play, and push the edge of what's possible with technology",
 
-	"metaFinxTitle": "Pay",
+	"metaFinxTitle": "Cubiq Pay - Instant BTC/USDT payments via Lightning Network",
 	"metaFinxDescription": "Real-time payments with Instant Global Settlements in USDT/BTC via Lightning Network. Eg. Receive in Argentina and settle abroad, instantly, with 100% compliance and verifiable transparency.",
 
-	"metaCareSyncTitle": "Care",
+	"metaCareSyncTitle": "Care - Complete IT lifecycle management for SMEs",
 	"metaCareSyncDescription": "Everything you need to provide your IT services. Everything clients need to hire the best IT professionals. ITSM + Marketplace.",
 
-	"metaStoreTitle": "Cubiq Store: Headless E-Commerce",
+	"metaStoreTitle": "Cubiq Store - Tailor-made Headless E-Commerce",
 	"metaStoreDescription": "",
 
 	"careSyncSlogan": "Take care of your business, \nwe take care of your IT",
@@ -286,7 +287,7 @@
 	"careHaaSFeature2Title": "Managed logistics",
 	"careHaaSFeature2Desc": "We deliver to all states with tracking, flexible scheduling, and structured reverse logistics for exchanges, returns, pickups, and equipment relocations in any region.",
 
-	"careStoreSlogan": "Get access to our equipment and parts store with significant discounts for Cubiq:Care platform customers. You will have accumulative cashback on all equipment purchases, extended warranty, and more.",
+	"careStoreSlogan": "Get access to our equipment and parts store with significant discounts for Cubiq:Care platform customers.",
 
 	"careHaaSFeature3Title": "Parts repair and machine replacement",
 	"careHaaSFeature3Desc": "We offer repairs, quick technical analysis, and immediate replacement of equipment in case of failure, reducing downtime and ensuring operational continuity.",

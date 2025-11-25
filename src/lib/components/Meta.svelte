@@ -17,7 +17,11 @@
 	const pageTitle = $derived(() => {
 		const baseTitle = m.metaBaseTitle(); // Your site title from Paraglide
 		if (!title) return baseTitle;
-		return `${title} - ${baseTitle}`;
+		if (title.includes('-')) {
+			return title;
+		} else {
+			return `${title} - ${baseTitle}`;
+		}
 	});
 
 	const pageDescription = $derived(() => {

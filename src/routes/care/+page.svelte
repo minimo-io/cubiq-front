@@ -214,7 +214,7 @@
 						<!-- Platform -->
 						{#if currentSwitcherSelection == m.careSyncAssetManagment()}
 							<div
-								class="mx-auto mb-10 hidden font-sans text-xl md:mb-0 md:block md:max-w-[70%] md:text-2xl"
+								class="text-accent mx-auto mb-10 hidden font-sans text-xl font-medium md:mb-0 md:block md:max-w-[70%] md:text-2xl"
 							>
 								{@html m.careSyncFeaturedSlogan()}
 							</div>

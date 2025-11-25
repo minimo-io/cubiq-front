@@ -20,6 +20,7 @@
 	"notes": "Notas",
 	"rental": "Locação de Equipamentos",
 	"goToStore": "Ir para a loja",
+	"visitStore": "Visitar loja",
 
 	"loggingIn": "Entrando...",
 	"platform": "Plataforma",
@@ -133,13 +134,13 @@
 	"metaLabTitle": "Lab",
 	"metaLabDescription": "Um espaço para prototipar, explorar e expandir os limites do que é possível com a tecnologia",
 
-	"metaFinxTitle": "Pay",
+	"metaFinxTitle": "Cubiq Pay - Pagamentos instantâneos em BTC/USDT via Lightning Network",
 	"metaFinxDescription": "Pagamentos em tempo real com Settlements Globais Instantâneos em USDT/BTC, via Lightning Network. Ex.: Receba no Brasil e liquide no exterior, no instante, com 100% de compliance e transparência verificável",
 
-	"metaCareSyncTitle": "Care",
+	"metaCareSyncTitle": "Cubiq Care - Gestão completa do ciclo de vida de TI para PMEs",
 	"metaCareSyncDescription": "Tudo o que você precisa para fornecer seus serviços de TI. Tudo o que os clientes precisam para contratar os melhores profissionais de TI. ITSM + Marketplace.",
 
-	"metaStoreTitle": "Cubiq Store: Headless E-Commerce",
+	"metaStoreTitle": "Cubiq Store - E-Commerce Headless Sob Medida",
 	"metaStoreDescription": "",
 
 	"careSyncSlogan": "Você cuide da sua empresa, \na gente cuida da sua TI",
@@ -279,7 +280,7 @@
 	"caresyncFeature8Title": "Módulo de compras",
 	"caresyncFeature8Desc": "Todos os clientes da plataforma terão acesso à nossa loja para comprar equipamentos e peças a preços especiais.",
 
-	"careSyncFeaturedSlogan": "Gerenciamos e mantemos todos os seus equipamentos, oferecendo suporte completo aos seus colaboradores. Evite qualquer perda de produtividade, <span class='text-base-content'>enquanto você cuida da sua empresa, a gente cuida da sua TI.</span>",
+	"careSyncFeaturedSlogan": "Gerenciamos e mantemos todos os seus equipamentos, com suporte completo aos seus colaboradores. <span class='text-base-content'>Enquanto você cuida da sua empresa, a gente cuida da sua TI.</span>",
 
 	"careHaaSFeature1Title": "Instalação e configuração dos equipamentos",
 	"careHaaSFeature1Desc": "Receba cada equipamento totalmente configurado com sistemas, softwares, políticas de segurança e testes prévios, garantindo implantação rápida, padronizada e pronta para uso pela sua equipe.",
@@ -303,7 +304,7 @@
 
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Se você já é cliente Cubiq:Care terá um cashback acumulável em todas as compras de equipamentos e peças realizadas através da nossa loja.",
-	"careStoreSlogan": "Tenha acesso à nossa loja de equipamentos e peças com descontos importantes para clientes da plataforma Cubiq:Care. Terá um cashback acumulável em todas as compras de equipamentos, garantia estendida e mais.",
+	"careStoreSlogan": "Tenha acesso à nossa loja de equipamentos e peças com descontos importantes para clientes da plataforma Cubiq:Care.",
 
 	"finxPayMainTitle": "Pagamentos globais em tempo real com segurança",
 	"finxPayMainSubtitle": "Receba USDT/BTC desde qualquer lugar do mundo e liquide no instante, na sua carteira, com transparência verificável",
