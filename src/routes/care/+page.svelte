@@ -185,7 +185,7 @@
 	<!-- <CarePricing /> -->
 
 	<!-- Diferentials -->
-	<div id="more" class="border-base-200 Xborder-t mb-4 md:border-b">
+	<div id="more" class="border-base-200 md:mb-4 md:border-b">
 		<section class="max-w-fw mx-auto">
 			<div class=" mt-5 mb-5 flex justify-center">
 				<div
@@ -198,7 +198,7 @@
 
 	<div class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto">
 		<!-- Switcher desktop -->
-		<div class="max-w-fw relative -top-2 mx-auto pt-4 md:-top-10 md:block">
+		<div class="max-w-fw relative -top-2 mx-auto pt-0 md:-top-10 md:block md:pt-4">
 			<Switcher
 				options={[m.careSyncAssetManagment(), m.rental(), m.careSyncMarketplace()]}
 				bind:selected={currentSwitcherSelection}
