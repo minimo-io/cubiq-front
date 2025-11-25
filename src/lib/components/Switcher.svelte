@@ -1,3 +1,4 @@
+<!-- src/lib/components/Switcher.svelte -->
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 
@@ -7,6 +8,24 @@
 		selected = option;
 		onChange?.(option);
 	}
+
+	let isOpen = $state(false);
+	let dropdownRef = $state<HTMLDivElement>();
+
+	function handleClickOutside(event: MouseEvent) {
+		if (dropdownRef && !dropdownRef.contains(event.target as Node)) {
+			isOpen = false;
+		}
+	}
+
+	$effect(() => {
+		if (isOpen) {
+			document.addEventListener('click', handleClickOutside);
+		}
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
 <div class="bg-base-200 relative hidden items-center gap-0 rounded-full p-1 md:inline-flex">
@@ -31,14 +50,38 @@
 	{/each}
 </div>
 
-<div class="relative -top-8 mt-4 w-full px-4 md:-top-0 md:hidden">
-	<select
-		class="select select-lg bg-primary select-primary flex w-full justify-center rounded-xl text-center font-sans text-[18px] font-black"
-		bind:value={selected}
-		onchange={() => onChange?.(selected)}
-	>
-		{#each options as option}
-			<option value={option} class="justify-center text-center font-normal">{option}</option>
-		{/each}
-	</select>
+<div class="relative -top-8 mt-4 w-full px-4 md:-top-0 md:hidden" bind:this={dropdownRef}>
+	<div class="dropdown dropdown-end w-full">
+		<button
+			class="select select-lg select-primary flex w-full items-center justify-between rounded-xl text-center font-sans text-[18px] font-black transition-colors {isOpen
+				? 'bg-primary/30'
+				: 'bg-primary/10'}"
+			onclick={() => (isOpen = !isOpen)}
+		>
+			<span class="flex-1">{selected}</span>
+		</button>
+		{#if isOpen}
+			<ul
+				class="dropdown-content menu bg-base-100 rounded-box border-base-300 z-50 mt-2 w-full border shadow-lg"
+			>
+				{#each options as option}
+					<li>
+						<button
+							class="hover:bg-primary/20 active:bg-primary/30 justify-center rounded-lg py-3 text-center font-sans text-lg font-normal {selected ===
+							option
+								? 'bg-primary/10 font-semibold'
+								: ''}"
+							onclick={() => {
+								selected = option;
+								isOpen = false;
+								onChange?.(selected);
+							}}
+						>
+							{option}
+						</button>
+					</li>
+				{/each}
+			</ul>
+		{/if}
+	</div>
 </div>

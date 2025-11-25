@@ -10,7 +10,74 @@
 	import Meta from '$lib/components/Meta.svelte';
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
+	import { type Feature } from '$types/features.types';
 	import { Product } from '$types/products.types';
+	import {
+		Blocks,
+		BrainCircuit,
+		ChartNoAxesCombined,
+		Cpu,
+		Glasses,
+		Layers,
+		MessageCircleHeart,
+		ShoppingCart
+	} from '@lucide/svelte';
+
+	// Define features based on product
+	const bagityFeatures: Feature[] = [
+		{
+			icon: Cpu,
+			title: m.bagityFeature1Title(),
+			desc: m.bagityFeature1Desc(),
+			pill: null
+		},
+		{
+			icon: Glasses,
+			title: m.bagityFeature2Title(),
+			desc: m.bagityFeature2Desc(),
+			pill: null
+		},
+		{
+			icon: BrainCircuit,
+			title: m.bagityFeature8Title(),
+			desc: m.bagityFeature8Desc(),
+			pill: {
+				text: m.prototyping(),
+				color: 'primary-transparent',
+				customCss: '!px-3'
+			}
+		},
+		{
+			icon: MessageCircleHeart,
+			title: m.bagityFeature5Title(),
+			desc: m.bagityFeature5Desc(),
+			pill: null
+		},
+		{
+			icon: Layers,
+			title: m.bagityFeature7Title(),
+			desc: m.bagityFeature7Desc(),
+			pill: null
+		},
+		{
+			icon: ChartNoAxesCombined,
+			title: m.bagityFeature4Title(),
+			desc: m.bagityFeature4Desc(),
+			pill: null
+		},
+		{
+			icon: Blocks,
+			title: m.bagityFeature3Title(),
+			desc: m.bagityFeature3Desc(),
+			pill: null
+		},
+		{
+			icon: ShoppingCart,
+			title: m.bagityFeature6Title(),
+			desc: m.bagityFeature6Desc(),
+			pill: null
+		}
+	];
 </script>
 
 <Meta title={m.metaStoreTitle()} description={m.metaStoreDescription()} />
@@ -106,7 +173,7 @@
 		</section>
 	</div>
 
-	<Features />
+	<Features featuresList={bagityFeatures} />
 
 	<Slogan text={m.bagitySlogan()} />
 	<ServiceOrders />

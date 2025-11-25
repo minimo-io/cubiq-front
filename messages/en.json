@@ -19,11 +19,13 @@
 	"close": "Close",
 	"note": "Note",
 	"notes": "Notes",
+	"rental": "Equipment Rental",
 
 	"latestNews": "Latest news",
 	"subscriveVia": "Subscribe via",
 	"contactSupport": "Contact Support",
 	"saveChanges": "Save Changes",
+	"requestQuotation": "Request a quote",
 
 	"refresh": "Refresh",
 	"searchPlaceholder": "Search for tools and commands...",
@@ -74,7 +76,7 @@
 
 	"heroContentCareSyncOLD": "Platform for <span class='text-base-content opacity-80'>Predictive Maintenance</span> and Asset Management (ITSM + ITAM) <span class='text-base-content opacity-80'>for IT professionals and SMEs</span> — with AI applied to Real-Time Monitoring, Knowledge-Base and Client Marketplace.",
 
-	"heroContentCareSync": "Complete IT Lifecycle Management for growing SMEs — featuring  <span class='text-base-content opacity-80'>Hardware-as-a-Service (HaaS)</span>, Managed Technical Support, and Predictive Maintenance powered by  <span class='text-base-content opacity-80'>AI real-time diagnostics</span>.",
+	"heroContentCareSync": "Complete IT lifecycle management for growing SMEs — integrating <span class='text-base-content opacity-80'>Managed IT asset management</span>, <span class='text-base-content opacity-80'>Hardware-as-a-Service (HaaS/Rental)</span>, and <span class='text-base-content opacity-80'>Predictive maintenance</span> powered by real-time AI diagnostics.",
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>Tailored Premium E-Commerce</span>: We customize without limits — Design, UX, and Features — with integrated AI, scalable security, and <span class='text-base-content opacity-80'>express checkout</span> via <a href='/finx' class='text-primary font-medium'>Cubiq Pay</a> (PIX, Boleto, Card, and Bitcoin). <span class='text-base-content opacity-80'>Predictable plans</span> from $20/month or <span class='text-base-content opacity-80'>Store Pro with no upfront costs</span>.",
 
@@ -139,7 +141,7 @@
 	"metaStoreTitle": "Cubiq Store: Headless E-Commerce",
 	"metaStoreDescription": "",
 
-	"careSyncSlogan": "Take care of your company, \nwe’ll take care of your IT",
+	"careSyncSlogan": "Take care of your business, \nwe take care of your IT",
 
 	"loginYourEmail": "Your email...",
 	"loginYourPassword": "Your password...",
@@ -158,52 +160,12 @@
 
 	"careSyncAssetManagment": "Asset Management",
 	"careSyncLearning": "Learning",
-	"careSyncMarketplace": "Marketplace",
+	"careSyncMarketplace": "Integrated Store",
 	"careSyncPredictiveSoftware": "Predictive software",
 	"careSyncAuto": "For businesses",
 	"careSyncManaged": "For clients",
 
 	"careSyncIdealFor": "IDEAL FOR",
-
-	"careSyncAutoDesc": "We offer an <span class='text-base-content opacity-80'>ITSM + Client Marketplace platform</span> for companies that provide IT services or want internal control of their assets. Modules include Asset, Service, and Client Management, Billing, Alerts, and more.",
-
-	"careSyncManagedDesc": "Find IT professionals validated by the <span class='text-base-content opacity-80'>Cubiq Care</span> platform. Register for free, find your trusted professional, and request repair or maintenance services on-demand, with tracking, from the bests!",
-
-	"careSyncAutoItem0Title": "Full Reports & Dashboards:",
-	"careSyncAutoItem0Desc": "Get an overview of your IT assets. Historical trends in usage, services, and costs.",
-	"careSyncAutoItem1Title": "Service Orders:",
-	"careSyncAutoItem1Desc": "Create and track maintenance requests.",
-	"careSyncAutoItem2Title": "Preventive Maintenance:",
-	"careSyncAutoItem2Desc": "Schedule maintenance and repair requests for your IT park through the system. Receive the quote and track progress on each equipment's record or via QR Code.",
-	"careSyncAutoItem3Title": "Pay‑Per‑Use:",
-	"careSyncAutoItem3Desc": "Only pay for the services you need, per device, contracted directly through the platform—like Continuity Insurance, Predictive Monitoring, and all CareSync services.",
-	"careSyncAutoItem4Title": "Tagging:",
-	"careSyncAutoItem4Desc": "Generate and print QR codes or barcodes directly from the platform to physically identify each device and share its service history.",
-	"careSyncAutoItem5Title": "On‑Demand Predictive Monitoring:",
-	"careSyncAutoItem5Desc": "Anomaly detection and failure prediction with our AI trained.",
-	"careSyncAutoItem6Title": "On‑Demand Remote Support:",
-	"careSyncAutoItem6Desc": "Online technical assistance, preventive maintenance, and troubleshooting.",
-	"careSyncAutoItem7Title": "Procurement & Rentals:",
-	"careSyncAutoItem7Desc": "Access certified equipment on demand, contracted through the platform.",
-	"careSyncAutoItem8Title": "Open API:",
-	"careSyncAutoItem8Desc": "You can connect CareSync to other systems your company already uses.",
-
-	"careSyncManagedItem0Title": "360° Management:",
-	"careSyncManagedItem0Desc": "We proactively manage, monitor, and maintain your IT park, covering both leased/rented equipment and your own equipment.",
-	"careSyncManagedItem1Title": "Flexibility:",
-	"careSyncManagedItem1Desc": "Annual, monthly contract plans, and subscription/rental plans by day, month, or year, with everything included.",
-	"careSyncManagedItem2Title": "24/7 Service and Support:",
-	"careSyncManagedItem2Desc": "Remote support, on-site at the company or home office, preventive maintenance, and troubleshooting.",
-	"careSyncManagedItem3Title": "Tagging:",
-	"careSyncManagedItem3Desc": "We physically tag each device with QR codes/barcodes, logging every maintenance action. Use them to identify each device and view its performance & service history.",
-	"careSyncManagedItem4Title": "Predictive Monitoring:",
-	"careSyncManagedItem4Desc": "Anomaly detection and failure prediction with our AI trained.",
-	"careSyncManagedItem5Title": "Continuity Insurance:",
-	"careSyncManagedItem5Desc": "Receive a replacement device immediately while yours is under maintenance, ensuring your operations never stop (in selected cities).",
-	"careSyncManagedItem6Title": "Reports & Dashboards:",
-	"careSyncManagedItem6Desc": "Get service reports, costs, and performance history, report events, and track our management through our Dashboards.",
-	"careSyncManagedItem7Title": "Procurement & Rentals:",
-	"careSyncManagedItem7Desc": "Rent or purchase certified equipment with special discounts for Managed plan clients.",
 
 	"careSyncYouControl": "You in control",
 	"careSyncWeTakeCare": "We take care of everything",
@@ -278,30 +240,62 @@
 	"whyUseCare": "Platform features",
 
 	"findTechnician": "Find Technician",
+	"caresyncFeature01Title": "Managed IT asset management",
+	"caresyncFeature01Desc": "We track the complete lifecycle of your equipment. From acquisition and technical assistance to final disposal, we offer real-time monitoring and full control via a dashboard.",
 
-	"caresyncFeature1Title": "Monitoring Dashboards",
-	"caresyncFeature1Desc": "If you've hired an IT professional, track their management through our dashboards. And if you're a provider, generate cost, service, and performance reports for your clients!",
+	"caresyncFeature02Title": "Remote technical support",
+	"caresyncFeature02Desc": "No matter where your employees are — in Brazil or abroad — we provide fast incident resolution and user support to prevent productivity loss.",
 
-	"caresyncFeature2Title": "Fixed and Predictable Costs",
-	"caresyncFeature2Desc": "We don't charge commissions from professionals or Marketplace clients. Our model is simple: fixed and affordable costs, aligned with our mission to improve the IT world!",
+	"caresyncFeature03Title": "Scheduled preventive maintenance",
+	"caresyncFeature03Desc": "Through the proactive execution of scheduled maintenance for each asset, we significantly reduce the risk of failures, ensuring your team's productivity.",
+
+	"caresyncFeature04Title": "System backup and recovery",
+	"caresyncFeature04Desc": "To give you peace of mind we perform secure backups so that, in case of a failure, the system can be recovered cleanly with secure restoration and reinstallation.",
+
+	"caresyncFeature1Title": "Monitoring dashboards",
+	"caresyncFeature1Desc": "Monitor our entire management through our dashboards. Generate reports on costs, services and performance, ensuring full transparency!",
+
+	"caresyncFeature2Title": "Fixed and predictable costs",
+	"caresyncFeature2Desc": "We don't charge commissions from either professionals or Marketplace customers. Our model is simple: fixed, affordable costs aligned with our mission to improve the IT world!",
 
 	"caresyncFeature3Title": "Technicians + Clients Marketplace",
-	"caresyncFeature3Desc": "Whether you're an IT professional or a client, the Cubiq Care Community and Marketplace are available 24/7 to offer or hire your services.",
+	"caresyncFeature3Desc": "Whether you are an IT professional or a customer, the Cubiq Care Community and Marketplace are available 24/7 to offer or hire services.",
 
-	"caresyncFeature4Title": "24/7 Predictive Monitoring",
-	"caresyncFeature4Desc": "Monitoring, anomaly detection, and failure prediction with our Cubiq-trained AI to prevent interruptions and generate preventive alerts.",
+	"caresyncFeature4Title": "24/7 predictive monitoring",
+	"caresyncFeature4Desc": "By installing our predictive monitoring software you get 24/7 coverage for anomaly detection and failure prediction with our AI trained to prevent interruptions and generate proactive alerts.",
 
-	"caresyncFeature5Title": "Inventory and Services Control",
-	"caresyncFeature5Desc": "Control your clients' asset inventory through our dashboards and complete ITSM, with service management, alerts, maintenance scheduling, and dashboard and email reports of completed work.",
+	"caresyncFeature5Title": "Inventory control",
+	"caresyncFeature5Desc": "Manage your asset inventory through our dashboards, with service management, alerts, maintenance scheduling and email reports containing a monthly summary.",
 
-	"caresyncFeature6Title": "Knowledge Base",
-	"caresyncFeature6Desc": "We have a knowledge base for IT technicians, with tutorials and courses for you to evolve in your professional journey and offer excellent service to your clients. So, problems opening a case? Look for the video in the base.",
+	"caresyncFeature6Title": "Knowledge base",
+	"caresyncFeature6Desc": "We provide a knowledge base for IT technicians with tutorials and courses so you can advance in your professional journey and deliver great service to your clients. Having trouble opening a chassis? Check the video in the knowledge base.",
 
-	"caresyncFeature7Title": "Billing Module",
-	"caresyncFeature7Desc": "You'll not only be able to send automated reports of completed work and alerts to your clients, but also count on a billing and expense control module, integrated with Cubiq Pay.",
+	"caresyncFeature7Title": "Billing module",
+	"caresyncFeature7Desc": "You can not only send automated reports of completed jobs and alerts to your clients, but also rely on a billing and expense-control module integrated with Cubiq Pay.",
 
-	"caresyncFeature8Title": "Purchase Module",
-	"caresyncFeature8Desc": "Both IT professionals on the platform and clients will have access to our store to buy equipment and parts at special prices, exclusive to community members!",
+	"caresyncFeature8Title": "Purchasing module",
+	"caresyncFeature8Desc": "All platform customers will have access to our store to buy equipment and parts at special prices.",
+
+	"careHaaSFeature1Title": "Equipment installation and configuration",
+	"careHaaSFeature1Desc": "Receive each device fully configured with systems, software, security policies, and pre-testing, ensuring fast, standardized deployment and ready-to-use equipment for your team.",
+
+	"careHaaSFeature2Title": "Managed logistics",
+	"careHaaSFeature2Desc": "We deliver to all states with tracking, flexible scheduling, and structured reverse logistics for exchanges, returns, pickups, and equipment relocations in any region.",
+
+	"careHaaSFeature3Title": "Parts repair and machine replacement",
+	"careHaaSFeature3Desc": "We offer repairs, quick technical analysis, and immediate replacement of equipment in case of failure, reducing downtime and ensuring operational continuity.",
+
+	"careHaaSFeature4Title": "Flexible terms",
+	"careHaaSFeature4Desc": "Highly flexible contracts, from a single day of use to long-term projects. We scale according to your demand, enabling complete fleets, expansions, and adjustments without bureaucracy.",
+
+	"careHaaSFeature5Title": "Maintenance included",
+	"careHaaSFeature5Desc": "Full technical support included, with ticket creation, expert guidance, preventive maintenance, system updates, and continuous monitoring of equipment performance.",
+
+	"careHaaSFeature6Title": "No upfront investment",
+	"careHaaSFeature6Desc": "Eliminate large upfront expenses, preserve cash flow and credit lines, avoid tying up capital in non-essential investments, and avoid travel or research needed to buy equipment.",
+
+	"careStoreFeature2Title": "Cashback for Care customers",
+	"careStoreFeature2Desc": "If you are already a Cubiq:Care customer, you will receive cumulative cashback on all equipment and parts purchases made through our store.",
 
 	"finxPayMainTitle": "Real-time global payments with security and focus on Latin America",
 	"finxPayMainSubtitle": "Receive USDT/BTC from anywhere in the world and settle instantly, in your wallet, with verifiable transparency",

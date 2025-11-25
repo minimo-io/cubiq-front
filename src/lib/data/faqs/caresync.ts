@@ -17,9 +17,9 @@ export const caresyncFaqs: Record<string, Faq[]> = {
 				"It's very simple. If you are an IT professional, the cost is and will always be fixed and predictable. Each user account has a predefined cost and allows unlimited equipment registration. If you are a client, hire any IT professional directly through the platform, with a service cost that is also fixed, applied only when the order is completed (see the price tables)."
 		},
 		{
-			question: 'What is the Marketplace?',
+			question: 'What is the Cubiq:Care store?',
 			answer:
-				'Cubiq Care is more than an ITSM system. Our mission is to help IT professionals grow and to help clients who need services find the best technicians in their region or online.'
+				'Cubiq Care is more than an IT Asset Management service or Equipment Rental; our mission is to ensure that SMEs and Startups can focus on the core of their businesses. The safe purchase of equipment is often a problem to solve, which is why in the Cubiq:Care Store our customers get special discounts, security, and warranty.'
 		},
 		{
 			question: 'Can I buy equipment through the platform?',
@@ -59,9 +59,9 @@ export const caresyncFaqs: Record<string, Faq[]> = {
 				'Es muy simple. Si eres un profesional de TI, el costo es y siempre será fijo y predecible. Cada cuenta de usuario tiene un costo predefinido y permite el registro ilimitado de equipos. Si eres un cliente, contrata a cualquier profesional de TI directamente a través de la plataforma, con un costo de servicio también fijo, que se aplica solo cuando se completa la orden (consulta las tablas de precios).'
 		},
 		{
-			question: '¿Qué es el Marketplace?',
+			question: '¿Qué es la tienda de Cubiq:Care?',
 			answer:
-				'Cubiq Care es más que un sistema ITSM. Nuestra misión es ayudar a los profesionales de TI a crecer y a los clientes que necesitan servicios a encontrar a los mejores técnicos en su región o en línea.'
+				'Cubiq Care es más que un servicio de Gestión de Activos de TI o Alquiler de Equipos; nuestra misión es garantizar que las PyMEs y Startups puedan centrarse en el core de sus negocios. La compra segura de los equipos suele ser un problema a resolver, por eso en la Tienda Cubiq:Care nuestros clientes tienen descuentos especiales, seguridad y garantía.'
 		},
 		{
 			question: '¿Puedo comprar equipos a través de la plataforma?',
@@ -104,9 +104,9 @@ export const caresyncFaqs: Record<string, Faq[]> = {
 				'Bem simples. Se você é um profissional de TI, o custo é e sempre será fixo e previsível. Cada conta de usuário tem um custo predefinido e permite cadastro ilimitado de equipamentos. Se você é um cliente, contrate qualquer um dos profissionais de TI diretamente pela plataforma, com um custo de serviço também fixo só quando a ordem seja finalizada (veja as tabelas de preços).'
 		},
 		{
-			question: 'O que é o Marketplace?',
+			question: 'O que é a loja de Cubiq:Care?',
 			answer:
-				'Cubiq Care é mais que um sistema ITSM; nossa missão é ajudar os profissionais de TI a crescer e os clientes que precisam de serviços a encontrar os melhores técnicos na sua região ou online.'
+				'Cubiq Care é mais que um serviço de Gestão de ativos de TI ou Locação de Equipamentos; nossa missão é garantir que as PMEs e Startups consigam focar no core de sus negócios; e a compra segura dos equipamentos é frequentemente um problema resolver, por isso na Loja Cubiq:Care nossos clientes tem descontos especiáis, segurança e garantía.'
 		},
 		{
 			question: 'Posso comprar equipamentos pela plataforma?',

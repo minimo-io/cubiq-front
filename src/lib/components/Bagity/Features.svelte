@@ -3,129 +3,19 @@
 	import { m } from '$paraglide/messages';
 	import { Product } from '$types/products.types';
 	import Pill from '../Pill.svelte';
+	import type { Feature } from '$types/features.types';
 
 	let {
-		product = Product.STORE,
-		noPaddingMobile = false
-	}: { product?: Product; noPaddingMobile?: boolean } = $props();
+		noPaddingMobile = false,
+		featuresList
+	}: { noPaddingMobile?: boolean; featuresList: Feature[] } = $props();
 
 	// Reactive state for carousel
 	let currentIndex = $state(0);
 	let direction = $state(1); // 1 for next, -1 for prev
 
-	// Feature type definition using actual Pill types
-	type Feature = {
-		img: string;
-		title: string;
-		desc: string;
-		pill?: {
-			text: string;
-			color: 'light' | 'primary' | 'dark' | 'primary-transparent';
-			customCss: string;
-		} | null;
-	};
-
-	// Define features based on product
-	const bagityFeatures: Feature[] = [
-		{
-			img: '/feature-1.svg',
-			title: m.bagityFeature1Title(),
-			desc: m.bagityFeature1Desc(),
-			pill: null
-		},
-		{
-			img: '/feature-4.svg',
-			title: m.bagityFeature2Title(),
-			desc: m.bagityFeature2Desc(),
-			pill: null
-		},
-		{
-			img: '/feature-8.svg',
-			title: m.bagityFeature8Title(),
-			desc: m.bagityFeature8Desc(),
-			pill: {
-				text: m.prototyping(),
-				color: 'primary-transparent',
-				customCss: '!px-3'
-			}
-		},
-		{
-			img: '/feature-3.svg',
-			title: m.bagityFeature5Title(),
-			desc: m.bagityFeature5Desc(),
-			pill: null
-		},
-		{
-			img: '/feature-7.svg',
-			title: m.bagityFeature7Title(),
-			desc: m.bagityFeature7Desc(),
-			pill: null
-		},
-		{
-			img: '/feature-5.svg',
-			title: m.bagityFeature4Title(),
-			desc: m.bagityFeature4Desc(),
-			pill: null
-		},
-		{
-			img: '/feature-2.svg',
-			title: m.bagityFeature3Title(),
-			desc: m.bagityFeature3Desc(),
-			pill: null
-		},
-		{
-			img: '/feature-6.svg',
-			title: m.bagityFeature6Title(),
-			desc: m.bagityFeature6Desc(),
-			pill: null
-		}
-	];
-
-	const caresyncFeatures: Feature[] = [
-		{
-			img: '/feature-dashboard.svg',
-			title: m.caresyncFeature1Title(),
-			desc: m.caresyncFeature1Desc()
-		},
-		{
-			img: '/feature-5.svg',
-			title: m.caresyncFeature2Title(),
-			desc: m.caresyncFeature2Desc()
-		},
-		// {
-		// 	img: '/feature-community.svg',
-		// 	title: m.caresyncFeature3Title(),
-		// 	desc: m.caresyncFeature3Desc()
-		// },
-		{
-			img: '/feature-health.svg',
-			title: m.caresyncFeature4Title(),
-			desc: m.caresyncFeature4Desc()
-		},
-		{
-			img: '/feature-8.svg',
-			title: m.caresyncFeature5Title(),
-			desc: m.caresyncFeature5Desc()
-		},
-		// {
-		// 	img: '/feature-book.svg',
-		// 	title: m.caresyncFeature6Title(),
-		// 	desc: m.caresyncFeature6Desc()
-		// },
-		{
-			img: '/feature-invoice.svg',
-			title: m.caresyncFeature7Title(),
-			desc: m.caresyncFeature7Desc()
-		},
-		{
-			img: '/feature-6.svg',
-			title: m.caresyncFeature8Title(),
-			desc: m.caresyncFeature8Desc()
-		}
-	];
-
 	// Computed properties using $derived
-	let features = $derived(product === Product.STORE ? bagityFeatures : caresyncFeatures);
+	let features = $derived(featuresList);
 	let isMobile = $state(false);
 	let itemsPerPage = $derived(isMobile ? 3 : 6);
 	let totalPages = $derived(Math.ceil(features.length / itemsPerPage));
@@ -196,13 +86,21 @@
 	>
 		<!-- Features container with animation -->
 		<div class="grid grid-cols-1 gap-12 overflow-hidden lg:grid-cols-2">
-			{#each currentPageFeatures as feature, i (feature.img)}
+			{#each currentPageFeatures as feature, i}
 				<div class="feature-item" in:fly={{ x: direction * 100, opacity: 0, duration: 150 }}>
 					<div class="flex-shrink-0">
-						<img src={feature.img} alt={`feature-${i + 1}`} />
+						{#if !feature.icon}
+							<img src={feature.img} alt={`feature-${i + 1}`} />
+						{:else}
+							<div
+								class="bg-primary flex h-15 w-15 items-center justify-center rounded-full md:h-22 md:w-22"
+							>
+								<feature.icon strokeWidth="1" class="text-black md:h-8 md:w-8" />
+							</div>
+						{/if}
 					</div>
 					<div class="feature-item-desc text-left">
-						<h3 class="text-base-content relative">
+						<h3 class="text-base-content relative leading-tight">
 							{#if feature.pill}
 								<div class="absolute -top-6 -right-1 scale-80 md:-top-3 md:right-5">
 									<Pill

@@ -19,11 +19,13 @@
 	"close": "Cerrar",
 	"note": "Nota",
 	"notes": "Notas",
+	"rental": "Alquiler de Equipos",
 
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
 	"contactSupport": "Entre en contacto",
 	"saveChanges": "Guardar cambios",
+	"requestQuotation": "Solicite un presupuesto",
 
 	"refresh": "Actualizar",
 	"searchPlaceholder": "Buscar herramientas y comandos...",
@@ -66,7 +68,7 @@
 
 	"heroContentHomeXXXX": "Somos una <span class='text-base-content opacity-80'>Plataforma B2B de Productos Digitales</span> impulsados por IA para Startups y PyMes, y un <span class='text-base-content opacity-80'>Laboratorio de Desarrollo</span> enfocado en la Innovación sobre protocolos permissionless y soluciones a medida.",
 
-	"heroContentHome": "Somos una <span class='text-base-content opacity-80'>Plataforma B2B de Productos Digitales</span> para startups y pymes, y un <span class='text-base-content opacity-80'>Laboratorio de Desarrollo</span> centrado en soluciones empresariales a medida y en la innovación sobre protocolos permissionless.",
+	"heroContentHome": "Somos una <span class='text-base-content opacity-80'>Plataforma B2B de Productos Digitales</span> para Startups y PyMEs, y un <span class='text-base-content opacity-80'>Laboratorio de Desarrollo</span> centrado en soluciones empresariales a medida y en la innovación sobre protocolos permissionless.",
 
 	"heroContentHome1": "Somos una <span class='text-base-content opacity-80'>Plataforma de Productos Digitales</span> y un Laboratorio de Desarrollo enfocados en la Innovación en las áreas de <span class='text-base-content opacity-80'>E-Commerce, Pagos X-Border en Tiempo Real, IA y Máquinas (IoT)</span>.",
 
@@ -74,7 +76,7 @@
 
 	"heroContentCareSyncXXX": "Plataforma de <span class='text-base-content opacity-80'>Mantenimiento Predictivo</span> y Gestión de Activos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profesionales de TI y PyMEs</span> — con IA aplicada al Monitoreo en Tiempo Real, Base de Conocimiento y Marketplace de Clientes.",
 
-	"heroContentCareSync": "Gestión completa del ciclo de vida TI para Pymes en crecimiento — integrando <span class='text-base-content opacity-80'>Hardware como Servicio (HaaS)</span>, <span class='text-base-content opacity-80'>Soporte Técnico Online</span>, y <span class='text-base-content opacity-80'>Mantenimiento predictivo</span> impulsado por diagnósticos de IA en tiempo real.",
+	"heroContentCareSync": "Gestión completa del ciclo de vida de TI para PyMEs en crecimiento — integrando <span class='text-base-content opacity-80'>Gestión tercerizada de activos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Servicio (HaaS/Alquiler)</span> y <span class='text-base-content opacity-80'>Mantenimiento predictivo</span> potenciado por diagnósticos de IA en tiempo real.",
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Personalizamos sin límites — Diseño, UX y Funcionalidades — con IA integrada, seguridad escalable y <span class='text-base-content opacity-80'>checkout exprés</span> (PIX, Boleto, Tarjeta y Bitcoin). <span class='text-base-content opacity-80'>Planes previsibles</span> desde $u999/mes o <span class='text-base-content opacity-80'>Store Pro sin costos iniciales</span>.",
 
@@ -102,9 +104,9 @@
 	"aboutUsTitleLeft": "SOBRE<br/>",
 	"aboutUsTitleRight": "CUBIQ",
 
-	"quote": "<span class='text-primary font-pixel text-5xl font-bold'>C</span>ubic ofrece tecnología de nivel empresarial en piezas modulares y eficientes <span class='font-bold'>— una plataforma, APIs y desarrollos a medida simples y confiables, diseñados para Startups & PyMes</span>. Nosotros nos encargamos de la tecnología; vos te concentrás en tu negocio.",
+	"quote": "<span class='text-primary font-pixel text-5xl font-bold'>C</span>ubic ofrece tecnología de nivel empresarial en piezas modulares y eficientes <span class='font-bold'>— una plataforma, APIs y desarrollos a medida simples y confiables, diseñados para Startups & PyMEs</span>. Nosotros nos encargamos de la tecnología; vos te concentrás en tu negocio.",
 
-	"aboutText": "<p><span class='fw-text-pixel'>S</span>omos una Plataforma de Productos Digitales verticalmente integrada y un <a href='/es/lab' class='fw-pixel !text-primary'>Laboratorio</a> de Desarrollo e Innovación enfocado en LATAM.</p><p><span class='fw-text-pixel'>O</span>frecemos una Plataforma Unificada de <span class='fw-pixel text-primary'>Productos</span> & <span class='fw-pixel text-primary'>APIs</span> enfocada en la innovación en las áreas de E-Commerce, Pagos Cross-Border con Liquidaciones Instantáneas BTC/USDT, e Inteligencia Artificial Aplicada al Monitoreo de Activos Físicos de TI.</p><p><span class='fw-text-pixel'>N</span>os especializamos en ofrecer soluciones tecnológicas avanzadas para Pymes, ayudándolas a dar el salto hacia el futuro con servicios premium a costos justos; al tiempo que impulsamos y <a href='/es/blog/presentando-la-plataforma-cubiq' class='fw-pixel !text-primary'>facilitamos la adopción de Bitcoin</a> por parte de nuestros clientes y colaboradores.</p><p><span class='fw-text-pixel'>C</span>reemos en la transparencia verificable de costos y en corregir las ineficiencias en las empresas a través de la tecnología.</p><p><span class='fw-text-pixel'>C</span>reemos en la tecnología que mejora la vida de las personas y los resultados empresariales.</p><p>Creemos que <a target='_blank' class='underline hover:opacity-50 !text-primary' href='https://youtube.com/watch?v=fgbBtnCvcDI'>IA es la nueva electricidad</a>, inteligencia que impulsa nuevas acciones y logros humanos. También creemos que el dinero es una de las consecuencias de crear excelentes productos y resolver los problemas de las personas y las empresas.</p><p><span class='fw-text-pixel'>S</span>omos eficientes y minimalistas. Construimos para el largo plazo. Apuntamos a crear sistemas de alto rendimiento con recursos optimizados. Usamos lo que funciona mejor, no reinventamos la rueda, ni cobramos por ello. Somos <a target='_blank' rel='nofollow noopener' href='https://a16z.com/the-techno-optimist-manifesto/' class='underline hover:opacity-50  !text-primary'>tecno-optimistas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> ¡Diseñamos, experimentamos, enviamos!</p><p><p><span class='fw-text-pixel'>E</span>xperimentamos con nuevas tecnologías en nuestro <a class='!text-primary font-pixel' href='/es/lab'>Laboratorio</a>. </p><p><span class='fw-text-pixel'>D</span>esde la integración de las APIs de Lightspark para Liquidaciones Instantáneas Internacionales vía Lightning Network, un Servidor MCP para permitir que LLMs hagan pedidos en nuestros clientes de E-Commerce — <a href='/es/store'>Store</a> — hasta herramientas de Pay-Per-Use para entusiastas de <a rel='nofollow noopener noreferrer' target='_blank' href='https://nostr.how/es/what-is-nostr' class='fw-pixel !text-primary'>Nostr</a>.</p>Algunos experimentos fallan, no se convierten en productos — sino en conocimiento adquirido en forma de herramientas y librerías para desarrolladores, diseños y <a href='/es/blog' class='!text-primary'>artículos</a>.</p><p>A veces las ideas no van más allá del papel — así que las dejamos madurar en el <a href='/en/lab' class='underline !text-primary'>Laboratorio de Ideas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> El stack.</p><p class='relative'><span class='fw-text-pixel'>E</span>l stack tecnológico de Cubiq es simple pero poderoso: <span class='!text-primary !mx-0 !font-sans font-bold'>Svelte</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>Figma</span> para el front-end, <span class='!text-primary !mx-0 !font-sans font-bold'>Claude</span> para vibe coding, <span class='!text-primary !mx-0 !font-sans font-bold'>NestJS</span> para nuestras APIs, <span class='!text-primary !mx-0 !font-sans font-bold'>Python</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Transformers.js</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Tensorflow.js</span> para IA, <span class='!text-primary !mx-0 !font-sans font-bold'>MicroPython</span> para sistemas embebidos, <span class='!text-primary !mx-0 !font-sans font-bold'>Docker</span> para containerización, <span class='!text-primary !mx-0 !font-sans font-bold'>Bitcoin</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>USDT</span> vía <span class='!text-primary !mx-0 !font-sans font-bold'>Lightning</span> para pagos, preservación y transmisión de valor, <span class='!text-primary !mx-0 !font-sans font-bold'>Vercel</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Render</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Cloudflare</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>Self-Hosting</span> para infraestructura cloud.</p><p><span class='fw-text-pixel'>A</span>poyamos <span class='!text-primary'>protocolos abiertos, globales y permissionless</span> (Bitcoin, MCP, Nostr, WebRTC, etc) & Self-Hosting & Home-Labbing.</p><p><span class='fw-text-pixel'>R</span>esolvemos nuestros propios problemas y los de nuestros socios usando tecnología — y de estas experiencias, creamos Productos y APIs de valor para el mundo real.</p><p><span class='fw-text-pixel'>N</span>os gusta trabajar junto a clientes con visión de futuro, ¡con optimistas!</p><p class='text-base-content font-sans font-bold italic'><span>//</span> OS.</p><p><span class='fw-text-pixel'>N</span>os alimentamos de código abierto, así que contribuimos al código abierto. Muchas de las librerías que creamos son gratuitas y abiertas. ¡A veces hasta proyectos completos!</p><p>¿Tenés una idea loca? Hablemos, nos va a encantar — <a href='https://www.linkedin.com/in/nicolas-erramuspe/' class='underline hover:opacity-50 !text-primary'>¡Contactanos!</a></p><p>¡Sé audaz, vamos a crear juntos el futuro!,<br /><i class='font-bold text-white'>~@Cubiq</i></p>",
+	"aboutText": "<p><span class='fw-text-pixel'>S</span>omos una Plataforma de Productos Digitales verticalmente integrada y un <a href='/es/lab' class='fw-pixel !text-primary'>Laboratorio</a> de Desarrollo e Innovación enfocado en LATAM.</p><p><span class='fw-text-pixel'>O</span>frecemos una Plataforma Unificada de <span class='fw-pixel text-primary'>Productos</span> & <span class='fw-pixel text-primary'>APIs</span> enfocada en la innovación en las áreas de E-Commerce, Pagos Cross-Border con Liquidaciones Instantáneas BTC/USDT, e Inteligencia Artificial Aplicada al Monitoreo de Activos Físicos de TI.</p><p><span class='fw-text-pixel'>N</span>os especializamos en ofrecer soluciones tecnológicas avanzadas para PyMEs, ayudándolas a dar el salto hacia el futuro con servicios premium a costos justos; al tiempo que impulsamos y <a href='/es/blog/presentando-la-plataforma-cubiq' class='fw-pixel !text-primary'>facilitamos la adopción de Bitcoin</a> por parte de nuestros clientes y colaboradores.</p><p><span class='fw-text-pixel'>C</span>reemos en la transparencia verificable de costos y en corregir las ineficiencias en las empresas a través de la tecnología.</p><p><span class='fw-text-pixel'>C</span>reemos en la tecnología que mejora la vida de las personas y los resultados empresariales.</p><p>Creemos que <a target='_blank' class='underline hover:opacity-50 !text-primary' href='https://youtube.com/watch?v=fgbBtnCvcDI'>IA es la nueva electricidad</a>, inteligencia que impulsa nuevas acciones y logros humanos. También creemos que el dinero es una de las consecuencias de crear excelentes productos y resolver los problemas de las personas y las empresas.</p><p><span class='fw-text-pixel'>S</span>omos eficientes y minimalistas. Construimos para el largo plazo. Apuntamos a crear sistemas de alto rendimiento con recursos optimizados. Usamos lo que funciona mejor, no reinventamos la rueda, ni cobramos por ello. Somos <a target='_blank' rel='nofollow noopener' href='https://a16z.com/the-techno-optimist-manifesto/' class='underline hover:opacity-50  !text-primary'>tecno-optimistas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> ¡Diseñamos, experimentamos, enviamos!</p><p><p><span class='fw-text-pixel'>E</span>xperimentamos con nuevas tecnologías en nuestro <a class='!text-primary font-pixel' href='/es/lab'>Laboratorio</a>. </p><p><span class='fw-text-pixel'>D</span>esde la integración de las APIs de Lightspark para Liquidaciones Instantáneas Internacionales vía Lightning Network, un Servidor MCP para permitir que LLMs hagan pedidos en nuestros clientes de E-Commerce — <a href='/es/store'>Store</a> — hasta herramientas de Pay-Per-Use para entusiastas de <a rel='nofollow noopener noreferrer' target='_blank' href='https://nostr.how/es/what-is-nostr' class='fw-pixel !text-primary'>Nostr</a>.</p>Algunos experimentos fallan, no se convierten en productos — sino en conocimiento adquirido en forma de herramientas y librerías para desarrolladores, diseños y <a href='/es/blog' class='!text-primary'>artículos</a>.</p><p>A veces las ideas no van más allá del papel — así que las dejamos madurar en el <a href='/en/lab' class='underline !text-primary'>Laboratorio de Ideas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> El stack.</p><p class='relative'><span class='fw-text-pixel'>E</span>l stack tecnológico de Cubiq es simple pero poderoso: <span class='!text-primary !mx-0 !font-sans font-bold'>Svelte</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>Figma</span> para el front-end, <span class='!text-primary !mx-0 !font-sans font-bold'>Claude</span> para vibe coding, <span class='!text-primary !mx-0 !font-sans font-bold'>NestJS</span> para nuestras APIs, <span class='!text-primary !mx-0 !font-sans font-bold'>Python</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Transformers.js</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Tensorflow.js</span> para IA, <span class='!text-primary !mx-0 !font-sans font-bold'>MicroPython</span> para sistemas embebidos, <span class='!text-primary !mx-0 !font-sans font-bold'>Docker</span> para containerización, <span class='!text-primary !mx-0 !font-sans font-bold'>Bitcoin</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>USDT</span> vía <span class='!text-primary !mx-0 !font-sans font-bold'>Lightning</span> para pagos, preservación y transmisión de valor, <span class='!text-primary !mx-0 !font-sans font-bold'>Vercel</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Render</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Cloudflare</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>Self-Hosting</span> para infraestructura cloud.</p><p><span class='fw-text-pixel'>A</span>poyamos <span class='!text-primary'>protocolos abiertos, globales y permissionless</span> (Bitcoin, MCP, Nostr, WebRTC, etc) & Self-Hosting & Home-Labbing.</p><p><span class='fw-text-pixel'>R</span>esolvemos nuestros propios problemas y los de nuestros socios usando tecnología — y de estas experiencias, creamos Productos y APIs de valor para el mundo real.</p><p><span class='fw-text-pixel'>N</span>os gusta trabajar junto a clientes con visión de futuro, ¡con optimistas!</p><p class='text-base-content font-sans font-bold italic'><span>//</span> OS.</p><p><span class='fw-text-pixel'>N</span>os alimentamos de código abierto, así que contribuimos al código abierto. Muchas de las librerías que creamos son gratuitas y abiertas. ¡A veces hasta proyectos completos!</p><p>¿Tenés una idea loca? Hablemos, nos va a encantar — <a href='https://www.linkedin.com/in/nicolas-erramuspe/' class='underline hover:opacity-50 !text-primary'>¡Contactanos!</a></p><p>¡Sé audaz, vamos a crear juntos el futuro!,<br /><i class='font-bold text-white'>~@Cubiq</i></p>",
 
 	"social": "Redes",
 	"developers": "Desarrolladores",
@@ -161,52 +163,12 @@
 
 	"careSyncAssetManagment": "Gestión de Activos",
 	"careSyncLearning": "Cursos online",
-	"careSyncMarketplace": "Marketplace",
+	"careSyncMarketplace": "Tienda Integrada",
 	"careSyncPredictiveSoftware": "Software predictivo",
 	"careSyncAuto": "Para empresas",
 	"careSyncManaged": "Para clientes",
 
 	"careSyncIdealFor": "IDEAL PARA",
-
-	"careSyncAutoDesc": "Ofrecemos una <span class='text-base-content opacity-80'>plataforma ITSM + Marketplace de clientes</span> para empresas que bridan servicios de TI o desean control interno de sus activos. Módulos de Gestión de Activos, Servicios y Clientes, Facturación, Alertas y más.",
-
-	"careSyncManagedDesc": "Encontrá profesionales de TI validados por la plataforma <span class='text-base-content opacity-80'>Cubiq Care</span>. Registrarte grátis, encontrá tu profesional de confianza y encargá servicios de reparación o mantenimiento, a-demanda, con seguimiento, ¡y de los mejores!",
-
-	"careSyncAutoItem0Title": "Informes y Paneles completos:",
-	"careSyncAutoItem0Desc": "Obtén una visión general de tus activos de TI. Tendencias históricas de uso, servicios y costos.",
-	"careSyncAutoItem1Title": "Órdenes de Servicio:",
-	"careSyncAutoItem1Desc": "Crea y realiza seguimiento de solicitudes de mantenimiento.",
-	"careSyncAutoItem2Title": "Mantenimiento Preventivo:",
-	"careSyncAutoItem2Desc": "Agende el mantenimiento y las solicitudes de reparación de su parque de TI a través del sistema. Reciba el presupuesto y siga el progreso en la ficha de cada equipo o mediante código QR.",
-	"careSyncAutoItem3Title": "Pay-Per-Use:",
-	"careSyncAutoItem3Desc": "Contrata solo los servicios que necesites, por equipo, directamente desde la plataforma—como Seguro de Continuidad, Monitoreo predictivo y todos los servicios de CareSync.",
-	"careSyncAutoItem4Title": "Tagging:",
-	"careSyncAutoItem4Desc": "Genera e imprime códigos QR o códigos de barras directamente desde la plataforma para identificar físicamente cada dispositivo y compartir su historial de servicios.",
-	"careSyncAutoItem5Title": "Monitoreo Predictivo On‑Demand:",
-	"careSyncAutoItem5Desc": "Detección de anomalías y predicción de fallas con nuestra IA entrenada por Cubiq.",
-	"careSyncAutoItem6Title": "Soporte Remoto On‑Demand:",
-	"careSyncAutoItem6Desc": "Asistencia técnica en línea, mantenimiento preventivo y resolución de problemas.",
-	"careSyncAutoItem7Title": "Compras y Alquileres:",
-	"careSyncAutoItem7Desc": "Accede a equipos certificados a pedido, contratados a través de la plataforma.",
-	"careSyncAutoItem8Title": "API Abierta:",
-	"careSyncAutoItem8Desc": "Puedes conectar CareSync a otros sistemas que tu empresa ya utiliza.",
-
-	"careSyncManagedItem0Title": "Gestión 360°:",
-	"careSyncManagedItem0Desc": "Gestionamos, monitoreamos y mantenemos su parque de TI proactivamente, abarcando tanto los equipos alquilados como los propios.",
-	"careSyncManagedItem1Title": "Flexibilidad:",
-	"careSyncManagedItem1Desc": "Planes de contrato anual, mensual, y planes de suscripción/alquiler por día, mes o año, con todo incluido.",
-	"careSyncManagedItem2Title": "Atención y Soporte 24/7:",
-	"careSyncManagedItem2Desc": "Soporte remoto, presencial en la empresa o en la oficina en casa (home office), mantenimiento preventivo y solución de problemas.",
-	"careSyncManagedItem3Title": "Tagging:",
-	"careSyncManagedItem3Desc": "Etiquetamos físicamente cada dispositivo con códigos QR/códigos de barras, registrando cada acción de mantenimiento. Úsalos para identificar cada dispositivo y ver su historial de servicios & performance.",
-	"careSyncManagedItem4Title": "Monitoreo Predictivo:",
-	"careSyncManagedItem4Desc": "Detección de anomalías y predicción de fallas con nuestra IA entrenada por Cubiq.",
-	"careSyncManagedItem5Title": "Seguro de Continuidad:",
-	"careSyncManagedItem5Desc": "Recibe un dispositivo de reemplazo inmediatamente mientras el tuyo está en mantenimiento, garantizando que tus operaciones nunca se detengan (en ciudades seleccionadas).",
-	"careSyncManagedItem6Title": "Informes y Paneles:",
-	"careSyncManagedItem6Desc": "Obtenga informes de servicios, costos e historiales de rendimiento, reporte eventos y siga nuestra gestión a través de nuestros Dashboards.",
-	"careSyncManagedItem7Title": "Compras y Alquileres:",
-	"careSyncManagedItem7Desc": "Alquila o compra equipos certificados con descuentos especiales para clientes del plan Gestionado.",
 
 	"careSyncYouControl": "Gestión de TI para PyMes",
 	"careSyncWeTakeCare": "¿Tenés un problem con tu Laptop/PC?",
@@ -279,30 +241,62 @@
 	"top10TI": "Top 10 Profesionales de TI<br/>de 🇦🇷 Argentina",
 	"whyUseCare": "Recursos de la Plataforma",
 	"findTechnician": "Encontrar Técnico",
+	"caresyncFeature01Title": "Gestión administrada de activos de TI",
+	"caresyncFeature01Desc": "Acompañamos todo el ciclo de vida de tus equipos. Desde la adquisición y la asistencia técnica hasta la disposición final, ofrecemos seguimiento en tiempo real y control total a través de un panel (dashboard).",
 
-	"caresyncFeature1Title": "Dashboards de seguimiento",
-	"caresyncFeature1Desc": "Si has contratado a un profesional de TI, sigue su gestión a través de nuestros dashboards. Y si eres un proveedor, ¡genera informes de costos, servicios y rendimiento para tus clientes!",
+	"caresyncFeature02Title": "Asistencia técnica remota",
+	"caresyncFeature02Desc": "No importa dónde estén tus colaboradores —en Brasil o en el exterior—, brindamos resolución rápida de incidentes y soporte al usuario para evitar pérdida de productividad.",
 
-	"caresyncFeature2Title": "Costos fijos y predecibles",
-	"caresyncFeature2Desc": "No cobramos comisiones, ni a los profesionales ni a los clientes del Marketplace. Nuestro modelo es simple: costos fijos y accesibles, alineados con nuestra misión de mejorar el mundo de TI.",
+	"caresyncFeature03Title": "Mantenimientos preventivos programados",
+	"caresyncFeature03Desc": "Mediante la ejecución proactiva de mantenimientos programados para cada activo, reducimos significativamente el riesgo de fallas, asegurando la productividad de tu equipo.",
 
-	"caresyncFeature3Title": "Marketplace de Técnicos + Clientes",
-	"caresyncFeature3Desc": "Ya sea que seas un profesional de TI o un cliente, la Comunidad y el Marketplace de Cubiq Care están disponibles 24/7 para ofrecer o contratar tus servicios.",
+	"caresyncFeature04Title": "Respaldo y recuperación de sistemas",
+	"caresyncFeature04Desc": "Para estar tranquilos realizamos copias de seguridad, de manera que, en caso de falla, el sistema pueda recuperarse de forma limpia con restauración segura y reinstalación.",
+
+	"caresyncFeature1Title": "Paneles de seguimiento",
+	"caresyncFeature1Desc": "Seguimiento de toda nuestra gestión a través de nuestros paneles. Generá informes de costos, servicios y rendimiento, ¡garantizando total transparencia!",
+
+	"caresyncFeature2Title": "Costos fijos y previsibles",
+	"caresyncFeature2Desc": "No cobramos comisiones ni a los profesionales ni a los clientes del Marketplace. Nuestro modelo es simple: costos fijos y accesibles, alineados con nuestra misión de mejorar el mundo de TI.",
+
+	"caresyncFeature3Title": "Marketplace de técnicos y clientes",
+	"caresyncFeature3Desc": "Si sos profesional de TI o cliente, la Comunidad y el Marketplace de Cubiq Care están disponibles 24/7 para ofrecer o contratar servicios.",
 
 	"caresyncFeature4Title": "Monitoreo predictivo 24/7",
-	"caresyncFeature4Desc": "Monitoreo, detección de anomalías y predicción de fallas con nuestra IA entrenada por Cubiq para evitar interrupciones y generar alertas preventivas.",
+	"caresyncFeature4Desc": "Al instalar nuestro software de monitoreo predictivo vas a tener cobertura 24/7 en la detección de anomalías y la predicción de fallas con nuestra IA entrenada para evitar interrupciones y generar alertas preventivas.",
 
-	"caresyncFeature5Title": "Control de Inventario y Servicios",
-	"caresyncFeature5Desc": "Controla el inventario de activos de tus clientes a través de nuestros dashboards de ITSM, con gestión de servicios, alertas, programación de mantenimiento e informes via email con un resumen mensual.",
+	"caresyncFeature5Title": "Control de inventario",
+	"caresyncFeature5Desc": "Controlá tu inventario de activos a través de nuestros paneles, con gestión de servicios, alertas, programación de mantenimiento e informes por correo con un resumen mensual.",
 
 	"caresyncFeature6Title": "Base de conocimiento",
-	"caresyncFeature6Desc": "Contamos con una base de conocimiento para técnicos de TI, con tutoriales y cursos para que evoluciones en tu trayectoria profesional y ofrezcas un excelente servicio a tus clientes. Entonces, ¿problemas para abrir una carcasa? Busca el video en la base.",
+	"caresyncFeature6Desc": "Contamos con una base de conocimiento para técnicos de TI, con tutoriales y cursos para que te desarrolles en tu trayecto profesional y ofrezcas un excelente servicio a tus clientes. ¿Problemas para abrir una carcasa? Buscá el video en la base.",
 
-	"caresyncFeature7Title": "Módulo de Facturación",
-	"caresyncFeature7Desc": "No solo podrás enviar informes automatizados de los trabajos realizados y alertas a tus clientes, sino también contar con un módulo de facturación y control de gastos, integrado con Cubiq Pay.",
+	"caresyncFeature7Title": "Módulo de facturación",
+	"caresyncFeature7Desc": "No solo vas a poder enviar informes automatizados de los trabajos realizados y alertas a tus clientes, sino también contar con un módulo de facturación y control de gastos integrado con Cubiq Pay.",
 
 	"caresyncFeature8Title": "Módulo de compras",
-	"caresyncFeature8Desc": "Tanto los profesionales de TI de la plataforma como los clientes tendrán acceso a nuestra tienda para comprar equipos y piezas a precios especiales, ¡exclusivos para miembros de la comunidad!",
+	"caresyncFeature8Desc": "Todos los clientes de la plataforma van a tener acceso a nuestra tienda para comprar equipos y piezas a precios especiales.",
+
+	"careHaaSFeature1Title": "Instalación y configuración de los equipos",
+	"careHaaSFeature1Desc": "Reciba cada equipo totalmente configurado con sistemas, software, políticas de seguridad y pruebas previas, garantizando una implementación rápida, estandarizada y lista para usar por su equipo.",
+
+	"careHaaSFeature2Title": "Logística gestionada",
+	"careHaaSFeature2Desc": "Realizamos entregas en todos los estados, con rastreo, programación flexible y logística inversa estructurada para cambios, devoluciones, retiros y reubicaciones de equipos en cualquier región.",
+
+	"careHaaSFeature3Title": "Reparación de piezas y sustitución de máquinas",
+	"careHaaSFeature3Desc": "Ofrecemos reparación, análisis técnico rápido y sustitución inmediata del equipo en caso de falla, reduciendo el tiempo de inactividad y garantizando la continuidad operativa.",
+
+	"careHaaSFeature4Title": "Plazos flexibles",
+	"careHaaSFeature4Desc": "Contratos altamente flexibles, desde un único día de uso hasta proyectos largos. Escalamos según su demanda, permitiendo parques completos, ampliaciones y ajustes sin burocracia.",
+
+	"careHaaSFeature5Title": "Mantenimiento incluido",
+	"careHaaSFeature5Desc": "Soporte técnico completo incluido en el servicio, con apertura de tickets, orientación especializada, mantenimiento preventivo, actualización de sistemas y seguimiento continuo del rendimiento de los equipos.",
+
+	"careHaaSFeature6Title": "Sin inversión inicial",
+	"careHaaSFeature6Desc": "Elimine la gran inversión inicial, preserve el flujo de caja y las líneas de crédito, evite perder capital en otros gastos y prescinda de desplazamientos o búsquedas para comprar equipos.",
+
+	"careStoreFeature2Title": "Cashback para clientes Care",
+	"careStoreFeature2Desc": "Si ya es cliente de Cubiq:Care, recibirá cashback acumulable en todas las compras de equipos y piezas realizadas a través de nuestra tienda.",
 
 	"finxPayMainTitle": "Pagos globales en tiempo real con seguridad y enfoque en América Latina",
 	"finxPayMainSubtitle": "Recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, en tu billetera, con transparencia verificable",
