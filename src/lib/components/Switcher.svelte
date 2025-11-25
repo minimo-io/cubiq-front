@@ -3,7 +3,7 @@
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
 	import { Info } from '@lucide/svelte';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 
 	let { options = ['Autopilot', 'Copilot'], selected = $bindable(), onChange } = $props();
 
@@ -24,11 +24,15 @@
 
 	$effect(() => {
 		if (isOpen) {
-			document.addEventListener('click', handleClickOutside);
+			const timer = setTimeout(() => {
+				document.addEventListener('click', handleClickOutside);
+			}, 10);
+
+			return () => {
+				clearTimeout(timer);
+				document.removeEventListener('click', handleClickOutside);
+			};
 		}
-		return () => {
-			document.removeEventListener('click', handleClickOutside);
-		};
 	});
 </script>
 
@@ -62,45 +66,44 @@
 	</button>
 </div>
 
-<div class="relative -top-8 mt-4 w-full px-4 md:-top-0 md:hidden" bind:this={dropdownRef}>
-	<div class="dropdown dropdown-end w-full">
-		<button
-			class="select select-lg select-primary flex w-full items-center justify-between rounded-xl text-center font-sans text-[18px] font-black transition-colors {isOpen
-				? 'bg-primary/30'
-				: 'bg-primary/10'}"
-			onclick={() => (isOpen = !isOpen)}
-		>
-			<span class="flex-1">{selected}</span>
+<!-- Mobile -->
+<div class="relative mt-4 w-full px-4 md:hidden" bind:this={dropdownRef}>
+	<button
+		class="select select-lg select-primary flex w-full items-center justify-between rounded-xl text-center font-sans text-[18px] font-black transition-colors {isOpen
+			? 'bg-primary/30'
+			: 'bg-primary/10'}"
+		onclick={() => (isOpen = !isOpen)}
+	>
+		<span class="flex-1">{selected}</span>
+	</button>
+	<div class="relative -top-2 flex justify-end">
+		<button class="btn btn-sm btn-primary rounded-full" onclick={() => dialog?.showModal()}>
+			{m.learnMore()}
 		</button>
-		<div class="relative -top-2 flex justify-end">
-			<button class="btn btn-sm btn-primary rounded-full" onclick={() => dialog?.showModal()}>
-				{m.learnMore()}
-			</button>
-		</div>
-		{#if isOpen}
-			<ul
-				class="dropdown-content menu bg-base-100 rounded-box border-base-300 z-50 mt-2 w-full border shadow-lg"
-			>
-				{#each options as option}
-					<li>
-						<button
-							class="hover:bg-primary/20 active:bg-primary/30 justify-center rounded-lg py-3 text-center font-sans text-lg font-normal {selected ===
-							option
-								? 'bg-primary/10 font-semibold'
-								: ''}"
-							onclick={() => {
-								selected = option;
-								isOpen = false;
-								onChange?.(selected);
-							}}
-						>
-							{option}
-						</button>
-					</li>
-				{/each}
-			</ul>
-		{/if}
 	</div>
+	{#if isOpen}
+		<div
+			class="bg-base-100 border-base-300 absolute right-4 left-4 z-[9999] mt-2 overflow-hidden rounded-2xl border shadow-xl"
+			transition:fly={{ y: -10, duration: 200 }}
+		>
+			{#each options as option}
+				<button
+					type="button"
+					class="hover:bg-primary/20 active:bg-primary/30 border-base-300 block w-full border-b py-2.5 text-center font-sans text-lg font-normal last:border-b-0 {selected ===
+					option
+						? 'bg-primary/10 font-semibold'
+						: ''}"
+					onclick={() => {
+						selected = option;
+						isOpen = false;
+						onChange?.(selected);
+					}}
+				>
+					{option}
+				</button>
+			{/each}
+		</div>
+	{/if}
 </div>
 
 <dialog bind:this={dialog} class="modal">
