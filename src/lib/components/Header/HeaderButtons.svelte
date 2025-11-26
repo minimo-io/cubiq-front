@@ -1,3 +1,4 @@
+<!-- src/lib/components/Header/HeaderButtons.svelte -->
 <script lang="ts">
 	import { openCommandPalette } from '$lib/stores/CommandPallete.state.svelte';
 	import { getLocale } from '$paraglide/runtime';
@@ -75,7 +76,7 @@
 			/>
 
 			{#if drawerState.active}
-				<X class="!mr-0 h-[22px] animate__animated animate__rotateIn animate__faster" />
+				<X class="animate__animated animate__rotateIn animate__faster !mr-0 h-[22px]" />
 			{:else}
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +91,7 @@
 						stroke-width="2"
 						d="M4 6h16M4 12h16M4 18h7"
 					/>
-				</svg>				
+				</svg>
 			{/if}
 		</button>
 	</div>

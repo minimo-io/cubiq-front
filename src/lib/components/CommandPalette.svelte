@@ -105,18 +105,29 @@
 			: allCommands
 	);
 
+	//  function open() {
+	// 	openCommandPalette();
+	// 	// Load all data for current locale
+	// 	const locale = getLocale() as 'pt' | 'en' | 'es';
+	// 	const featured = featuredPosts[locale] ?? [];
+	// 	const regular = posts[locale] ?? [];
+	// 	blogPosts = [...featured, ...regular];
+	// 	products = getProducts(locale);
+	// 	labProducts = getProductsFromLab(locale);
+	// 	// Reset state when opening
+	// 	searchQuery = '';
+	// 	selectedIndex = 0;
+	// 	// Set focus on the input with requestAnimationFrame for better timing
+	// 	requestAnimationFrame(() => {
+	// 		const input = document.getElementById('command-input');
+	// 		if (input) {
+	// 			input.focus();
+	// 		}
+	// 	});
+	// }
+
 	function open() {
 		openCommandPalette();
-		// Load all data for current locale
-		const locale = getLocale() as 'pt' | 'en' | 'es';
-		const featured = featuredPosts[locale] ?? [];
-		const regular = posts[locale] ?? [];
-		blogPosts = [...featured, ...regular];
-		products = getProducts(locale);
-		labProducts = getProductsFromLab(locale);
-		// Reset state when opening
-		searchQuery = '';
-		selectedIndex = 0;
 		// Set focus on the input with requestAnimationFrame for better timing
 		requestAnimationFrame(() => {
 			const input = document.getElementById('command-input');
@@ -125,6 +136,20 @@
 			}
 		});
 	}
+
+	// Load data whenever the palette opens
+	$effect(() => {
+		if (commandPaletteState.open) {
+			const locale = getLocale() as 'pt' | 'en' | 'es';
+			const featured = featuredPosts[locale] ?? [];
+			const regular = posts[locale] ?? [];
+			blogPosts = [...featured, ...regular];
+			products = getProducts(locale);
+			labProducts = getProductsFromLab(locale);
+			searchQuery = '';
+			selectedIndex = 0;
+		}
+	});
 
 	function close() {
 		closeCommandPalette();
