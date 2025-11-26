@@ -1,4 +1,5 @@
 <script>
+	import { AppConfig } from '$lib/configs';
 	import { m } from '$paraglide/messages';
 	import Hr from '../Hr.svelte';
 </script>
@@ -21,14 +22,38 @@
 				<span class="absolute -right-5 -bottom-1"><img src="/quote-end.svg" alt="Quote end" /></span
 				> -->
 			</div>
-			<cite class="text-base-content text-left text-sm"
-				>Fonte: <a
+			<cite class="text-base-content text-left text-sm">
+				<div class="mt-5 flex w-fit scale-90 items-center space-x-3 md:scale-100">
+					<img
+						src="/me.jpeg"
+						alt="Nicolas"
+						class="h-10 w-10 rounded-full group-hover:ring-2 group-hover:ring-black"
+					/>
+					<div class="flex flex-row items-center gap-3">
+						<div class="font-sans text-lg leading-[105%] tracking-wide group-hover:text-black">
+							<span class="font-bold">Nicolas Erramuspe</span> <br />
+							<span class="text-[15px]">@ Cubiq.lat</span> -
+							<a
+								target="_blank"
+								rel="noreferrer noopener"
+								class="text-primary text-[15px]"
+								href={AppConfig.cubiq.socials.linkedin}
+							>
+								Linkedin
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Fonte:
+				<a
 					class="text-primary relative underline hover:opacity-50"
 					href="https://www.perplexity.ai/"
 					target="_blank"
-					rel="nofollow noopener">Perplexity</a
-				></cite
-			>
+					rel="nofollow noopener"
+					>Perplexity
+				</a> -->
+			</cite>
 		</blockquote>
 	</section>
 </div>
