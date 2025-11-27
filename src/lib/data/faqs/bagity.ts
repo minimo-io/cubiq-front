@@ -20,7 +20,7 @@ export const bagityFaqs: Record<string, Faq[]> = {
 		{
 			question: 'What payment methods does Bagity support in the checkout?',
 			answer:
-				'Bagity offers an express checkout supporting PIX, Boleto, credit/debit cards, and Bitcoin via FinXPay, ensuring fast and secure transactions with high conversion rates.'
+				'Bagity offers an express checkout supporting PIX, Boleto, credit/debit cards, and Bitcoin via Cubiq Pay, ensuring fast and secure transactions with high conversion rates.'
 		},
 		{
 			question: 'Can I customize the design and UX of my store?',
@@ -30,7 +30,7 @@ export const bagityFaqs: Record<string, Faq[]> = {
 		{
 			question: 'What integrations are available with Bagity?',
 			answer:
-				'Bagity integrates via API and webhooks with major ERPs, CRMs (via AutoCRM), and payment platforms like FinXPay, as well as CMSs like WooCommerce and Ghost.'
+				'Bagity integrates via API and webhooks with major ERPs, CRMs (via AutoCRM), and payment platforms like Cubiq Pay, as well as CMSs like WooCommerce and Ghost.'
 		},
 		{
 			question: 'How does AI enhance my e-commerce with Bagity?',
@@ -62,7 +62,7 @@ export const bagityFaqs: Record<string, Faq[]> = {
 		{
 			question: '¿Qué métodos de pago admite Bagity en el checkout?',
 			answer:
-				'Bagity ofrece un checkout exprés con PIX, Boleto, tarjetas de crédito/débito y Bitcoin vía FinXPay, garantizando transacciones rápidas y seguras con altas tasas de conversión.'
+				'Bagity ofrece un checkout exprés con PIX, Boleto, tarjetas de crédito/débito y Bitcoin vía Cubiq Pay, garantizando transacciones rápidas y seguras con altas tasas de conversión.'
 		},
 
 		{
@@ -73,7 +73,7 @@ export const bagityFaqs: Record<string, Faq[]> = {
 		{
 			question: '¿Qué integraciones están disponibles con Bagity?',
 			answer:
-				'Bagity se integra vía API y webhooks con los principales ERPs, CRMs (a través de AutoCRM) y plataformas de pago como FinXPay, así como CMSs como WooCommerce y Ghost.'
+				'Bagity se integra vía API y webhooks con los principales ERPs, CRMs (a través de AutoCRM) y plataformas de pago como Cubiq Pay, así como CMSs como WooCommerce y Ghost.'
 		},
 		{
 			question: '¿Cómo mejora la IA mi e-commerce con Bagity?',
@@ -105,7 +105,7 @@ export const bagityFaqs: Record<string, Faq[]> = {
 		{
 			question: 'Quais métodos de pagamento o Bagity suporta no checkout?',
 			answer:
-				'O Bagity oferece checkout expresso com PIX, Boleto, cartão de crédito/débito e Bitcoin via FinXPay, garantindo transações rápidas e seguras com altas taxas de conversão.'
+				'O Bagity oferece checkout expresso com PIX, Boleto, cartão de crédito/débito e Bitcoin via Cubiq Pay, garantindo transações rápidas e seguras com altas taxas de conversão.'
 		},
 		{
 			question: 'Posso customizar o design e a UX da minha loja?',
@@ -115,7 +115,7 @@ export const bagityFaqs: Record<string, Faq[]> = {
 		{
 			question: 'Quais integrações o Bagity oferece?',
 			answer:
-				'O Bagity integra via API e webhooks com os principais ERPs, CRMs (via AutoCRM) e plataformas de pagamento como FinXPay, além de CMSs como WooCommerce e Ghost.'
+				'O Bagity integra via API e webhooks com os principais ERPs, CRMs (via AutoCRM) e plataformas de pagamento como Cubiq Pay, além de CMSs como WooCommerce e Ghost.'
 		},
 		{
 			question: 'Como a IA potencializa meu e-commerce com Bagity?',

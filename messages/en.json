@@ -68,19 +68,19 @@
 	"construction": "construction",
 	"constructionContent": "We are building a unified platform for <span class='text-base-content opacity-80'>E-Commerce</span>, <span class='text-base-content opacity-80'>Cross-Border Payments</span>, and <span class='text-base-content opacity-80'>IT Asset Monitoring</span>. Contact us while we finish this page.",
 
-	"heroContentHomeXXX": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> powered by AI for Startups & SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on Innovation over Permissionless Protocols and Custom Solutions.",
+	"heroContentHomeXXX": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation around permissionless protocols.",
 
 	"heroContentHome": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation around permissionless protocols.",
 
 	"heroContentFinXXX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via Lightning Network. Eg. <span class='text-base-content'>Receive in Argentina and settle abroad</span>, instantly, with 100% compliance and verifiable transparency.</div>",
 
-	"heroContentFinX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via the Lightning Network. E.g.: <span class='text-base-content'>Receive from anywhere in the world and settle instantly</span>, with 100% verifiable transparency.</div>",
+	"heroContentFinX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via the Lightning Network. E.g.: <span class='text-base-content'>Receive from anywhere in the world and settle instantly in your wallet</span>, with 100% verifiable transparency.</div>",
 
 	"heroContentCareSyncOLD": "Platform for <span class='text-base-content opacity-80'>Predictive Maintenance</span> and Asset Management (ITSM + ITAM) <span class='text-base-content opacity-80'>for IT professionals and SMEs</span> — with AI applied to Real-Time Monitoring, Knowledge-Base and Client Marketplace.",
 
 	"heroContentCareSync": "Complete IT lifecycle management for growing SMEs — integrating <span class='text-base-content opacity-80'>Managed IT asset management</span>, <span class='text-base-content opacity-80'>Hardware-as-a-Service (HaaS/Rental)</span>, and <span class='text-base-content opacity-80'>Predictive maintenance</span> powered by real-time AI diagnostics.",
 
-	"heroContentBagity": "<span class='text-base-content opacity-80'>Tailored Premium E-Commerce</span>: We customize without limits — Design, UX, and Features — with integrated AI, scalable security, and <span class='text-base-content opacity-80'>express checkout</span> via <a href='/finx' class='text-primary font-medium'>Cubiq Pay</a> (PIX, Boleto, Card, and Bitcoin). <span class='text-base-content opacity-80'>Predictable plans</span> from $20/month or <span class='text-base-content opacity-80'>Store Pro with no upfront costs</span>.",
+	"heroContentBagity": "<span class='text-base-content opacity-80'>Tailor-made Premium E-Commerce</span>: We customize without limits — Design, UX, and Features — with integrated AI for Content, and <span class='text-base-content opacity-80'>USDT/BTC Payments</span> via <a href='/en/pay' class='text-primary font-medium'>Cubiq Pay</a>. Expect <span class='text-base-content opacity-80'>predictable plans</span> and <span class='text-base-content opacity-80'>no sales commissions.</span>.",
 
 	"homeProductsSlogan": "Unified Platform of Digital Products and APIs for SMEs and Startups focused on LATAM.",
 
@@ -191,7 +191,7 @@
 
 	"bagityBasic": "Store Basic",
 	"bagityBasicPrice": "$u999/mo fixed",
-	"bagityBasicDescription": "Plan that provides full access to the platform, with a <span class='text-base-content'>store ready to sell</span>, payment integration via FinXPay + all essential features. Customization is optional, task-based, ideal <span class='text-base-content'>for those who want cost control and autonomy</span>.",
+	"bagityBasicDescription": "Plan that provides full access to the platform, with a <span class='text-base-content'>store ready to sell</span>, payment integration via Cubiq Pay + all essential features. Customization is optional, task-based, ideal <span class='text-base-content'>for those who want cost control and autonomy</span>.",
 
 	"bagityPro": "Store <span class='bg-primary relative -top-[2px] ml-1 rounded-lg px-3 py-[2px] text-xl'>PRO+</span>",
 	"bagityProPrice": "5–10% per sale",
@@ -215,7 +215,7 @@
 	"bagityFeature5Desc": "We want to build unique stores, for unique clients, and with focus on the human factor. That’s why we follow up with all our clients through monthly video calls.",
 
 	"bagityFeature6Title": "Express checkout",
-	"bagityFeature6Desc": "Our proprietary payment solution — <a href='/en/finx' class='text-primary hover:opacity-40'>FinXPay</a> — lets us streamline checkout, achieve high conversion rates, and reduce operational costs.",
+	"bagityFeature6Desc": "Our proprietary payment solution — <a href='/en/finx' class='text-primary hover:opacity-40'>Cubiq:Pay</a> — lets us streamline checkout, achieve high conversion rates, and reduce operational costs.",
 
 	"bagityFeature7Title": "Composavel front-ends",
 	"bagityFeature7Desc": "Our headless technology allows you to connect your store to any backend or API — WooCommerce, Ghost and more — resulting in fast, modular interfaces.",
@@ -249,7 +249,7 @@
 	"caresyncFeature02Desc": "No matter where your employees are — in Brazil or abroad — we provide fast incident resolution and user support to prevent productivity loss.",
 
 	"caresyncFeature03Title": "Scheduled preventive maintenance",
-	"caresyncFeature03Desc": "Through the proactive execution of scheduled maintenance for each asset, we significantly reduce the risk of failures, ensuring your team's productivity.",
+	"caresyncFeature03Desc": "Through the proactive execution of scheduled maintenance for each asset, we significantly reduce the risk of failures,  <span class='text-white'>extending the lifetime of equipments and boosting productivity</span>.",
 
 	"caresyncFeature04Title": "System backup and recovery",
 	"caresyncFeature04Desc": "To give you peace of mind we perform secure backups so that, in case of a failure, the system can be recovered cleanly with secure restoration and reinstallation.",
@@ -276,7 +276,7 @@
 	"caresyncFeature7Desc": "You can not only send automated reports of completed jobs and alerts to your clients, but also rely on a billing and expense-control module integrated with Cubiq Pay.",
 
 	"caresyncFeature8Title": "Purchasing module",
-	"caresyncFeature8Desc": "All platform customers will have access to our store to buy equipment and parts at special prices.",
+	"caresyncFeature8Desc": "All platform customers will have access to our store to buy equipment and parts at the best princes on the market.",
 
 	"careSyncFeaturedSlogan": "We manage and maintain all your equipment, providing full support to your employees to prevent any loss of productivity. <span class='text-base-content'>While you take care of your business, we take care of your IT.</span>",
 
@@ -287,7 +287,7 @@
 	"careHaaSFeature2Title": "Managed logistics",
 	"careHaaSFeature2Desc": "We deliver to all states with tracking, flexible scheduling, and structured reverse logistics for exchanges, returns, pickups, and equipment relocations in any region.",
 
-	"careStoreSlogan": "Get access to our equipment and parts store with significant discounts for Cubiq:Care platform customers.",
+	"careStoreSlogan": "Get access to our equipment and parts store with the best prices on the market.",
 
 	"careHaaSFeature3Title": "Parts repair and machine replacement",
 	"careHaaSFeature3Desc": "We offer repairs, quick technical analysis, and immediate replacement of equipment in case of failure, reducing downtime and ensuring operational continuity.",
@@ -302,7 +302,7 @@
 	"careHaaSFeature6Desc": "Eliminate large upfront expenses, preserve cash flow and credit lines, avoid tying up capital in non-essential investments, and avoid travel or research needed to buy equipment.",
 
 	"careStoreFeature2Title": "Cashback for Care customers",
-	"careStoreFeature2Desc": "If you are already a Cubiq:Care customer, you will receive cumulative cashback on all equipment and parts purchases made through our store.",
+	"careStoreFeature2Desc": "If you are already a Cubiq Care customer, you will receive cumulative cashback on all products purchases made directly through our store.",
 
 	"finxPayMainTitle": "Real-time global payments with security and focus on Latin America",
 	"finxPayMainSubtitle": "Receive USDT/BTC from anywhere in the world and settle instantly, in your wallet, with verifiable transparency",

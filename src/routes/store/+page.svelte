@@ -1,15 +1,18 @@
 <script lang="ts">
 	import Features from '$lib/components/Bagity/Features.svelte';
+	import StorePricing from '$lib/components/Bagity/StorePricing.svelte';
 	import TransparentButton from '$lib/components/Buttons/TransparentButton.svelte';
 	import ServiceOrders from '$lib/components/caresync/ServiceOrders.svelte';
 	import Slogan from '$lib/components/caresync/Slogan.svelte';
 	import CtaContact from '$lib/components/CtaContact.svelte';
+	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 	import Faq from '$lib/components/Faq.svelte';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import Meta from '$lib/components/Meta.svelte';
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
+	import { type DashboardImageType } from '$types/dashboardImages.types';
 	import { type Feature } from '$types/features.types';
 	import { Product } from '$types/products.types';
 	import {
@@ -78,6 +81,24 @@
 			pill: null
 		}
 	];
+
+	const dashboardImages: DashboardImageType[] = $state([
+		{
+			src: '/products/care/cubiq-care-dashboard-1.webp',
+			alt: 'A screenshot of the Cubiq dashboard',
+			object: 'left'
+		},
+		{
+			src: '/products/care/cubiq-care-dashboard-2.webp',
+			alt: 'A screenshot of the Cubiq Care dashboard',
+			object: 'right'
+		}
+		// {
+		// 	src: '/products/pay/cubiq-pay-dashboard-3.webp',
+		// 	alt: 'A screenshot of the Cubiq Care dashboard',
+		// 	object: 'right'
+		// }
+	]);
 </script>
 
 <Meta title={m.metaStoreTitle()} description={m.metaStoreDescription()} />
@@ -97,21 +118,21 @@
 
 <main>
 	<div
-		class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto md:border-x"
+		class="max-w-fw border-x-base-200 md:border-xxx relative container my-0 text-center md:mx-auto"
 	>
-		<div id="more" class="flex flex-1 items-center justify-center">
+		<StorePricing />
+
+		<!-- <div id="more" class="flex flex-1 items-center justify-center">
 			<div
 				class="border-base-200 fw-border-b-divider md:fw-border-t-divider-dot flex w-full flex-col border-b
 			            after:absolute after:right-[48%] md:flex-row md:after:top-12 md:after:right-[49.4%] md:after:content-['']"
 			>
-				<!-- Auto-gestão -->
 				<div class="border-r-base-200 w-full py-3 text-xl md:w-1/2 md:border-r">
 					<div class="mb-3 text-2xl">{m.bagityBasic()}</div>
 					<div class="border-base-200 text-primary border-t pt-2 font-sans text-lg font-bold">
 						{m.bagityBasicPrice()}
 					</div>
 				</div>
-				<!-- Gerenciado -->
 				<div class="hidden w-full py-3 text-xl md:inline-block md:w-1/2">
 					<div class="mb-3 text-2xl">
 						{@html m.bagityPro()}
@@ -121,9 +142,17 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="flex flex-col justify-center md:flex-1 md:flex-row md:items-stretch">
+		<!-- Dashboards -->
+		<section
+			class="animate-slide-up-fade relative -top-9 mx-auto mt-4 flex h-[500px] max-w-full justify-start overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-10 md:mt-0 md:h-auto md:w-[100%] md:max-w-full"
+		>
+			<!-- Payment image -->
+			<DashboardImagesOnly images={dashboardImages} />
+		</section>
+
+		<div class="flex hidden flex-col justify-center md:flex-1 md:flex-row md:items-stretch">
 			<!-- Você no controle -->
 			<div
 				class="border-r-base-200 flex w-full flex-col py-5 text-center md:w-1/2 md:border-r md:px-20 md:py-10"
@@ -176,8 +205,9 @@
 	<Features featuresList={bagityFeatures} />
 
 	<Slogan text={m.bagitySlogan()} />
-	<ServiceOrders />
-	<div id="more" class="border-base-200 mt-10 font-sans md:border-t">
+
+	<!-- <ServiceOrders /> -->
+	<div id="more" class="border-base-200 mt-15 font-sans md:border-t">
 		<Faq project="bagity" />
 	</div>
 	<CtaContact />

@@ -6,6 +6,11 @@ import type { Faq } from '$lib/type/faq.types';
 export const finxFaqs: Record<string, Faq[]> = {
 	en: [
 		{
+			question: 'Is Cubiq Pay a wallet?',
+			answer:
+				"No, Cubi Pay connects your customers' payments directly to the wallet you set up on the platform. Tokens/money never get custodied by Cubiq Pay. Instead, we recommend self-custody."
+		},
+		{
 			question: 'What is Cubiq:Pay and how does it work?',
 			answer:
 				'Cubiq:Pay offers instant global payments and settlements in stablecoins or Bitcoin via Lightning. Example: receive USDT/BTC from anywhere in the world and settle instantly, with full transparency.'
@@ -53,6 +58,11 @@ export const finxFaqs: Record<string, Faq[]> = {
 	],
 	es: [
 		{
+			question: '¿Es Cubiq Pay una cartera?',
+			answer:
+				'No, Cubiq Pay conecta los pagos de sus clientes directamente con la billetera que establece en la plataforma. Los tokens/dinero nunca quedan custodiados por Cubiq Pay. En su lugar, recomendamos la auto-custodia.'
+		},
+		{
 			question: '¿Qué es Cubiq:Pay y cómo funciona?',
 			answer:
 				'Cubiq:Pay ofrece pagos y liquidaciones globales instantáneas en stablecoins o Bitcoin, vía Lightning. Ej.: recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, con total transparencia.'
@@ -99,6 +109,11 @@ export const finxFaqs: Record<string, Faq[]> = {
 		}
 	],
 	pt: [
+		{
+			question: 'Cubiq Pay é uma wallet?',
+			answer:
+				'Não, Cubi Pay conecta o pagamento de seus clientes diretamente com a carteira que você configura na plataforma. Os tokens/dinheiro nunca fica custodiado pela Cubiq Pay. Pelo contrário, recomendamos a auto-custódia.'
+		},
 		{
 			question: 'Por que a Cubiq:Pay não opera no Brasil?',
 			answer:

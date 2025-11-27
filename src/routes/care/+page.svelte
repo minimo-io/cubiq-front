@@ -283,6 +283,8 @@
 
 	<!-- <CareCourses /> -->
 
+	<CarePricing />
+
 	<!-- <Features product={Product.CARE} /> -->
 
 	<!-- <ServiceOrders image="/caresync-dashboard-3.png" /> -->

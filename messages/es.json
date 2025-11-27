@@ -68,19 +68,17 @@
 	"construction": "construcción",
 	"constructionContent": "Estamos construyendo una plataforma unificada de <span class='text-base-content opacity-80'>Comercio Electrónico</span>, <span class='text-base-content opacity-80'>Pagos Transfronterizos</span> y <span class='text-base-content opacity-80'>Monitoreo de Activos de TI</span>. Contáctanos mientras finalizamos esta página.",
 
-	"heroContentHomeXXXX": "Somos una <span class='text-base-content opacity-80'>Plataforma B2B de Productos Digitales</span> impulsados por IA para Startups y PyMes, y un <span class='text-base-content opacity-80'>Laboratorio de Desarrollo</span> enfocado en la Innovación sobre protocolos permissionless y soluciones a medida.",
-
 	"heroContentHome": "Somos una <span class='text-base-content opacity-80'>Plataforma B2B de Productos Digitales</span> para Startups y PyMEs, y un <span class='text-base-content opacity-80'>Laboratorio de Desarrollo</span> centrado en soluciones empresariales a medida y en la innovación sobre protocolos permissionless.",
 
 	"heroContentHome1": "Somos una <span class='text-base-content opacity-80'>Plataforma de Productos Digitales</span> y un Laboratorio de Desarrollo enfocados en la Innovación en las áreas de <span class='text-base-content opacity-80'>E-Commerce, Pagos X-Border en Tiempo Real, IA y Máquinas (IoT)</span>.",
 
-	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagos en tiempo real con <span class='text-base-content opacity-80'>Settlements Globales Instantáneas</span> en BTC/USDT, vía Lightning Network. Ej.: <span class='text-base-content'>Recibí desde cualquier lugar del mundo y liquidá en el instante</span>, con transparencia 100% verificable.</div>",
+	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagos en tiempo real con <span class='text-base-content opacity-80'>Settlements Globales Instantáneas</span> en BTC/USDT, vía Lightning Network. Ej.: <span class='text-base-content'>Recibí desde cualquier lugar del mundo y liquidá en el instante en su wallet</span>, con transparencia 100% verificable.</div>",
 
 	"heroContentCareSyncXXX": "Plataforma de <span class='text-base-content opacity-80'>Mantenimiento Predictivo</span> y Gestión de Activos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profesionales de TI y PyMEs</span> — con IA aplicada al Monitoreo en Tiempo Real, Base de Conocimiento y Marketplace de Clientes.",
 
 	"heroContentCareSync": "Gestión completa del ciclo de vida de TI para PyMEs en crecimiento — integrando <span class='text-base-content opacity-80'>Gestión tercerizada de activos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Servicio (HaaS/Alquiler)</span> y <span class='text-base-content opacity-80'>Mantenimiento predictivo</span> potenciado por diagnósticos de IA en tiempo real.",
 
-	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Personalizamos sin límites — Diseño, UX y Funcionalidades — con IA integrada, seguridad escalable y <span class='text-base-content opacity-80'>checkout exprés</span> (PIX, Boleto, Tarjeta y Bitcoin). <span class='text-base-content opacity-80'>Planes previsibles</span> desde $u999/mes o <span class='text-base-content opacity-80'>Store Pro sin costos iniciales</span>.",
+	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Customizamos sin límites: Diseño, UX y Funcionalidades, con IA de Contenido integrada y <span class='text-base-content opacity-80'>Pagos USDT/BITCOIN</span> via <a href='/es/pay' class='text-primary'>Cubiq Pay</a>. ¿Qué esperar? <span class='text-base-content opacity-80'>Planes previsíveis</span>, <span class='text-base-content opacity-80'>sin comisiones por venta</span>.",
 
 	"homeProductsSlogan": "Plataforma Unificada de Produtos Digitais e APIs para PMEs e Startups focada em LATAM.",
 
@@ -194,7 +192,7 @@
 
 	"bagityBasic": "Store básico",
 	"bagityBasicPrice": "$u999/mes fijo",
-	"bagityBasicDescription": "Plan que ofrece acceso completo a la plataforma, con <span class='text-base-content'>tienda lista para vender</span>, integración de pagos vía FinXPay + todas las funcionalidades esenciales. La personalización es opcional, contratada por tarea, ideal <span class='text-base-content'>para quienes buscan control de costos y autonomía</span>.",
+	"bagityBasicDescription": "Plan que ofrece acceso completo a la plataforma, con <span class='text-base-content'>tienda lista para vender</span>, integración de pagos vía Cubiq Pay + todas las funcionalidades esenciales. La personalización es opcional, contratada por tarea, ideal <span class='text-base-content'>para quienes buscan control de costos y autonomía</span>.",
 
 	"bagityPro": "Store <span class='bg-primary relative -top-[2px] ml-1 rounded-lg px-3 py-[2px] text-xl'>PRO+</span>",
 	"bagityProPrice": "5–10% por venta",
@@ -218,7 +216,7 @@
 	"bagityFeature5Desc": "Queremos construir tiendas únicas, para clientes únicos, y con foco en el factor humano. Por eso acompañamos la evolución de todos nuestros clientes con videollamadas mensuales.",
 
 	"bagityFeature6Title": "Checkout express",
-	"bagityFeature6Desc": "Nuestra solución de pago propia — <a href='/es/finx' class='text-primary hover:opacity-40'>FinXPay</a> — nos permite simplificar el checkout, alcanzando altas tasas de conversión y reduciendo costes operativos.",
+	"bagityFeature6Desc": "Nuestra solución de pago propia — <a href='/es/finx' class='text-primary hover:opacity-40'>Cubiq Pay</a> — nos permite simplificar el checkout, alcanzando altas tasas de conversión y reduciendo costes operativos.",
 
 	"bagityFeature7Title": "Front-ends Componibles",
 	"bagityFeature7Desc": "Nuestra tecnología headless permite conectar tu tienda a cualquier backend o API — WooCommerce, Ghost y más — resultando en interfaces rápidas y modulares.",
@@ -250,7 +248,7 @@
 	"caresyncFeature02Desc": "No importa dónde estén tus colaboradores —en Brasil o en el exterior—, brindamos resolución rápida de incidentes y soporte al usuario para evitar pérdida de productividad.",
 
 	"caresyncFeature03Title": "Mantenimientos preventivos programados",
-	"caresyncFeature03Desc": "Mediante la ejecución proactiva de mantenimientos programados para cada activo, reducimos significativamente el riesgo de fallas, asegurando la productividad de tu equipo.",
+	"caresyncFeature03Desc": "Mediante la ejecución proactiva de mantenimientos programados para cada activo, reducimos significativamente el riesgo de fallas,  <span class='text-white'>aumentando la vida útil de los equipos y la productividad</span>.",
 
 	"caresyncFeature04Title": "Respaldo y recuperación de sistemas",
 	"caresyncFeature04Desc": "Para estar tranquilos realizamos copias de seguridad, de manera que, en caso de falla, el sistema pueda recuperarse de forma limpia con restauración segura y reinstalación.",
@@ -277,7 +275,7 @@
 	"caresyncFeature7Desc": "No solo vas a poder enviar informes automatizados de los trabajos realizados y alertas a tus clientes, sino también contar con un módulo de facturación y control de gastos integrado con Cubiq Pay.",
 
 	"caresyncFeature8Title": "Módulo de compras",
-	"caresyncFeature8Desc": "Todos los clientes de la plataforma van a tener acceso a nuestra tienda para comprar equipos y piezas a precios especiales.",
+	"caresyncFeature8Desc": "Todos los clientes de la plataforma van a tener acceso a nuestra tienda para comprar equipos y piezas a los mejores precios del mercado.",
 
 	"careSyncFeaturedSlogan": "Gestionamos y mantenemos todos sus equipos, ofreciendo soporte completo a sus colaboradores para evitar cualquier pérdida de productividad. <span class='text-base-content'>Mientras usted cuida de su empresa, nosotros cuidamos de su TI.</span>",
 
@@ -302,8 +300,8 @@
 	"careHaaSSlogan": "Bloquee su equipo desde cualquier lugar con mantenimiento incluido. Elija el software que necesite y recíbalo ya instalado, sin un gran desembolso inicial y con soporte activo en línea.",
 
 	"careStoreFeature2Title": "Cashback para clientes Care",
-	"careStoreFeature2Desc": "Si ya es cliente de Cubiq:Care, recibirá cashback acumulable en todas las compras de equipos y piezas realizadas a través de nuestra tienda.",
-	"careStoreSlogan": "Tenga acceso a nuestra tienda de equipos y piezas con importantes descuentos para clientes de la plataforma Cubiq:Care.",
+	"careStoreFeature2Desc": "Si ya es cliente de Cubiq Care, recibirá cashback acumulable en todas las compras de productos vendidos directamente por Cubiq.",
+	"careStoreSlogan": "Tenga acceso a nuestra tienda de equipos y piezas con los mejores precios del mercado.",
 
 	"finxPayMainTitle": "Pagos globales en tiempo real con seguridad y enfoque en América Latina",
 	"finxPayMainSubtitle": "Recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, en tu billetera, con transparencia verificable",
