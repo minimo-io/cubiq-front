@@ -1,5 +1,5 @@
 export const AppConfig = {
-	apiUrl: import.meta.env.DEV ? 'http://127.0.0.1:8085' : 'https://api.futurewise.lat',
+	apiUrl: import.meta.env.DEV ? 'http://127.0.0.1:8085' : 'https://api.cubiq.lat',
 	calendar: 'https://calendar.app.google/PFL1kPtd8VYFaXzc6',
 	status: 'https://stats.uptimerobot.com/pPaLEt4eBM',
 	care: {
@@ -20,7 +20,7 @@ export const AppConfig = {
 			linkedin: 'https://www.linkedin.com/in/nicolas-erramuspe/',
 			nostr: 'https://primal.net/p/npub1wujhdsytm3w6g0mpsqh8v7ezx83jcm64dlkwuqgm5v8lv0pds55ssudkw0'
 		},
-		docs: 'https://api.futurewise.lat/docs'
+		docs: 'https://api.cubiq.lat/docs'
 	},
 
 	dashboards: {
