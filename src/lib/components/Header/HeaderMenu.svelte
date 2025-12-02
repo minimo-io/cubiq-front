@@ -142,7 +142,7 @@
 	<!-- <a class="uppercase" href={localizeHref('/blog')}>Blog</a> -->
 	<!-- <a class="uppercase" href={localizeHref('/blog')}>Blog</a> -->
 
-	<a href={localizeHref('/soon')} class="flex items-center tracking-wide uppercase">
+	<a href={localizeHref('/lab')} class="flex items-center tracking-wide uppercase">
 		<!-- <FlaskConical class="h-4" /> -->
 		{m.menuLab()}
 	</a>

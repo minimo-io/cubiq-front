@@ -117,9 +117,19 @@
 
 			{#if selected == m.careSyncAssetManagment()}
 				{@html m.careSyncFeaturedSlogan()}
-				<a href={localizeHref('/loja')} class="btn btn-sm btn-primary mt-3 w-fit rounded-full"
-					>{m.contactSupport()}</a
-				>
+				<div class="flex flex-row gap-2">
+					<!-- Contact support -->
+					<a href={localizeHref('/loja')} class="btn btn-sm btn-primary mt-3 w-fit rounded-full">
+						{m.contactSupport()}
+					</a>
+					<!-- Download predictive software -->
+					<a
+						href={localizeHref('/soon')}
+						class="btn btn-sm text-primary bg-primary/10 border-primary hover:bg-primary mt-3 w-fit rounded-full border"
+					>
+						{m.downloadSoftware()}
+					</a>
+				</div>
 			{:else if selected == m.rental()}
 				{@html m.careHaaSSlogan()}
 				<a href={localizeHref('/loja')} class="btn btn-sm btn-primary mt-3 w-fit rounded-full"

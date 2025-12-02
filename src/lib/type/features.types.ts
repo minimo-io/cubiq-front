@@ -5,6 +5,10 @@ export type Feature = {
 	img?: string;
 	title: string;
 	desc: string;
+	button?: {
+		text: string;
+		href: string;
+	};
 	pill?: {
 		text: string;
 		color: 'light' | 'primary' | 'dark' | 'primary-transparent';

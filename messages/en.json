@@ -22,6 +22,8 @@
 	"rental": "Equipment Rental",
 	"goToStore": "Go to store",
 	"visitStore": "Visit store",
+	"downloadSoftware": "Download predictive software",
+	"experiments": "Experiments",
 
 	"latestNews": "Latest news",
 	"subscriveVia": "Subscribe via",
@@ -133,6 +135,10 @@
 
 	"metaLabTitle": "Lab",
 	"metaLabDescription": "A space to prototype, play, and push the edge of what's possible with technology",
+	"labLaunchText": "<span class='hidden md:inline-block font-bold'>Prototype Launch!&nbsp;</span><u>Hopchain</u>",
+	"labLaunchSubText": "Local Craft Beers x Lightning",
+	"labToolsTitle": "Projects and tools <br /> of the lab.",
+	"labToolsSubtitle": "We create experiments, prototypes, and tools that explore new technologies, decentralized models, and innovative experiences.",
 
 	"metaFinxTitle": "Cubiq Pay - Instant BTC/USDT payments via Lightning Network",
 	"metaFinxDescription": "Real-time payments with Instant Global Settlements in USDT/BTC via Lightning Network. Eg. Receive in Argentina and settle abroad, instantly, with 100% compliance and verifiable transparency.",
@@ -278,11 +284,11 @@
 	"caresyncFeature8Title": "Purchasing module",
 	"caresyncFeature8Desc": "All platform customers will have access to our store to buy equipment and parts at the best princes on the market.",
 
-	"careSyncFeaturedSlogan": "We manage and maintain all your equipment, providing full support to your employees to prevent any loss of productivity. <span class='text-base-content'>While you take care of your business, we take care of your IT.</span>",
+	"careSyncFeaturedSlogan": "We manage and maintain all your equipment, providing full support to your employees to prevent any loss of productivity. <span class='text-base-content opacity-80'>Take care of your business, we take care of your IT.</span>",
 
 	"careHaaSFeature1Title": "Equipment installation and configuration",
 	"careHaaSFeature1Desc": "Receive each device fully configured with systems, software, security policies, and pre-testing, ensuring fast, standardized deployment and ready-to-use equipment for your team.",
-	"careHaaSSlogan": "Lock your equipment from anywhere with included maintenance. Choose the software you need and receive it already installed, without a large initial outlay and with active online support.",
+	"careHaaSSlogan": "Lease your equipment from anywhere with maintenance included. Whether you're an individual or a business, free up cash flow, <span class='text-base-content opacity-80'>focus on your business — we take care of your IT!</span>",
 
 	"careHaaSFeature2Title": "Managed logistics",
 	"careHaaSFeature2Desc": "We deliver to all states with tracking, flexible scheduling, and structured reverse logistics for exchanges, returns, pickups, and equipment relocations in any region.",
@@ -358,9 +364,10 @@
 	"productNotesDetails": "Local encrypted & syncronizable notes<br /> on the browser",
 
 	"productBetizenSlogan": "fair casino, bo & forex listings",
-	"productBetizenDetails": "iGaming and Forex rankings<br />powered by merit & PoW",
+	"productBetizenDetails": "iGaming and Forex rankings<br />on merit & PoW",
 	"productLnBeerSlogan": "Craft beer over lightning",
-	"productLnBeerDetails": "Your local craft beers<br />over Lightning Network",
+	"productLnBeerDetails": "Local craft beers<br />over Lightning Network",
+	"productBilbioSlogan": "PWA Ebook Reader <br />via Nostr",
 
 	"heroContentRoadmap": "Here you can find the result of our development cycle: <span class=\"text-base-content\">Projection, Experimentation, and Delivery</span>. Below is the list of launches, milestones, and Proofs of Concept (PoCs) — the live record of our most recent creations ⛵️🚀",
 
@@ -374,6 +381,7 @@
 	"searchNotes": "Search notes...",
 	"notesWarningUnencrypteed": "<strong>Warning!</strong> Unencrypted notes will be plain text accessible on browser local storage even after logout!",
 
+	"heroContentLab": "Besides our Products Platform, at the <span class='text-base-content opacity-80'>Cubiq:Lab we experiment with new technologies and ideas</span>. From buying local beers via Bitcoin Lightning to secure rankings of betting sites using karma.",
 	"labProductsSlogan": "Projects from our technology lab range from proof-of-concepts to in-market products... <a href='/en/lab' class='hover:text-underline text-white'>learn more</a>",
 
 	"invoicing": "Invoicing"

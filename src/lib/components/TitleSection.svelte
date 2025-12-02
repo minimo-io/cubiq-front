@@ -106,6 +106,7 @@
 				>
 					{capitalizedTitleRight}
 				</span>
+
 				<!-- Text Right Colored Background with Animation -->
 				<span
 					class="bg-primary absolute top-[0px] -left-[1px] z-0 h-[80%] translate-y-1 md:-top-[2px] md:h-[90%]"

@@ -9,6 +9,8 @@
 	import { getLocale, localizeHref } from '$paraglide/runtime';
 	import { getProductsFromLab } from '$lib/data/products.data';
 
+	let { hideSlogan = false, noSpaces = false, experimentsTitle = m.menuExperiments() } = $props();
+
 	// const locale = $state(getLocale());
 	const PRODUCTS_FROM_LAB = getProductsFromLab(getLocale());
 	let drawerDataForLang = $state(PRODUCTS_FROM_LAB);
@@ -18,19 +20,21 @@
 </script>
 
 <!-- Products Slider Section -->
-<section class="relative mt-0 px-0 pb-2 md:-top-8 md:px-12 lg:px-16">
-	<Hr halfWidth={true} />
+<section class="relative mt-0 px-0 pb-2 md:-top-8 md:px-12 md:pb-0 lg:px-16">
+	<!-- <Hr halfWidth={true} /> -->
 
 	<div class="md:pb-3">
 		<div class="relative -top-6 pt-3 text-center md:-top-4 md:block md:scale-95">
-			<PillFlower title={m.menuExperiments()} />
+			<PillFlower title={experimentsTitle} />
 		</div>
 
-		<div
-			class="text-accent mx-auto mt-3 mb-5 w-full text-center font-sans text-xl md:mt-5 md:mb-0 md:max-w-[50%] md:text-2xl"
-		>
-			{@html m.labProductsSlogan()}
-		</div>
+		{#if hideSlogan === false}
+			<div
+				class="text-accent mx-auto mt-3 mb-5 w-full text-center font-sans text-xl md:mt-5 md:mb-0 md:max-w-[50%] md:text-2xl"
+			>
+				{@html m.labProductsSlogan()}
+			</div>
+		{/if}
 
 		<div
 			class="relative -top-5 mx-auto mb-1 flex scale-95 flex-col items-center justify-center gap-2 md:top-0 md:-left-4 md:mt-5 md:flex-row"
@@ -55,7 +59,7 @@
 		</div>
 	</div>
 
-	<div class="relative mb-8 block md:hidden">
+	<div class="relative mb-8 block h-px md:mb-0">
 		<Hr />
 		<div
 			class="absolute bottom-[-7px] left-1/2 h-[15px] w-[15px] -translate-x-1/2 bg-[url('/bgs/square.svg')] bg-contain bg-no-repeat"

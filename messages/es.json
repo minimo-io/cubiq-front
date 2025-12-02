@@ -22,6 +22,8 @@
 	"rental": "Alquiler de Equipos",
 	"goToStore": "Ir a la tienda",
 	"visitStore": "Visitar tienda",
+	"downloadSoftware": "Descargar software predictivo",
+	"experiments": "Experimentos",
 
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
@@ -132,6 +134,10 @@
 
 	"metaLabTitle": "Lab",
 	"metaLabDescription": "Un espacio para prototipar, explorar y llevar al límite lo posible con la tecnología",
+	"labLaunchText": "<span class='hidden md:inline-block font-bold'>Lanzamiento!&nbsp;</span><u>Hopchain</u>",
+	"labLaunchSubText": "Cervezas artesanales x Lightning",
+	"labToolsTitle": "Proyectos y herramientas <br /> del laboratorio.",
+	"labToolsSubtitle": "Creamos experimentos, prototipos y herramientas que exploran nuevas tecnologías, modelos descentralizados y experiencias innovadoras.",
 
 	"metaFinxTitle": "Cubiq Pay - Pagos instantáneos en BTC/USDT a través de Lightning Network",
 	"metaFinxDescription": "Pagos en tiempo real con Settlements Globales Instantáneas en USDT/BTC, vía Lightning Network. Ej.: Recibí en Argentina y liquidá en el exterior, al instante, con 100% de compliance y transparencia verificable.",
@@ -277,7 +283,7 @@
 	"caresyncFeature8Title": "Módulo de compras",
 	"caresyncFeature8Desc": "Todos los clientes de la plataforma van a tener acceso a nuestra tienda para comprar equipos y piezas a los mejores precios del mercado.",
 
-	"careSyncFeaturedSlogan": "Gestionamos y mantenemos todos sus equipos, ofreciendo soporte completo a sus colaboradores para evitar cualquier pérdida de productividad. <span class='text-base-content'>Mientras usted cuida de su empresa, nosotros cuidamos de su TI.</span>",
+	"careSyncFeaturedSlogan": "Gestionamos y mantenemos todos sus equipos, ofreciendo soporte completo a sus colaboradores para evitar cualquier pérdida de productividad. <span class='text-base-content opacity-80'>Mientras usted cuida de su empresa, nosotros cuidamos de su TI.</span>",
 
 	"careHaaSFeature1Title": "Instalación y configuración de los equipos",
 	"careHaaSFeature1Desc": "Reciba cada equipo totalmente configurado con sistemas, software, políticas de seguridad y pruebas previas, garantizando una implementación rápida, estandarizada y lista para usar por su equipo.",
@@ -297,7 +303,7 @@
 	"careHaaSFeature6Title": "Sin inversión inicial",
 	"careHaaSFeature6Desc": "Elimine la gran inversión inicial, preserve el flujo de caja y las líneas de crédito, evite perder capital en otros gastos y prescinda de desplazamientos o búsquedas para comprar equipos.",
 
-	"careHaaSSlogan": "Bloquee su equipo desde cualquier lugar con mantenimiento incluido. Elija el software que necesite y recíbalo ya instalado, sin un gran desembolso inicial y con soporte activo en línea.",
+	"careHaaSSlogan": "Alquile su equipo desde cualquier lugar con mantenimiento incluido. Seas persona física o empresa, libera caja, <span class='text-base-content opacity-80'>enfócate en tu negocio, ¡nosotros cuidamos de tu TI!</span>",
 
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Si ya es cliente de Cubiq Care, recibirá cashback acumulable en todas las compras de productos vendidos directamente por Cubiq.",
@@ -358,10 +364,10 @@
 	"productNotesDetails": "Notas locales, encriptadas y sincronizables<br /> en el navegador",
 
 	"productBetizenSlogan": "Rankings justos de casinos & forex",
-	"productBetizenDetails": "Rankings de iGaming y Forex<br />impulsados por el mérito & PoW",
-
+	"productBetizenDetails": "Rankings de iGaming y Forex<br />por el mérito & PoW",
 	"productLnBeerSlogan": "Cerveza artesanal sobre lightning",
-	"productLnBeerDetails": "Tus cervezas artesabakes<br />via Lightning Network",
+	"productLnBeerDetails": "Cervezas artesanales<br />via Lightning Network",
+	"productBilbioSlogan": "Lector de E-books PWA <br />Via Nostr",
 
 	"heroContentRoadmap": "Acá encontrás el resultado de nuestro ciclo de desarrollo: <span class=\"text-base-content\">Proyección, Experimentación y Entrega</span>. Abajo, detallamos la lista de lanzamientos, hitos y Pruebas de Concepto (PoCs) — el registro vivo de nuestras creaciones más recientes ⛵️🚀",
 
@@ -375,6 +381,7 @@
 	"searchNotes": "Buscar notas...",
 	"notesWarningUnencrypteed": "<strong>¡Advertencia!</strong> Las notas sin encriptar estarán disponibles en texto plano en el almacenamiento local del navegador incluso después de cerrar sesión!",
 
+	"heroContentLab": "Además de nuestra Plataforma de Productos, en el <span class='text-base-content opacity-80'>Cubiq:Lab experimentamos con nuevas tecnologías e ideas</span>. Desde comprar cervezas locales vía Bitcoin Lightning hasta rankings seguros de sitios de apuestas usando karma.",
 	"labProductsSlogan": "Los proyectos de nuestro laboratorio van desde pruebas de concepto hasta productos activos en el mercado... <a href='/es/lab' class='hover:text-underline text-white'>saiba más</a>",
 
 	"invoicing": "Facturación"

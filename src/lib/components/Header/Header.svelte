@@ -16,7 +16,7 @@
 	const delocalizedPath = deLocalizeUrl(page.url).pathname;
 
 	interface Props {
-		background?: 'space' | 'rocket' | 'astronaut' | 'commerce' | 'construction';
+		background?: 'base' | 'space' | 'rocket' | 'astronaut' | 'commerce' | 'construction' | 'stars';
 		opacity?: '0' | '40';
 
 		titleRight: string;
@@ -91,7 +91,9 @@
 			opacity == '0' && 'opacity-none',
 			opacity == '40' && 'opacity-40',
 
+			background == 'base' && 'fw-bg-base',
 			background == 'space' && 'fw-bg-space',
+			background == 'stars' && 'fw-bg-stars',
 			background == 'astronaut' && 'fw-bg-astronaut',
 			background == 'construction' && 'fw-bg-construction',
 			background == 'commerce' && 'fw-bg-bagity',

@@ -237,8 +237,16 @@ body {
 	}
 
 	/* Pre-compiled backgrounds */
+	.fw-bg-base {
+		@apply bg-[url('/bgs/header-base-2.jpg')];
+		/* @apply bg-[url('/bgs/header-underconstruction.jpeg')]; */
+	}
 	.fw-bg-space {
 		@apply bg-[url('/bgs/ngc-2899.jpg')];
+		/* @apply bg-[url('/bgs/header-underconstruction.jpeg')]; */
+	}
+	.fw-bg-stars {
+		@apply bg-[url('/bgs/header-lab.jpeg')];
 		/* @apply bg-[url('/bgs/header-underconstruction.jpeg')]; */
 	}
 	.fw-bg-rocket {

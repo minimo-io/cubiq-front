@@ -4,6 +4,7 @@
 	import { Product } from '$types/products.types';
 	import Pill from '../Pill.svelte';
 	import type { Feature } from '$types/features.types';
+	import { Download } from '@lucide/svelte';
 
 	let {
 		noPaddingMobile = false,
@@ -113,6 +114,15 @@
 							{@html feature.title}
 						</h3>
 						<p class="text-secondary leading-tight font-normal">{@html feature.desc}</p>
+						{#if feature.button}
+							<a
+								href={feature.button.href}
+								class="btn bg-primary/10 border-primary text-primary hover:bg-primary relative -left-2 mt-3 rounded-full border hover:text-black"
+							>
+								<Download class="h-3" />
+								{feature.button.text}
+							</a>
+						{/if}
 					</div>
 				</div>
 			{/each}

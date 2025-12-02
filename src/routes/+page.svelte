@@ -65,7 +65,12 @@
 
 <Meta title={m.metaHomeTitle()} description={m.metaHomeDescription()} />
 
-<Header titleLeft={m.welcome()} titleRight={m.theFuture()} heroContent={m.heroContentHome()} />
+<Header
+	background="base"
+	titleLeft={m.welcome()}
+	titleRight={m.theFuture()}
+	heroContent={m.heroContentHome()}
+/>
 
 <main class="font-sans-pro bg-base-100 text-base-content relative mx-(--cubiq-app-margin)">
 	<div class="mb-[8px]">

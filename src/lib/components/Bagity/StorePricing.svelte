@@ -287,7 +287,7 @@
 					<!-- Button -->
 					<div class="mt-6 flex flex-1 items-center justify-center md:mt-0 md:w-1/6 md:justify-end">
 						<button class="btn btn-primary btn-md md:btn-lg w-full md:w-auto md:px-5"
-							>{m.contactSupport()}</button
+							>{m.requestQuotation()}</button
 						>
 					</div>
 				</div>
@@ -453,7 +453,7 @@
 					<!-- Button -->
 					<div class="mt-6 flex flex-1 items-center justify-center md:mt-0 md:w-1/6 md:justify-end">
 						<button class="btn btn-outline btn-md md:btn-lg w-full md:w-auto md:px-8">
-							{m.contactSupport()}
+							{m.requestQuotation()}
 						</button>
 					</div>
 				</div>
@@ -467,11 +467,7 @@
 				<div class="text-base-content/60 flex justify-center gap-6 text-sm">
 					<!-- <span>✓ Cancel anytime</span> -->
 					<!-- <span>✓ 30-day money back guarantee</span> -->
-					<span
-						>✓ Suporte ao cliente humanizado via <a href="#" class="text-primary underline"
-							>A Gente Faz</a
-						></span
-					>
+					<span>✓ Suporte ao cliente humanizado</span>
 				</div>
 			</div>
 		</div>

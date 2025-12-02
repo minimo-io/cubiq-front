@@ -77,9 +77,22 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 
 export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 	{
+		id: LabProduct.BETIZEN,
+		name: LabProduct.BETIZEN,
+		logo: '/products/betizen-logo.png',
+		isMain: true,
+		slogan: m.productBetizenSlogan({}, { locale: locale }),
+		sloganSimple: '',
+		details: m.productBetizenDetails({}, { locale: locale }),
+		isBold: true,
+		primary: true,
+		underDevelopment: false,
+		url: 'https://www.betizen.org'
+	},
+	{
 		id: LabProduct.LNBEER,
 		name: LabProduct.LNBEER,
-		logo: '/products/lnbeer-logo.png',
+		logo: '/products/hopchain-logo.png',
 		isMain: true,
 		slogan: m.productLnBeerSlogan({}, { locale: locale }),
 		sloganSimple: '',
@@ -90,16 +103,16 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		url: 'https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1'
 	},
 	{
-		id: LabProduct.BETIZEN,
-		name: LabProduct.BETIZEN,
-		logo: '/products/betizen-logo.png',
+		id: LabProduct.BIBLIO,
+		name: LabProduct.BIBLIO,
+		logo: '/products/biblio-logo.png',
 		isMain: true,
-		slogan: m.productBetizenSlogan({}, { locale: locale }),
+		slogan: m.productBilbioSlogan({}, { locale: locale }),
 		sloganSimple: '',
-		details: m.productBetizenDetails({}, { locale: locale }),
+		details: m.productBilbioSlogan({}, { locale: locale }),
 		isBold: true,
 		primary: true,
 		underDevelopment: true,
-		url: 'https://www.betizen.org'
+		url: '#'
 	}
 ];
