@@ -1,5 +1,6 @@
 <script>
 	import { m } from '$paraglide/messages';
+	import { localizeHref } from '$paraglide/runtime';
 </script>
 
 <!-- Diferentials -->
@@ -16,21 +17,20 @@
 
 <div class="relative -top-5 px-4 pt-4 md:-top-14 md:pt-12">
 	<div class="mx-auto max-w-6xl">
-		<!-- <div class="flex justify-center">
-			<TitleSection titleLeft="Escolha seu" titleRight="plano" forceFlexRow={true} />
-		</div> -->
-
-		<!-- Header -->
-		<!-- <div class="mb-12 hidden text-center md:block">
-			<h1 class="text-base-content mb-4 text-3xl font-bold md:text-4xl">Escolha seu plano</h1>
-		</div> -->
-
 		<!-- Pricing Cards -->
 		<div class="space-y-6 md:space-y-0">
 			<!-- Basic Plan -->
 			<div
-				class="card bg-base-100 border-base-300 hidden border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-1"
+				class="card bg-base-100 border-base-300 border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-1"
 			>
+				<!-- For who -->
+				<div
+					class="badge badge-primary border-base-300 badge-lg absolute -top-3 left-1/2 -translate-x-1/2 transform border bg-black px-4 py-2 font-sans font-bold"
+				>
+					{@html m.forBTCOnlyStores()}
+				</div>
+
+				<!-- Content -->
 				<div class="card-body md:card-side p-6 md:p-8">
 					<!-- Plan Info -->
 					<div class="flex items-center text-center md:w-[25%] md:text-left">
@@ -39,9 +39,13 @@
 						>
 							Basic
 						</h2> -->
-						<div class="mb-6 md:mb-0">
-							<span class="text-base-content text-3xl font-bold md:text-4xl">Gratuito</span>
-							<!-- <span class="text-base-content/70 text-lg">/mes</span> -->
+						<div
+							class="my-5 flex h-full w-full items-center justify-center! md:my-2 md:mb-0 md:justify-center"
+						>
+							<span class="text-base-content text-center text-4xl font-bold md:text-[40px]">
+								50%<br />OFF
+							</span>
+							<!-- <span class="text-base-content/70 text-lg">/mês</span> -->
 						</div>
 					</div>
 
@@ -124,8 +128,11 @@
 										clip-rule="evenodd"
 									/>
 								</svg>
-								<span class="text-base-content/40 font-sans text-sm line-through md:text-base"
-									>Domínio próprio</span
+								<span class="text-base-content font-sans text-sm md:text-base"
+									>Payments via <a
+										href={localizeHref('/pay')}
+										class="text-primary/80 hover:text-primary underline">Cubiq:Pay</a
+									></span
 								>
 							</div>
 							<div class="flex items-start gap-3">
@@ -150,7 +157,7 @@
 					<!-- Button -->
 					<div class="mt-6 flex flex-1 items-center justify-center md:mt-0 md:justify-end">
 						<button class="btn btn-outline btn-md md:btn-lg w-full md:w-auto md:px-5"
-							>{m.contactSupport()}</button
+							>{m.requestQuotation()}</button
 						>
 					</div>
 				</div>
@@ -163,7 +170,7 @@
 				<div
 					class="badge badge-primary badge-lg absolute -top-3 left-1/2 -translate-x-1/2 transform px-4 py-2 font-sans font-bold md:left-6 md:translate-x-0"
 				>
-					E-Commerce
+					{m.allStores()}
 				</div>
 				<div class="card-body md:card-side p-6 md:p-8">
 					<!-- Plan Info -->
@@ -174,9 +181,11 @@
 							Sob medida
 						</h2> -->
 						<div
-							class="my-5 flex h-full items-center justify-center md:my-2 md:mb-0 md:justify-start"
+							class="my-5 flex h-full items-center justify-center md:my-2 md:mb-0 md:justify-center"
 						>
-							<span class="text-base-content text-4xl font-bold md:text-[38px]"> Sob medida </span>
+							<span class="text-base-content text-center text-4xl font-bold md:text-[45px]">
+								{@html m.tailorMade()}
+							</span>
 							<!-- <span class="text-base-content/70 text-lg">/mês</span> -->
 						</div>
 					</div>
@@ -466,8 +475,8 @@
 				</p> -->
 				<div class="text-base-content/60 flex justify-center gap-6 text-sm">
 					<!-- <span>✓ Cancel anytime</span> -->
-					<!-- <span>✓ 30-day money back guarantee</span> -->
-					<span>✓ Suporte ao cliente humanizado</span>
+					<span>✓ Atendimento humano, sempre.</span>
+					<span>✓ Dashboards prontos.</span>
 				</div>
 			</div>
 		</div>

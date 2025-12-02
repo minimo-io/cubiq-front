@@ -52,6 +52,8 @@
 
 	"readMore": "Leer todo",
 	"readLess": "Leer menos",
+	"showLess": "Mostrar menos",
+
 	"or": "ó",
 	"soon": "En breve",
 	"getInTouch": "Entrar en contacto",
@@ -303,7 +305,7 @@
 	"careHaaSFeature6Title": "Sin inversión inicial",
 	"careHaaSFeature6Desc": "Elimine la gran inversión inicial, preserve el flujo de caja y las líneas de crédito, evite perder capital en otros gastos y prescinda de desplazamientos o búsquedas para comprar equipos.",
 
-	"careHaaSSlogan": "Alquile su equipo desde cualquier lugar con mantenimiento incluido. Seas persona física o empresa, libera caja, <span class='text-base-content opacity-80'>enfócate en tu negocio, ¡nosotros cuidamos de tu TI!</span>",
+	"careHaaSSlogan": "Alquile su equipo desde cualquier lugar con mantenimiento incluido. Sea persona física o jurídica, libere caja.<br /> <span class='text-base-content opacity-80'>Usted enfóquese en su negocio, nosotros cuidamos de su TI.</span>",
 
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Si ya es cliente de Cubiq Care, recibirá cashback acumulable en todas las compras de productos vendidos directamente por Cubiq.",
@@ -384,5 +386,8 @@
 	"heroContentLab": "Además de nuestra Plataforma de Productos, en el <span class='text-base-content opacity-80'>Cubiq:Lab experimentamos con nuevas tecnologías e ideas</span>. Desde comprar cervezas locales vía Bitcoin Lightning hasta rankings seguros de sitios de apuestas usando karma.",
 	"labProductsSlogan": "Los proyectos de nuestro laboratorio van desde pruebas de concepto hasta productos activos en el mercado... <a href='/es/lab' class='hover:text-underline text-white'>saiba más</a>",
 
-	"invoicing": "Facturación"
+	"invoicing": "Facturación",
+	"forBTCOnlyStores": "<span class='hidden md:flex'>Tiendas</span> Sólo Bitcoin",
+	"allStores": "Todas las tiendas",
+	"tailorMade": "A<br />medida"
 }

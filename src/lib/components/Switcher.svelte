@@ -36,6 +36,7 @@
 	});
 </script>
 
+<!-- Desktop -->
 <div
 	class="border-base-300 relative hidden items-center gap-0 rounded-full border bg-black p-1 md:inline-flex"
 >
@@ -53,7 +54,7 @@
 					transition:fly={{ x: index === 0 ? 20 : -20, duration: 100 }}
 				></div>
 			{/if}
-			<span class="font-sans text-lg font-bold">
+			<span class="font-sans text-lg {selected == option ? 'font-bold' : 'font-normal'}">
 				{option}
 			</span>
 		</button>

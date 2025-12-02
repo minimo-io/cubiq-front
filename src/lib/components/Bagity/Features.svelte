@@ -4,7 +4,7 @@
 	import { Product } from '$types/products.types';
 	import Pill from '../Pill.svelte';
 	import type { Feature } from '$types/features.types';
-	import { Download } from '@lucide/svelte';
+	import { Download, ChevronDown, ChevronUp } from '@lucide/svelte';
 
 	let {
 		noPaddingMobile = false,
@@ -14,6 +14,12 @@
 	// Reactive state for carousel
 	let currentIndex = $state(0);
 	let direction = $state(1); // 1 for next, -1 for prev
+
+	// Track expanded state for each feature
+	let expandedFeatures = $state<Set<number>>(new Set());
+
+	// Track content heights for smooth transitions
+	let contentHeights = $state<Map<number, number>>(new Map());
 
 	// Computed properties using $derived
 	let features = $derived(featuresList);
@@ -42,6 +48,36 @@
 	let currentPageFeatures = $derived(
 		features.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage)
 	);
+
+	// Toggle expand/collapse for a feature
+	function toggleExpand(index: number) {
+		const newExpanded = new Set(expandedFeatures);
+		if (newExpanded.has(index)) {
+			newExpanded.delete(index);
+		} else {
+			newExpanded.add(index);
+		}
+		expandedFeatures = newExpanded;
+	}
+
+	// Measure content height for transitions
+	function measureHeight(node: HTMLElement, index: number) {
+		const height = node.scrollHeight;
+		const newHeights = new Map(contentHeights);
+		newHeights.set(index, height);
+		contentHeights = newHeights;
+
+		return {
+			destroy() {}
+		};
+	}
+
+	// Check if text needs truncation (more than ~150 characters or 3 lines worth)
+	function needsTruncation(text: string): boolean {
+		// Remove HTML tags for length calculation
+		const plainText = text.replace(/<[^>]*>/g, '');
+		return plainText.length > 150;
+	}
 
 	// Swipe handling
 	let touchStartX = $state(0);
@@ -86,15 +122,25 @@
 		ontouchend={isMobile ? handleTouchEnd : undefined}
 	>
 		<!-- Features container with animation -->
-		<div class="grid grid-cols-1 gap-12 overflow-hidden lg:grid-cols-2">
+		<div class="grid grid-cols-1 gap-1 overflow-hidden md:gap-5 lg:grid-cols-2">
 			{#each currentPageFeatures as feature, i}
-				<div class="feature-item" in:fly={{ x: direction * 100, opacity: 0, duration: 150 }}>
+				{@const globalIndex = currentIndex * itemsPerPage + i}
+				{@const isExpanded = expandedFeatures.has(globalIndex)}
+				{@const showExpandButton = needsTruncation(feature.desc)}
+
+				<div
+					class={[
+						'feature-item',
+						feature.button && 'border-primary/50 mt-5 rounded-xl border px-2 pt-6 pb-3 md:mt-0'
+					]}
+					in:fly={{ x: direction * 100, opacity: 0, duration: 150 }}
+				>
 					<div class="flex-shrink-0">
 						{#if !feature.icon}
 							<img src={feature.img} alt={`feature-${i + 1}`} />
-						{:else}
+						{:else if !feature.button}
 							<div
-								class="bg-primary/10 border-primary flex h-15 w-15 items-center justify-center rounded-full border md:h-22 md:w-22"
+								class="bg-primary/10 border-primary flex h-13 w-13 items-center justify-center rounded-full border md:h-22 md:w-22"
 							>
 								<feature.icon strokeWidth="1" class="text-primary md:h-8 md:w-8" />
 							</div>
@@ -113,23 +159,72 @@
 							{/if}
 							{@html feature.title}
 						</h3>
-						<p class="text-secondary leading-tight font-normal">{@html feature.desc}</p>
-						{#if feature.button}
-							<a
-								href={feature.button.href}
-								class="btn bg-primary/10 border-primary text-primary hover:bg-primary relative -left-2 mt-3 rounded-full border hover:text-black"
-							>
-								<Download class="h-3" />
-								{feature.button.text}
-							</a>
-						{/if}
+						<div class="relative">
+							<div class="relative mb-2">
+								<div
+									class="expandable-wrapper"
+									style:height={isExpanded
+										? (contentHeights.get(globalIndex) || 200) + 'px'
+										: '4.0rem'}
+								>
+									<p
+										use:measureHeight={globalIndex}
+										class="text-secondary leading-tight font-normal"
+									>
+										{@html feature.desc}
+									</p>
+								</div>
+
+								{#if showExpandButton && !isExpanded}
+									<div
+										class="from-base-100 via-base-100/90 pointer-events-none absolute right-0 bottom-0 left-0 h-10 bg-gradient-to-t to-transparent"
+									></div>
+								{/if}
+							</div>
+
+							{#if showExpandButton}
+								<div
+									class={[
+										'relative flex flex-row items-center gap-3',
+										showExpandButton && feature.button ? '-top-4' : '-top-7 md:-top-5 ',
+										isExpanded && !feature.button && 'pt-6 md:mt-2',
+										feature.button && isExpanded && 'mt-8'
+									]}
+								>
+									<!-- Read more/less buttons -->
+									<button
+										onclick={() => toggleExpand(globalIndex)}
+										class={[
+											'text-primary hover:text-primary/80 relative flex items-center gap-1 text-sm font-medium transition-colors'
+										]}
+									>
+										{isExpanded ? m.showLess() : m.readMore()}
+										{#if isExpanded}
+											<ChevronUp class="h-4 w-4" />
+										{:else}
+											<ChevronDown class="h-4 w-4" />
+										{/if}
+									</button>
+
+									<!-- Featured button -->
+									{#if feature.button}
+										<a
+											href={feature.button.href}
+											class="btn btn-xs bg-primary/10 border-primary text-primary hover:bg-primary relative mt-0 rounded-full border hover:text-black"
+										>
+											<Download class="h-3" />
+											{feature.button.text}
+										</a>
+									{/if}
+								</div>
+							{/if}
+						</div>
 					</div>
 				</div>
 			{/each}
 		</div>
 
-		<!-- Navigation controls for desktop - hidden on mobile -->
-		<!-- {#if !isMobile} -->
+		<!-- Navigation controls -->
 		<div class="absolute inset-y-0 -top-10 -left-18 flex items-center">
 			<button
 				class="btn border-primary text-primary btn-circle btn-outline btn-sm md:btn-md hover:bg-primary hover:text-white hover:opacity-100"
@@ -151,7 +246,6 @@
 				{'>'}
 			</button>
 		</div>
-		<!-- {/if} -->
 
 		<!-- Pagination dots -->
 		{#if totalPages > 1}
@@ -187,5 +281,10 @@
 	}
 	.feature-item > div > img {
 		@apply aspect-square h-[60px] md:h-[90px];
+	}
+
+	.expandable-wrapper {
+		overflow: hidden;
+		transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 </style>

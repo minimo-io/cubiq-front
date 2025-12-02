@@ -52,6 +52,8 @@
 	"prototyping": "Prototyping",
 	"readMore": "Read All",
 	"readLess": "Read Less",
+	"showLess": "Show less",
+
 	"or": "or",
 	"soon": "Soon",
 	"getInTouch": "Get in touch!",
@@ -288,7 +290,8 @@
 
 	"careHaaSFeature1Title": "Equipment installation and configuration",
 	"careHaaSFeature1Desc": "Receive each device fully configured with systems, software, security policies, and pre-testing, ensuring fast, standardized deployment and ready-to-use equipment for your team.",
-	"careHaaSSlogan": "Lease your equipment from anywhere with maintenance included. Whether you're an individual or a business, free up cash flow, <span class='text-base-content opacity-80'>focus on your business — we take care of your IT!</span>",
+
+	"careHaaSSlogan": "Rent your equipment from anywhere with maintenance included. Whether you're an individual or a company, free up cash flow.<br /> <span class='text-base-content opacity-80'>You focus on your business, we take care of your IT!</span>",
 
 	"careHaaSFeature2Title": "Managed logistics",
 	"careHaaSFeature2Desc": "We deliver to all states with tracking, flexible scheduling, and structured reverse logistics for exchanges, returns, pickups, and equipment relocations in any region.",
@@ -384,5 +387,8 @@
 	"heroContentLab": "Besides our Products Platform, at the <span class='text-base-content opacity-80'>Cubiq:Lab we experiment with new technologies and ideas</span>. From buying local beers via Bitcoin Lightning to secure rankings of betting sites using karma.",
 	"labProductsSlogan": "Projects from our technology lab range from proof-of-concepts to in-market products... <a href='/en/lab' class='hover:text-underline text-white'>learn more</a>",
 
-	"invoicing": "Invoicing"
+	"invoicing": "Invoicing",
+	"forBTCOnlyStores": "<span class='hidden md:flex'>For</span>Bitcoin Only<span class='hidden md:flex'>Stores</span>",
+	"allStores": "All stores",
+	"tailorMade": "Tailor-<br />made"
 }

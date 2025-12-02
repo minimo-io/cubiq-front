@@ -49,8 +49,9 @@
 	"knowledgeBase": "Conhecimento",
 
 	"prototyping": "Prototipagem",
-	"readMore": "Ler tudo",
+	"readMore": "Ler mais",
 	"readLess": "Ler menos",
+	"showLess": "Mostrar menos",
 	"or": "ou",
 	"soon": "Em breve",
 	"getInTouch": "Entre em contato",
@@ -288,7 +289,7 @@
 
 	"careSyncFeaturedSlogan": "Gerenciamos e mantemos todos os seus equipamentos, com suporte completo aos seus colaboradores. <span class='text-base-content opacity-80'>Você cuida do seu negócio, a gente cuida da sua TI!</span>",
 
-	"careHaaSFeature1Title": "Instalação e configuração dos equipamentos",
+	"careHaaSFeature1Title": "Instalação e configuração",
 	"careHaaSFeature1Desc": "Receba cada equipamento totalmente configurado com sistemas, softwares, políticas de segurança e testes prévios, garantindo implantação rápida, padronizada e pronta para uso pela sua equipe.",
 
 	"careHaaSFeature2Title": "Logística gerenciada",
@@ -306,7 +307,7 @@
 	"careHaaSFeature6Title": "Ausência de investimento inicial",
 	"careHaaSFeature6Desc": "Elimine o grande desembolso inicial, preserve caixa e linhas de crédito, evite perder capital para outros investimentos e dispense deslocamentos ou pesquisas para comprar equipamentos.",
 
-	"careHaaSSlogan": "Loque seu equipamento desde qualquer lugar com manutenção inclusa. Seja PF ou PJ, libere caixa, <span class='text-base-content opacity-80'>foque no seu negócio, a gente cuida da sua TI!</span>",
+	"careHaaSSlogan": "Loque seu equipamento desde qualquer lugar com manutenção inclusa. Seja PF ou PJ, libere caixa.<span class='text-base-content opacity-80'>Você foca no seu negócio, a gente cuida da sua TI!</span>",
 
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Se você já é cliente Cubiq Care ganhará cashback em todas as compras em produtos vendidos diretamente pela Cubiq através da nossa loja.",
@@ -388,5 +389,8 @@
 	"heroContentLab": "Além da nossa Plataforma de Produtos, no <span class='text-base-content opacity-80'>Cubiq:Lab experimentamos com novas tecnologías e ideias</span>. Desde compra de cervejas locais via bitcoin lightning, rankings seguros de sites de apostas.",
 	"labProductsSlogan": "Os projetos do nosso laboratório de tecnologia vão desde provas de conceito até produtos ativos no mercado... <a href='/lab' class='hover:text-underline text-white'>saiba mais</a>",
 
-	"invoicing": "Faturamento"
+	"invoicing": "Faturamento",
+	"forBTCOnlyStores": "<span class='hidden md:flex'>Lojas Que Aceitam</span>Só Bitcoin",
+	"allStores": "Todas as lojas",
+	"tailorMade": "Sob<br />medida"
 }

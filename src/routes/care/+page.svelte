@@ -196,7 +196,7 @@
 				<div
 					class="bg-primary animate__animated animate__flash animate__infinite relative left-1 mr-4 block h-[20px] w-[5px] md:-top-1 md:h-[30px] md:w-[8px]"
 				></div>
-				<h2 class="font-pixel text-2xl tracking-wider md:text-3xl">{m.whyUseCare()}</h2>
+				<h2 class="font-sans text-2xl font-bold tracking-wider md:text-3xl">{m.whyUseCare()}</h2>
 			</div>
 		</section>
 	</div>
@@ -212,7 +212,7 @@
 
 			{#key currentSwitcherSelection}
 				<div
-					class="mx-auto mt-4 space-y-6 text-center md:mt-5"
+					class="mx-auto mt-11 space-y-6 text-center md:mt-5"
 					in:fly={{ y: -20, duration: 100, delay: 100 }}
 				>
 					<span class="text-secondary py-4 font-sans text-base font-semibold tracking-wide">
