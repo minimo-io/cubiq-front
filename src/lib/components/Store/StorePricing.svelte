@@ -3,169 +3,42 @@
 	import { localizeHref } from '$paraglide/runtime';
 </script>
 
-<!-- Diferentials -->
-<!-- <div class="border-base-200 mb-4 border-b">
-	<section class="max-w-fw mx-auto">
-		<div class="border-base-200 mt-5 mb-4 flex justify-center">
-			<div
-				class="bg-primary animate__animated animate__flash animate__infinite relative left-1 mr-4 block h-[20px] w-[5px] md:-top-1 md:h-[30px] md:w-[8px]"
-			></div>
-			<h2 class="font-pixel text-2xl tracking-wider md:text-3xl">{'Escolha seu plano'}</h2>
-		</div>
-	</section>
-</div> -->
-
-<div class="relative -top-5 px-4 pt-4 md:-top-14 md:pt-12">
+<div class="relative -top-5 px-0 pt-4 md:-top-14 md:pt-12">
 	<div class="mx-auto max-w-6xl">
 		<!-- Pricing Cards -->
 		<div class="space-y-6 md:space-y-0">
 			<!-- Basic Plan -->
-			<div
-				class="card bg-base-100 border-base-300 border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-1"
+			<!-- <div
+				class="card bg-base-100 border-base-300 left-1/2 -translate-x-1/2 border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:w-[50%] md:hover:-translate-y-1"
 			>
-				<!-- For who -->
 				<div
 					class="badge badge-primary border-base-300 badge-lg absolute -top-3 left-1/2 -translate-x-1/2 transform border bg-black px-4 py-2 font-sans font-bold"
 				>
 					{@html m.forBTCOnlyStores()}
 				</div>
 
-				<!-- Content -->
-				<div class="card-body md:card-side p-6 md:p-8">
-					<!-- Plan Info -->
+				<div class="card-body md:card-side flex justify-center p-6 md:gap-10 md:p-8">
 					<div class="flex items-center text-center md:w-[25%] md:text-left">
-						<!-- <h2
-							class="card-title mb-2 justify-center font-sans text-2xl font-black md:justify-start"
-						>
-							Basic
-						</h2> -->
 						<div
 							class="my-5 flex h-full w-full items-center justify-center! md:my-2 md:mb-0 md:justify-center"
 						>
 							<span class="text-base-content text-center text-4xl font-bold md:text-[40px]">
-								50%<br />OFF
+								50%&nbsp;OFF
 							</span>
-							<!-- <span class="text-base-content/70 text-lg">/mês</span> -->
 						</div>
 					</div>
 
-					<!-- Features -->
-					<div class="md:w-1/2 md:pr-8">
-						<div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
-							<div class="flex items-start gap-3">
-								<svg
-									class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								<span class="text-base-content font-sans text-sm md:text-base">Até 20 produtos</span
-								>
-							</div>
-							<div class="flex items-start gap-3">
-								<svg
-									class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								<span class="text-base-content font-sans text-sm md:text-base"
-									>Ideal para testes</span
-								>
-							</div>
-							<div class="flex items-start gap-3">
-								<svg
-									class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								<span class="text-base-content font-sans text-sm md:text-base"
-									>Acesso a cursos gratuitos</span
-								>
-							</div>
-							<div class="flex items-start gap-3">
-								<svg
-									class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								<span class="text-base-content font-sans text-sm md:text-base"
-									>Suporte por email</span
-								>
-							</div>
-							<!-- Grayed features -->
-							<div class="flex items-start gap-3">
-								<svg
-									class="text-base-content/30 mt-0.5 h-5 w-5 flex-shrink-0"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								<span class="text-base-content font-sans text-sm md:text-base"
-									>Payments via <a
-										href={localizeHref('/pay')}
-										class="text-primary/80 hover:text-primary underline">Cubiq:Pay</a
-									></span
-								>
-							</div>
-							<div class="flex items-start gap-3">
-								<svg
-									class="text-base-content/30 mt-0.5 h-5 w-5 flex-shrink-0"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-								<span class="text-base-content/40 font-sans text-sm line-through md:text-base"
-									>Até 20 produtos</span
-								>
-							</div>
-						</div>
-					</div>
-
-					<!-- Button -->
-					<div class="mt-6 flex flex-1 items-center justify-center md:mt-0 md:justify-end">
+					<div class="flex items-center justify-center md:mt-0 md:mt-6 md:justify-end">
 						<button class="btn btn-outline btn-md md:btn-lg w-full md:w-auto md:px-5"
 							>{m.requestQuotation()}</button
 						>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- Premium Plan -->
 			<div
-				class="card bg-base-100 border-primary relative z-50 border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:scale-105 md:hover:-translate-y-1"
+				class="card bg-base-100 border-base-300 relative z-50 border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:scale-105 md:hover:-translate-y-1"
 			>
 				<div
 					class="badge badge-primary badge-lg absolute -top-3 left-1/2 -translate-x-1/2 transform px-4 py-2 font-sans font-bold md:left-6 md:translate-x-0"
@@ -183,7 +56,7 @@
 						<div
 							class="my-5 flex h-full items-center justify-center md:my-2 md:mb-0 md:justify-center"
 						>
-							<span class="text-base-content text-center text-4xl font-bold md:text-[45px]">
+							<span class="text-base-content text-center text-4xl font-bold md:text-[42px]">
 								{@html m.tailorMade()}
 							</span>
 							<!-- <span class="text-base-content/70 text-lg">/mês</span> -->
@@ -260,7 +133,7 @@
 							<!-- Grayed features -->
 							<div class="flex items-start gap-3">
 								<svg
-									class="text-base-content/30 mt-0.5 h-5 w-5 flex-shrink-0"
+									class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
 									fill="currentColor"
 									viewBox="0 0 20 20"
 								>
@@ -276,7 +149,7 @@
 							</div>
 							<div class="flex items-start gap-3">
 								<svg
-									class="text-base-content/30 mt-0.5 h-5 w-5 flex-shrink-0"
+									class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
 									fill="currentColor"
 									viewBox="0 0 20 20"
 								>
@@ -306,13 +179,7 @@
 			<div
 				class="card bg-base-100 border-base-300 relative hidden border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:hover:-translate-y-1"
 			>
-				<!-- <div
-					class="badge badge-secondary badge-lg absolute -top-3 left-1/2 -translate-x-1/2 transform px-4 py-2 md:left-6 md:translate-x-0"
-				>
-					Best Value
-				</div> -->
 				<div class="card-body md:card-side p-6 md:p-8">
-					<!-- Plan Info -->
 					<div class="text-center md:w-1/3 md:text-left">
 						<h2
 							class="card-title mb-2 justify-center font-sans text-2xl font-black md:justify-start"
@@ -325,7 +192,6 @@
 						</div>
 					</div>
 
-					<!-- Features -->
 					<div class="md:w-1/2 md:pr-8">
 						<div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
 							<div class="flex items-start gap-3">
@@ -465,18 +331,6 @@
 							{m.requestQuotation()}
 						</button>
 					</div>
-				</div>
-			</div>
-
-			<!-- Footer -->
-			<div class="mt-6 text-center font-sans md:mt-10">
-				<!-- <p class="text-base-content/70 mb-4 md:text-xl">
-					✅ All plans include a 14-day free trial. No credit card required.
-				</p> -->
-				<div class="text-base-content/60 flex justify-center gap-6 text-sm">
-					<!-- <span>✓ Cancel anytime</span> -->
-					<span>✓ Atendimento humano, sempre.</span>
-					<span>✓ Dashboards prontos.</span>
 				</div>
 			</div>
 		</div>

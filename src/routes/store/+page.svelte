@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Features from '$lib/components/Bagity/Features.svelte';
-	import StorePricing from '$lib/components/Bagity/StorePricing.svelte';
+	import Features from '$lib/components/Store/Features.svelte';
+	import StorePricing from '$lib/components/Store/StorePricing.svelte';
 	import TransparentButton from '$lib/components/Buttons/TransparentButton.svelte';
 	import ServiceOrders from '$lib/components/caresync/ServiceOrders.svelte';
 	import Slogan from '$lib/components/caresync/Slogan.svelte';
@@ -25,6 +25,9 @@
 		MessageCircleHeart,
 		ShoppingCart
 	} from '@lucide/svelte';
+	import StoreCarrousel from '$lib/components/Store/StoreCarrousel.svelte';
+	import StorePricingVertical from '$lib/components/Store/StorePricingVertical.svelte';
+	import Hr from '$lib/components/Hr.svelte';
 
 	// Define features based on product
 	const bagityFeatures: Feature[] = [
@@ -107,44 +110,44 @@
 	heroContent={m.heroContentBagity()}
 />
 
-<div>
+<!-- <div>
 	<Clients />
-</div>
+</div> -->
+
+<StoreCarrousel />
 
 <main>
-	<div
-		class="max-w-fw border-x-base-200 md:border-xxx relative container my-0 text-center md:mx-auto"
-	>
+	<!-- Title -->
+	<h2 class="text-base-content mx-10 mb-15 text-center text-3xl font-bold md:mx-0 md:text-4xl">
+		Etapa de implementação
+	</h2>
+
+	<div class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto">
 		<StorePricing />
+	</div>
 
-		<!-- <div id="more" class="flex flex-1 items-center justify-center">
-			<div
-				class="border-base-200 fw-border-b-divider md:fw-border-t-divider-dot flex w-full flex-col border-b
-			            after:absolute after:right-[48%] md:flex-row md:after:top-12 md:after:right-[49.4%] md:after:content-['']"
-			>
-				<div class="border-r-base-200 w-full py-3 text-xl md:w-1/2 md:border-r">
-					<div class="mb-3 text-2xl">{m.bagityBasic()}</div>
-					<div class="border-base-200 text-primary border-t pt-2 font-sans text-lg font-bold">
-						{m.bagityBasicPrice()}
-					</div>
-				</div>
-				<div class="hidden w-full py-3 text-xl md:inline-block md:w-1/2">
-					<div class="mb-3 text-2xl">
-						{@html m.bagityPro()}
-					</div>
-					<div class="border-base-200 text-primary mt-1 border-t pt-2 font-sans text-lg font-bold">
-						{m.bagityProPrice()}
-					</div>
-				</div>
-			</div>
-		</div> -->
+	<!-- <div class="relative block h-px md:mb-0">
+		<Hr />
+		<div
+			class="absolute bottom-[-7px] left-1/2 h-[15px] w-[15px] -translate-x-1/2 bg-[url('/bgs/square.svg')] bg-contain bg-no-repeat"
+		></div>
+	</div> -->
 
+	<!-- Title -->
+	<h2 class="text-base-content mx-10 mt-0 mb-5 text-center text-3xl font-bold md:mx-0 md:text-4xl">
+		Etapa de Manutenção
+	</h2>
+	<div class="max-w-fw border-x-base-200 relative container my-0 mb-17 text-center md:mx-auto">
+		<StorePricingVertical />
+	</div>
+
+	<div class="max-w-fw border-x-base-200 relative container my-0 mt-20! text-center md:mx-auto">
 		<!-- Dashboards -->
 		<section
-			class="animate-slide-up-fade relative -top-9 mx-auto mt-4 flex h-[500px] max-w-full justify-start overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-10 md:mt-0 md:h-auto md:w-[100%] md:max-w-full"
+			class="animate-slide-up-fade relative -top-9 mx-auto mt-10 flex h-[500px] max-w-full justify-start overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-10 md:mt-0 md:h-auto md:w-[100%] md:max-w-full"
 		>
 			<!-- Payment image -->
-			<DashboardImagesOnly images={dashboardImages} />
+			<DashboardImagesOnly images={dashboardImages} noMargins={true} />
 		</section>
 
 		<div class="flex hidden flex-col justify-center md:flex-1 md:flex-row md:items-stretch">

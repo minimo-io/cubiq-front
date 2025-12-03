@@ -35,7 +35,7 @@
 		Wrench
 	} from '@lucide/svelte';
 	import type { Feature } from '$types/features.types';
-	import Features from '$lib/components/Bagity/Features.svelte';
+	import Features from '$lib/components/Store/Features.svelte';
 	import { conditionalSmoothScroll } from '$utils';
 	import { type DashboardImageType } from '$types/dashboardImages.types';
 
