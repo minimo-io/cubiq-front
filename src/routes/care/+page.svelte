@@ -256,7 +256,7 @@
 		class="animate-slide-up-fade relative -top-9 mx-auto mt-4 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:mt-0 md:h-auto md:w-[100%] md:max-w-[82%]"
 	>
 		<!-- Payment image -->
-		<DashboardImagesOnly images={dashboardImages} />
+		<DashboardImagesOnly images={dashboardImages} noMargins={true} />
 	</section>
 
 	<!-- Slogan -->
