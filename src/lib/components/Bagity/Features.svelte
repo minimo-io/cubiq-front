@@ -195,7 +195,7 @@
 									<button
 										onclick={() => toggleExpand(globalIndex)}
 										class={[
-											'text-primary hover:text-primary/80 relative flex items-center gap-1 text-sm font-medium transition-colors'
+											'text-primary hover:text-primary/80 relative flex items-center gap-1 text-sm font-medium  transition-colors'
 										]}
 									>
 										{isExpanded ? m.showLess() : m.readMore()}
@@ -210,7 +210,7 @@
 									{#if feature.button}
 										<a
 											href={feature.button.href}
-											class="btn btn-xs bg-primary/10 border-primary text-primary hover:bg-primary relative mt-0 rounded-full border hover:text-black"
+											class="btn btn-xs md:btn-sm bg-primary/10 border-primary text-primary hover:bg-primary relative mt-0 rounded-full border hover:text-black"
 										>
 											<Download class="h-3" />
 											{feature.button.text}

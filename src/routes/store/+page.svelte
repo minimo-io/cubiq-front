@@ -84,14 +84,9 @@
 
 	const dashboardImages: DashboardImageType[] = $state([
 		{
-			src: '/products/care/cubiq-care-dashboard-1.webp',
-			alt: 'A screenshot of the Cubiq dashboard',
+			src: '/products/store/cubiq-store-dashboard-1.webp',
+			alt: 'Cubiq Store Dashboard',
 			object: 'left'
-		},
-		{
-			src: '/products/care/cubiq-care-dashboard-2.webp',
-			alt: 'A screenshot of the Cubiq Care dashboard',
-			object: 'right'
 		}
 		// {
 		// 	src: '/products/pay/cubiq-pay-dashboard-3.webp',
