@@ -33,7 +33,7 @@
 
 	function handleTouchStart(e: TouchEvent) {
 		touchStartX = e.touches[0].clientX;
-		console.log('Touch start:', touchStartX);
+		// console.log('Touch start:', touchStartX);
 		// Pause auto-scroll while touching
 		if (intervalId) clearInterval(intervalId);
 	}
@@ -43,24 +43,24 @@
 	}
 
 	function handleTouchEnd() {
-		console.log('Touch end:', touchEndX, 'Start was:', touchStartX);
+		// console.log('Touch end:', touchEndX, 'Start was:', touchStartX);
 		const swipeThreshold = 50; // minimum distance for a swipe
 		const diff = touchStartX - touchEndX;
-		console.log('Diff:', diff, 'Current index:', currentIndex);
+		// console.log('Diff:', diff, 'Current index:', currentIndex);
 
 		if (Math.abs(diff) > swipeThreshold) {
 			if (diff > 0) {
 				// Swiped left - go to next image
-				console.log('Swiping to next');
+				// console.log('Swiping to next');
 				currentIndex = (currentIndex + 1) % images.length;
 			} else {
 				// Swiped right - go to previous image
-				console.log('Swiping to previous');
+				// console.log('Swiping to previous');
 				currentIndex = (currentIndex - 1 + images.length) % images.length;
 			}
 		}
 
-		console.log('New index:', currentIndex);
+		// console.log('New index:', currentIndex);
 
 		// Reset for next swipe
 		touchStartX = 0;

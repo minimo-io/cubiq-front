@@ -114,11 +114,11 @@
 <!-- <div>
 	<Clients />
 </div> -->
-<div class="relative -top-5 md:-top-2">
+<div class="relative -top-10 md:-top-2">
 	<StoreCarrousel />
 </div>
 
-<main>
+<main class="relative -top-10 md:-top-2">
 	<!-- Title -->
 	<h2 class="text-base-content mx-10 mb-15 text-center text-3xl font-bold md:mx-0 md:text-4xl">
 		Etapa de implementação
@@ -152,7 +152,7 @@
 			<DashboardImagesOnly images={dashboardImages} noMargins={true} />
 		</section>
 
-		<div class="flex hidden flex-col justify-center md:flex-1 md:flex-row md:items-stretch">
+		<div class="hidden flex-col justify-center md:flex-1 md:flex-row md:items-stretch">
 			<!-- Você no controle -->
 			<div
 				class="border-r-base-200 flex w-full flex-col py-5 text-center md:w-1/2 md:border-r md:px-20 md:py-10"

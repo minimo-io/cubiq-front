@@ -168,6 +168,7 @@
 	slidedTitle={false}
 	titleRight={Product.CARE}
 	heroContent={m.heroContentCareSync()}
+	noMobileBorderBottom={true}
 >
 	<div class="mt-7 flex flex-wrap gap-2 md:mt-8 md:gap-3">
 		<a href="#more" use:conditionalSmoothScroll={'#more'} class="fw-button fw-button-lg">
@@ -294,7 +295,7 @@
 
 	<!-- <ServiceOrders image="/caresync-dashboard-3.png" /> -->
 
-	<div class="mt-10 font-sans md:mt-0">
+	<div class="mt-20 font-sans md:mt-0">
 		<Faq project="caresync" />
 	</div>
 

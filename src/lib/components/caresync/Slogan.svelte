@@ -37,7 +37,7 @@
 	}
 </script>
 
-<div class="border-base-200 mx-(--cubiq-app-margin) h-fit min-h-[146px] border-t md:min-h-[175px]">
+<div class="border-base-200 mx-(--cubiq-app-margin) h-fit min-h-[146px] border-t md:min-h-[146px]">
 	<div class="mx-auto my-10 text-center">
 		<h2 class="font-pixel text-2xl font-bold tracking-wider md:text-4xl md:leading-[45px]">
 			<span class="text-primary font-black" class:animate-pulse={isVisible}>></span>

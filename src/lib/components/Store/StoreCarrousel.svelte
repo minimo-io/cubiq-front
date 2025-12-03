@@ -136,6 +136,6 @@
 	/* Pause animation on hover */
 	.animate-scroll-right:hover,
 	.animate-scroll-left:hover {
-		animation-play-state: paused;
+		/* animation-play-state: paused; */
 	}
 </style>
