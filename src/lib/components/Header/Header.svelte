@@ -25,6 +25,8 @@
 		slidedTitle?: boolean;
 		buttons?: boolean;
 
+		noMobileBorderBottom?: boolean;
+
 		children?: Snippet;
 	}
 
@@ -34,6 +36,7 @@
 		titleLeft,
 		titleRight,
 		heroContent,
+		noMobileBorderBottom = false,
 		slidedTitle = true,
 		buttons = true,
 		children
@@ -82,7 +85,10 @@
 
 <header
 	in:fade={{ duration: 150 }}
-	class="border-base-200 relative border-b px-(--cubiq-app-margin) md:border-b-0 md:px-0"
+	class={[
+		'border-base-200 relative px-(--cubiq-app-margin) md:border-b-0 md:px-0',
+		noMobileBorderBottom ? '' : 'border-b '
+	]}
 >
 	<!-- Bg image -->
 	<div

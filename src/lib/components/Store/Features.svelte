@@ -1,5 +1,6 @@
+<!-- src/lib/components/Store/Features.svelte -->
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { m } from '$paraglide/messages';
 	import { Product } from '$types/products.types';
 	import Pill from '../Pill.svelte';
@@ -79,19 +80,31 @@
 		return plainText.length > 150;
 	}
 
-	// Swipe handling
-	let touchStartX = $state(0);
+	// Swipe handling - NOT reactive, regular variables
+	let touchStartX = 0;
+	let touchEndX = 0;
 
 	function handleTouchStart(e: TouchEvent) {
 		touchStartX = e.touches[0].clientX;
 	}
 
-	function handleTouchEnd(e: TouchEvent) {
-		const touchEndX = e.changedTouches[0].clientX;
+	function handleTouchMove(e: TouchEvent) {
+		touchEndX = e.touches[0].clientX;
+	}
+
+	function handleTouchEnd() {
+		// If no touch movement happened, this was probably a tap/click, not a swipe
+		if (touchStartX === 0 || touchEndX === 0) {
+			touchStartX = 0;
+			touchEndX = 0;
+			return;
+		}
+
+		const swipeThreshold = 50;
 		const diff = touchStartX - touchEndX;
 
 		// Minimum swipe distance
-		if (Math.abs(diff) > 50) {
+		if (Math.abs(diff) > swipeThreshold) {
 			if (diff > 0 && canGoNext) {
 				direction = 1;
 				goToNext();
@@ -100,6 +113,10 @@
 				goToPrev();
 			}
 		}
+
+		// Reset for next swipe
+		touchStartX = 0;
+		touchEndX = 0;
 	}
 
 	// Check if device is mobile
@@ -118,110 +135,133 @@
 	<!-- Carousel container -->
 	<div
 		class="relative"
-		ontouchstart={isMobile ? handleTouchStart : undefined}
-		ontouchend={isMobile ? handleTouchEnd : undefined}
+		ontouchstart={handleTouchStart}
+		ontouchmove={handleTouchMove}
+		ontouchend={handleTouchEnd}
 	>
 		<!-- Features container with animation -->
-		<div class="grid grid-cols-1 gap-1 overflow-hidden md:gap-5 lg:grid-cols-2">
-			{#each currentPageFeatures as feature, i}
-				{@const globalIndex = currentIndex * itemsPerPage + i}
-				{@const isExpanded = expandedFeatures.has(globalIndex)}
-				{@const showExpandButton = needsTruncation(feature.desc)}
-
+		<div class="relative">
+			{#key currentIndex}
 				<div
-					class={[
-						'feature-item',
-						feature.button && 'border-primary/50 mt-5 rounded-xl border px-2 pt-6 pb-3 md:mt-0'
-					]}
-					in:fly={{ x: direction * 100, opacity: 0, duration: 150 }}
+					class="grid grid-cols-1 gap-1 overflow-hidden md:gap-5 lg:grid-cols-2"
+					in:fade={{ duration: 120, delay: 60 }}
+					out:fade={{ duration: 60 }}
 				>
-					<div class="flex-shrink-0">
-						{#if !feature.icon}
-							<img src={feature.img} alt={`feature-${i + 1}`} />
-						{:else if !feature.button}
-							<div
-								class="bg-primary/10 border-primary flex h-13 w-13 items-center justify-center rounded-full border md:h-22 md:w-22"
-							>
-								<feature.icon strokeWidth="1" class="text-primary md:h-8 md:w-8" />
-							</div>
-						{/if}
-					</div>
-					<div class="feature-item-desc text-left">
-						<h3 class="text-base-content relative leading-tight">
-							{#if feature.pill}
-								<div class="absolute -top-6 -right-1 scale-80 md:-top-3 md:right-5">
-									<Pill
-										color={feature.pill.color}
-										text={feature.pill.text}
-										customCss={feature.pill.customCss}
-									/>
-								</div>
-							{/if}
-							{@html feature.title}
-						</h3>
-						<div class="relative">
-							<div class="relative mb-2">
-								<div
-									class="expandable-wrapper"
-									style:height={isExpanded
-										? (contentHeights.get(globalIndex) || 200) + 'px'
-										: '4.0rem'}
-								>
-									<p
-										use:measureHeight={globalIndex}
-										class="text-secondary leading-tight font-normal"
-									>
-										{@html feature.desc}
-									</p>
-								</div>
+					{#each currentPageFeatures as feature, i}
+						{@const globalIndex = currentIndex * itemsPerPage + i}
+						{@const isExpanded = expandedFeatures.has(globalIndex)}
+						{@const showExpandButton = needsTruncation(feature.desc)}
 
-								{#if showExpandButton && !isExpanded}
+						<div
+							class={[
+								'feature-item',
+								feature.button && 'border-primary/50 mt-5 rounded-xl border px-2 pt-6 pb-3 md:mt-0'
+							]}
+						>
+							<div class="flex-shrink-0">
+								{#if !feature.icon}
+									<img src={feature.img} alt={`feature-${i + 1}`} />
+								{:else if !feature.button}
 									<div
-										class="from-base-100 via-base-100/90 pointer-events-none absolute right-0 bottom-0 left-0 h-10 bg-gradient-to-t to-transparent"
-									></div>
+										class="bg-primary/10 border-primary flex h-13 w-13 items-center justify-center rounded-full border md:h-22 md:w-22"
+									>
+										<feature.icon strokeWidth="1" class="text-primary md:h-8 md:w-8" />
+									</div>
 								{/if}
 							</div>
-
-							{#if showExpandButton}
-								<div
-									class={[
-										'relative flex flex-row items-center gap-3',
-										showExpandButton && feature.button ? '-top-4' : '-top-7 md:-top-5 ',
-										isExpanded && !feature.button && 'pt-6 md:mt-2',
-										feature.button && isExpanded && 'mt-8'
-									]}
-								>
-									<!-- Read more/less buttons -->
-									<button
-										onclick={() => toggleExpand(globalIndex)}
-										class={[
-											'text-primary hover:text-primary/80 relative flex items-center gap-1 text-sm font-medium  transition-colors'
-										]}
+							<div class="feature-item-desc text-left">
+								<h3 class="text-base-content relative leading-tight">
+									{#if feature.pill}
+										<div class="absolute -top-6 -right-1 scale-80 md:-top-3 md:right-5">
+											<Pill
+												color={feature.pill.color}
+												text={feature.pill.text}
+												customCss={feature.pill.customCss}
+											/>
+										</div>
+									{/if}
+									{@html feature.title}
+								</h3>
+								<div class="relative">
+									<!-- svelte-ignore a11y_no_static_element_interactions -->
+									<!-- svelte-ignore a11y_click_events_have_key_events -->
+									<div
+										class="relative"
+										class:mb-2={showExpandButton}
+										class:mb-4={!showExpandButton}
+										onclick={() => showExpandButton && toggleExpand(globalIndex)}
+										onkeydown={(e) =>
+											showExpandButton &&
+											(e.key === 'Enter' || e.key === ' ') &&
+											toggleExpand(globalIndex)}
+										{...showExpandButton ? { role: 'button', tabindex: 0 } : {}}
+										class:cursor-pointer={showExpandButton}
 									>
-										{isExpanded ? m.showLess() : m.readMore()}
-										{#if isExpanded}
-											<ChevronUp class="h-4 w-4" />
-										{:else}
-											<ChevronDown class="h-4 w-4" />
-										{/if}
-									</button>
-
-									<!-- Featured button -->
-									{#if feature.button}
-										<a
-											href={feature.button.href}
-											class="btn btn-xs md:btn-sm bg-primary/10 border-primary text-primary hover:bg-primary relative mt-0 rounded-full border hover:text-black"
+										<div
+											class="expandable-wrapper"
+											style:height={isExpanded
+												? (contentHeights.get(globalIndex) || 200) + 'px'
+												: showExpandButton
+													? '4.0rem'
+													: 'auto'}
 										>
-											<Download class="h-3" />
-											{feature.button.text}
-										</a>
+											<p
+												use:measureHeight={globalIndex}
+												class="text-secondary leading-tight font-normal"
+											>
+												{@html feature.desc}
+											</p>
+										</div>
+
+										{#if showExpandButton && !isExpanded}
+											<div
+												class="from-base-100 via-base-100/90 pointer-events-none absolute right-0 bottom-0 left-0 h-10 bg-gradient-to-t to-transparent"
+											></div>
+										{/if}
+									</div>
+
+									{#if showExpandButton}
+										<div
+											class={[
+												'relative flex flex-row items-center gap-3',
+												showExpandButton && feature.button ? '-top-4' : '-top-5 md:-top-3',
+												isExpanded && !feature.button && 'pt-4 md:mt-1',
+												feature.button && isExpanded && 'mt-6'
+											]}
+										>
+											<!-- Read more/less buttons -->
+											<button
+												onclick={() => toggleExpand(globalIndex)}
+												class={[
+													'text-primary hover:text-primary/80 relative flex items-center gap-1 text-sm font-medium  transition-colors'
+												]}
+											>
+												{isExpanded ? m.showLess() : m.readMore()}
+												{#if isExpanded}
+													<ChevronUp class="h-4 w-4" />
+												{:else}
+													<ChevronDown class="h-4 w-4" />
+												{/if}
+											</button>
+
+											<!-- Featured button -->
+											{#if feature.button}
+												<a
+													href={feature.button.href}
+													class="btn btn-xs md:btn-sm bg-primary/10 border-primary text-primary hover:bg-primary relative mt-0 rounded-full border hover:text-black"
+												>
+													<Download class="h-3" />
+													{feature.button.text}
+												</a>
+											{/if}
+										</div>
 									{/if}
 								</div>
-							{/if}
+							</div>
 						</div>
-					</div>
+					{/each}
 				</div>
-			{/each}
+			{/key}
 		</div>
 
 		<!-- Navigation controls -->
@@ -249,7 +289,7 @@
 
 		<!-- Pagination dots -->
 		{#if totalPages > 1}
-			<div class="mt-8 flex justify-center space-x-2">
+			<div class="mt-2 mb-4 flex justify-center space-x-2 md:mt-8 md:mb-0">
 				{#each Array(totalPages) as _, i}
 					<button
 						class="h-3 w-3 rounded-full transition-all duration-300"

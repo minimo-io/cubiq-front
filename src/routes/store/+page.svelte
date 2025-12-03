@@ -108,13 +108,15 @@
 	slidedTitle={false}
 	titleRight={Product.STORE}
 	heroContent={m.heroContentBagity()}
+	noMobileBorderBottom={true}
 />
 
 <!-- <div>
 	<Clients />
 </div> -->
-
-<StoreCarrousel />
+<div class="relative -top-5 md:-top-2">
+	<StoreCarrousel />
+</div>
 
 <main>
 	<!-- Title -->

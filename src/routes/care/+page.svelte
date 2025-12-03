@@ -212,7 +212,7 @@
 
 			{#key currentSwitcherSelection}
 				<div
-					class="mx-auto mt-11 space-y-6 text-center md:mt-5"
+					class="mx-auto mt-8 space-y-6 text-center md:mt-5"
 					in:fly={{ y: -20, duration: 100, delay: 100 }}
 				>
 					<span class="text-secondary py-4 font-sans text-base font-semibold tracking-wide">
