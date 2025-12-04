@@ -7,35 +7,6 @@
 	<div class="mx-auto max-w-6xl">
 		<!-- Pricing Cards -->
 		<div class="space-y-6 md:space-y-0">
-			<!-- Basic Plan -->
-			<!-- <div
-				class="card bg-base-100 border-base-300 left-1/2 -translate-x-1/2 border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:w-[50%] md:hover:-translate-y-1"
-			>
-				<div
-					class="badge badge-primary border-base-300 badge-lg absolute -top-3 left-1/2 -translate-x-1/2 transform border bg-black px-4 py-2 font-sans font-bold"
-				>
-					{@html m.forBTCOnlyStores()}
-				</div>
-
-				<div class="card-body md:card-side flex justify-center p-6 md:gap-10 md:p-8">
-					<div class="flex items-center text-center md:w-[25%] md:text-left">
-						<div
-							class="my-5 flex h-full w-full items-center justify-center! md:my-2 md:mb-0 md:justify-center"
-						>
-							<span class="text-base-content text-center text-4xl font-bold md:text-[40px]">
-								50%&nbsp;OFF
-							</span>
-						</div>
-					</div>
-
-					<div class="flex items-center justify-center md:mt-0 md:mt-6 md:justify-end">
-						<button class="btn btn-outline btn-md md:btn-lg w-full md:w-auto md:px-5"
-							>{m.requestQuotation()}</button
-						>
-					</div>
-				</div>
-			</div> -->
-
 			<!-- Premium Plan -->
 			<div
 				class="card bg-base-100 border-base-300 relative z-50 border-2 shadow-xl transition-all duration-300 hover:shadow-2xl md:scale-105 md:hover:-translate-y-1"
@@ -78,8 +49,8 @@
 										clip-rule="evenodd"
 									/>
 								</svg>
-								<span class="text-base-content font-sans text-sm md:text-base"
-									>Cuidamos do design</span
+								<span class="text-base-content text-left font-sans text-sm md:text-base"
+									>{m.storeDesignFigma()}</span
 								>
 							</div>
 							<div class="flex items-start gap-3">
@@ -95,7 +66,7 @@
 									/>
 								</svg>
 								<span class="text-base-content text-left font-sans text-sm md:text-base"
-									>Cuidamos das integrações</span
+									>{m.storeInitialIntegrations()}</span
 								>
 							</div>
 							<div class="flex items-start gap-3">
@@ -111,7 +82,7 @@
 									/>
 								</svg>
 								<span class="text-base-content text-left font-sans text-sm md:text-base"
-									>Cuidamos dos servidores</span
+									>{m.storeServerManagement()}</span
 								>
 							</div>
 							<div class="flex items-start gap-3">
@@ -127,7 +98,7 @@
 									/>
 								</svg>
 								<span class="text-base-content text-left font-sans text-sm md:text-base"
-									>ERPs & APIs sob medida</span
+									>{m.storeCustomERPsAPIs()}</span
 								>
 							</div>
 							<!-- Grayed features -->
@@ -144,7 +115,7 @@
 									/>
 								</svg>
 								<span class="text-base-content text-left font-sans text-sm md:text-base"
-									>Oferecemos suporte humanizado</span
+									>{m.storeHumanizedSupport()}</span
 								>
 							</div>
 							<div class="flex items-start gap-3">
@@ -160,17 +131,20 @@
 									/>
 								</svg>
 								<span class="text-base-content text-left font-sans text-sm md:text-base"
-									>Sem comissões por venda, custo fixo previsível</span
+									>{m.storeNoCommissions()}</span
 								>
 							</div>
 						</div>
 					</div>
 
 					<!-- Button -->
-					<div class="mt-6 flex flex-1 items-center justify-center md:mt-0 md:w-1/6 md:justify-end">
-						<button class="btn btn-primary btn-md md:btn-lg w-full md:w-auto md:px-5"
-							>{m.requestQuotation()}</button
-						>
+					<div
+						class="mt-6 flex flex-1 flex-col items-center justify-center md:mt-0 md:w-1/6 md:justify-center"
+					>
+						<button class="btn btn-primary btn-md md:btn-lg mb-2 w-full md:w-auto md:px-5">
+							{m.requestQuotation()}
+						</button>
+						<strong class="font-sans">{@html m.storeBTCOnlyDiscount()}</strong>
 					</div>
 				</div>
 			</div>

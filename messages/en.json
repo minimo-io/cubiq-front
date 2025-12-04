@@ -393,5 +393,46 @@
 	"tailorMade": "Tailor-<br />made",
 
 	"storeImplementationStep": "Implementation",
-	"storeMaintenanceStep": "Maintenance"
+	"storeMaintenanceStep": "Maintenance",
+
+	"storePricingStarter": "Starter",
+	"storePricingPro": "Pro",
+	"storePricingEnterprise": "Enterprise",
+	"storePricingRecommended": "Recommended",
+	"storePricingTailorMade": "Custom pricing",
+	"storePricingPerMonth": "/month",
+
+	"storeStarterUsers": "1 admin user",
+	"storeStarterHosting": "Hosting + SSL + Backups",
+	"storeStarterMaintenance": "3h/month of maintenance",
+	"storeStarterSupport": "Email support (24h)",
+	"storeStarterPaymentGateway": "1 traditional payment gateway",
+	"storeStarterCubiqPay": "for USDT/BTC <br /> payments",
+
+	"storeProUsers": "3 admin users + 2 editors",
+	"storeProInfrastructure": "Premium infrastructure and CDN",
+	"storeProSupport": "Priority chat support (4h)",
+	"storeProMaintenance": "10h/month + dedicated manager",
+	"storeProSEO": "SEO + CRO + Analytics",
+	"storeProAI": "Content AI + Recommendations",
+	"storeProPaymentGateways": "3 payment gateways <br />+",
+
+	"storeEnterpriseUsers": "Unlimited users + SSO",
+	"storeEnterpriseArchitecture": "Scalable cloud architecture",
+	"storeEnterpriseSupport": "Proactive 24/7 priority support",
+	"storeEnterpriseTeam": "Dedicated project team",
+	"storeEnterpriseAI": "Advanced content AI",
+	"storeEnterpriseIntegrations": "Advanced integrations (ERPs/Gateways/APIs)",
+	"storeEnterpriseMCP": "MCP Server Integration",
+	"storeEnterpriseConsulting": "Monthly strategic consulting",
+
+	"storePricingFooter": "Ready-made dashboards, simple and AI-assisted.",
+
+	"storeDesignFigma": "We handle the design in Figma",
+	"storeInitialIntegrations": "We handle initial integrations",
+	"storeServerManagement": "We handle the servers",
+	"storeCustomERPsAPIs": "Custom ERPs and APIs to start strong",
+	"storeHumanizedSupport": "We offer humanized support",
+	"storeNoCommissions": "No hidden or per sale commissions",
+	"storeBTCOnlyDiscount": "50% OFF for Bitcoin<br /> only stores"
 }

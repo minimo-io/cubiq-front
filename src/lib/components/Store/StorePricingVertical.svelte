@@ -14,44 +14,48 @@
 			>
 				<div class="card-body p-6">
 					<!-- Title -->
-					<h2 class="card-title mb-2 justify-center font-sans text-2xl font-black">Starter</h2>
+					<h2 class="card-title mb-2 justify-center font-sans text-2xl font-black">
+						{m.storePricingStarter()}
+					</h2>
 
 					<!-- Price -->
 					<div class="mt-0 mb-5 text-center">
 						<span class="text-base-content text-4xl font-bold">R$250</span>
-						<span class="text-base-content/70 text-lg">/mês</span>
+						<span class="text-base-content/70 text-lg">{m.storePricingPerMonth()}</span>
 					</div>
 
 					<!-- Features -->
 					<div class="flex-1 space-y-3">
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm font-bold"> 1 usuários admin</span>
+							<span class="text-base-content font-sans text-sm font-bold"
+								>{m.storeStarterUsers()}</span
+							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm"> Hospedagem + SSL + Backups </span>
+							<span class="text-base-content font-sans text-sm">{m.storeStarterHosting()}</span>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm">3h/mês de manutenção</span>
+							<span class="text-base-content font-sans text-sm">{m.storeStarterMaintenance()}</span>
 						</div>
 
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm"> Suporte por email (24h)</span>
+							<span class="text-base-content font-sans text-sm">{m.storeStarterSupport()}</span>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content font-sans text-sm">
-								1 gateway de pagamentos tradicional</span
+								{m.storeStarterPaymentGateway()}</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm">
 								<a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a>
-								para pagamentos <br /> USDT/BTC
+								{@html m.storeStarterCubiqPay()}
 							</span>
 						</div>
 					</div>
@@ -72,17 +76,19 @@
 				<div
 					class="badge badge-primary badge-lg absolute -top-3 left-1/2 -translate-x-1/2 transform px-4 py-2 font-sans font-bold"
 				>
-					Recomnedado
+					{m.storePricingRecommended()}
 				</div>
 
 				<div class="card-body p-6">
 					<!-- Title -->
-					<h2 class="card-title mb-2 justify-center font-sans text-2xl font-black">Pro</h2>
+					<h2 class="card-title mb-2 justify-center font-sans text-2xl font-black">
+						{m.storePricingPro()}
+					</h2>
 
 					<!-- Price -->
 					<div class="mt-0 mb-5 text-center">
 						<span class="text-base-content text-4xl font-bold">R$500</span>
-						<span class="text-base-content/70 text-lg">/mês</span>
+						<span class="text-base-content/70 text-lg">{m.storePricingPerMonth()}</span>
 					</div>
 
 					<!-- Features -->
@@ -90,43 +96,39 @@
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content font-sans text-sm font-bold">
-								3 usuários admin + 2 editores</span
+								{m.storeProUsers()}</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm">
-								Infraestrutura e CDN premium</span
+								{m.storeProInfrastructure()}</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm"
-								>Suporte via chat prioritário (4h)</span
+								>{m.storeProSupport()}</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm"
-								>10h/mês + gerente dedicado</span
+								>{m.storeProMaintenance()}</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content text-left font-sans text-sm"
-								>SEO + CRO + Analytics</span
-							>
+							<span class="text-base-content text-left font-sans text-sm">{m.storeProSEO()}</span>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content text-left font-sans text-sm"
-								>IA de Conteúdo + Recomendações</span
-							>
+							<span class="text-base-content text-left font-sans text-sm">{m.storeProAI()}</span>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm">
-								3 gateways de pagamentos <br />+
+								{@html m.storeProPaymentGateways()}
 								<a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a>
 							</span>
 						</div>
@@ -147,11 +149,13 @@
 			>
 				<div class="card-body p-6">
 					<!-- Title -->
-					<h2 class="card-title mb-2 justify-center font-sans text-2xl font-black">Enterprise</h2>
+					<h2 class="card-title mb-2 justify-center font-sans text-2xl font-black">
+						{m.storePricingEnterprise()}
+					</h2>
 
 					<!-- Price -->
 					<div class="mt-0 mb-5 text-center">
-						<span class="text-base-content text-4xl font-bold">Sob medida</span>
+						<span class="text-base-content text-4xl font-bold">{m.storePricingTailorMade()}</span>
 						<!-- <span class="text-base-content/70 text-lg">/mês</span> -->
 					</div>
 
@@ -160,41 +164,42 @@
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content font-sans text-sm font-bold"
-								>Usuários ilimitados + SSO</span
+								>{m.storeEnterpriseUsers()}</span
 							>
-						</div>
-						<div class="flex items-start gap-3">
-							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm">Arquitetura cloud escalável</span>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content font-sans text-sm"
-								>Suporte proativo e prioritário 24/7</span
+								>{m.storeEnterpriseArchitecture()}</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm">Equipe dedicada ao projeto</span>
+							<span class="text-base-content font-sans text-sm">{m.storeEnterpriseSupport()}</span>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm">IA de conteúdo avançada</span>
+							<span class="text-base-content font-sans text-sm">{m.storeEnterpriseTeam()}</span>
+						</div>
+						<div class="flex items-start gap-3">
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">{m.storeEnterpriseAI()}</span>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm"
-								>Integrações avançadas (ERPs/Gateways/APIs)</span
+								>{m.storeEnterpriseIntegrations()}</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm">Integração do Servidor MCP</span>
+							<span class="text-base-content font-sans text-sm">{m.storeEnterpriseMCP()}</span>
 						</div>
 
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
-							<span class="text-base-content font-sans text-sm">Consultoria estratégica mensal</span
+							<span class="text-base-content font-sans text-sm"
+								>{m.storeEnterpriseConsulting()}</span
 							>
 						</div>
 					</div>
@@ -215,7 +220,7 @@
 				class="text-base-content/60 flex flex-wrap items-center justify-center gap-2 text-lg md:text-xl"
 			>
 				<Check class="h-4.5 text-green-500" />
-				<span>Dashboards prontos, simples e assistidos por IA. </span>
+				<span>{m.storePricingFooter()}</span>
 			</div>
 		</div>
 	</div>

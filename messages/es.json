@@ -392,5 +392,46 @@
 	"tailorMade": "A<br />medida",
 
 	"storeImplementationStep": "Etapa de Implementación",
-	"storeMaintenanceStep": "Etapa de Mantenimiento"
+	"storeMaintenanceStep": "Etapa de Mantenimiento",
+
+	"storePricingStarter": "Starter",
+	"storePricingPro": "Pro",
+	"storePricingEnterprise": "Enterprise",
+	"storePricingRecommended": "Recomendado",
+	"storePricingTailorMade": "A medida",
+	"storePricingPerMonth": "/mes",
+
+	"storeStarterUsers": "1 usuario admin",
+	"storeStarterHosting": "Hosting + SSL + Backups",
+	"storeStarterMaintenance": "3h/mes de mantenimiento",
+	"storeStarterSupport": "Soporte por email (24h)",
+	"storeStarterPaymentGateway": "1 pasarela de pagos tradicional",
+	"storeStarterCubiqPay": "para pagos <br /> USDT/BTC",
+
+	"storeProUsers": "3 usuarios admin + 2 editores",
+	"storeProInfrastructure": "Infraestructura y CDN premium",
+	"storeProSupport": "Soporte por chat prioritario (4h)",
+	"storeProMaintenance": "10h/mes + gerente dedicado",
+	"storeProSEO": "SEO + CRO + Analytics",
+	"storeProAI": "IA de Contenido + Recomendaciones",
+	"storeProPaymentGateways": "3 pasarelas de pagos <br />+",
+
+	"storeEnterpriseUsers": "Usuarios ilimitados + SSO",
+	"storeEnterpriseArchitecture": "Arquitectura cloud escalable",
+	"storeEnterpriseSupport": "Soporte proactivo y prioritario 24/7",
+	"storeEnterpriseTeam": "Equipo dedicado al proyecto",
+	"storeEnterpriseAI": "IA de contenido avanzada",
+	"storeEnterpriseIntegrations": "Integraciones avanzadas (ERPs/Pasarelas/APIs)",
+	"storeEnterpriseMCP": "Integración del Servidor MCP",
+	"storeEnterpriseConsulting": "Consultoría estratégica mensual",
+
+	"storePricingFooter": "Dashboards listos, simples y asistidos por IA.",
+
+	"storeDesignFigma": "Nos ocupamos del diseño en Figma",
+	"storeInitialIntegrations": "Nos ocupamos de las integraciones iniciales",
+	"storeServerManagement": "Nos ocupamos de los servidores",
+	"storeCustomERPsAPIs": "ERPs y APIs a medida para iniciar fuerte",
+	"storeHumanizedSupport": "Ofrecemos soporte humanizado",
+	"storeNoCommissions": "Sin comisiones por venta u ocultas",
+	"storeBTCOnlyDiscount": "50% OFF para tiendas<br /> solo Bitcoin"
 }

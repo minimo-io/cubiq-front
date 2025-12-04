@@ -395,5 +395,46 @@
 	"tailorMade": "Sob<br />medida",
 
 	"storeImplementationStep": "Etapa de Implementação",
-	"storeMaintenanceStep": "Etapa de Manutenção"
+	"storeMaintenanceStep": "Etapa de Manutenção",
+
+	"storePricingStarter": "Starter",
+	"storePricingPro": "Pro",
+	"storePricingEnterprise": "Enterprise",
+	"storePricingRecommended": "Recomnedado",
+	"storePricingTailorMade": "Sob medida",
+	"storePricingPerMonth": "/mês",
+
+	"storeStarterUsers": "1 usuários admin",
+	"storeStarterHosting": "Hospedagem + SSL + Backups",
+	"storeStarterMaintenance": "3h/mês de manutenção",
+	"storeStarterSupport": "Suporte por email (24h)",
+	"storeStarterPaymentGateway": "1 gateway de pagamentos tradicional",
+	"storeStarterCubiqPay": "para pagamentos <br /> USDT/BTC",
+
+	"storeProUsers": "3 usuários admin + 2 editores",
+	"storeProInfrastructure": "Infraestrutura e CDN premium",
+	"storeProSupport": "Suporte via chat prioritário (4h)",
+	"storeProMaintenance": "10h/mês + gerente dedicado",
+	"storeProSEO": "SEO + CRO + Analytics",
+	"storeProAI": "IA de Conteúdo + Recomendações",
+	"storeProPaymentGateways": "3 gateways de pagamentos <br />+",
+
+	"storeEnterpriseUsers": "Usuários ilimitados + SSO",
+	"storeEnterpriseArchitecture": "Arquitetura cloud escalável",
+	"storeEnterpriseSupport": "Suporte proativo e prioritário 24/7",
+	"storeEnterpriseTeam": "Equipe dedicada ao projeto",
+	"storeEnterpriseAI": "IA de conteúdo avançada",
+	"storeEnterpriseIntegrations": "Integrações avançadas (ERPs/Gateways/APIs)",
+	"storeEnterpriseMCP": "Integração do Servidor MCP",
+	"storeEnterpriseConsulting": "Consultoria estratégica mensal",
+
+	"storePricingFooter": "Dashboards prontos, simples e assistidos por IA.",
+
+	"storeDesignFigma": "Cuidamos do design em Figma",
+	"storeInitialIntegrations": "Cuidamos das integrações iniciáis",
+	"storeServerManagement": "Cuidamos dos servidores",
+	"storeCustomERPsAPIs": "ERPs e APIs sob medida para começar forte",
+	"storeHumanizedSupport": "Oferecemos suporte humanizado",
+	"storeNoCommissions": "Sem comissões por venda ou escondidas",
+	"storeBTCOnlyDiscount": "50% OFF para lojas<br /> só Bitcoin"
 }
