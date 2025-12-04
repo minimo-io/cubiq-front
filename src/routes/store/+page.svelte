@@ -108,16 +108,32 @@
 	slidedTitle={false}
 	titleRight={Product.STORE}
 	heroContent={m.heroContentBagity()}
-	noMobileBorderBottom={true}
+	noMobileBorderBottom={false}
+	hideCube={true}
 />
 
 <!-- <div>
 	<Clients />
 </div> -->
-<div class="relative -top-10 md:-top-2">
-	<StoreCarrousel />
+<div class="relative -top-4 md:-top-2">
+	<div
+		class="md:fw-border-t-divider md:fw-border-t-divider-dot fw-border-t-divider-dot-center md:border-t-base-300/50 relative md:border-t"
+	>
+		<StoreCarrousel />
+	</div>
+
+	<!-- Left gradient overlay -->
+	<div
+		class="pointer-events-none absolute top-0 left-0 h-px w-100 bg-gradient-to-r from-black to-transparent"
+	></div>
+
+	<!-- Right gradient overlay -->
+	<div
+		class="pointer-events-none absolute top-0 right-0 h-px w-120 bg-gradient-to-l from-black to-transparent"
+	></div>
 </div>
 
+<!-- Main -->
 <main class="relative -top-10 md:-top-2">
 	<!-- Title -->
 	<h2 class="text-base-content mx-10 mb-15 text-center text-3xl font-bold md:mx-0 md:text-4xl">

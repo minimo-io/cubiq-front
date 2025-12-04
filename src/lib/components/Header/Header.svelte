@@ -26,6 +26,7 @@
 		buttons?: boolean;
 
 		noMobileBorderBottom?: boolean;
+		hideCube?: boolean;
 
 		children?: Snippet;
 	}
@@ -37,6 +38,7 @@
 		titleRight,
 		heroContent,
 		noMobileBorderBottom = false,
+		hideCube = false,
 		slidedTitle = true,
 		buttons = true,
 		children
@@ -133,11 +135,13 @@
 	<HeaderDots />
 	<!-- Decorations -->
 	<HeaderDecorations />
-
-	<div class="max-w-fw relative mx-auto hidden md:block">
-		<div
-			style="transform: rotate({rotation.current}deg);"
-			class="absolute right-0 bottom-[-7px] z-50 h-[15px] w-[15px] bg-[url('/bgs/square.svg')] bg-contain bg-no-repeat"
-		></div>
-	</div>
+	<!-- Decoration cube -->
+	{#if hideCube === false}
+		<div class="max-w-fw relative mx-auto hidden md:block">
+			<div
+				style="transform: rotate({rotation.current}deg);"
+				class="absolute right-0 bottom-[-7px] z-50 h-[15px] w-[15px] bg-[url('/bgs/square.svg')] bg-contain bg-no-repeat"
+			></div>
+		</div>
+	{/if}
 </header>

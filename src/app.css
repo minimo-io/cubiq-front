@@ -251,7 +251,7 @@ body {
 	}
 	.fw-bg-rocket {
 		/* @apply bg-[url('/bgs/header-finx.jpeg')]; */
-		@apply bg-[url('/bgs/header-moving-stars.jpeg')] opacity-50 md:opacity-70;
+		@apply bg-[url('/bgs/header-moving-stars.webp')] opacity-50 md:opacity-50;
 	}
 	.fw-bg-astronaut {
 		/* @apply bg-[url('/bgs/header-caresync.png')]; */
@@ -259,7 +259,7 @@ body {
 	}
 	.fw-bg-bagity {
 		/* @apply bg-conic bg-[url('/bgs/header-bagity-4.png')] opacity-50; */
-		@apply bg-conic bg-[url('/bgs/header-purple-haze.jpeg')] opacity-50;
+		@apply bg-conic bg-[url('/bgs/header-purple-haze.jpeg')] opacity-45;
 	}
 	.fw-bg-construction {
 		@apply bg-[url('/bgs/header-underconstruction.jpeg')];
