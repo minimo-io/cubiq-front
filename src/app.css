@@ -250,10 +250,12 @@ body {
 		/* @apply bg-[url('/bgs/header-underconstruction.jpeg')]; */
 	}
 	.fw-bg-rocket {
-		@apply bg-[url('/bgs/header-finx.jpeg')];
+		/* @apply bg-[url('/bgs/header-finx.jpeg')]; */
+		@apply bg-[url('/bgs/header-moving-stars.jpeg')] opacity-50 md:opacity-70;
 	}
 	.fw-bg-astronaut {
-		@apply bg-[url('/bgs/header-caresync.png')];
+		/* @apply bg-[url('/bgs/header-caresync.png')]; */
+		@apply bg-[url('/bgs/header-moving-stars-2-2.webp')] opacity-20;
 	}
 	.fw-bg-bagity {
 		/* @apply bg-conic bg-[url('/bgs/header-bagity-4.png')] opacity-50; */
