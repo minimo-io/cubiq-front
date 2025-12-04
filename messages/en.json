@@ -390,5 +390,8 @@
 	"invoicing": "Invoicing",
 	"forBTCOnlyStores": "<span class='hidden md:flex'>For</span>Bitcoin Only<span class='hidden md:flex'>Stores</span>",
 	"allStores": "All stores",
-	"tailorMade": "Tailor-<br />made"
+	"tailorMade": "Tailor-<br />made",
+
+	"storeImplementationStep": "Implementation",
+	"storeMaintenanceStep": "Maintenance"
 }

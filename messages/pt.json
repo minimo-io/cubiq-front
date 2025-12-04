@@ -392,5 +392,8 @@
 	"invoicing": "Faturamento",
 	"forBTCOnlyStores": "<span class='hidden md:flex'>Lojas Que Aceitam</span>Só Bitcoin",
 	"allStores": "Todas as lojas",
-	"tailorMade": "Sob<br />medida"
+	"tailorMade": "Sob<br />medida",
+
+	"storeImplementationStep": "Etapa de Implementação",
+	"storeMaintenanceStep": "Etapa de Manutenção"
 }

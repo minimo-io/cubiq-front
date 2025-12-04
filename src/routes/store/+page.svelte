@@ -136,8 +136,10 @@
 <!-- Main -->
 <main class="relative -top-10 md:-top-2">
 	<!-- Title -->
-	<h2 class="text-base-content mx-10 mb-15 text-center text-3xl font-bold md:mx-0 md:text-4xl">
-		Etapa de implementação
+	<h2
+		class="text-base-content mx-10 mb-15 text-center font-sans text-3xl font-bold md:mx-0 md:text-4xl"
+	>
+		{m.storeImplementationStep()}
 	</h2>
 
 	<div class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto">
@@ -152,8 +154,10 @@
 	</div> -->
 
 	<!-- Title -->
-	<h2 class="text-base-content mx-10 mt-0 mb-5 text-center text-3xl font-bold md:mx-0 md:text-4xl">
-		Etapa de Manutenção
+	<h2
+		class="text-base-content mx-10 mt-0 mb-5 text-center font-sans text-3xl font-bold md:mx-0 md:text-4xl"
+	>
+		{m.storeMaintenanceStep()}
 	</h2>
 	<div class="max-w-fw border-x-base-200 relative container my-0 mb-17 text-center md:mx-auto">
 		<StorePricingVertical />

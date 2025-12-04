@@ -1,6 +1,7 @@
 <script>
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
+	import { Check } from '@lucide/svelte';
 </script>
 
 <div class="relative px-4 pt-4 md:pt-12">
@@ -24,95 +25,41 @@
 					<!-- Features -->
 					<div class="flex-1 space-y-3">
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Manutenção Preditiva com IA</span>
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm font-bold"> 1 usuários admin</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Custom brand templates</span>
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm"> Hospedagem + SSL + Backups </span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Múltiplos usuários e acessos</span>
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">3h/mês de manutenção</span>
+						</div>
+
+						<div class="flex items-start gap-3">
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm"> Suporte por email (24h)</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">
+								1 gateway de pagamentos tradicional</span
 							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Premium AI enhancements</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Priority support</span>
-						</div>
-						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Custom integrations</span>
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content text-left font-sans text-sm">
+								<a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a>
+								para pagamentos <br /> USDT/BTC
+							</span>
 						</div>
 					</div>
 
 					<!-- Button -->
 					<div class="mt-6">
 						<button class="btn btn-outline btn-md w-full">
-							{m.requestQuotation()}
+							{m.contactSupport()}
 						</button>
 					</div>
 				</div>
@@ -139,106 +86,57 @@
 					</div>
 
 					<!-- Features -->
-					<div class="flex-1 space-y-3">
+					<div class="flex flex-col space-y-3">
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Cuidamos do design</span>
-						</div>
-						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content text-left font-sans text-sm"
-								>Cuidamos das integrações</span
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm font-bold">
+								3 usuários admin + 2 editores</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content text-left font-sans text-sm"
-								>Cuidamos dos servidores</span
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content text-left font-sans text-sm">
+								Infraestrutura e CDN premium</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
+							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm"
-								>ERPs & APIs sob medida</span
+								>Suporte via chat prioritário (4h)</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-base-content/30 mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
+							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm"
-								>Oferecemos suporte humanizado</span
+								>10h/mês + gerente dedicado</span
 							>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-base-content/30 mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
+							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm"
-								>Sem comissões por venda, custo fixo previsível</span
+								>SEO + CRO + Analytics</span
 							>
+						</div>
+						<div class="flex items-start gap-3">
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content text-left font-sans text-sm"
+								>IA de Conteúdo + Recomendações</span
+							>
+						</div>
+						<div class="flex items-start gap-3">
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content text-left font-sans text-sm">
+								3 gateways de pagamentos <br />+
+								<a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a>
+							</span>
 						</div>
 					</div>
 
 					<!-- Button -->
-					<div class="mt-6">
-						<button class="btn btn-primary btn-md w-full">{m.requestQuotation()}</button>
+					<div class="mt-6 md:mt-8">
+						<button class="btn btn-primary btn-md w-full font-sans font-bold"
+							>{m.contactSupport()}</button
+						>
 					</div>
 				</div>
 			</div>
@@ -260,88 +158,44 @@
 					<!-- Features -->
 					<div class="flex-1 space-y-3">
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm font-bold"
+								>Usuários ilimitados + SSO</span
 							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Manutenção Preditiva com IA</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Custom brand templates</span>
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">Arquitetura cloud escalável</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm"
+								>Suporte proativo e prioritário 24/7</span
 							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Múltiplos usuários e acessos</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Premium AI enhancements</span>
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">Equipe dedicada ao projeto</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
-							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Priority support</span>
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">IA de conteúdo avançada</span>
 						</div>
 						<div class="flex items-start gap-3">
-							<svg
-								class="text-success mt-0.5 h-5 w-5 flex-shrink-0"
-								fill="currentColor"
-								viewBox="0 0 20 20"
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content text-left font-sans text-sm"
+								>Integrações avançadas (ERPs/Gateways/APIs)</span
 							>
-								<path
-									fill-rule="evenodd"
-									d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-									clip-rule="evenodd"
-								/>
-							</svg>
-							<span class="text-base-content font-sans text-sm">Custom integrations</span>
+						</div>
+						<div class="flex items-start gap-3">
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">Integração do Servidor MCP</span>
+						</div>
+
+						<div class="flex items-start gap-3">
+							<Check class="h-4.5 text-green-500" />
+							<span class="text-base-content font-sans text-sm">Consultoria estratégica mensal</span
+							>
 						</div>
 					</div>
 
@@ -357,9 +211,11 @@
 
 		<!-- Footer -->
 		<div class="mt-15 text-center font-sans">
-			<div class="text-base-content/60 flex flex-wrap justify-center gap-2 text-xs md:text-base">
-				<span>✓ Atendimento humano, sempre.</span>
-				<span>✓ Dashboards prontos.</span>
+			<div
+				class="text-base-content/60 flex flex-wrap items-center justify-center gap-2 text-lg md:text-xl"
+			>
+				<Check class="h-4.5 text-green-500" />
+				<span>Dashboards prontos, simples e assistidos por IA. </span>
 			</div>
 		</div>
 	</div>

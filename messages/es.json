@@ -389,5 +389,8 @@
 	"invoicing": "Facturación",
 	"forBTCOnlyStores": "<span class='hidden md:flex'>Tiendas</span> Sólo Bitcoin",
 	"allStores": "Todas las tiendas",
-	"tailorMade": "A<br />medida"
+	"tailorMade": "A<br />medida",
+
+	"storeImplementationStep": "Etapa de Implementación",
+	"storeMaintenanceStep": "Etapa de Mantenimiento"
 }
