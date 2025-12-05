@@ -40,11 +40,11 @@ export const finxFaqs: Record<string, Faq[]> = {
 			answer:
 				'Yes. We adhere to all local and international standards and provide audit trails for each transaction to ensure 100% compliance.'
 		},
-		{
-			question: 'Can I issue refunds or partial cancellations?',
-			answer:
-				'Cubiq:Pay supports full and partial refunds as well as dispute resolution workflows via our API and dashboard.'
-		},
+		// {
+		// 	question: 'Can I issue refunds or partial cancellations?',
+		// 	answer:
+		// 		'Cubiq:Pay supports full and partial refunds as well as dispute resolution workflows via our API and dashboard.'
+		// },
 		{
 			question: 'How can I track and reconcile transactions?',
 			answer:
@@ -92,11 +92,11 @@ export const finxFaqs: Record<string, Faq[]> = {
 			answer:
 				'Sí. Cumplimos con todas las normas locales e internacionales y proporcionamos registros de auditoría para cada transacción.'
 		},
-		{
-			question: '¿Puedo emitir reembolsos o cancelaciones parciales?',
-			answer:
-				'Cubiq:Pay admite reembolsos completos y parciales, así como flujos de resolución de disputas a través de nuestra API y panel de control.'
-		},
+		// {
+		// 	question: '¿Puedo emitir reembolsos o cancelaciones parciales?',
+		// 	answer:
+		// 		'Cubiq:Pay admite reembolsos completos y parciales, así como flujos de resolución de disputas a través de nuestra API y panel de control.'
+		// },
 		{
 			question: '¿Cómo rastreo y concilió mis transacciones?',
 			answer:
@@ -149,11 +149,11 @@ export const finxFaqs: Record<string, Faq[]> = {
 			answer:
 				'Sim. Seguimos todas as normas locais e internacionais e fornecemos trilhas de auditoria para cada transação.'
 		},
-		{
-			question: 'Posso emitir reembolsos ou cancelamentos parciais?',
-			answer:
-				'O Cubiq:Pay suporta reembolsos totais e parciais, além de fluxos de resolução de disputas via API e dashboard.'
-		},
+		// {
+		// 	question: 'Posso emitir reembolsos ou cancelamentos parciais?',
+		// 	answer:
+		// 		'O Cubiq:Pay suporta reembolsos totais e parciais, além de fluxos de resolução de disputas via API e dashboard.'
+		// },
 		{
 			question: 'Como monitorar e conciliar transações?',
 			answer:

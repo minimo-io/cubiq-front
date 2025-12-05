@@ -24,6 +24,7 @@
 	"visitStore": "Visit store",
 	"downloadSoftware": "Download predictive software",
 	"experiments": "Experiments",
+	"unavailable": "Unavailable",
 
 	"latestNews": "Latest news",
 	"subscriveVia": "Subscribe via",
@@ -78,13 +79,13 @@
 
 	"heroContentFinXXX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via Lightning Network. Eg. <span class='text-base-content'>Receive in Argentina and settle abroad</span>, instantly, with 100% compliance and verifiable transparency.</div>",
 
-	"heroContentFinX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via the Lightning Network. E.g.: <span class='text-base-content'>Receive from anywhere in the world and settle instantly in your wallet</span>, with 100% verifiable transparency.</div>",
+	"heroContentFinX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via the Lightning Network. E.g.: <span class='text-base-content'>Receive from anywhere in the world and settle instantly in your wallet</span>, with 100% verifiable transparency. <div class='ml-2 pb-[1px] badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary font-sans text-xs!'>Unavailable</div></div>",
 
 	"heroContentCareSyncOLD": "Platform for <span class='text-base-content opacity-80'>Predictive Maintenance</span> and Asset Management (ITSM + ITAM) <span class='text-base-content opacity-80'>for IT professionals and SMEs</span> — with AI applied to Real-Time Monitoring, Knowledge-Base and Client Marketplace.",
 
 	"heroContentCareSync": "Complete IT lifecycle management for growing SMEs — integrating <span class='text-base-content opacity-80'>Managed IT asset management</span>, <span class='text-base-content opacity-80'>Hardware-as-a-Service (HaaS/Rental)</span>, and <span class='text-base-content opacity-80'>Predictive maintenance</span> powered by real-time AI diagnostics.",
 
-	"heroContentBagity": "<span class='text-base-content opacity-80'>Tailor-made Premium E-Commerce</span>: We customize without limits — Design, UX, and Features — with integrated AI for Content, and <span class='text-base-content opacity-80'>USDT/BTC Payments</span> via <a href='/en/pay' class='text-primary font-medium'>Cubiq Pay</a>. Expect <span class='text-base-content opacity-80'>predictable plans</span> and <span class='text-base-content opacity-80'>no sales commissions.</span>.",
+	"heroContentBagity": "<span class='text-base-content opacity-80'>Premium Custom E-Commerce</span>: We customize without limits: Design, UX, and Integrations, with Content AI and USDT/Bitcoin Payments. What to expect? <span class='text-base-content opacity-80'>Unique stores, predictable plans</span>, <span class='text-base-content opacity-80'>no sales commissions</span>.",
 
 	"homeProductsSlogan": "Unified Platform of Digital Products and APIs for SMEs and Startups focused on LATAM.",
 
@@ -216,8 +217,8 @@
 	"bagityFeature3Title": "Custom integrations",
 	"bagityFeature3Desc": "Quality API and Webhook integrations with major ERPs and custom development in the Pro Plan.",
 
-	"bagityFeature4Title": "High indexing on Google and LLMs",
-	"bagityFeature4Desc": "Proprietary technology and specialized cloud infrastructure boost indexing on Google, ChatGPT, and other AI.",
+	"bagityFeature4Title": "Custom tailored designs",
+	"bagityFeature4Desc": "We handle the design to create unique stores using next-generation Headless technology. Avoid being just another online store.",
 
 	"bagityFeature5Title": "Your Technology Partner",
 	"bagityFeature5Desc": "We want to build unique stores, for unique clients, and with focus on the human factor. That’s why we follow up with all our clients through monthly video calls.",
@@ -225,8 +226,8 @@
 	"bagityFeature6Title": "Express checkout",
 	"bagityFeature6Desc": "Our proprietary payment solution — <a href='/en/finx' class='text-primary hover:opacity-40'>Cubiq:Pay</a> — lets us streamline checkout, achieve high conversion rates, and reduce operational costs.",
 
-	"bagityFeature7Title": "Composavel front-ends",
-	"bagityFeature7Desc": "Our headless technology allows you to connect your store to any backend or API — WooCommerce, Ghost and more — resulting in fast, modular interfaces.",
+	"bagityFeature7Title": "Composable Front-ends",
+	"bagityFeature7Desc": "Our headless technology allows you to connect your store to any backend or API, resulting in fast, modular, and multi-channel interfaces.",
 
 	"bagityFeature8Title": "Intelligent Support",
 	"bagityFeature8Desc": "Integration with our first-contact chatbot trained with AI to represent your brand, answer questions, qualify leads, and automatically connect to your CRM.",
@@ -402,20 +403,22 @@
 	"storePricingTailorMade": "Custom pricing",
 	"storePricingPerMonth": "/month",
 
+	"storeStarterPrice": "$50",
 	"storeStarterUsers": "1 admin user",
 	"storeStarterHosting": "Hosting + SSL + Backups",
 	"storeStarterMaintenance": "3h/month of maintenance",
 	"storeStarterSupport": "Email support (24h)",
 	"storeStarterPaymentGateway": "1 traditional payment gateway",
-	"storeStarterCubiqPay": "for USDT/BTC <br /> payments",
+	"storeStarterCubiqPay": "USDT/BTC <br /> payments",
 
+	"storeProPrice": "$100",
 	"storeProUsers": "3 admin users + 2 editors",
 	"storeProInfrastructure": "Premium infrastructure and CDN",
 	"storeProSupport": "Priority chat support (4h)",
 	"storeProMaintenance": "10h/month + dedicated manager",
 	"storeProSEO": "SEO + CRO + Analytics",
 	"storeProAI": "Content AI + Recommendations",
-	"storeProPaymentGateways": "3 payment gateways <br />+",
+	"storeProPaymentGateways": "3 payment gateways",
 
 	"storeEnterpriseUsers": "Unlimited users + SSO",
 	"storeEnterpriseArchitecture": "Scalable cloud architecture",

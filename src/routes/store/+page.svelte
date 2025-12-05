@@ -43,16 +43,16 @@
 			desc: m.bagityFeature2Desc(),
 			pill: null
 		},
-		{
-			icon: BrainCircuit,
-			title: m.bagityFeature8Title(),
-			desc: m.bagityFeature8Desc(),
-			pill: {
-				text: m.prototyping(),
-				color: 'primary-transparent',
-				customCss: '!px-3'
-			}
-		},
+		// {
+		// 	icon: BrainCircuit,
+		// 	title: m.bagityFeature8Title(),
+		// 	desc: m.bagityFeature8Desc(),
+		// 	pill: {
+		// 		text: m.prototyping(),
+		// 		color: 'primary-transparent',
+		// 		customCss: '!px-3'
+		// 	}
+		// },
 		{
 			icon: MessageCircleHeart,
 			title: m.bagityFeature5Title(),
@@ -76,13 +76,13 @@
 			title: m.bagityFeature3Title(),
 			desc: m.bagityFeature3Desc(),
 			pill: null
-		},
-		{
-			icon: ShoppingCart,
-			title: m.bagityFeature6Title(),
-			desc: m.bagityFeature6Desc(),
-			pill: null
 		}
+		// {
+		// 	icon: ShoppingCart,
+		// 	title: m.bagityFeature6Title(),
+		// 	desc: m.bagityFeature6Desc(),
+		// 	pill: null
+		// }
 	];
 
 	const dashboardImages: DashboardImageType[] = $state([

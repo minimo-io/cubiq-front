@@ -155,7 +155,8 @@
 						<div
 							class={[
 								'feature-item',
-								feature.button && 'border-primary/50 mt-5 rounded-xl border px-2 pt-6 pb-3 md:mt-0'
+								feature.button &&
+									'border-primary/50 mb-6 rounded-xl border px-2 pt-6 pb-3 md:mt-0 md:mb-0'
 							]}
 						>
 							<div class="flex-shrink-0">

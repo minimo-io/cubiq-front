@@ -20,7 +20,7 @@
 
 					<!-- Price -->
 					<div class="mt-0 mb-5 text-center">
-						<span class="text-base-content text-4xl font-bold">R$250</span>
+						<span class="text-base-content text-4xl font-bold">{m.storeStarterPrice()}</span>
 						<span class="text-base-content/70 text-lg">{m.storePricingPerMonth()}</span>
 					</div>
 
@@ -54,7 +54,7 @@
 						<div class="flex items-start gap-3">
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm">
-								<a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a>
+								<!-- <a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a> -->
 								{@html m.storeStarterCubiqPay()}
 							</span>
 						</div>
@@ -87,7 +87,7 @@
 
 					<!-- Price -->
 					<div class="mt-0 mb-5 text-center">
-						<span class="text-base-content text-4xl font-bold">R$500</span>
+						<span class="text-base-content text-4xl font-bold">{m.storeProPrice()}</span>
 						<span class="text-base-content/70 text-lg">{m.storePricingPerMonth()}</span>
 					</div>
 
@@ -129,7 +129,7 @@
 							<Check class="h-4.5 text-green-500" />
 							<span class="text-base-content text-left font-sans text-sm">
 								{@html m.storeProPaymentGateways()}
-								<a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a>
+								<!-- <a href={localizeHref('/pay')} class="text-primary hover:underline">Cubiq Pay</a> -->
 							</span>
 						</div>
 					</div>

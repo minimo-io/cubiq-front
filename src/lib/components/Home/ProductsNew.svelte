@@ -50,11 +50,12 @@
 										class="text-primary h-32 w-32 stroke-[0.5] transition-transform duration-500 group-hover:scale-110"
 									/>
 								</div>
-								{#if product.unavailableBrazil && getLocale() == 'pt'}
+								<!-- {#if product.unavailableBrazil && getLocale() == 'pt'} -->
+								{#if product.unavailableBrazil}
 									<div
 										class="badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary absolute top-3 right-3 font-sans text-xs!"
 									>
-										Indisponível no Brasil
+										{m.unavailable()}
 									</div>
 								{/if}
 								<div class="mt-8 mb-0 flex items-center justify-between">

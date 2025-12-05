@@ -24,6 +24,7 @@
 	"visitStore": "Visitar tienda",
 	"downloadSoftware": "Descargar software predictivo",
 	"experiments": "Experimentos",
+	"unavailable": "No disponible",
 
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
@@ -76,13 +77,13 @@
 
 	"heroContentHome1": "Somos una <span class='text-base-content opacity-80'>Plataforma de Productos Digitales</span> y un Laboratorio de Desarrollo enfocados en la Innovación en las áreas de <span class='text-base-content opacity-80'>E-Commerce, Pagos X-Border en Tiempo Real, IA y Máquinas (IoT)</span>.",
 
-	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagos en tiempo real con <span class='text-base-content opacity-80'>Settlements Globales Instantáneas</span> en BTC/USDT, vía Lightning Network. Ej.: <span class='text-base-content'>Recibí desde cualquier lugar del mundo y liquidá en el instante en su wallet</span>, con transparencia 100% verificable.</div>",
+	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagos en tiempo real con <span class='text-base-content opacity-80'>Settlements Globales Instantáneos</span> en BTC/USDT, vía Lightning Network. Ej.: <span class='text-base-content'>Recibí desde cualquier lugar del mundo y liquidá en el instante en tu wallet</span>, con transparencia 100% verificable. <div class='ml-2 pb-[1px] badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary font-sans text-xs!'>No disponible</div></div>",
 
 	"heroContentCareSyncXXX": "Plataforma de <span class='text-base-content opacity-80'>Mantenimiento Predictivo</span> y Gestión de Activos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profesionales de TI y PyMEs</span> — con IA aplicada al Monitoreo en Tiempo Real, Base de Conocimiento y Marketplace de Clientes.",
 
 	"heroContentCareSync": "Gestión completa del ciclo de vida de TI para PyMEs en crecimiento — integrando <span class='text-base-content opacity-80'>Gestión tercerizada de activos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Servicio (HaaS/Alquiler)</span> y <span class='text-base-content opacity-80'>Mantenimiento predictivo</span> potenciado por diagnósticos de IA en tiempo real.",
 
-	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Customizamos sin límites: Diseño, UX y Funcionalidades, con IA de Contenido integrada y <span class='text-base-content opacity-80'>Pagos USDT/BITCOIN</span> via <a href='/es/pay' class='text-primary'>Cubiq Pay</a>. ¿Qué esperar? <span class='text-base-content opacity-80'>Planes previsíveis</span>, <span class='text-base-content opacity-80'>sin comisiones por venta</span>.",
+	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Customizamos sin límites: Diseño, UX e Integraciones, con IA de Contenido y Pagos USDT/Bitcoin. ¿Qué esperar? <span class='text-base-content opacity-80'>Tiendas únicas, planes previsíveis</span>, <span class='text-base-content opacity-80'>sin comisiones por venta</span>.",
 
 	"homeProductsSlogan": "Plataforma Unificada de Produtos Digitais e APIs para PMEs e Startups focada em LATAM.",
 
@@ -217,8 +218,8 @@
 	"bagityFeature3Title": "Integraciones a medida",
 	"bagityFeature3Desc": "Integraciones de calidad vía API y Webhooks con los principales ERPs y desarrollos a medida en el Plan PRO.",
 
-	"bagityFeature4Title": "Alta indexación en Google y LLMs",
-	"bagityFeature4Desc": "Tecnología propia e infraestructura especializada en la nube potencia la indexación en Google, ChatGPT y otras IA.",
+	"bagityFeature4Title": "Diseños personalizados a medida",
+	"bagityFeature4Desc": "Nos encargamos del diseño para crear tiendas únicas con tecnología Headless de última generación. Evita ser solo otra tienda online.",
 
 	"bagityFeature5Title": "Un socio tecnológico",
 	"bagityFeature5Desc": "Queremos construir tiendas únicas, para clientes únicos, y con foco en el factor humano. Por eso acompañamos la evolución de todos nuestros clientes con videollamadas mensuales.",
@@ -227,7 +228,7 @@
 	"bagityFeature6Desc": "Nuestra solución de pago propia — <a href='/es/finx' class='text-primary hover:opacity-40'>Cubiq Pay</a> — nos permite simplificar el checkout, alcanzando altas tasas de conversión y reduciendo costes operativos.",
 
 	"bagityFeature7Title": "Front-ends Componibles",
-	"bagityFeature7Desc": "Nuestra tecnología headless permite conectar tu tienda a cualquier backend o API — WooCommerce, Ghost y más — resultando en interfaces rápidas y modulares.",
+	"bagityFeature7Desc": "Nuestra tecnología headless permite conectar tu tienda a cualquier backend o API, lo que resulta en interfaces rápidas, modulares y multicanal.",
 
 	"bagityFeature8Title": "Atendimientos inteligentes",
 	"bagityFeature8Desc": "Integración con nuestro chatbot de primer contacto, entrenado con IA para representar su marca, responder dudas, cualificar leads e integrarse automáticamente a su CRM.",
@@ -305,7 +306,7 @@
 	"careHaaSFeature6Title": "Sin inversión inicial",
 	"careHaaSFeature6Desc": "Elimine la gran inversión inicial, preserve el flujo de caja y las líneas de crédito, evite perder capital en otros gastos y prescinda de desplazamientos o búsquedas para comprar equipos.",
 
-	"careHaaSSlogan": "Alquile su equipo desde cualquier lugar con mantenimiento incluido. Sea persona física o jurídica, libere caja.<br /> <span class='text-base-content opacity-80'>Usted enfóquese en su negocio, nosotros cuidamos de su TI.</span>",
+	"careHaaSSlogan": "Alquile su equipo desde cualquier lugar con mantenimiento incluido. Sea persona física o jurídica, libere caja. <span class='text-base-content opacity-80'>Usted enfóquese en su negocio, nosotros cuidamos de su TI.</span>",
 
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Si ya es cliente de Cubiq Care, recibirá cashback acumulable en todas las compras de productos vendidos directamente por Cubiq.",
@@ -401,20 +402,22 @@
 	"storePricingTailorMade": "A medida",
 	"storePricingPerMonth": "/mes",
 
+	"storeStarterPrice": "U$S 50",
 	"storeStarterUsers": "1 usuario admin",
 	"storeStarterHosting": "Hosting + SSL + Backups",
 	"storeStarterMaintenance": "3h/mes de mantenimiento",
 	"storeStarterSupport": "Soporte por email (24h)",
 	"storeStarterPaymentGateway": "1 pasarela de pagos tradicional",
-	"storeStarterCubiqPay": "para pagos <br /> USDT/BTC",
+	"storeStarterCubiqPay": "Pagos <br /> USDT/BTC",
 
+	"storeProPrice": "U$S 100",
 	"storeProUsers": "3 usuarios admin + 2 editores",
 	"storeProInfrastructure": "Infraestructura y CDN premium",
 	"storeProSupport": "Soporte por chat prioritario (4h)",
 	"storeProMaintenance": "10h/mes + gerente dedicado",
 	"storeProSEO": "SEO + CRO + Analytics",
 	"storeProAI": "IA de Contenido + Recomendaciones",
-	"storeProPaymentGateways": "3 pasarelas de pagos <br />+",
+	"storeProPaymentGateways": "3 pasarelas de pagos",
 
 	"storeEnterpriseUsers": "Usuarios ilimitados + SSO",
 	"storeEnterpriseArchitecture": "Arquitectura cloud escalable",

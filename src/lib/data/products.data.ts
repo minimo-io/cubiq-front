@@ -101,18 +101,18 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		primary: true,
 		underDevelopment: true,
 		url: 'https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1'
-	},
-	{
-		id: LabProduct.BIBLIO,
-		name: LabProduct.BIBLIO,
-		logo: '/products/biblio-logo.png',
-		isMain: true,
-		slogan: m.productBilbioSlogan({}, { locale: locale }),
-		sloganSimple: '',
-		details: m.productBilbioSlogan({}, { locale: locale }),
-		isBold: true,
-		primary: true,
-		underDevelopment: true,
-		url: '#'
 	}
+	// {
+	// 	id: LabProduct.BIBLIO,
+	// 	name: LabProduct.BIBLIO,
+	// 	logo: '/products/biblio-logo.png',
+	// 	isMain: true,
+	// 	slogan: m.productBilbioSlogan({}, { locale: locale }),
+	// 	sloganSimple: '',
+	// 	details: m.productBilbioSlogan({}, { locale: locale }),
+	// 	isBold: true,
+	// 	primary: true,
+	// 	underDevelopment: true,
+	// 	url: '#'
+	// }
 ];

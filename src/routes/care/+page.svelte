@@ -48,6 +48,16 @@
 
 	const careFeaturesAssetManagment: Feature[] = [
 		{
+			icon: Activity,
+			title: m.caresyncFeature4Title(),
+			desc: m.caresyncFeature4Desc(),
+			button: {
+				text: m.downloadSoftware(),
+				// href: localizeHref('/care/software-preditivo')
+				href: localizeHref('/soon')
+			}
+		},
+		{
 			icon: ListOrdered,
 			title: m.caresyncFeature01Title(),
 			desc: m.caresyncFeature01Desc()
@@ -74,17 +84,6 @@
 			icon: CircleGauge,
 			title: m.caresyncFeature1Title(),
 			desc: m.caresyncFeature1Desc()
-		},
-
-		{
-			icon: Activity,
-			title: m.caresyncFeature4Title(),
-			desc: m.caresyncFeature4Desc(),
-			button: {
-				text: m.downloadSoftware(),
-				// href: localizeHref('/care/software-preditivo')
-				href: localizeHref('/soon')
-			}
 		}
 	];
 
