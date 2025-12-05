@@ -9,7 +9,12 @@
 	import { getLocale, localizeHref } from '$paraglide/runtime';
 	import { getProductsFromLab } from '$lib/data/products.data';
 
-	let { hideSlogan = false, noSpaces = false, experimentsTitle = m.menuExperiments() } = $props();
+	let {
+		hideSlogan = false,
+		noSpaces = false,
+		experimentsTitle = m.menuExperiments(),
+		smallerTopMargins = false
+	} = $props();
 
 	// const locale = $state(getLocale());
 	const PRODUCTS_FROM_LAB = getProductsFromLab(getLocale());
@@ -24,7 +29,11 @@
 	<!-- <Hr halfWidth={true} /> -->
 
 	<div class="md:pb-3">
-		<div class="relative -top-6 pt-3 text-center md:-top-4 md:block md:scale-95">
+		<div
+			class="relative -top-6 pt-3 text-center {smallerTopMargins
+				? 'top-0'
+				: 'md:-top-4'}  md:block md:scale-95"
+		>
 			<PillFlower title={experimentsTitle} />
 		</div>
 
@@ -37,7 +46,9 @@
 		{/if}
 
 		<div
-			class="relative -top-5 mx-auto mb-1 flex scale-95 flex-col items-center justify-center gap-2 md:top-0 md:-left-4 md:mt-5 md:flex-row"
+			class="relative mx-auto mb-1 flex scale-95 flex-col items-center justify-center gap-2 md:top-0 md:-left-4 md:mt-5 md:flex-row {smallerTopMargins
+				? ''
+				: '-top-5'}"
 		>
 			{#each primaryProductsForLang as product, i (product.name)}
 				{@const align = i === 0 ? 'start' : i === drawerDataForLang.length - 1 ? 'end' : 'center'}

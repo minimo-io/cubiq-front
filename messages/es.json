@@ -386,7 +386,8 @@
 	"searchNotes": "Buscar notas...",
 	"notesWarningUnencrypteed": "<strong>¡Advertencia!</strong> Las notas sin encriptar estarán disponibles en texto plano en el almacenamiento local del navegador incluso después de cerrar sesión!",
 
-	"heroContentLab": "Además de nuestra Plataforma de Productos, en el <span class='text-base-content opacity-80'>Cubiq:Lab experimentamos con nuevas tecnologías e ideas</span>. Desde comprar cervezas locales vía Bitcoin Lightning hasta rankings seguros de sitios de apuestas usando karma.",
+	"heroContentLab": "Además de nuestra Plataforma de Productos, en Cubiq Lab <span class='text-base-content opacity-80'>experimentamos con nuevas tecnologías, ideas y pruebas de concepto</span>.",
+
 	"labProductsSlogan": "Los proyectos de nuestro laboratorio van desde pruebas de concepto hasta productos activos en el mercado... <a href='/es/lab' class='hover:text-underline text-white'>saiba más</a>",
 
 	"invoicing": "Facturación",

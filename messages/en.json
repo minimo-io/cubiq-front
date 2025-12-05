@@ -387,7 +387,8 @@
 	"searchNotes": "Search notes...",
 	"notesWarningUnencrypteed": "<strong>Warning!</strong> Unencrypted notes will be plain text accessible on browser local storage even after logout!",
 
-	"heroContentLab": "Besides our Products Platform, at the <span class='text-base-content opacity-80'>Cubiq:Lab we experiment with new technologies and ideas</span>. From buying local beers via Bitcoin Lightning to secure rankings of betting sites using karma.",
+	"heroContentLab": "Beyond our Products Platform, at Cubiq Lab <span class='text-base-content opacity-80'>we experiment with new technologies, ideas, and proofs-of-concept</span>.",
+
 	"labProductsSlogan": "Projects from our technology lab range from proof-of-concepts to in-market products... <a href='/en/lab' class='hover:text-underline text-white'>learn more</a>",
 
 	"invoicing": "Invoicing",

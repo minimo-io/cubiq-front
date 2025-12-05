@@ -36,8 +36,13 @@
 	</div>
 </Header>
 
-<div class="relative -top-3">
-	<LabProducts noSpaces={true} hideSlogan={true} experimentsTitle={m.experiments()} />
+<div class="relative -top-3 md:top-0">
+	<LabProducts
+		noSpaces={true}
+		hideSlogan={true}
+		experimentsTitle={m.experiments()}
+		smallerTopMargins={true}
+	/>
 </div>
 
 <section class="max-w-fw mx-(--cubiq-app-margin) mb-10 md:mx-auto">
