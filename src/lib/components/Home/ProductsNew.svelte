@@ -50,8 +50,8 @@
 										class="text-primary h-32 w-32 stroke-[0.5] transition-transform duration-500 group-hover:scale-110"
 									/>
 								</div>
-								<!-- {#if product.unavailableBrazil && getLocale() == 'pt'} -->
-								{#if product.unavailableBrazil}
+								<!-- {#if product.unavailable && getLocale() == 'pt'} -->
+								{#if product.unavailable}
 									<div
 										class="badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary absolute top-3 right-3 font-sans text-xs!"
 									>
