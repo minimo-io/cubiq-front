@@ -83,6 +83,12 @@
 				<div>{'6 min read'}</div>
 			</div>
 
+			{#if data.post.image}
+				<div class="relative flex justify-center pb-5">
+					<img src={data.post.image} alt="post" class="img-rotate rounded-3xl" />
+				</div>
+			{/if}
+
 			<!-- Excerpt -->
 			<p
 				class="text-secondary my-8 text-left font-sans text-lg leading-tight font-semibold tracking-wide md:my-8 md:text-2xl"

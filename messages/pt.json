@@ -25,6 +25,8 @@
 	"experiments": "Experimentos",
 	"unavailable": "Indisponível",
 
+	"logoutMessage": "Até logo! Você foi desconectado(a).",
+
 	"loggingIn": "Entrando...",
 	"platform": "Plataforma",
 	"latestNews": "Últimas notícias",
@@ -139,7 +141,7 @@
 	"metaLabDescription": "Um espaço para prototipar, explorar e expandir os limites do que é possível com a tecnologia",
 	"labLaunchText": "<span class='hidden md:inline-block font-bold'>Lançamento!&nbsp;</span><u>Hopchain</u>",
 	"labLaunchSubText": "Cervejas artesanais x Lightning",
-	"labToolsTitle": "Projetos e ferramentas <br /> do laboratório.",
+	"labToolsTitle": "Projetos, ferramentas y PoCs <br /> do laboratório.",
 	"labToolsSubtitle": "Criamos experimentos, protótipos e ferramentas que exploram novas tecnologias, modelos descentralizados e experiências inovadoras.",
 
 	"metaFinxTitle": "Cubiq Pay - Pagamentos instantâneos em BTC/USDT via Lightning Network",
@@ -439,5 +441,10 @@
 	"storeCustomERPsAPIs": "ERPs e APIs sob medida para começar forte",
 	"storeHumanizedSupport": "Oferecemos suporte humanizado",
 	"storeNoCommissions": "Sem comissões por venda ou escondidas",
-	"storeBTCOnlyDiscount": "50% OFF para lojas<br /> só Bitcoin"
+	"storeBTCOnlyDiscount": "50% OFF para lojas<br /> só Bitcoin",
+
+	"labNostrFollowbackDescription": "Descubra quem não te segue de volta no Nostr: Este é um micro-app conceitual com o objetivo de ter um primeiro contato com o Protocolo Nostr, e experimentar bibliotecas como NDK por pablof7z.",
+	"labBzStatsDescription": "Um script Node.js + Playwright que extrai automaticamente dados de ganhos de programas de afiliados usando a plataforma Netrefer, compara-os com a execução anterior e envia alertas via Telegram ou e-mail.",
+	"labLoveInABoxDescription": "❤️ LoveInABox é um aplicativo de culinária onde você poderá descobrir novas receitas e pedir um kit pequeno e fofo com os ingredientes para prepará-las. É como HelloFresh® turbinado (ou com esteroides).",
+	"labViiVPayDescription": "Tecnologia financeira transfronteiriça com foco no mercado LATAM, projeto e app desenhados no Figma. Pagamentos transparentes e sem fronteiras."
 }

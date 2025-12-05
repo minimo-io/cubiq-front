@@ -87,7 +87,8 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		isBold: true,
 		primary: true,
 		underDevelopment: false,
-		url: 'https://www.betizen.org'
+		url: 'https://www.betizen.org',
+		newWindow: true
 	},
 	{
 		id: LabProduct.LNBEER,
@@ -100,7 +101,8 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		isBold: true,
 		primary: true,
 		underDevelopment: true,
-		url: 'https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1'
+		url: localizeHref('/blog/beer-app'),
+		newWindow: false
 	}
 	// {
 	// 	id: LabProduct.BIBLIO,

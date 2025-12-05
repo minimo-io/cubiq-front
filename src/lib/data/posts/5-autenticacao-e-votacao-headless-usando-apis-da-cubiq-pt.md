@@ -1,7 +1,7 @@
 ---
 title: 'Autenticação e Votação Headless usando as APIs de Cubiq'
 excerpt: 'Nosso projeto Betizen acabou de ser reescrito e relançado, com o objetivo de criar uma comunidade de transparência para listagens de iGaming, Forex e Binárias, e usamos nossa API de Usuários/Votação para construí-lo.'
-date: 2025-09-01
+date: 2025-12-04
 featured: true
 isMain: false
 icon: Terminal

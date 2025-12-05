@@ -32,4 +32,5 @@ export interface ProductData {
 	underDevelopment?: boolean;
 	online?: boolean;
 	unavailable?: boolean;
+	newWindow?: boolean;
 }

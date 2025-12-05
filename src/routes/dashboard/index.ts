@@ -1,10 +1,11 @@
+// import { page } from '$app/state';
 import { postgreService } from '$databases';
 import { localizeHref } from '$paraglide/runtime';
 import { AuthService } from '$services/auth.service';
 import { redirect, type Actions, type RequestEvent } from '@sveltejs/kit';
 
 // Global logout action for dashboard
-export const logoutAction = async ({ cookies }: RequestEvent) => {
+export const logoutAction = async ({ cookies, request }: RequestEvent) => {
 	const sessionToken = cookies.get('session');
 
 	if (sessionToken) {
@@ -18,9 +19,19 @@ export const logoutAction = async ({ cookies }: RequestEvent) => {
 			console.error('Error removing session from database:', error);
 		}
 	}
+
 	AuthService.userClearState(cookies);
-	// cookies.delete('session', { path: '/' });
-	redirect(303, localizeHref('/login'));
+
+	const form = await request.formData();
+	let redirectTo = form.get('redirect_to')?.toString() ?? localizeHref('/login');
+
+	// ✅ Add the parameter here, nothing else changed
+	const url = new URL(redirectTo, request.url);
+	url.searchParams.set('logged_out', '1');
+	redirectTo = url.pathname + url.search;
+
+	console.log(redirectTo);
+	redirect(303, redirectTo);
 };
 
 export const dashboardCommonActions = {

@@ -1,7 +1,7 @@
 ---
 title: Introducing the Cubiq Platform
 excerpt: A unified digital products platform, designed to transform the way businesses in Latin America handle e-commerce, payments, and IT.
-date: 2025-09-06
+date: 2025-12-05
 featured: true
 isMain: true
 icon: Star

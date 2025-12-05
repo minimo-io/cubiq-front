@@ -1,3 +1,4 @@
+// src/lib/stores/Toast.state.svelte.ts
 import { AppConfig } from '$lib/configs';
 import type { ToastPosition, ToastState, ToastType } from '$types/toast.types';
 

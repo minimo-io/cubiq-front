@@ -41,6 +41,7 @@
 		>
 			{#each primaryProductsForLang as product, i (product.name)}
 				{@const align = i === 0 ? 'start' : i === drawerDataForLang.length - 1 ? 'end' : 'center'}
+				{@const newwindow = product.newWindow ? true : false}
 
 				<ProductSingle
 					count={i}
@@ -49,7 +50,7 @@
 					icon={product.icon}
 					primary={product.primary}
 					hideDetails={false}
-					openInNewWindow={true}
+					openInNewWindow={newwindow}
 				/>
 			{/each}
 

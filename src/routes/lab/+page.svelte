@@ -9,19 +9,13 @@
 	import Meta from '$lib/components/Meta.svelte';
 	import TitleSection from '$lib/components/TitleSection.svelte';
 	import { m } from '$paraglide/messages';
-	import { localizeHref } from '$paraglide/runtime';
+	import { localizeHref, getLocale } from '$paraglide/runtime';
 	import { conditionalSmoothScroll } from '$utils';
-	import { Zap } from '@lucide/svelte';
+	import { Zap, Github, ExternalLink } from '@lucide/svelte';
+	import { getLabToolsAndProjects } from '$lib/data/lab.data';
 
-	const labToolsAndProjects = [
-		{
-			title: 'Nostr Followback',
-			github: '',
-			description: 'Discover who follows you back on Nostr',
-			href: '',
-			tags: ['nostr', 'social']
-		}
-	];
+	// Get projects with current locale
+	const labToolsAndProjects = getLabToolsAndProjects(getLocale());
 </script>
 
 <Meta title={m.metaLabTitle()} description={m.metaLabDescription()} />
@@ -38,17 +32,6 @@
 			<a href={localizeHref('/#more')} class="fw-button fw-button-lg hidden! h-fit md:flex!">
 				<span>{m.learnMore()}</span>
 			</a>
-
-			<!-- <div class="flex flex-col">
-				<a
-					href={localizeHref('/lab/hopchain')}
-					class="fw-button fw-button-lg fw-button-outline font-sans"
-				>
-					<Zap class="h-3" />
-					<span>{@html m.labLaunchText()} / {m.labLaunchSubText()}</span>
-				</a>
-
-			</div> -->
 		</div>
 	</div>
 </Header>
@@ -59,7 +42,7 @@
 
 <section class="max-w-fw mx-(--cubiq-app-margin) mb-10 md:mx-auto">
 	<!-- Section title -->
-	<h2 class="mx-auto text-center font-sans text-3xl md:text-[33px]">
+	<h2 class="mx-auto mb-10 text-center font-sans text-3xl md:text-[33px]">
 		<!-- Actual title -->
 		<span>{@html m.labToolsTitle()}</span>
 
@@ -85,48 +68,83 @@
 	</h2>
 
 	<!-- Sub-title -->
-	<div
+	<!-- <div
 		class="text-accent mx-auto my-5 mt-3 mb-10 w-full text-center font-sans text-xl md:max-w-[80%] md:text-2xl"
 	>
 		Criamos experimentos, protótipos e ferramentas que exploram novas tecnologias, modelos
 		descentralizados e experiências inovadoras.
-	</div>
+	</div> -->
 
 	<!-- Separator -->
 	<div class="relative mb-8 block h-px md:mb-0">
 		<Hr />
-		<!-- <div
-			class="absolute bottom-[-7px] left-1/2 h-[15px] w-[15px] -translate-x-1/2 bg-[url('/bgs/square.svg')] bg-contain bg-no-repeat"
-		></div> -->
 	</div>
 
 	<!-- Projects & Tools -->
 	<div
 		class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto md:border-0 md:border-x"
 	>
-		<div class="border-base-200 relative grid grid-cols-1 gap-1 border-b md:grid-cols-3 md:gap-0">
+		<div class="border-base-200 relative flex flex-col">
 			{#each labToolsAndProjects as item, i (i)}
-				<a
-					href={localizeHref(`${item.href}`)}
-					class="group border-base-200 hover:text-secondary relative flex flex-col justify-start border-b p-(--cubiq-app-margin) pb-10 text-white transition-colors hover:bg-white md:border-r md:border-b-0 md:p-12 md:pb-12"
+				<div
+					class="group border-base-200 hover:bg-base-100 relative flex flex-col justify-start border-b p-(--cubiq-app-margin) pb-10 transition-colors last:border-b-0 md:p-12 md:pb-12"
 				>
-					So...
-				</a>
+					<!-- Badge if exists -->
+					{#if item.badge}
+						<div
+							class="absolute top-4 right-4 bg-red-600 px-3 py-1 text-xs font-bold text-white md:top-6 md:right-6"
+						>
+							{item.badge}
+						</div>
+					{/if}
+
+					<!-- Title with bullet -->
+					<div class="mb-4 flex items-start gap-3 text-left">
+						<span class="text-primary mt-1 text-xl">■</span>
+						<h3 class="font-pixel text-2xl leading-tight tracking-wide md:text-3xl">
+							{item.title}
+						</h3>
+					</div>
+
+					<!-- Description -->
+					<p class="mb-6 text-left text-sm leading-relaxed text-gray-300 md:text-base">
+						{item.description}
+					</p>
+
+					<!-- Links -->
+					<div class="mt-auto flex items-center gap-4 text-left">
+						{#if item.github}
+							<a
+								href={item.github}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-primary hover:text-primary-focus flex items-center gap-2 text-sm transition-colors"
+							>
+								<Github class="h-4 w-4" />
+								View on Github
+							</a>
+						{/if}
+						{#if item.figma}
+							<a
+								href={item.figma}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-primary hover:text-primary-focus flex items-center gap-2 text-sm transition-colors"
+							>
+								<ExternalLink class="h-4 w-4" />
+								Figma
+							</a>
+						{/if}
+						<!-- <a
+							href={localizeHref(`${item.href}`)}
+							class="ml-auto text-xs text-gray-500 hover:text-gray-300"
+						>
+							Saiba mais.
+						</a> -->
+					</div>
+				</div>
 			{/each}
 		</div>
-
-		<!-- <div class="border-base-200 flex items-center justify-between border-b px-6 py-8 md:px-12">
-			<div
-				class="text-left font-sans text-[25px] leading-tight font-black md:text-[36px] md:leading-normal"
-			>
-				{m.latestNews()}
-			</div>
-			<div class="text-right font-sans text-sm md:text-base">
-				{m.subscriveVia()} <a href="/#" class="text-primary font-bold">RSS</a>
-				{m.or()}
-				<a href="/#" class="text-primary font-bold">Email</a>
-			</div>
-		</div> -->
 
 		<CtaContact />
 

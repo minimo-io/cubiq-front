@@ -27,7 +27,7 @@
 	</button>
 
 	<ul
-		class="menu menu-base border border-accent dropdown-content bg-black font-sans rounded-box z-1 mt-4 w-fit p-2 px-3 font-normal tracking-widest shadow-md"
+		class="menu menu-base border-accent dropdown-content rounded-box z-1 mt-4 w-fit border bg-black p-2 px-3 font-sans font-normal tracking-widest shadow-md"
 	>
 		<li><a href="/">{m.configurations()}</a></li>
 
@@ -36,7 +36,6 @@
 		<li><a href="/">{m.invoicing()}</a></li>
 
 		<div class="my-1 border-b border-b-gray-700"></div>
-
 
 		<li>
 			<form
@@ -50,6 +49,7 @@
 					};
 				}}
 			>
+				<input type="hidden" name="redirect_to" value={page.url.pathname + page.url.search} />
 				<button type="submit">{m.logout()}</button>
 			</form>
 		</li>

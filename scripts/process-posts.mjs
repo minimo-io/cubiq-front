@@ -79,6 +79,7 @@ fs.readdirSync(postsDir)
 			isMain: data.isMain || false,
 			iconName: data.icon || null, // Store as iconName for now
 			authors: authors,
+			image: data.image || '',
 			featured: data.featured || false // Add featured property
 		};
 
@@ -155,6 +156,7 @@ for (const lang of languages) {
 
 		postsObject += '\t\t{\n';
 		postsObject += `\t\t\ttitle: ${JSON.stringify(post.title)},\n`;
+		postsObject += `\t\t\timage: ${JSON.stringify(post.image)},\n`;
 		postsObject += `\t\t\texcerpt: ${JSON.stringify(post.excerpt)},\n`;
 		postsObject += `\t\t\tcontent: ${JSON.stringify(post.content)},\n`;
 		postsObject += `			date: ${JSON.stringify(formatDate(post.date, lang))},
@@ -197,6 +199,7 @@ for (const lang of languages) {
 
 		featuredPostsObject += '\t\t{\n';
 		featuredPostsObject += `\t\t\ttitle: ${JSON.stringify(post.title)},\n`;
+		featuredPostsObject += `\t\t\timage: ${JSON.stringify(post.image)},\n`;
 		featuredPostsObject += `\t\t\texcerpt: ${JSON.stringify(post.excerpt)},\n`;
 		featuredPostsObject += `\t\t\tcontent: ${JSON.stringify(post.content)},\n`;
 		featuredPostsObject += `			date: ${JSON.stringify(formatDate(post.date, lang))},

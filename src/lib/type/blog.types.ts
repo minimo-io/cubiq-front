@@ -15,4 +15,5 @@ export interface Post {
 	featured?: boolean;
 	icon?: typeof IconType;
 	authors: PostAuthor[];
+	image?: string;
 }

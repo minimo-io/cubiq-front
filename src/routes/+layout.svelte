@@ -16,7 +16,8 @@
 	import { loader } from '$stores/Loader.state.svelte';
 	import Tools from '$lib/components/Tools.svelte';
 	import Toast from '$lib/components/Toast.svelte';
-	import { FwToastState } from '$stores/Toast.state.svelte';
+	import { FwToastState, FwToast } from '$stores/Toast.state.svelte';
+	import { m } from '$paraglide/messages';
 
 	let { children } = $props();
 
@@ -30,13 +31,13 @@
 	});
 
 	function globalKeyHandler(event: KeyboardEvent) {
-		// Only fire “L” when neither ⌘ (meta) nor Ctrl is held down
+		// Only fire "L" when neither ⌘ (meta) nor Ctrl is held down
 		// if ((event.key === 'l' || event.key === 'L') && (event.metaKey || event.ctrlKey)) {
 		// 	event.preventDefault();
 		// 	goto(localizeHref('/login'));
 		// }
 
-		// “B” always goes back one page
+		// "B" always goes back one page
 		if ((event.key === 'b' || event.key === 'B') && (event.metaKey || event.ctrlKey)) {
 			event.preventDefault();
 			if (browser) {
@@ -44,7 +45,7 @@
 			}
 		}
 
-		// “H” goes to homepage
+		// "H" goes to homepage
 		if ((event.key === 'h' || event.key === 'H') && (event.metaKey || event.ctrlKey)) {
 			event.preventDefault();
 			if (browser) {
@@ -59,6 +60,18 @@
 		return () => {
 			document.removeEventListener('keydown', globalKeyHandler);
 		};
+	});
+
+	// Check for logout parameter on page changes
+	$effect(() => {
+		if (page.url.searchParams.has('logged_out')) {
+			FwToast.launch(m.logoutMessage(), 'success', 'top');
+
+			// Clean up URL to remove the parameter using SvelteKit's goto
+			const url = new URL(page.url);
+			url.searchParams.delete('logged_out');
+			goto(url.pathname + url.search, { replaceState: true, noScroll: true });
+		}
 	});
 
 	// If it takes x amount of time, then show the overlay

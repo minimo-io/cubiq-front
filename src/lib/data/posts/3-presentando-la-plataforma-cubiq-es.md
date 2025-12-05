@@ -1,7 +1,7 @@
 ---
 title: Presentando la Plataforma Cubiq
 excerpt: Una plataforma unificada de productos digitales, creada para transformar la forma en que los negocios de América Latina gestionan el comercio electrónico, los pagos y la TI.
-date: 2025-09-06
+date: 2025-12-05
 featured: true
 isMain: true
 icon: Star

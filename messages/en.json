@@ -26,6 +26,8 @@
 	"experiments": "Experiments",
 	"unavailable": "Unavailable",
 
+	"logoutMessage": "Goodbye! You've been logged out.",
+
 	"latestNews": "Latest news",
 	"subscriveVia": "Subscribe via",
 	"contactSupport": "Contact Support",
@@ -140,7 +142,7 @@
 	"metaLabDescription": "A space to prototype, play, and push the edge of what's possible with technology",
 	"labLaunchText": "<span class='hidden md:inline-block font-bold'>Prototype Launch!&nbsp;</span><u>Hopchain</u>",
 	"labLaunchSubText": "Local Craft Beers x Lightning",
-	"labToolsTitle": "Projects and tools <br /> of the lab.",
+	"labToolsTitle": "Projects, tools & PoCs <br /> of the lab.",
 	"labToolsSubtitle": "We create experiments, prototypes, and tools that explore new technologies, decentralized models, and innovative experiences.",
 
 	"metaFinxTitle": "Cubiq Pay - Instant BTC/USDT payments via Lightning Network",
@@ -437,5 +439,10 @@
 	"storeCustomERPsAPIs": "Custom ERPs and APIs to start strong",
 	"storeHumanizedSupport": "We offer humanized support",
 	"storeNoCommissions": "No hidden or per sale commissions",
-	"storeBTCOnlyDiscount": "50% OFF for Bitcoin<br /> only stores"
+	"storeBTCOnlyDiscount": "50% OFF for Bitcoin<br /> only stores",
+
+	"labNostrFollowbackDescription": "Discover who doesn't follow you back on Nostr: This is a concept micro-app with the goal of having a first contact with the Nostr Protocol, and trying out libraries like NDK by pablof7z. ",
+	"labBzStatsDescription": "A Node.js+Playwright script that automatically scrapes earnings data from affiliate programs using the Netrefer platform, compares it with the previous run, and sends alerts via Telegram or Email.",
+	"labLoveInABoxDescription": "❤️ LoveInABox is a cooking app where you will be able to discover new recipes and order a cute little kit with the ingredients to cook them. Like HelloFresh® on steroids.",
+	"labViiVPayDescription": "Cross-border financial technology with a focus in the LATAM market project and app designed in Figma. Transparent Borderless Payments."
 }

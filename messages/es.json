@@ -26,6 +26,8 @@
 	"experiments": "Experimentos",
 	"unavailable": "No disponible",
 
+	"logoutMessage": "¡Adiós! Has cerrado la sesión.",
+
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
 	"contactSupport": "Entre en contacto",
@@ -139,7 +141,7 @@
 	"metaLabDescription": "Un espacio para prototipar, explorar y llevar al límite lo posible con la tecnología",
 	"labLaunchText": "<span class='hidden md:inline-block font-bold'>Lanzamiento!&nbsp;</span><u>Hopchain</u>",
 	"labLaunchSubText": "Cervezas artesanales x Lightning",
-	"labToolsTitle": "Proyectos y herramientas <br /> del laboratorio.",
+	"labToolsTitle": "Proyectos, herramientas y PoCs <br /> del laboratorio.",
 	"labToolsSubtitle": "Creamos experimentos, prototipos y herramientas que exploran nuevas tecnologías, modelos descentralizados y experiencias innovadoras.",
 
 	"metaFinxTitle": "Cubiq Pay - Pagos instantáneos en BTC/USDT a través de Lightning Network",
@@ -436,5 +438,10 @@
 	"storeCustomERPsAPIs": "ERPs y APIs a medida para iniciar fuerte",
 	"storeHumanizedSupport": "Ofrecemos soporte humanizado",
 	"storeNoCommissions": "Sin comisiones por venta u ocultas",
-	"storeBTCOnlyDiscount": "50% OFF para tiendas<br /> solo Bitcoin"
+	"storeBTCOnlyDiscount": "50% OFF para tiendas<br /> solo Bitcoin",
+
+	"labNostrFollowbackDescription": "Descubre quién no te sigue de vuelta en Nostr: Esta es una micro-app conceptual con el objetivo de tener un primer contacto con el Protocolo Nostr, y probar bibliotecas como NDK por pablof7z.",
+	"labBzStatsDescription": "Un script de Node.js + Playwright que extrae automáticamente datos de ganancias de programas de afiliados utilizando la plataforma Netrefer, los compara con la ejecución anterior y envía alertas a través de Telegram o correo electrónico.",
+	"labLoveInABoxDescription": "❤️ LoveInABox es una aplicación de cocina donde podrás descubrir nuevas recetas y pedir un pequeño y lindo kit con los ingredientes para cocinarlas. Es como HelloFresh® con esteroides.",
+	"labViiVPayDescription": "Tecnología financiera transfronteriza con enfoque en el mercado LATAM, proyecto y app diseñados en Figma. Pagos transparentes y sin fronteras."
 }

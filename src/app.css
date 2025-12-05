@@ -348,6 +348,14 @@ body {
 	.fw-dashboard-left-menu-icon {
 		@apply aspect-square h-7 md:h-4;
 	}
+
+	.img-rotate {
+		transform: rotate(-1deg);
+		transition: transform 0.3s ease-in-out;
+	}
+	.img-rotate:hover {
+		transform: rotate(0deg);
+	}
 }
 
 @keyframes fw-colorPulse {

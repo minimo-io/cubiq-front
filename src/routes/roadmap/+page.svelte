@@ -35,7 +35,7 @@
 				</svg>
 			</div>
 			<div class="timeline-end md:mb-10">
-				<time class="font-mono text-sm italic">Novembro, 2025</time>
+				<time class="font-mono text-sm italic">Janeiro, 2025</time>
 				<div class="font-pixel mt-2 text-xl font-black">API: Auth & Voting</div>
 				<p class="text-sm">
 					Serviço de Autenticação e Registro de Votos otimizado para alto desempenho otimizado com
@@ -63,7 +63,7 @@
 				</svg>
 			</div>
 			<div class="timeline-start mb-10 space-x-2 md:text-end">
-				<time class="font-mono text-sm italic">Outubro, 2025</time>
+				<time class="font-mono text-sm italic">Dezembro, 2025</time>
 				<div class="font-pixel text-xl font-black">Lançamento da Cubiq</div>
 				<p class="text-sm">
 					Cubiq iça as velas com o objetivo de oferecer soluções tecnológicas avançadas para PMEs
