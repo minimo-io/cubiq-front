@@ -1,7 +1,7 @@
 <script lang="ts">
 	import TransparentButton from '$lib/components/Buttons/TransparentButton.svelte';
-	import ServiceOrders from '$lib/components/caresync/ServiceOrders.svelte';
-	import Slogan from '$lib/components/caresync/Slogan.svelte';
+	import ServiceOrders from '$lib/components/Care/ServiceOrders.svelte';
+	import Slogan from '$lib/components/Care/Slogan.svelte';
 	import CtaContact from '$lib/components/CtaContact.svelte';
 	import Faq from '$lib/components/Faq.svelte';
 	import Header from '$lib/components/Header/Header.svelte';
@@ -15,8 +15,8 @@
 	import { AppConfig } from '$lib';
 	import TitleFullWidth from '$lib/components/TitleFullWidth.svelte';
 	import Switcher from '$lib/components/Switcher.svelte';
-	import CarePricing from '$lib/components/caresync/CarePricing.svelte';
-	import CareCourses from '$lib/components/caresync/CareCourses.svelte';
+	import CarePricing from '$lib/components/Care/CarePricing.svelte';
+	import CareCourses from '$lib/components/Care/CareCourses.svelte';
 	import DashboardImages from '$lib/components/DashboardImages.svelte';
 	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 	import {
@@ -38,6 +38,7 @@
 	import Features from '$lib/components/Store/Features.svelte';
 	import { conditionalSmoothScroll } from '$utils';
 	import { type DashboardImageType } from '$types/dashboardImages.types';
+	import CarePricingTable from '$lib/components/Care/CarePricingTable.svelte';
 
 	let isExpanded = $state(false);
 	let currentSwitcherSelection = $state(m.careSyncAssetManagment());
@@ -290,7 +291,8 @@
 
 	<!-- <CareCourses /> -->
 
-	<CarePricing />
+	<CarePricingTable />
+	<!-- <CarePricing /> -->
 
 	<!-- <Features product={Product.CARE} /> -->
 

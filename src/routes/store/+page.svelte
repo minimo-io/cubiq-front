@@ -2,8 +2,8 @@
 	import Features from '$lib/components/Store/Features.svelte';
 	import StorePricing from '$lib/components/Store/StorePricing.svelte';
 	import TransparentButton from '$lib/components/Buttons/TransparentButton.svelte';
-	import ServiceOrders from '$lib/components/caresync/ServiceOrders.svelte';
-	import Slogan from '$lib/components/caresync/Slogan.svelte';
+	import ServiceOrders from '$lib/components/Care/ServiceOrders.svelte';
+	import Slogan from '$lib/components/Care/Slogan.svelte';
 	import CtaContact from '$lib/components/CtaContact.svelte';
 	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 	import Faq from '$lib/components/Faq.svelte';

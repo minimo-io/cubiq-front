@@ -10,7 +10,7 @@
 	import { m } from '$paraglide/messages';
 	import CtaContact from '$lib/components/CtaContact.svelte';
 	import Meta from '$lib/components/Meta.svelte';
-	import ServiceOrders from '$lib/components/caresync/ServiceOrders.svelte';
+	import ServiceOrders from '$lib/components/Care/ServiceOrders.svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { smoothScroll } from '$utils';
