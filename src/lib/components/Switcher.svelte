@@ -5,7 +5,12 @@
 	import { Info } from '@lucide/svelte';
 	import { fly, fade } from 'svelte/transition';
 
-	let { options = ['Autopilot', 'Copilot'], selected = $bindable(), onChange } = $props();
+	let {
+		options = ['Autopilot', 'Copilot'],
+		selected = $bindable(),
+		onChange,
+		hideVisitStoreButton = false
+	} = $props();
 
 	function handleSelect(option) {
 		selected = option;
@@ -59,12 +64,14 @@
 			</span>
 		</button>
 	{/each}
-	<a
-		href={localizeHref('/loja')}
-		class="btn btn-sm border-primary/50 rounded-circle hover:bg-primary absolute -top-6 -right-4 z-50 rounded-full border bg-[#1A0402] font-sans tracking-wider hover:opacity-100"
-	>
-		{m.visitStore()}
-	</a>
+	{#if hideVisitStoreButton === false}
+		<a
+			href={localizeHref('/loja')}
+			class="btn btn-sm border-primary/50 rounded-circle hover:bg-primary absolute -top-6 -right-4 z-50 rounded-full border bg-[#1A0402] font-sans tracking-wider hover:opacity-100"
+		>
+			{m.visitStore()}
+		</a>
+	{/if}
 </div>
 
 <!-- Mobile -->

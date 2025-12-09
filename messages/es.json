@@ -25,8 +25,10 @@
 	"downloadSoftware": "Descargar software predictivo",
 	"experiments": "Experimentos",
 	"unavailable": "No disponible",
+	"prices": "Precios",
+	"included": "Incluido",
 
-	"logoutMessage": "¡Adiós! Has cerrado la sesión.",
+	"logoutMessage": "¡Adiós! Cerraste la sesión.",
 
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
@@ -314,6 +316,9 @@
 	"careStoreFeature2Desc": "Si ya es cliente de Cubiq Care, recibirá cashback acumulable en todas las compras de productos vendidos directamente por Cubiq.",
 	"careStoreSlogan": "Tenga acceso a nuestra tienda de equipos y piezas con los mejores precios del mercado.",
 
+	"careStoreFeatureRent": "Alquiler de Equipos",
+	"careStoreFeatureRentDesc": "Accede a la Cubiq Store para alquilar nuevos equipos con mantenimiento incluido y reemplazo inmediato. Todo 100% configurado con tus políticas de seguridad y listo para usar, preservando el flujo de caja de tu empresa.",
+
 	"finxPayMainTitle": "Pagos globales en tiempo real con seguridad y enfoque en América Latina",
 	"finxPayMainSubtitle": "Recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, en tu billetera, con transparencia verificable",
 
@@ -446,27 +451,57 @@
 	"labLoveInABoxDescription": "❤️ LoveInABox es una aplicación de cocina donde podrás descubrir nuevas recetas y pedir un pequeño y lindo kit con los ingredientes para cocinarlas. Es como HelloFresh® con esteroides.",
 	"labViiVPayDescription": "Tecnología financiera transfronteriza con enfoque en el mercado LATAM, proyecto y app diseñados en Figma. Pagos transparentes y sin fronteras.",
 
-	"carePricingTitle": "Planes Care",
-	"carePricingSubtitle": "Soluciones de gestión y mantenimiento para tus activos de TI.",
-	"careEssentialTitle": "Essential",
-	"careEssentialSubtitle": "Monitoreo y soporte básico para mantener todo funcionando.",
-	"carePricingPerAsset": "por activo / mes",
-	"careEssentialMonitoring": "Monitoreo 24/7",
-	"careEssentialPredictive": "Alertas predictivas",
-	"careEssentialSupport": "Soporte por email (horario laboral)",
-	"careEssentialITAM": "Inventario básico de activos (ITAM)",
-	"careEssentialMaintenance": "Mantenimiento correctivo",
-	"careEssentialBackup": "Backup diario",
-	"careEssentialDashboard": "Dashboard con métricas esenciales",
-	"careExtraSupportCost": "Soporte adicional",
-	"careCompleteTitle": "Complete",
-	"careCompleteSubtitle": "Todo lo del Essential, más optimización, automatizaciones y soporte avanzado.",
-	"careCompleteProductivity": "Optimización de productividad",
-	"careCompletePredictive": "Predicción avanzada de fallas",
-	"careCompleteSupport": "Soporte 24/7 (incluye teléfono)",
-	"careCompleteITAM": "Inventario avanzado de activos (ITAM)",
-	"careCompleteMaintenance": "Mantenimiento preventivo y correctivo",
-	"careCompleteBackup": "Backup continuo y restauración",
-	"careCompleteDashboard": "Dashboard completo con reportes",
-	"carePricingFooter": "Incluye monitoreo, backup y reportes. Precio por activo por mes."
+	"careAccessStore": "Accede a la Cubiq Store",
+	"careAccessStoreDesc": "Encuentra todo para tu infraestructura: alquileres, equipos, software con licencia y accesorios. Gestiona y compra tu TI en un solo lugar.",
+
+	"careCTA": "Descuentos por volumen y <span class='text-base-content'>presupuestos a medida</span>. Cuéntenos sus desafíos, en Cubiq nos encanta ayudar a nuestros clientes a superarlos!",
+	"careEssentialPlanName": "Esencial",
+	"careCompletePlanName": "Completo",
+	"careCharacteristic": "Característica",
+	"careEssentialFocus": "Monitoreo y Control Básico de Activos",
+	"careCompleteFocus": "Productividad Total, Soporte Prioritario y Previsibilidad",
+	"careMonthlyPricePerAsset": "Precio Mensual (por Activo)",
+	"carePredictiveMonitoring": "Monitoreo Predictivo (IA) 24/7",
+	"careRemoteSupportHours": "Horas de Soporte Remoto Incluidas",
+	"careRemoteSupportHoursPerAsset": "Horas de Soporte Remoto Incluidas (por Activo/mes)",
+	"careOneHour": "1 hora",
+	"careThreeHours": "3 horas",
+	"careLifecycleManagement": "Gestión de Ciclo de Vida (ITAM)",
+	"careLifecycleManagementDescription": "La gestión del ciclo de vida incluye el seguimiento de la salud de los activos, la planificación de actualizaciones y la gestión de las transiciones de fin de vida útil para maximizar el valor del equipo.",
+
+	"careScheduledPreventiveMaintenance": "Mantenimientos Preventivos Programados",
+	"careRemotePreventiveMaintenance": "Mantenimientos Preventivos Programados (Remotos)",
+	"careQuarterly": "Trimestrales",
+	"careMonthly": "Mensuales",
+	"careOncePerMonth": "1 por mes",
+	"careEvery15Days": "Cada 15 días",
+	"carePhysicalMaintenanceCleaning": "Mantenimientos Preventivos Físicos / Limpiezas",
+	"careEvery6Months": "Cada 6 meses",
+	"careEvery3Months": "Cada 3 meses",
+	"careBackupRecovery": "Backup y Recuperación de Sistemas",
+	"careBackupRecoveryDescription": "Los servicios de copia de seguridad y recuperación garantizan que sus datos críticos estén protegidos y puedan restaurarse rápidamente en caso de un fallo del sistema.",
+
+	"careOptional": "Opcional",
+	"careIncludedUpTo150GB": "Incluido (hasta 150GB/activo)",
+	"careMonitoringDashboards": "Dashboards de Seguimiento",
+	"careMonitoringDashboardsDescription": "Accede a paneles en tiempo real para monitorear el rendimiento de los activos, las métricas de salud y recibir alertas sobre posibles problemas antes de que se vuelvan críticos.",
+
+	"careBasicAccess": "Acceso Básico (Histórico/Costos)",
+	"careCompleteAccess": "Acceso Completo (Tiempo Real/Rendimiento)",
+	"careExtraSupportHourCost": "Costo de la Hora Extra de Soporte",
+	"careExtraRemoteSupportHourCost": "Costo de la Hora Extra de Soporte Remoto",
+	"careExtraRemoteSupportHourCostDescription": "Acceda a soporte experto ilimitado más allá de las horas incluidas en su plan (1h/3h). Garantice la resolución inmediata de cualquier incidente y mantenga la máxima continuidad operativa para sus activos de TI, pagando solo por el tiempo adicional que realmente utilice.",
+	"carePricingFooter": "Todos los precios son transparentes y sin tarifas ocultas",
+
+	"careEmergencyMaintenance": "Mantenimiento de Emergencia/Correctivo (Bajo Demanda)",
+	"careEmergencyMaintenanceDescription": "El Mantenimiento de Correctivo bajo demanda es para fallas inesperadas fuera del mantenimiento preventivo programado. Esto cubre fallas de hardware, caídas del sistema y otros problemas urgentes. El diagnóstico remoto siempre está incluido en su plan mensual sin costo adicional. Si se requiere una visita presencial, hay una tarifa de servicio más el costo de las piezas de reemplazo necesarias. Los clientes del plan Complete reciben tarifas descontadas.",
+
+	"careEmergencyEssentialPrice": "$U 1000/visita + repuestos",
+	"careEmergencyCompletePrice": "$U 500/visita + repuestos (50% OFF)",
+
+	"carePricingEssentiaPrice": "$U 500,00",
+	"carePricingCompletePrice": "$U 1000,00",
+
+	"careExtraHourEssentialSupportCost": "$U 250,00",
+	"careExtraHourCompleteSupportCost": "$U 250,00"
 }

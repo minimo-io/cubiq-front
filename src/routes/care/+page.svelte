@@ -1,7 +1,4 @@
 <script lang="ts">
-	import TransparentButton from '$lib/components/Buttons/TransparentButton.svelte';
-	import ServiceOrders from '$lib/components/Care/ServiceOrders.svelte';
-	import Slogan from '$lib/components/Care/Slogan.svelte';
 	import CtaContact from '$lib/components/CtaContact.svelte';
 	import Faq from '$lib/components/Faq.svelte';
 	import Header from '$lib/components/Header/Header.svelte';
@@ -9,15 +6,10 @@
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
 	import { Product } from '$types/products.types';
-	import { fly, slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import { AppConfig } from '$lib';
-	import TitleFullWidth from '$lib/components/TitleFullWidth.svelte';
 	import Switcher from '$lib/components/Switcher.svelte';
-	import CarePricing from '$lib/components/Care/CarePricing.svelte';
-	import CareCourses from '$lib/components/Care/CareCourses.svelte';
-	import DashboardImages from '$lib/components/DashboardImages.svelte';
 	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 	import {
 		Activity,
@@ -29,7 +21,9 @@
 		ListOrdered,
 		MonitorCheck,
 		PiggyBank,
+		Plug,
 		ShoppingCart,
+		Store,
 		ToolCase,
 		Truck,
 		Wrench
@@ -40,8 +34,8 @@
 	import { type DashboardImageType } from '$types/dashboardImages.types';
 	import CarePricingTable from '$lib/components/Care/CarePricingTable.svelte';
 
-	let isExpanded = $state(false);
 	let currentSwitcherSelection = $state(m.careSyncAssetManagment());
+	// let currentSwitcherPriceSelection = $state(m.careSyncAssetManagment());
 
 	function handleSwitcherChange(option) {
 		console.log('Selected:', option);
@@ -128,6 +122,11 @@
 
 	const careFeaturesStore: Feature[] = [
 		{
+			icon: Plug,
+			title: m.careStoreFeatureRent(),
+			desc: m.careStoreFeatureRentDesc()
+		},
+		{
 			icon: ShoppingCart,
 			title: m.caresyncFeature8Title(),
 			desc: m.caresyncFeature8Desc()
@@ -137,6 +136,15 @@
 			icon: ShoppingCart,
 			title: m.careStoreFeature2Title(),
 			desc: m.careStoreFeature2Desc()
+		},
+		{
+			icon: Store,
+			title: m.careAccessStore(),
+			desc: m.careAccessStoreDesc(),
+			button: {
+				text: m.visitStore(),
+				href: localizeHref('/loja')
+			}
 		}
 	];
 
@@ -232,7 +240,7 @@
 						<!-- HaaS -->
 						{#if currentSwitcherSelection == m.rental()}
 							<div
-								class="mx-auto mb-10 hidden py-5 font-sans text-xl md:mb-0 md:block md:max-w-[70%] md:text-2xl"
+								class="text-accent mx-auto mb-10 hidden py-5 font-sans text-xl font-medium md:mb-0 md:block md:max-w-[70%] md:text-2xl"
 							>
 								{@html m.careHaaSSlogan()}
 							</div>
@@ -242,7 +250,7 @@
 						<!-- Store -->
 						{#if currentSwitcherSelection == m.careSyncMarketplace()}
 							<div
-								class="mx-auto mb-10 hidden py-5 font-sans text-xl md:mb-0 md:block md:max-w-[70%] md:text-2xl"
+								class="text-accent mx-auto mb-10 hidden py-5 font-sans text-xl font-medium md:mb-0 md:block md:max-w-[70%] md:text-2xl"
 							>
 								{@html m.careStoreSlogan()}
 							</div>
@@ -262,15 +270,44 @@
 		<DashboardImagesOnly images={dashboardImages} noMargins={true} />
 	</section>
 
+	<!-- <CareCourses /> -->
+
+	<!-- Prices -->
+	<section class="mb-5">
+		<div id="more" class="border-base-200 md:mb-4 md:border-b">
+			<section class="max-w-fw mx-auto">
+				<div class="mt-0 mb-5 flex justify-center pb-2">
+					<div
+						class="bg-primary animate__animated animate__flash animate__infinite relative left-1 mr-4 block h-[20px] w-[5px] md:-top-1 md:h-[30px] md:w-[8px]"
+					></div>
+					<h2 class="relative -top-1 font-sans text-2xl font-bold tracking-wider md:text-3xl">
+						{m.prices()}
+					</h2>
+				</div>
+			</section>
+		</div>
+
+		<div class="max-w-fw relative -top-2 mx-auto w-fit pt-0 md:-top-10 md:block md:pt-4">
+			<Switcher
+				options={[m.careSyncAssetManagment(), m.rental()]}
+				bind:selected={currentSwitcherSelection}
+				onChange={handleSwitcherChange}
+				hideVisitStoreButton={true}
+			/>
+		</div>
+
+		<div class="md:scale-110">
+			<CarePricingTable />
+		</div>
+	</section>
+
 	<!-- Slogan -->
-	<section
-		class="border-base-200 fw-border-t-divider fw-border-t-divider-dot !relative mx-(--cubiq-app-margin) border-t px-0 py-16 text-center"
-	>
+	<section class="!relative mx-(--cubiq-app-margin) px-0 pt-8 pb-3 text-center md:pt-20 md:pb-0">
 		<h2 class="font-pixel mb-4 text-2xl font-bold tracking-wider uppercase md:text-3xl">
 			{m.careSyncSlogan()}
 		</h2>
 		<p class="text-secondary mx-auto mb-6 max-w-3xl font-sans text-lg md:text-xl">
-			{m.ctaText()}
+			{@html m.careCTA()}
 		</p>
 		<a
 			href={AppConfig.calendar}
@@ -281,17 +318,13 @@
 			{m.contactSupport()}
 		</a>
 
-		<!-- Decoration -->
-		<div
+		<!-- <div
 			class="absolute -top-[5%] -left-[10%] z-50 scale-35 opacity-50 md:top-[5%] md:left-[20%] md:scale-90"
 		>
 			<img src="/bgs/cross.svg" alt="cross" />
-		</div>
+		</div> -->
 	</section>
 
-	<!-- <CareCourses /> -->
-
-	<CarePricingTable />
 	<!-- <CarePricing /> -->
 
 	<!-- <Features product={Product.CARE} /> -->

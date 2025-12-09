@@ -25,6 +25,8 @@
 	"downloadSoftware": "Download predictive software",
 	"experiments": "Experiments",
 	"unavailable": "Unavailable",
+	"prices": "Prices",
+	"included": "Included",
 
 	"logoutMessage": "Goodbye! You've been logged out.",
 
@@ -316,6 +318,9 @@
 	"careStoreFeature2Title": "Cashback for Care customers",
 	"careStoreFeature2Desc": "If you are already a Cubiq Care customer, you will receive cumulative cashback on all products purchases made directly through our store.",
 
+	"careStoreFeatureRent": "Equipment Rental",
+	"careStoreFeatureRentDesc": "Access the Cubiq Store to rent new equipment with maintenance included and immediate replacement. Everything is 100% configured with your security policies and ready to use, preserving your company's cash flow.",
+
 	"finxPayMainTitle": "Real-time global payments with security and focus on Latin America",
 	"finxPayMainSubtitle": "Receive USDT/BTC from anywhere in the world and settle instantly, in your wallet, with verifiable transparency",
 
@@ -447,27 +452,55 @@
 	"labLoveInABoxDescription": "❤️ LoveInABox is a cooking app where you will be able to discover new recipes and order a cute little kit with the ingredients to cook them. Like HelloFresh® on steroids.",
 	"labViiVPayDescription": "Cross-border financial technology with a focus in the LATAM market project and app designed in Figma. Transparent Borderless Payments.",
 
-	"carePricingTitle": "Care Plans",
-	"carePricingSubtitle": "Management and maintenance solutions for your IT assets.",
-	"careEssentialTitle": "Essential",
-	"careEssentialSubtitle": "Basic monitoring and support to keep everything running smoothly.",
-	"carePricingPerAsset": "per asset / month",
-	"careEssentialMonitoring": "24/7 monitoring",
-	"careEssentialPredictive": "Predictive alerts",
-	"careEssentialSupport": "Email support (business hours)",
-	"careEssentialITAM": "Basic asset inventory (ITAM)",
-	"careEssentialMaintenance": "Corrective maintenance",
-	"careEssentialBackup": "Daily backup",
-	"careEssentialDashboard": "Dashboard with essential metrics",
-	"careExtraSupportCost": "Additional support",
-	"careCompleteTitle": "Complete",
-	"careCompleteSubtitle": "Everything from Essential, plus optimization, automations, and advanced support.",
-	"careCompleteProductivity": "Productivity optimization",
-	"careCompletePredictive": "Advanced failure prediction",
-	"careCompleteSupport": "24/7 support (includes phone)",
-	"careCompleteITAM": "Advanced asset inventory (ITAM)",
-	"careCompleteMaintenance": "Preventive and corrective maintenance",
-	"careCompleteBackup": "Continuous backup and restoration",
-	"careCompleteDashboard": "Full dashboard with reports",
-	"carePricingFooter": "Includes monitoring, backup, and reports. Pricing per asset per month."
+	"careAccessStore": "Access the Cubiq Store",
+	"careAccessStoreDesc": "Find everything for your infrastructure: rentals, equipment, licensed software and accessories. Manage and purchase your IT in one place.",
+
+	"careCTA": "Volume discounts and <span class='text-base-content'>custom plans</span>. Tell us your challenges—at Cubiq, we love helping our clients overcome them!",
+	"careEssentialPlanName": "Essential",
+	"careCompletePlanName": "Complete",
+	"careCharacteristic": "Feature",
+	"careEssentialFocus": "Basic Asset Monitoring and Control",
+	"careCompleteFocus": "Total Productivity, Priority Support and Predictability",
+	"careMonthlyPricePerAsset": "Monthly Price (per Asset)",
+	"carePredictiveMonitoring": "Predictive Monitoring (AI) 24/7",
+
+	"careRemoteSupportHours": "Included Remote Support Hours",
+	"careRemoteSupportHoursPerAsset": "Included Remote Support Hours (per Asset/month)",
+	"careOneHour": "1 hour",
+	"careThreeHours": "3 hours",
+	"careLifecycleManagement": "Lifecycle Management (ITAM)",
+	"careLifecycleManagementDescription": "Lifecycle management includes tracking asset health, planning upgrades, and managing end-of-life transitions to maximize equipment value.",
+
+	"careScheduledPreventiveMaintenance": "Scheduled Preventive Maintenance",
+	"careRemotePreventiveMaintenance": "Scheduled Preventive Maintenance (Remote)",
+	"careQuarterly": "Quarterly",
+	"careMonthly": "Monthly",
+	"careOncePerMonth": "Once per month",
+	"careEvery15Days": "Every 15 days",
+	"carePhysicalMaintenanceCleaning": "Physical Preventive Maintenance / Cleaning",
+	"careEvery6Months": "Every 6 months",
+	"careEvery3Months": "Every 3 months",
+	"careBackupRecovery": "Backup and System Recovery",
+	"careBackupRecoveryDescription": "Backup and recovery services ensure your critical data is protected and can be restored quickly in case of system failure.",
+
+	"careOptional": "Optional",
+	"careIncludedUpTo150GB": "Included (up to 150GB/asset)",
+	"careMonitoringDashboards": "Monitoring Dashboards",
+	"careMonitoringDashboardsDescription": "Access real-time dashboards to monitor asset performance, health metrics, and receive alerts for potential issues before they become critical.",
+
+	"careBasicAccess": "Basic Access (History/Costs)",
+	"careCompleteAccess": "Complete Access (Real Time/Performance)",
+
+	"careExtraSupportHourCost": "Extra Support Hour Cost",
+	"careExtraRemoteSupportHourCost": "Extra Remote Support Hour Cost",
+	"careExtraRemoteSupportHourCostDescription": "Access unlimited expert support beyond the hours included in your plan (1h/3h). Ensure immediate resolution of any incident and maintain maximum operational continuity for your IT assets, paying only for the extra time you actually use.",
+	"carePricingFooter": "All prices are transparent with no hidden fees",
+
+	"careEmergencyMaintenance": "Emergency/Corrective Maintenance (On-Demand)",
+	"careEmergencyMaintenanceDescription": "The On-Demand Corrective Maintenance is for unexpected equipment failures outside of scheduled preventive maintenance. This covers hardware malfunctions, system crashes, and other urgent issues. Remote diagnosis is always included in your monthly plan at no extra charge. If an on-site visit is required, there is a service call fee plus the cost of any replacement parts needed. Complete plan clients receive discounted rates.",
+	"careEmergencyEssentialPrice": "$50/visit + parts",
+	"careEmergencyCompletePrice": "$25/visit + parts (50% OFF)",
+
+	"carePricingEssentiaPrice": "$25,00",
+	"carePricingCompletePrice": "$25,00"
 }

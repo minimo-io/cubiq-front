@@ -8,19 +8,24 @@ export const caresyncFaqs: Record<string, Faq[]> = {
 				'Costs are tailored to the number of devices that will be managed on the platform. Contact us to receive a personalized quote and plan.'
 		},
 		{
+			question: 'What happens if my equipment breaks and needs extra service?',
+			answer:
+				'We offer Emergency/Corrective Maintenance on-demand for unexpected equipment failures outside of scheduled preventive maintenance. This covers hardware malfunctions, system crashes, and other urgent issues. Remote diagnosis is always included in your monthly plan at no extra charge. If an on-site visit is required, there is a service call fee plus the cost of any replacement parts needed. Complete plan clients receive discounted rates for emergency service calls.'
+		},
+		{
 			question: 'Can you manage my IT assets even if I don’t rent equipment from you?',
 			answer:
 				'Yes. Cubiq:Care has three different modules. One for managing your own assets, another for Equipment Rental/Leasing, and a Store with products and parts at discounted prices for customers. If you have your own assets but want professionals to handle their management, maintenance, and technical support, our Asset Management module is ideal for you.'
 		},
-		{
-			question: 'How does the Continuity Service work?',
-			answer:
-				'It is Cubiq:Care’s service to guarantee your operation. As soon as you report a problem with one of the devices covered by Continuity Insurance through the platform, we first try to provide online support to check whether the issue is not software-related. If a hardware problem is confirmed, we deliver a functional device while the other is in our workshop, ensuring the continuity of your operation.'
-		},
-		{
-			question: 'Do rented devices come with the Continuity Insurance?',
-			answer: 'Yes'
-		},
+		// {
+		// 	question: 'How does the Continuity Service work?',
+		// 	answer:
+		// 		'It is Cubiq:Care’s service to guarantee your operation. As soon as you report a problem with one of the devices covered by Continuity Insurance through the platform, we first try to provide online support to check whether the issue is not software-related. If a hardware problem is confirmed, we deliver a functional device while the other is in our workshop, ensuring the continuity of your operation.'
+		// },
+		// {
+		// 	question: 'Do rented devices come with the Continuity Insurance?',
+		// 	answer: 'Yes'
+		// },
 		{
 			question: 'What is the Cubiq:Care store?',
 			answer:
@@ -37,22 +42,27 @@ export const caresyncFaqs: Record<string, Faq[]> = {
 		{
 			question: '¿Cómo se calculan los costos?',
 			answer:
-				'Los costos se adaptan según la cantidad de equipos que se van a gestionar en la plataforma. Contactanos para recibir un presupuesto y un plan personalizados.'
+				'Los costos son por activo y puede adaptarse según la cantidad de equipos que se van a gestionar en la plataforma. Contactanos para recibir un presupuesto y un plan personalizados.'
+		},
+		{
+			question: '¿Qué sucede si mi equipo se daña y necesita servicio adicional?',
+			answer:
+				'Ofrecemos Mantenimiento de Emergencia/Correctivo bajo demanda para fallas inesperadas fuera del mantenimiento preventivo programado. Esto cubre fallas de hardware, caídas del sistema y otros problemas urgentes. El diagnóstico remoto siempre está incluido en su plan mensual sin costo adicional. Si se requiere una visita presencial, hay una tarifa de servicio más el costo de las piezas de reemplazo necesarias. Los clientes del plan Complete reciben tarifas con descuento para llamadas de servicio de emergencia.'
 		},
 		{
 			question: '¿Pueden gestionar mis activos de TI incluso si no alquilo equipos con ustedes?',
 			answer:
 				'Sí. Cubiq:Care tiene tres módulos diferentes. Uno para la Gestión de Activos propios, otro para Alquiler/Locación de Equipos, y una Tienda con productos y repuestos con descuentos para clientes. Si tenés tus propios activos pero querés dejar en manos de profesionales la gestión, el mantenimiento y el soporte técnico, nuestro módulo de Gestión de Activos es ideal para vos.'
 		},
-		{
-			question: '¿Cómo funciona el Servicio de Continuidad?',
-			answer:
-				'Es el servicio de Cubiq:Care que garantiza tu operación. Apenas reportás un problema en alguno de los equipos con Seguro de Continuidad desde la plataforma, primero intentamos darte soporte online para verificar que el error no sea de software. Si se confirma un problema de hardware, te entregamos un equipo funcional mientras el otro está en nuestro taller, garantizando la continuidad de tu operación.'
-		},
-		{
-			question: '¿Los equipos alquilados vienen con el Seguro de Continuidad?',
-			answer: 'Sí'
-		},
+		// {
+		// 	question: '¿Cómo funciona el Servicio de Continuidad?',
+		// 	answer:
+		// 		'Es el servicio de Cubiq:Care que garantiza tu operación. Apenas reportás un problema en alguno de los equipos con Seguro de Continuidad desde la plataforma, primero intentamos darte soporte online para verificar que el error no sea de software. Si se confirma un problema de hardware, te entregamos un equipo funcional mientras el otro está en nuestro taller, garantizando la continuidad de tu operación.'
+		// },
+		// {
+		// 	question: '¿Los equipos alquilados vienen con el Seguro de Continuidad?',
+		// 	answer: 'Sí'
+		// },
 		{
 			question: '¿Qué es la tienda de Cubiq:Care?',
 			answer:
@@ -69,7 +79,12 @@ export const caresyncFaqs: Record<string, Faq[]> = {
 		{
 			question: 'Como são calculados os custos?',
 			answer:
-				'Os custos são personalizados de acordo com a quantidade de equipamentos que serão gerenciados na plataforma. Entre em contato conosco para receber um orçamento e um plano sob medida.'
+				'Os custos são por ativo e podem personalizados de acordo com a quantidade de equipamentos que serão gerenciados na plataforma. Entre em contato conosco para receber um orçamento e um plano sob medida.'
+		},
+		{
+			question: 'O que acontece se meu equipamento quebrar e precisar de serviço extra?',
+			answer:
+				'Oferecemos Manutenção de Emergência/Corretiva sob demanda para falhas inesperadas fora da manutenção preventiva programada. Isso cobre falhas de hardware, travamentos do sistema e outros problemas urgentes. O diagnóstico remoto está sempre incluído no seu plano mensal sem custo adicional. Se uma visita presencial for necessária, há uma taxa de atendimento mais o custo de peças de reposição necessárias. Clientes do plano Complete recebem tarifas com desconto para chamadas de serviço de emergência.'
 		},
 		{
 			question:
@@ -78,15 +93,15 @@ export const caresyncFaqs: Record<string, Faq[]> = {
 				'Sim, a Cubiq:Care tem três módulos diferentes. Um para Gestão de Ativos próprios, outro de Locação/Aluguél de Equipamentos, e uma Loja com produtos e peças com descontos para clientes. Se você tiver seus próprios ativos mas quer deixar nas mãos de profissionais o gerenciamento, manutenção e suporte técnico deles, nosso módulo de Gestão de Ativos é ideal para você.'
 		},
 
-		{
-			question: 'Cómo funciona o Serviço de Continuidade?',
-			answer:
-				'É o serviço da Cubiq:Care para garantir a sua operação. Assim que você reportar um problema em um dos equipamentos com Seguro de Continuidade pela plataforma, nós, primeiro tentamos dar suporte online para verificar que o erro não é de software. No caso de ser confirmado um problema de hardware, entregamos um equipamento funcional enquanto o outro está em nossa oficina, garantindo a continuidade da sua operação.'
-		},
-		{
-			question: 'Os equipamentos alugados vêm com o Seguro de Continuidade?',
-			answer: 'Sim'
-		},
+		// {
+		// 	question: 'Cómo funciona o Serviço de Continuidade?',
+		// 	answer:
+		// 		'É o serviço da Cubiq:Care para garantir a sua operação. Assim que você reportar um problema em um dos equipamentos com Seguro de Continuidade pela plataforma, nós, primeiro tentamos dar suporte online para verificar que o erro não é de software. No caso de ser confirmado um problema de hardware, entregamos um equipamento funcional enquanto o outro está em nossa oficina, garantindo a continuidade da sua operação.'
+		// },
+		// {
+		// 	question: 'Os equipamentos alugados vêm com o Seguro de Continuidade?',
+		// 	answer: 'Sim'
+		// },
 
 		{
 			question: 'O que é a loja de Cubiq:Care?',

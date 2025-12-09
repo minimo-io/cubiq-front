@@ -1,0 +1,17 @@
+[[headers]]
+  for = "/.well-known/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Type = "application/json"
+
+[[redirects]]
+  from = "/nicolas/qr"
+  to = "https://www.cubiq.lat/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/bagity"
+  to = "https://www.cubiq.lat/store"
+  status = 301
+  force = true

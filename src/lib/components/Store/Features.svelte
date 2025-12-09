@@ -131,6 +131,10 @@
 	});
 </script>
 
+{#snippet item(itemData)}
+	<li>{itemData.name}: {itemData.value}</li>
+{/snippet}
+
 <div class={['max-w-fw mx-auto !pb-5 md:px-10 md:py-10 md:!pb-10', noPaddingMobile ? '' : 'py-10']}>
 	<!-- Carousel container -->
 	<div
@@ -256,6 +260,14 @@
 												</a>
 											{/if}
 										</div>
+									{:else if feature.button}
+										<a
+											href={feature.button.href}
+											class="btn btn-xs md:btn-sm bg-primary/10 border-primary text-primary hover:bg-primary relative mt-0 rounded-full border hover:text-black"
+										>
+											<Download class="h-3" />
+											{feature.button.text}
+										</a>
 									{/if}
 								</div>
 							</div>
