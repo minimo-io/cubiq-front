@@ -295,7 +295,9 @@
 
 		<!-- Switcher -->
 		<!-- <div class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto"> -->
-		<div class="max-w-fw relative -top-2 mx-auto w-full pt-0 md:-top-10 md:block md:pt-4">
+		<div
+			class="max-w-fw f relative -top-2 mx-auto w-full pt-0 md:-top-10 md:block md:w-fit md:pt-4"
+		>
 			<Switcher
 				options={[m.careSyncAssetManagment(), m.rental()]}
 				bind:selected={currentSwitcherSelection}

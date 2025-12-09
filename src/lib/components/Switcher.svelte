@@ -43,7 +43,7 @@
 
 <!-- Desktop -->
 <div
-	class="border-base-300 relative hidden items-center gap-0 rounded-full border bg-black p-1 md:inline-flex"
+	class="border-base-300 relative hidden items-center gap-0 self-center rounded-full border bg-black p-1 md:mx-auto md:inline-flex"
 >
 	{#each options as option, index}
 		<button
