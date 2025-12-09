@@ -290,7 +290,7 @@
 	"caresyncFeature8Title": "Módulo de compras",
 	"caresyncFeature8Desc": "Todos los clientes de la plataforma van a tener acceso a nuestra tienda para comprar equipos y piezas a los mejores precios del mercado.",
 
-	"careSyncFeaturedSlogan": "Gestionamos y mantenemos todos sus equipos, ofreciendo soporte completo a sus colaboradores para evitar cualquier pérdida de productividad. <span class='text-base-content opacity-80'>Mientras usted cuida de su empresa, nosotros cuidamos de su TI.</span>",
+	"careSyncFeaturedSlogan": "Gestionamos y mantenemos todos sus equipos, ofreciendo soporte completo a sus colaboradores para evitar cualquier pérdida de productividad. <span class='text-base-content opacity-80'>Usted cuida de su empresa, nosotros cuidamos de su TI.</span>",
 
 	"careHaaSFeature1Title": "Instalación y configuración de los equipos",
 	"careHaaSFeature1Desc": "Reciba cada equipo totalmente configurado con sistemas, software, políticas de seguridad y pruebas previas, garantizando una implementación rápida, estandarizada y lista para usar por su equipo.",
@@ -454,7 +454,7 @@
 	"careAccessStore": "Accede a la Cubiq Store",
 	"careAccessStoreDesc": "Encuentra todo para tu infraestructura: alquileres, equipos, software con licencia y accesorios. Gestiona y compra tu TI en un solo lugar.",
 
-	"careCTA": "Descuentos por volumen y <span class='text-base-content'>presupuestos a medida</span>. Cuéntenos sus desafíos, en Cubiq nos encanta ayudar a nuestros clientes a superarlos!",
+	"careCTA": "Descuentos por volumen y <span class='text-base-content'>presupuestos a medida</span>.",
 	"careEssentialPlanName": "Esencial",
 	"careCompletePlanName": "Completo",
 	"careCharacteristic": "Característica",

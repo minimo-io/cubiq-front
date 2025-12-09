@@ -146,13 +146,6 @@
 		<StorePricing />
 	</div>
 
-	<!-- <div class="relative block h-px md:mb-0">
-		<Hr />
-		<div
-			class="absolute bottom-[-7px] left-1/2 h-[15px] w-[15px] -translate-x-1/2 bg-[url('/bgs/square.svg')] bg-contain bg-no-repeat"
-		></div>
-	</div> -->
-
 	<!-- Title -->
 	<h2
 		class="text-base-content mx-10 mt-0 mb-5 text-center font-sans text-3xl font-bold md:mx-0 md:text-4xl"

@@ -30,7 +30,7 @@
 	};
 </script>
 
-<div class="relative px-4 pt-4 font-sans md:pt-8">
+<div class="relative pt-4 font-sans md:px-4 md:pt-8">
 	<div class="mx-auto max-w-5xl">
 		<!-- Mobile: Cards View -->
 		<div class="space-y-6 md:hidden">
@@ -478,7 +478,7 @@
 					<tr class="border-base-300 hover:bg-base-200/50 border-b">
 						<td class="text-base-content font-sans text-sm font-semibold">
 							<div class="flex items-center gap-1">
-								{m.careEmergencyMaintenance()}
+								{@html m.careEmergencyMaintenance()}
 								<button
 									class="btn btn-ghost btn-xs btn-circle"
 									onclick={() =>
@@ -544,7 +544,7 @@
 			<button class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2">✕</button>
 		</form>
 		<div class="flex flex-col py-3 text-left font-sans">
-			<h3 class="mb-2 text-xl font-bold">{modalContent.title}</h3>
+			<h3 class="mb-2 text-xl font-bold">{@html modalContent.title}</h3>
 			<p class="text-base-content/80">{modalContent.description}</p>
 		</div>
 	</div>

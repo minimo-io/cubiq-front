@@ -455,7 +455,7 @@
 	"careAccessStore": "Access the Cubiq Store",
 	"careAccessStoreDesc": "Find everything for your infrastructure: rentals, equipment, licensed software and accessories. Manage and purchase your IT in one place.",
 
-	"careCTA": "Volume discounts and <span class='text-base-content'>custom plans</span>. Tell us your challenges—at Cubiq, we love helping our clients overcome them!",
+	"careCTA": "Volume discounts and <span class='text-base-content'>custom plans</span>.",
 	"careEssentialPlanName": "Essential",
 	"careCompletePlanName": "Complete",
 	"careCharacteristic": "Feature",

@@ -20,7 +20,7 @@ import type { Action } from 'svelte/action';
 // }
 
 export const conditionalSmoothScroll: Action<HTMLElement, string> = (node, url) => {
-	if (url === '#more') {
+	if (url === '#more' || url == '#prices') {
 		return smoothScroll(node); // must return { destroy } or nothing
 	}
 };

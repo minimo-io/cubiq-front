@@ -35,7 +35,6 @@
 	import CarePricingTable from '$lib/components/Care/CarePricingTable.svelte';
 
 	let currentSwitcherSelection = $state(m.careSyncAssetManagment());
-	// let currentSwitcherPriceSelection = $state(m.careSyncAssetManagment());
 
 	function handleSwitcherChange(option) {
 		console.log('Selected:', option);
@@ -183,6 +182,13 @@
 			<span>{m.learnMore()}</span>
 		</a>
 		<a
+			href="#prices"
+			use:conditionalSmoothScroll={'#prices'}
+			class="fw-button fw-button-lg fw-button-outline hidden! md:flex!"
+		>
+			<span>{m.prices()}</span>
+		</a>
+		<a
 			href="mailto:{AppConfig.cubiq.socials.email}"
 			class="fw-button fw-button-lg fw-button-outline"
 		>
@@ -273,7 +279,7 @@
 	<!-- <CareCourses /> -->
 
 	<!-- Prices -->
-	<section class="mb-5">
+	<section id="prices" class="mb-5">
 		<div id="more" class="border-base-200 md:mb-4 md:border-b">
 			<section class="max-w-fw mx-auto">
 				<div class="mt-0 mb-5 flex justify-center pb-2">
@@ -287,7 +293,9 @@
 			</section>
 		</div>
 
-		<div class="max-w-fw relative -top-2 mx-auto w-fit pt-0 md:-top-10 md:block md:pt-4">
+		<!-- Switcher -->
+		<!-- <div class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto"> -->
+		<div class="max-w-fw relative -top-2 mx-auto w-full pt-0 md:-top-10 md:block md:pt-4">
 			<Switcher
 				options={[m.careSyncAssetManagment(), m.rental()]}
 				bind:selected={currentSwitcherSelection}
@@ -295,34 +303,45 @@
 				hideVisitStoreButton={true}
 			/>
 		</div>
+		<!-- </div> -->
 
-		<div class="md:scale-110">
-			<CarePricingTable />
-		</div>
-	</section>
-
-	<!-- Slogan -->
-	<section class="!relative mx-(--cubiq-app-margin) px-0 pt-8 pb-3 text-center md:pt-20 md:pb-0">
-		<h2 class="font-pixel mb-4 text-2xl font-bold tracking-wider uppercase md:text-3xl">
-			{m.careSyncSlogan()}
-		</h2>
-		<p class="text-secondary mx-auto mb-6 max-w-3xl font-sans text-lg md:text-xl">
-			{@html m.careCTA()}
-		</p>
-		<a
-			href={AppConfig.calendar}
-			target="_blank"
-			rel="nofollow noreferrer"
-			class="font-pixel inline-block rounded-full bg-white px-6 py-2 text-black uppercase transition hover:bg-gray-200"
-		>
-			{m.contactSupport()}
-		</a>
-
-		<!-- <div
-			class="absolute -top-[5%] -left-[10%] z-50 scale-35 opacity-50 md:top-[5%] md:left-[20%] md:scale-90"
-		>
-			<img src="/bgs/cross.svg" alt="cross" />
-		</div> -->
+		{#if currentSwitcherSelection == m.careSyncAssetManagment()}
+			<div class="z-50 md:scale-110">
+				<CarePricingTable />
+			</div>
+			<!-- Slogan -->
+			<section
+				class="!relative z-10 mx-(--cubiq-app-margin) px-0 pt-8 pb-3 text-center md:mt-10 md:pb-0"
+			>
+				<h2 class="font-pixel mb-4 text-2xl font-bold tracking-wider uppercase md:text-3xl">
+					{@html m.careCTA()}
+				</h2>
+				<a
+					href={AppConfig.calendar}
+					target="_blank"
+					rel="nofollow noreferrer"
+					class="font-pixel inline-block rounded-full bg-white px-6 py-2 text-black uppercase transition hover:bg-gray-200"
+				>
+					{m.contactSupport()}
+				</a>
+			</section>
+		{:else if currentSwitcherSelection == m.rental()}
+			<div class="flex flex-col items-center justify-center">
+				<div
+					class="text-accent mx-auto mt-2 mb-0 pb-8 text-center font-sans text-xl font-medium md:mt-0 md:mb-0 md:flex md:max-w-[50%] md:text-2xl"
+				>
+					{@html m.careAccessStoreDesc()}
+				</div>
+				<a
+					href={localizeHref('/loja')}
+					class="btn bg-primary/10 text-primary border-primary btn-md md:btn-lg hover:bg-primary mb-2 w-full rounded-full font-sans tracking-wide hover:text-white md:w-auto md:px-5"
+				>
+					<ShoppingCart class="h-4 md:h-5" />
+					{m.visitStore()}
+				</a>
+				<!-- <strong class="font-sans">{@html m.storeBTCOnlyDiscount()}</strong> -->
+			</div>
+		{/if}
 	</section>
 
 	<!-- <CarePricing /> -->

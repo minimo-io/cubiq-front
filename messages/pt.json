@@ -453,7 +453,7 @@
 	"labLoveInABoxDescription": "❤️ LoveInABox é um aplicativo de culinária onde você poderá descobrir novas receitas e pedir um kit pequeno e fofo com os ingredientes para prepará-las. É como HelloFresh® turbinado (ou com esteroides).",
 	"labViiVPayDescription": "Tecnologia financeira transfronteiriça com foco no mercado LATAM, projeto e app desenhados no Figma. Pagamentos transparentes e sem fronteiras.",
 
-	"careCTA": "Descontos por volume e <span class='text-base-content'>orçamentos personalizados</span>. Conte-nos seus desafios—na Cubiq, adoramos ajudar nossos clientes a superá-los!",
+	"careCTA": "<span class='text-base-content font-bold'>Descontos por volume e orçamentos personalizados</span>",
 	"careAccessStore": "Acesse a Cubiq Store",
 	"careAccessStoreDesc": "Encontre tudo para sua infraestrutura: aluguéis, equipamentos, softwares licenciados e acessórios. Gerencie e compre sua TI em um só lugar.",
 
@@ -496,7 +496,7 @@
 	"careExtraRemoteSupportHourCostDescription": "Acesse suporte especializado ilimitado além das horas incluídas em seu plano (1h/3h). Garanta a resolução imediata de qualquer incidente e mantenha a máxima continuidade operacional para seus ativos de TI, pagando apenas pelo tempo adicional que realmente utilizar.",
 	"carePricingFooter": "Todos os preços são transparentes e sem taxas ocultas",
 
-	"careEmergencyMaintenance": "Manutenção de Emergência/Corretiva (Sob Demanda)",
+	"careEmergencyMaintenance": "Manutenção de Emergência/Corretiva<br /> (Sob Demanda)",
 	"careEmergencyMaintenanceDescription": "A Manutenção Corretiva sob demanda é para falhas inesperadas fora da manutenção preventiva programada. Isso cobre falhas de hardware, travamentos do sistema e outros problemas urgentes. O diagnóstico remoto está sempre incluído no seu plano mensal sem custo adicional. Se uma visita presencial for necessária, há uma taxa de atendimento mais o custo de peças de reposição necessárias. Clientes do plano Complete recebem tarifas com desconto.",
 
 	"careEmergencyEssentialPrice": "R$ 150/visita + peças",
