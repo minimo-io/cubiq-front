@@ -6,6 +6,7 @@
 	import { AppConfig } from '$lib/configs';
 	import type { Snippet } from 'svelte';
 	import { Product } from '$types/products.types';
+	import { getLocale } from '$paraglide/runtime';
 
 	const smoothAction = [conditionalSmoothScroll, '#more'] as const;
 
@@ -46,7 +47,7 @@
 					<span>{m.learnMore()}</span>
 				</a>
 				<a
-					href={AppConfig.calendar}
+					href={AppConfig.cubiq.socials.whatsapp[getLocale()]}
 					target="_blank"
 					rel="nofollow noopener	"
 					class="fw-button fw-button-lg fw-button-outline"

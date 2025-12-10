@@ -4,7 +4,7 @@
 	import Header from '$lib/components/Header/Header.svelte';
 	import Meta from '$lib/components/Meta.svelte';
 	import { m } from '$paraglide/messages';
-	import { localizeHref } from '$paraglide/runtime';
+	import { getLocale, localizeHref } from '$paraglide/runtime';
 	import { Product } from '$types/products.types';
 	import { fly } from 'svelte/transition';
 	import Clients from '$lib/components/Home/Clients.svelte';
@@ -319,7 +319,7 @@
 					{@html m.careCTA()}
 				</h2>
 				<a
-					href={AppConfig.calendar}
+					href={AppConfig.cubiq.socials.whatsapp[getLocale()]}
 					target="_blank"
 					rel="nofollow noreferrer"
 					class="font-pixel inline-block rounded-full bg-white px-6 py-2 text-black uppercase transition hover:bg-gray-200"

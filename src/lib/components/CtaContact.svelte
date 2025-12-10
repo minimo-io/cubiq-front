@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { AppConfig } from '$lib/configs';
 	import { m } from '$paraglide/messages';
+	import { getLocale } from '$paraglide/runtime';
 </script>
 
 <section
@@ -13,7 +14,7 @@
 		{m.ctaText()}
 	</p>
 	<a
-		href={AppConfig.calendar}
+		href={AppConfig.cubiq.socials.whatsapp[getLocale()]}
 		target="_blank"
 		rel="nofollow noreferrer"
 		class="font-pixel inline-block rounded-full bg-white px-6 py-2 text-black uppercase transition hover:bg-gray-200"

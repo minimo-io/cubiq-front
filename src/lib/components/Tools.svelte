@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { AppConfig } from '$lib/configs';
 	import { m } from '$paraglide/messages';
+	import { getLocale } from '$paraglide/runtime';
 	import { CircleQuestionMark, X } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 
@@ -83,6 +84,13 @@
 			style="width: {menuWidth}; transition: width 300ms cubic-bezier(0.33, 1, 0.68, 1);"
 			class="dropdown-content menu-sm menu rounded-box border-accent z-50 mt-3 w-[100px]! gap-2 rounded-lg border bg-black py-3 font-sans tracking-wider! shadow-xl"
 		>
+			<li>
+				<a
+					target="_blank"
+					rel="nofollow noreferrer"
+					href={AppConfig.cubiq.socials.whatsapp[getLocale()]}>Whatsapp</a
+				>
+			</li>
 			<li>
 				<a target="_blank" rel="nofollow noreferrer" href={AppConfig.cubiq.socials.telegram}
 					>Telegram</a
