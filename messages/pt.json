@@ -68,6 +68,7 @@
 	"others": "Outros",
 
 	"and": "e",
+	"the": "O",
 
 	"welcome": "Bem-vindo",
 	"theFuture": "Ao Futuro",
@@ -508,5 +509,24 @@
 	"carePricingCompletePrice": "R$ 99,90",
 
 	"careExtraHourEssentialSupportCost": "R$ 49,90",
-	"careExtraHourCompleteSupportCost": "R$ 49,90"
+	"careExtraHourCompleteSupportCost": "R$ 49,90",
+
+	"timelineJan2025": "Janeiro, 2026",
+	"timelineJan2025Item1": "Care Dashboards polishing",
+	"timelineJan2025Item2": "Care Predictive Software (Tauri)",
+	"timelineJan2025Item3": "Care Store & API",
+
+	"timelineDec2024": "Dezembro, 2025",
+	"timelineDec2024Item1Title": "RBAC para Dashboards",
+	"timelineDec2024Item1Desc": "Controle de Acesso Baseado em Funções e Produtos",
+	"timelineDec2024Item2Title": "API: Mais endpoints de Voting",
+	"timelineDec2024Item2Desc": "Endpoint de ganho de pontos de votação e segurança na API e implementação no Betizen",
+	"timelineDec2024Item3Title": "Front Básico da Cubiq",
+	"timelineDec2024Item3Desc": "Finalização do site.",
+	"timelineDec2024Item4Title": "API: Auth & Voting",
+	"timelineDec2024Item4Desc": "Serviço inicial de Autenticação e Registro de Votos otimizado para alto desempenho com prova de persistência via SQLite (WAL mode).",
+
+	"timelineNov2024": "Novembro, 2025",
+	"timelineNov2024Title": "Ideação da Cubiq",
+	"timelineNov2024Desc": "Cubiq iça as velas com o objetivo de oferecer soluções tecnológicas avançadas para PMEs; e um espaço de experimentação com produtos tecnológicos in-house, como foco em protocolos abertos e <i>permissionless</i>."
 }

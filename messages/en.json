@@ -69,6 +69,7 @@
 	"others": "Others",
 
 	"and": "and",
+	"the": "The",
 
 	"welcome": "Welcome to",
 	"theFuture": "The Future",
@@ -502,5 +503,24 @@
 	"careEmergencyCompletePrice": "$25/visit + parts (50% OFF)",
 
 	"carePricingEssentiaPrice": "$25,00",
-	"carePricingCompletePrice": "$25,00"
+	"carePricingCompletePrice": "$25,00",
+
+	"timelineJan2025": "January, 2026",
+	"timelineJan2025Item1": "Care Dashboards polishing",
+	"timelineJan2025Item2": "Care Predictive Software (Tauri)",
+	"timelineJan2025Item3": "Care Store & API",
+
+	"timelineDec2024": "December, 2025",
+	"timelineDec2024Item1Title": "RBAC for Dashboards",
+	"timelineDec2024Item1Desc": "Role and Product-Based Access Control",
+	"timelineDec2024Item2Title": "API: More Voting endpoints",
+	"timelineDec2024Item2Desc": "Voting points earning endpoint and API security with Betizen implementation",
+	"timelineDec2024Item3Title": "Basic Cubiq Front-End",
+	"timelineDec2024Item3Desc": "Website completion.",
+	"timelineDec2024Item4Title": "API: Auth & Voting",
+	"timelineDec2024Item4Desc": "Initial Authentication and Vote Registration service optimized for high performance with persistence proof via SQLite (WAL mode).",
+
+	"timelineNov2024": "November, 2025",
+	"timelineNov2024Title": "Cubiq Ideation",
+	"timelineNov2024Desc": "Cubiq sets sail with the goal of offering advanced technological solutions for SMEs; and an experimentation space with in-house tech products, focusing on open and <i>permissionless</i> protocols."
 }
