@@ -40,7 +40,7 @@
 					<th class="text-base-content">Alert Type</th>
 					<th class="text-base-content">Technician</th>
 					<th class="text-base-content">Status</th>
-					<th class="text-base-content">Severity</th>
+					<th class="text-base-content">{m.severity()}</th>
 					<th class="text-base-content">Actions</th>
 				</tr>
 			</thead>

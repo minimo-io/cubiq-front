@@ -1,7 +1,12 @@
 <!-- src/lib/components/Dashboard/products/caresync-dash/CareSyncDashboardDevices.svelte -->
 <script lang="ts">
 	import { Check, Laptop, PcCase } from '@lucide/svelte';
-	import { MachineStatus, MachineType, type Machine } from '$lib/type/caresync-machines.types';
+	import {
+		MachineStatus,
+		MachineType,
+		type Device,
+		type Machine
+	} from '$lib/type/caresync-machines.types';
 	import { onMount, onDestroy } from 'svelte';
 	import { m } from '$paraglide/messages';
 	import apiClient from '$lib/api';

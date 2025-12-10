@@ -47,11 +47,9 @@
 
 <section class="max-w-fw mx-(--cubiq-app-margin) mb-10 md:mx-auto">
 	<!-- Section title -->
-	<h2 class="mx-auto mb-10 text-center font-sans text-3xl md:text-[33px]">
-		<!-- Actual title -->
+	<!-- <h2 class="mx-auto mb-10 text-center font-sans text-3xl md:text-[33px]">
 		<span>{@html m.labToolsTitle()}</span>
 
-		<!-- Right -->
 		<div
 			class={[
 				'text-primary-content relative z-10 mt-2 inline-block w-fit md:mt-0',
@@ -64,13 +62,12 @@
 				Open-Source
 			</span>
 
-			<!-- Text Right Colored Background with Animation -->
 			<span
 				class="bg-primary absolute top-[1px] left-[1px] z-0 h-[80%] translate-y-1 md:h-[85%]"
 				style="width: {100}%;"
 			></span>
 		</div>
-	</h2>
+	</h2> -->
 
 	<!-- Sub-title -->
 	<!-- <div
@@ -81,13 +78,13 @@
 	</div> -->
 
 	<!-- Separator -->
-	<div class="relative mb-8 block h-px md:mb-0">
-		<Hr />
-	</div>
+	<!-- <div class="relative mb-8 block h-px md:mb-0">
+			<Hr />
+		</div> -->
 
 	<!-- Projects & Tools -->
 	<div
-		class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto md:border-0 md:border-x"
+		class="max-w-fw border-x-base-200 relative -top-8 container my-0 text-center md:mx-auto md:border-0 md:border-x"
 	>
 		<div class="border-base-200 relative flex flex-col">
 			{#each labToolsAndProjects as item, i (i)}

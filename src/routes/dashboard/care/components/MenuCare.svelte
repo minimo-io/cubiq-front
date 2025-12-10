@@ -5,8 +5,6 @@
 	import { dashboardLeftMenuState } from '$stores/DashboardLeftMenu.state.svelte';
 	import {
 		BookOpen,
-		ChevronLeft,
-		ChevronRight,
 		ClipboardMinus,
 		Coins,
 		Home,

@@ -1,6 +1,6 @@
 <!-- src/lib/components/Dashboard/MenuLeft.svelte -->
 <script lang="ts">
-	import { ChevronLeft, ChevronRight } from '@lucide/svelte';
+	import { ChevronDown, ChevronLeft, ChevronRight } from '@lucide/svelte';
 	import HeaderLogo from '../Header/HeaderLogo.svelte';
 	import ProductSwitchButton from '../Buttons/ProductSwitchButton.svelte';
 	import {
@@ -11,6 +11,8 @@
 	import { Product } from '$types/products.types';
 	import MenuCare from '../../../routes/dashboard/care/components/MenuCare.svelte';
 	import MenuNotes from '../../../routes/dashboard/notes/components/MenuNotes.svelte';
+	import { m } from '$paraglide/messages';
+	import { userContextState } from '$stores/UserContext.state.svelte';
 
 	// State to track if menu is collapsed
 	let isCollapsed = $derived(dashboardLeftMenuState.collapsed);
@@ -29,12 +31,20 @@
 >
 	<!-- Logo -->
 	<div
-		class="border-base-200 justify-center flex items-center border-b {isCollapsed ? '' : 'md:h-[108px] md:p-5'}"
+		class="border-base-200 flex items-center justify-center border-b {isCollapsed
+			? ''
+			: 'md:h-[108px] md:p-5'}"
 	>
 		<HeaderLogo isDashboard={true} {isCollapsed} />
 	</div>
 	<!-- Switch button -->
-	<div class="border-base-200 relative {isCollapsed ? '' : 'h-[73px]'} hidden border-b md:block">
+	<div
+		class="border-base-200 relative {isCollapsed
+			? ''
+			: productState.active == 'CARE'
+				? 'h-[120px]'
+				: 'h-[73px]'} hidden border-b md:block"
+	>
 		<button
 			onclick={toggleMenu}
 			class="border-base-200 absolute -top-3 -right-3 hidden h-[23px] w-[23px] items-center justify-center rounded-full border bg-black transition-all duration-200 hover:scale-110 md:flex"
@@ -48,6 +58,43 @@
 		<div class="{isCollapsed ? 'hidden' : 'hidden md:block'} ">
 			<ProductSwitchButton productsWithPermission={products} />
 		</div>
+
+		{#if productState.active == Product.CARE && !isCollapsed}
+			<div class="border-base-200 flex justify-center border-t">
+				<div class="dropdown dropdown-bottom dropdown-center relative">
+					<div
+						class="badge badge-xs absolute -top-[9px] left-1/2 -translate-x-1/2 transform px-3 font-bold tracking-widest uppercase"
+					>
+						{m.company()}
+					</div>
+					<button class="my-2 flex w-full justify-center hover:opacity-100">
+						<div class="flex flex-row items-center gap-1 hover:opacity-50">
+							<span class="text-primary font-pixel text-[20px] font-bold uppercase">
+								XMARTLABS</span
+							>
+							<ChevronDown class="text-primary h-4 w-4" />
+						</div>
+					</button>
+					<ul
+						tabindex="0"
+						role="menu"
+						class="dropdown-content menu bg-base-100 border-base-200 rounded-box z-[1] mt-2 w-36 border p-2 shadow"
+					>
+						{#each userContextState.contexts as context}
+							<li role="presentation">
+								<button
+									role="menuitem"
+									onclick={() => null}
+									class="font-pixel text-[16px] tracking-wide uppercase"
+								>
+									{context.company_name}
+								</button>
+							</li>
+						{/each}
+					</ul>
+				</div>
+			</div>
+		{/if}
 	</div>
 
 	<!-- Actual menu -->

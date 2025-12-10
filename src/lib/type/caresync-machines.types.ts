@@ -114,3 +114,10 @@ export interface DeviceHistoryEvent {
 	updated_at: string;
 	technician_name: string;
 }
+
+export interface CompanyContext {
+	company_id: string;
+	company_name: string;
+	role: string;
+	permissions: string[];
+}

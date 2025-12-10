@@ -6,7 +6,8 @@ declare global {
 		// interface Error {}
 		interface Locals {
 			session?: string;
-			user?: string;
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			user?: any;
 		}
 		// interface PageData {}
 		// interface PageState {}

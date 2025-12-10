@@ -121,6 +121,15 @@ export default defineConfig({
 					]
 				},
 				{
+					pattern: '/dashboard/care/alerts',
+					localized: [
+						['pt', '/dashboard/care/alertas'],
+						['es', '/es/dashboard/care/alertas'],
+						['en', '/en/dashboard/care/alerts']
+					]
+				},
+
+				{
 					pattern: '/dashboard/pay',
 					localized: [
 						['pt', '/dashboard/pay'],

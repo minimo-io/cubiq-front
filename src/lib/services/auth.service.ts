@@ -5,6 +5,7 @@ import { postgreService } from '$lib/databases';
 import jwt from 'jsonwebtoken';
 import { JWT_SECRET } from '$env/static/private';
 import { getUsername } from '$utils';
+import type { CompanyContext } from '$types/caresync-machines.types';
 // import { browser } from '$app/environment';
 
 export interface User {
@@ -115,6 +116,29 @@ export const AuthService = {
 		}
 
 		return userPermissions;
+	},
+
+	/**
+	 * SECURE CHECK: Fetches the user's available company contexts for a product (e.g., CARE).
+	 * This method always performs a live database query.
+	 */
+	async getUserCompanyContexts(userId: string, productKey: string): Promise<CompanyContext[]> {
+		return await postgreService.execute(async (knex) => {
+			// This query joins Fw_User_Contexts with CareSync_Companies
+			const rawContexts = await knex('Cq_User_Contexts as ctx')
+				.select('ctx.company_id', 'ctx.role', 'ctx.permissions', 'c.name as company_name')
+				.innerJoin('CareSync_Companies as c', 'ctx.company_id', 'c.id')
+				.where('ctx.user_id', userId)
+				.andWhere('ctx.product_key', productKey)
+				.orderBy('c.name', 'asc');
+
+			return rawContexts.map((c) => ({
+				company_id: c.company_id,
+				company_name: c.company_name,
+				role: c.role,
+				permissions: c.permissions || []
+			}));
+		});
 	},
 
 	async verifyEmailLogin(email: string, password: string): Promise<User | null> {

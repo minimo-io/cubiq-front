@@ -40,7 +40,7 @@
 		<ul
 			tabindex="0"
 			role="menu"
-			class="dropdown-content menu bg-base-100 rounded-box z-[1] mt-2 w-36 p-2 shadow"
+			class="dropdown-content menu bg-base-100 rounded-box border-base-200 z-[1] mt-2 w-36 border p-2 shadow"
 		>
 			{#each systemProducts as product}
 				{#if product !== productState.active && productsWithPermission.includes(product)}

@@ -27,6 +27,8 @@
 	"unavailable": "No disponible",
 	"prices": "Precios",
 	"included": "Incluido",
+	"company": "Empresa",
+	"severity": "Severidad",
 
 	"logoutMessage": "¡Adiós! Cerraste la sesión.",
 
@@ -88,7 +90,7 @@
 
 	"heroContentCareSyncXXX": "Plataforma de <span class='text-base-content opacity-80'>Mantenimiento Predictivo</span> y Gestión de Activos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profesionales de TI y PyMEs</span> — con IA aplicada al Monitoreo en Tiempo Real, Base de Conocimiento y Marketplace de Clientes.",
 
-	"heroContentCareSync": "Gestión completa del ciclo de vida de TI para PyMEs en crecimiento — integrando <span class='text-base-content opacity-80'>Gestión tercerizada de activos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Servicio (HaaS/Alquiler)</span> y <span class='text-base-content opacity-80'>Mantenimiento predictivo</span> potenciado por diagnósticos de IA en tiempo real.",
+	"heroContentCareSync": "Gestión completa del ciclo de vida de TI para empresas en crecimiento — integrando <span class='text-base-content opacity-80'>Gestión tercerizada de activos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Servicio (HaaS/Alquiler)</span> y <span class='text-base-content opacity-80'>Mantenimiento predictivo</span> potenciado por diagnósticos de IA en tiempo real.",
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Customizamos sin límites: Diseño, UX e Integraciones, con IA de Contenido y Pagos USDT/Bitcoin. ¿Qué esperar? <span class='text-base-content opacity-80'>Tiendas únicas, planes previsíveis</span>, <span class='text-base-content opacity-80'>sin comisiones por venta</span>.",
 
