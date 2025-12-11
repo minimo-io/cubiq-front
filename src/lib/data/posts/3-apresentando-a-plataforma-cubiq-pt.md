@@ -12,7 +12,22 @@ authors:
     avatar: /claude-logo.png
 ---
 
-A Cubiq é mais do que uma simples coleção de ferramentas. É um [ecossistema](https://www.cubiq.lat) integrado, desenvolvido para oferecer soluções acessíveis, modulares e inteligentes para empresas em crescimento — com foco especial nos mercados emergentes da LATAM.
+As PMEs e startups precisam acompanhar a transformação digital. É para ajudar nessa transformação que criamos a Cubiq.
+
+A Cubiq é mais do que uma simples coleção de ferramentas. É um [ecossistema integrado](https://www.cubiq.lat), projetado para oferecer soluções acessíveis, modulares e inteligentes para empresas em crescimento.
+
+Começamos esta jornada inspirados por empresas como Every… e com um conjunto inicial de produtos que será expandido à medida que os experimentos forem validados.
+
+Iniciamos com 4 produtos:
+
+- **CARE**: Gestão e aluguel de ativos de TI
+- **STORE**: E-commerce headless sob medida
+- **PAY**: Pagamentos cross-border em BTC/USDT via Lightning
+- **APIs**: Para startups que desejam usar as tecnologias por trás dos nossos próprios produtos
+
+Mas há mais no baú de experimentos:
+
+- **LAW**: Uma ferramenta de micropagamento que analisa contratos globais instantaneamente por US$ 4,99, identificando riscos e sugerindo edições jurídicas — eliminando a necessidade inicial de advogados caros.
 
 **Cubiq**  
-_Plataforma Unificada de Produtos Digitais para a América Latina._
+_Uma plataforma unificada de produtos digitais para a América Latina._

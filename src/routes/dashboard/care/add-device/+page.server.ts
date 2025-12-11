@@ -23,7 +23,6 @@ export const actions: Actions = {
 	addDevice: async ({ request }) => {
 		const data = await request.formData();
 		const device_id = data.get('device_id')?.toString();
-		const hostname = data.get('hostname')?.toString();
 		const status = data.get('status')?.toString();
 		const device_type = data.get('device_type')?.toString();
 		const remote_access = data.get('remote_access') === 'on';
@@ -50,9 +49,9 @@ export const actions: Actions = {
 		if (installation_date) device_metadata.installation_date = installation_date;
 
 		// Basic validation
-		if (!device_id || !hostname || !status || !company_id) {
+		if (!device_id || !status || !company_id) {
 			return fail(400, {
-				message: 'Missing required fields: Device ID, Hostname, Status, Company'
+				message: 'Missing required fields: Device ID, Status, Company'
 			});
 		}
 
@@ -60,7 +59,6 @@ export const actions: Actions = {
 			await postgreService.execute(async (knex) => {
 				await knex('CareSync_Reports').insert({
 					device_id,
-					hostname,
 					status,
 					remote_access,
 					device_type: device_type || null,
@@ -68,7 +66,7 @@ export const actions: Actions = {
 					metrics: {}, // Empty JSONB object for now
 					company_id,
 					contact_id: contact_id || null,
-					device_metadata: Object.keys(device_metadata).length > 0 ? device_metadata : null,
+					device_metadata: Object.keys(device_metadata).length > 0 ? device_metadata : null
 				});
 			});
 			return { status: 200, message: 'Device added successfully!' };

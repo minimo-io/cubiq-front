@@ -182,7 +182,7 @@
 						<td colspan="11" class="text-error text-center">{error}</td>
 					</tr>
 				{:else if machines.length <= 0}
-					<tr><td colspan="9" class="text-center">No devices configured.</td></tr>
+					<tr><td colspan="9" class="text-center">{m.noDevicesConfigured()}</td></tr>
 				{:else}
 					{#each machines as machine, i (i)}
 						{@const deviceUrl = localizeHref(`/dashboard/care/device/${machine.id}`)}

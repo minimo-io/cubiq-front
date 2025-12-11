@@ -76,7 +76,9 @@
 		<span class="hidden {isCollapsed ? '' : 'md:inline'}">{m.notes()}</span>
 	</a>
 	<!-- Actual notes -->
-	<ul class="hidden {isCollapsed ? '' : 'md:block'} pb-2 md:pl-4">
+	<ul
+		class="hidden {isCollapsed ? '' : 'md:block'} before:bg-primary pb-2 before:opacity-50 md:pl-4"
+	>
 		{#if filteredNotes.length === 0}
 			<li class="px-4 py-2 text-sm opacity-60">
 				{searchQuery ? 'No notes found' : "You don't have any notes yet."}

@@ -28,8 +28,13 @@
 	"prices": "Precios",
 	"included": "Incluido",
 	"company": "Empresa",
+	"companies": "Empresas",
 	"severity": "Severidad",
 	"loading": "Cargando{something}...",
+	"alerts": "Alertas",
+	"admnistration": "Administración",
+	"store": "Tienda",
+	"onlineStore": "Tienda online",
 
 	"logoutMessage": "¡Adiós! Cerraste la sesión.",
 
@@ -528,5 +533,9 @@
 
 	"timelineNov2024": "Noviembre, 2025",
 	"timelineNov2024Title": "Ideación de Cubiq",
-	"timelineNov2024Desc": "Cubiq iza las velas con el objetivo de ofrecer soluciones tecnológicas avanzadas para PyMEs; y un espacio de experimentación con productos tecnológicos in-house, con foco en protocolos abiertos y <i>permissionless</i>."
+	"timelineNov2024Desc": "Cubiq iza las velas con el objetivo de ofrecer soluciones tecnológicas avanzadas para PyMEs; y un espacio de experimentación con productos tecnológicos in-house, con foco en protocolos abiertos y <i>permissionless</i>.",
+
+	"noDevicesConfigured": "No hay dispositivos configurados.",
+	"organization": "Organización",
+	"organizations": "Organizaciones"
 }

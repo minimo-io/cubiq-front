@@ -16,7 +16,7 @@
 	<div class="flex items-start justify-start">
 		<a href={localizeHref('/')}>
 			<div class="flex flex-row justify-start">
-				<CubiqLogoWhite class="self-start h-[40px] md:h-[42px] md:-left-7 -left-6 relative" />
+				<CubiqLogoWhite class="relative -left-6 h-[40px] self-start md:-left-7 md:h-[42px]" />
 			</div>
 		</a>
 	</div>

@@ -27,8 +27,15 @@
 	"prices": "Preços",
 	"included": "Incluído",
 	"company": "Empresa",
+	"companies": "Empresas",
 	"severity": "Gravidade",
 	"loading": "Carregando{something}...",
+	"organization": "Organização",
+	"organizations": "Organizações",
+	"alerts": "Alertas",
+	"admnistration": "Administração",
+	"store": "Loja",
+	"onlineStore": "Loja online",
 
 	"logoutMessage": "Até logo! Você foi desconectado(a).",
 
@@ -47,7 +54,6 @@
 	"deviceAddedSuccess": "Dispositivo adicionado com sucesso!",
 	"deviceAddedError": "Falha ao adicionar dispositivo.",
 	"deviceAddedFailure": "Falha ao adicionar dispositivo devido a um erro do servidor.",
-	"addDevice": "Adicionar Dispositivo",
 	"yes": "Sim",
 	"no": "Não",
 	"loginEmailRequired": "E-mail é obrigatório",
@@ -531,5 +537,8 @@
 
 	"timelineNov2024": "Novembro, 2025",
 	"timelineNov2024Title": "Ideação da Cubiq",
-	"timelineNov2024Desc": "Cubiq iça as velas com o objetivo de oferecer soluções tecnológicas avançadas para PMEs; e um espaço de experimentação com produtos tecnológicos in-house, como foco em protocolos abertos e <i>permissionless</i>."
+	"timelineNov2024Desc": "Cubiq iça as velas com o objetivo de oferecer soluções tecnológicas avançadas para PMEs; e um espaço de experimentação com produtos tecnológicos in-house, como foco em protocolos abertos e <i>permissionless</i>.",
+
+	"noDevicesConfigured": "Nenhum dispositivo configurado.",
+	"addDevice": "Adicionar Dispositivo"
 }

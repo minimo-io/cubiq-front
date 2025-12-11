@@ -55,7 +55,7 @@
 				? 'h-[120px]'
 				: 'h-[73px]'} hidden border-b md:block"
 	>
-		<button
+		<!-- <button
 			onclick={toggleMenu}
 			class="border-base-200 absolute -top-3 -right-3 hidden h-[23px] w-[23px] items-center justify-center rounded-full border bg-black transition-all duration-200 hover:scale-110 md:flex"
 		>
@@ -64,7 +64,7 @@
 			{:else}
 				<ChevronLeft class="relative -left-[1px] h-[13px]" strokeWidth="3" />
 			{/if}
-		</button>
+		</button> -->
 		<div class="{isCollapsed ? 'hidden' : 'hidden md:block'} ">
 			<ProductSwitchButton productsWithPermission={products} />
 		</div>
@@ -75,7 +75,7 @@
 					<div
 						class="badge badge-xs absolute -top-[9px] left-1/2 -translate-x-1/2 transform px-3 font-bold tracking-widest uppercase"
 					>
-						{m.company()}
+						{m.organization()}
 					</div>
 					<button tabindex="0" class="my-2 flex w-full justify-center hover:opacity-100">
 						<div class="flex flex-row items-center gap-1 hover:opacity-50">
@@ -108,7 +108,7 @@
 	</div>
 
 	<!-- Actual menu -->
-	<ul class="menu bg-grey-light h-full gap-3 {isCollapsed ? '' : 'md:w-60 md:gap-0'}">
+	<ul class="menu bg-grey-light h-full gap-3 px-2 {isCollapsed ? '' : 'md:w-60 md:gap-0'}">
 		{#if productState.active == Product.CARE}
 			<MenuCare />
 		{:else if productState.active == Product.NOTES}

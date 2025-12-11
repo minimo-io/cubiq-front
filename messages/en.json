@@ -28,8 +28,13 @@
 	"prices": "Prices",
 	"included": "Included",
 	"company": "Company",
+	"companies": "Companies",
 	"severity": "Severity",
 	"loading": "Loading{something}...",
+	"alerts": "Alerts",
+	"admnistration": "Administration",
+	"store": "Store",
+	"onlineStore": "Online Store",
 
 	"logoutMessage": "Goodbye! You've been logged out.",
 
@@ -525,5 +530,9 @@
 
 	"timelineNov2024": "November, 2025",
 	"timelineNov2024Title": "Cubiq Ideation",
-	"timelineNov2024Desc": "Cubiq sets sail with the goal of offering advanced technological solutions for SMEs; and an experimentation space with in-house tech products, focusing on open and <i>permissionless</i> protocols."
+	"timelineNov2024Desc": "Cubiq sets sail with the goal of offering advanced technological solutions for SMEs; and an experimentation space with in-house tech products, focusing on open and <i>permissionless</i> protocols.",
+
+	"noDevicesConfigured": "No devices configured.",
+	"organization": "Organization",
+	"organizations": "Organizations"
 }

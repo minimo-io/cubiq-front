@@ -44,7 +44,6 @@ export interface MachineContact {
 export interface Device {
 	id: string;
 	device_id: string;
-	hostname: string;
 	is_owned_by_contact: boolean;
 	device_type: string;
 	status: string;

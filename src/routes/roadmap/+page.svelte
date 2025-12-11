@@ -33,7 +33,6 @@
 			</div>
 			<div class="timeline-start mb-10 space-x-2 md:text-end">
 				<time class="font-mono text-sm italic">{m.timelineJan2025()}</time>
-				<div class="font-pixel text-xl font-black">{m.timelineJan2025Item1()}</div>
 				<div class="font-pixel text-xl font-black">{m.timelineJan2025Item2()}</div>
 				<div class="font-pixel text-xl font-black">{m.timelineJan2025Item3()}</div>
 			</div>
@@ -60,6 +59,8 @@
 
 				<div class="font-pixel text-xl font-black">{m.timelineDec2024Item1Title()}</div>
 				<p class="text-sm">{m.timelineDec2024Item1Desc()}</p>
+
+				<div class="font-pixel text-xl font-black">{m.timelineJan2025Item1()}</div>
 
 				<div class="font-pixel text-xl font-black">{m.timelineDec2024Item2Title()}</div>
 				<p class="text-sm">{m.timelineDec2024Item2Desc()}</p>
