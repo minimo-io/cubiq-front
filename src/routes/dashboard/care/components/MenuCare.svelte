@@ -19,14 +19,14 @@
 	let isCollapsed = $derived(dashboardLeftMenuState.collapsed);
 </script>
 
-<li>
-	<a href={localizeHref(AppConfig.dashboards.care.base)} class="active text-primary">
+<!-- <li>
+	<a href={localizeHref(AppConfig.dashboards.care.base)}>
 		<Home class="fw-dashboard-left-menu-icon {isCollapsed ? '!h-5' : ''}" />
 		<span class="hidden {isCollapsed ? '' : 'md:inline'}">Dashboard</span>
 	</a>
-</li>
+</li> -->
 <li>
-	<a href={localizeHref(AppConfig.dashboards.care.base)}>
+	<a href={localizeHref(AppConfig.dashboards.care.base)} class="active text-primary">
 		<Laptop class="fw-dashboard-left-menu-icon {isCollapsed ? '!h-5' : ''}" />
 		<span class="hidden {isCollapsed ? '' : 'md:inline'}">Inventário</span>
 	</a>

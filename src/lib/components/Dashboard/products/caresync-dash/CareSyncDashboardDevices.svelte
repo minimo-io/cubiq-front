@@ -16,8 +16,11 @@
 	import { machineTypeCode } from '$utils';
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
 	import { userContextState } from '$stores/UserContext.state.svelte';
+	import { page } from '$app/state';
 
+	let user = $derived(page.data.user);
 	let machines: Machine[] = $state([]);
+
 	let isLoading = $state(true);
 	let isRefreshing = $state(false);
 	let error = $state<string | null>(null);
@@ -28,9 +31,10 @@
 	const fetchDevices = async () => {
 		try {
 			const response = await apiClient.get(
-				`/care/devices?context=${userContextState.active?.company_id}`
+				`/care/devices?company_id=${userContextState.active?.company_id}&user_id=${user.id}`
 			);
 			const apiData = response.data.data;
+			if (!apiData) throw new Error('No API Data fetched!');
 
 			machines = apiData.map((device: any): Machine => {
 				const getStatus = (metrics: any, deviceStatus: MachineStatus): MachineStatus | string => {
@@ -144,11 +148,10 @@
 </script>
 
 <div class="flex flex-1 flex-col">
-	<span class="text-white">{userContextState.active?.company_name}</span>
 	<CareSyncDashboardDevicesActions {handleRefresh} {isRefreshing} {countdown} />
 
 	<div class="w-full min-w-0 overflow-x-auto">
-		<table class="table border border-t-0 border-l-0 md:w-full">
+		<table class=" table border-t-0 border-l-0 md:w-full">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -178,6 +181,8 @@
 					<tr>
 						<td colspan="11" class="text-error text-center">{error}</td>
 					</tr>
+				{:else if machines.length <= 0}
+					<tr><td colspan="9" class="text-center">No devices configured.</td></tr>
 				{:else}
 					{#each machines as machine, i (i)}
 						{@const deviceUrl = localizeHref(`/dashboard/care/device/${machine.id}`)}
