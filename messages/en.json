@@ -29,6 +29,7 @@
 	"included": "Included",
 	"company": "Company",
 	"severity": "Severity",
+	"loading": "Loading{something}...",
 
 	"logoutMessage": "Goodbye! You've been logged out.",
 
@@ -90,7 +91,7 @@
 
 	"heroContentCareSyncOLD": "Platform for <span class='text-base-content opacity-80'>Predictive Maintenance</span> and Asset Management (ITSM + ITAM) <span class='text-base-content opacity-80'>for IT professionals and SMEs</span> — with AI applied to Real-Time Monitoring, Knowledge-Base and Client Marketplace.",
 
-	"heroContentCareSync": "Complete IT lifecycle management for growing companies — integrating <span class='text-base-content opacity-80'>Managed IT asset management</span>, <span class='text-base-content opacity-80'>Hardware-as-a-Service (HaaS/Rental)</span>, and <span class='text-base-content opacity-80'>Predictive maintenance</span> powered by real-time AI diagnostics.",
+	"heroContentCareSync": "Complete IT lifecycle management for growing companies — integrating <span class='text-base-content opacity-80'>Managed IT asset management</span>, <span class='text-base-content opacity-80'>Hardware-as-a-Service (HaaS/Rental)</span>, and <span class='text-base-content opacity-80'>Predictive maintenance</span> powered by AI diagnostics.",
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>Premium Custom E-Commerce</span>: We customize without limits: Design, UX, and Integrations, with Content AI and USDT/Bitcoin Payments. What to expect? <span class='text-base-content opacity-80'>Unique stores, predictable plans</span>, <span class='text-base-content opacity-80'>no sales commissions</span>.",
 

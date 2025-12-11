@@ -1,4 +1,3 @@
-<!-- src/lib/components/Dashboard/MenuLeft.svelte -->
 <script lang="ts">
 	import { ChevronDown, ChevronLeft, ChevronRight } from '@lucide/svelte';
 	import HeaderLogo from '../Header/HeaderLogo.svelte';
@@ -12,15 +11,26 @@
 	import MenuCare from '../../../routes/dashboard/care/components/MenuCare.svelte';
 	import MenuNotes from '../../../routes/dashboard/notes/components/MenuNotes.svelte';
 	import { m } from '$paraglide/messages';
-	import { userContextState } from '$stores/UserContext.state.svelte';
+	import { saveContextToCookie, userContextState } from '$stores/UserContext.state.svelte';
+	import type { CompanyContext } from '$types/caresync-machines.types';
 
 	// State to track if menu is collapsed
 	let isCollapsed = $derived(dashboardLeftMenuState.collapsed);
+	let careActiveUserContext = $derived(userContextState.active);
 
 	let { products }: { products: string[] } = $props();
 
 	function toggleMenu() {
 		toggleDashboardLeftMenuCollapse();
+	}
+
+	function setUserContext(context: CompanyContext) {
+		userContextState.active = context;
+		saveContextToCookie(context);
+
+		if (document.activeElement instanceof HTMLElement) {
+			document.activeElement.blur();
+		}
 	}
 </script>
 
@@ -67,11 +77,11 @@
 					>
 						{m.company()}
 					</div>
-					<button class="my-2 flex w-full justify-center hover:opacity-100">
+					<button tabindex="0" class="my-2 flex w-full justify-center hover:opacity-100">
 						<div class="flex flex-row items-center gap-1 hover:opacity-50">
 							<span class="text-primary font-pixel text-[20px] font-bold uppercase">
-								XMARTLABS</span
-							>
+								{careActiveUserContext?.company_name || m.select()}
+							</span>
 							<ChevronDown class="text-primary h-4 w-4" />
 						</div>
 					</button>
@@ -84,7 +94,7 @@
 							<li role="presentation">
 								<button
 									role="menuitem"
-									onclick={() => null}
+									onclick={() => setUserContext(context)}
 									class="font-pixel text-[16px] tracking-wide uppercase"
 								>
 									{context.company_name}
@@ -106,8 +116,3 @@
 		{/if}
 	</ul>
 </div>
-
-<!-- 
-<style lang="postcss">
-	@reference "tailwindcss";
-</style> -->

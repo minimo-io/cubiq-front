@@ -28,6 +28,7 @@
 	"included": "Incluído",
 	"company": "Empresa",
 	"severity": "Gravidade",
+	"loading": "Carregando{something}...",
 
 	"logoutMessage": "Até logo! Você foi desconectado(a).",
 
@@ -37,7 +38,7 @@
 	"subscriveVia": "Inscrever-se via",
 	"contactSupport": "Entre em contato",
 	"saveChanges": "Salvar alterações",
-	"requestQuotation": "Solicite uma cotação",
+	"requestQuotation": "Solicitar cotação",
 
 	"searchPlaceholder": "Procurar ferramentas e comandos...",
 	"searchSimplePlaceholder": "Procurar...",
@@ -91,7 +92,7 @@
 
 	"heroContentCareSyncOLDISH": "Plataforma completa para profissionais de TI e PMEs: Gestão de ativos, Ordens de Serviço e Alertas, Manutenção Preditiva e Monitoramento, Cursos online e Marketplace de insumos. <span class='text-base-content opacity-80'>Junte-se a comunidade que impulsiona o crescimento do profissional de TI.</span>",
 
-	"heroContentCareSync": "Gestão completa do ciclo de vida de TI para empresas em crescimento — integrando <span class='text-base-content opacity-80'>Gerenciamento de ativos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Serviço (HaaS/Locação)</span> e <span class='text-base-content opacity-80'>Manutenção preditiva</span> impulsionada por diagnósticos de IA em tempo real.",
+	"heroContentCareSync": "Gestão completa do ciclo de vida de TI para empresas em crescimento — integrando <span class='text-base-content opacity-80'>Gerenciamento de ativos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Serviço (HaaS/Locação)</span> e <span class='text-base-content opacity-80'>Manutenção preditiva</span> impulsionada por diagnósticos de IA.",
 
 	"heroContentBagity": "<span class='text-base-content opacity-80'>E-commerce Premium Sob Medida</span>: Customizamos sem limites: Design, UX e Integrações, com IA de Conteúdo e Pagamentos em USDT/Bitcoin. O que esperar? <span class='text-base-content opacity-80'>Lojas únicas, planos previsíveis</span>, <span class='text-base-content opacity-80'>sem comissões por venda</span>.",
 

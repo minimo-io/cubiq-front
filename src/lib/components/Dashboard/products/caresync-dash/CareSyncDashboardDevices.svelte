@@ -15,6 +15,7 @@
 	import { localizeHref } from '$paraglide/runtime';
 	import { machineTypeCode } from '$utils';
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
+	import { userContextState } from '$stores/UserContext.state.svelte';
 
 	let machines: Machine[] = $state([]);
 	let isLoading = $state(true);
@@ -26,7 +27,9 @@
 
 	const fetchDevices = async () => {
 		try {
-			const response = await apiClient.get('/care/devices');
+			const response = await apiClient.get(
+				`/care/devices?context=${userContextState.active?.company_id}`
+			);
 			const apiData = response.data.data;
 
 			machines = apiData.map((device: any): Machine => {
@@ -116,6 +119,16 @@
 		startCountdown();
 	});
 
+	// Listen for changes in the change of contexts
+	$effect(() => {
+		if (userContextState.active?.company_id) {
+			isLoading = true;
+			fetchDevices().then(() => {
+				isLoading = false;
+			});
+		}
+	});
+
 	onDestroy(() => {
 		clearInterval(refreshInterval);
 		clearInterval(countdownInterval);
@@ -131,6 +144,7 @@
 </script>
 
 <div class="flex flex-1 flex-col">
+	<span class="text-white">{userContextState.active?.company_name}</span>
 	<CareSyncDashboardDevicesActions {handleRefresh} {isRefreshing} {countdown} />
 
 	<div class="w-full min-w-0 overflow-x-auto">
@@ -156,7 +170,9 @@
 			<tbody>
 				{#if isLoading}
 					<tr>
-						<td colspan="11" class="text-center">Loading...</td>
+						<td colspan="11" class="text-center"
+							>{m.loading({ something: ` ${userContextState.active?.company_name}` })}</td
+						>
 					</tr>
 				{:else if error}
 					<tr>

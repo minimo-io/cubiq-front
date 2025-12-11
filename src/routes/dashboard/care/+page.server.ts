@@ -9,44 +9,55 @@ import type { CompanyContext } from '$types/caresync-machines.types';
 
 export const actions = dashboardCommonActions;
 
-export const load: PageServerLoad = async (event) => {
-	// Using 'event' as the parameter name
+const COOKIE_NAME = 'user_context';
 
-	// 1. Get the user identifier directly from event.locals.user
-	//    We assume event.locals.user is set to the UUID string by hooks.server.ts
+export const load: PageServerLoad = async (event) => {
 	const userData = event.locals.user;
 
 	if (!userData) {
 		throw redirect(302, localizeHref('/login'));
 	}
 
-	// --- Security and Context Lookup ---
 	try {
-		// 3. Fetch all available company contexts using the secure UUID (userId)
-		//    This uses the service function (with the fixed knex query) to check permissions.
+		// Fetch all available company contexts for this user
 		const availableContexts: CompanyContext[] = await AuthService.getUserCompanyContexts(
 			userData.id,
 			Product.CARE
 		);
 
 		if (availableContexts.length === 0) {
-			// User has no company access for CARE.
+			// User has no company access for CARE
 			throw redirect(302, localizeHref('/dashboard'));
 		}
 
-		console.log('AC', availableContexts);
+		// Try to load the stored context from cookie
+		let activeContext: CompanyContext | undefined;
+		const storedContextCookie = event.cookies.get(COOKIE_NAME);
 
-		return { contexts: availableContexts };
+		if (storedContextCookie) {
+			try {
+				const parsed: CompanyContext = JSON.parse(decodeURIComponent(storedContextCookie));
+				// Validate that the stored context is still in the user's available contexts
+				const isValid = availableContexts.some((c) => c.company_id === parsed.company_id);
+				if (isValid) {
+					activeContext = parsed;
+				}
+			} catch (err) {
+				console.error('Failed to parse user context cookie:', err);
+			}
+		}
 
-		// 4. Select a default company and redirect to the canonical, protected page
-		// const defaultCompanyId = availableContexts[0].company_id;
+		// If no valid stored context, default to the first available context
+		if (!activeContext) {
+			activeContext = availableContexts[0];
+		}
 
-		// Redirect to the first protected page, passing the context via URL parameter
-		// throw redirect(302, localizeHref(`/dashboard/care/devices?companyId=${defaultCompanyId}`));
+		return {
+			contexts: availableContexts,
+			activeContext
+		};
 	} catch (e) {
-		// Catch database or service errors (including invalid UUID format if userId was malformed)
 		console.error('Context Load Error:', e);
-		// Throw a SvelteKit error for server failures
 		throw error(500, 'Failed to load company contexts due to an internal error.');
 	}
 };

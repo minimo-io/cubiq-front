@@ -17,6 +17,7 @@
 		CircleGauge,
 		Clock,
 		DatabaseBackup,
+		DollarSign,
 		Headset,
 		ListOrdered,
 		MonitorCheck,
@@ -178,21 +179,30 @@
 	noMobileBorderBottom={true}
 >
 	<div class="mt-7 flex flex-wrap gap-2 md:mt-8 md:gap-3">
-		<a href="#more" use:conditionalSmoothScroll={'#more'} class="fw-button fw-button-lg">
+		<a href="#more" use:conditionalSmoothScroll={'#more'} class="fw-button fw-button-lg px-5!">
 			<span>{m.learnMore()}</span>
 		</a>
 		<a
 			href="#prices"
 			use:conditionalSmoothScroll={'#prices'}
-			class="fw-button fw-button-lg fw-button-outline hidden! md:flex!"
+			class="fw-button fw-button-lg fw-button-outline hidden! px-5! md:flex!"
 		>
 			<span>{m.prices()}</span>
 		</a>
 		<a
-			href="mailto:{AppConfig.cubiq.socials.email}"
-			class="fw-button fw-button-lg fw-button-outline"
+			href={AppConfig.cubiq.socials.whatsapp[getLocale()]}
+			rel="noopener noreferrer"
+			target="_blank"
+			class="fw-button fw-button-lg fw-button-outline px-5!"
 		>
 			<span>{m.requestQuotation()}</span>
+		</a>
+		<a
+			href="#prices"
+			use:conditionalSmoothScroll={'#prices'}
+			class="fw-button fw-button-lg fw-button-outline px-2! md:hidden!"
+		>
+			<span><DollarSign class="h-4" /></span>
 		</a>
 	</div>
 </Header>

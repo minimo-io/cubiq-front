@@ -11,7 +11,7 @@
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import Meta from '$lib/components/Meta.svelte';
 	import { m } from '$paraglide/messages';
-	import { localizeHref } from '$paraglide/runtime';
+	import { getLocale, localizeHref } from '$paraglide/runtime';
 	import { type DashboardImageType } from '$types/dashboardImages.types';
 	import { type Feature } from '$types/features.types';
 	import { Product } from '$types/products.types';
@@ -19,7 +19,9 @@
 		Blocks,
 		BrainCircuit,
 		ChartNoAxesCombined,
+		CircleDollarSign,
 		Cpu,
+		DollarSign,
 		Glasses,
 		Layers,
 		MessageCircleHeart,
@@ -28,6 +30,8 @@
 	import StoreCarrousel from '$lib/components/Store/StoreCarrousel.svelte';
 	import StorePricingVertical from '$lib/components/Store/StorePricingVertical.svelte';
 	import Hr from '$lib/components/Hr.svelte';
+	import { conditionalSmoothScroll } from '$utils';
+	import { AppConfig } from '$lib';
 
 	// Define features based on product
 	const bagityFeatures: Feature[] = [
@@ -110,12 +114,41 @@
 	heroContent={m.heroContentBagity()}
 	noMobileBorderBottom={false}
 	hideCube={true}
-/>
+>
+	<div class="mt-7 flex flex-wrap gap-2 md:mt-8 md:gap-3">
+		<a href="#more" use:conditionalSmoothScroll={'#more'} class="fw-button fw-button-lg px-5!">
+			<span>{m.learnMore()}</span>
+		</a>
+		<a
+			href="#prices"
+			use:conditionalSmoothScroll={'#prices'}
+			class="fw-button fw-button-lg fw-button-outline hidden! px-5! md:flex!"
+		>
+			<span>{m.prices()}</span>
+		</a>
+
+		<a
+			href={AppConfig.cubiq.socials.whatsapp[getLocale()]}
+			rel="noopener noreferrer"
+			target="_blank"
+			class="fw-button fw-button-lg fw-button-outline px-5!"
+		>
+			<span>{m.requestQuotation()}</span>
+		</a>
+		<a
+			href="#prices"
+			use:conditionalSmoothScroll={'#prices'}
+			class="fw-button fw-button-lg fw-button-outline px-2! md:hidden!"
+		>
+			<span><DollarSign class="h-4" /></span>
+		</a>
+	</div>
+</Header>
 
 <!-- <div>
 	<Clients />
 </div> -->
-<div class="relative -top-4 md:-top-2">
+<div id="more" class="relative -top-4 md:-top-2">
 	<div
 		class="md:fw-border-t-divider md:fw-border-t-divider-dot fw-border-t-divider-dot-center md:border-t-base-300/50 relative md:border-t"
 	>
@@ -134,7 +167,7 @@
 </div>
 
 <!-- Main -->
-<main class="relative -top-10 md:-top-2">
+<main id="prices" class="relative -top-10 md:-top-2">
 	<!-- Title -->
 	<h2
 		class="text-base-content mx-10 mb-15 text-center font-sans text-3xl font-bold md:mx-0 md:text-4xl"
@@ -220,7 +253,7 @@
 	<Slogan text={m.bagitySlogan()} />
 
 	<!-- <ServiceOrders /> -->
-	<div id="more" class="border-base-200 mt-15 font-sans md:border-t">
+	<div class="border-base-200 mt-15 font-sans md:border-t">
 		<Faq project="bagity" />
 	</div>
 	<CtaContact />
