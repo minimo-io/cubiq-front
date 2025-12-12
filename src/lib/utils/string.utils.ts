@@ -16,7 +16,7 @@ export function machineTypeCode(type: MachineType | string) {
 	} else if (type == 'DESKTOP') {
 		return 'DT';
 	} else if (type == 'ALLINONE') {
-		return 'DT';
+		return 'AI';
 	} else {
 		return 'N/A';
 	}

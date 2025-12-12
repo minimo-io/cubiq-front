@@ -35,6 +35,7 @@
 	"admnistration": "Administración",
 	"store": "Tienda",
 	"onlineStore": "Tienda online",
+	"estado": "Estado",
 
 	"logoutMessage": "¡Adiós! Cerraste la sesión.",
 
@@ -537,5 +538,18 @@
 
 	"noDevicesConfigured": "No hay dispositivos configurados.",
 	"organization": "Organización",
-	"organizations": "Organizaciones"
+	"organizations": "Organizaciones",
+	"selectOrganization": "Selecciona una organización",
+	"loadingContacts": "Cargando contactos...",
+	"selectContact": "Seleccione un contacto (opcional)",
+
+	"statusHealthy": "Saludable",
+	"statusWarning": "Advertencia",
+	"statusCritical": "Crítico",
+	"statusMonitoring": "Monitoreando",
+	"deviceID": "ID del dispositivo",
+	"remoteAccess": "Acceso remoto",
+	"serialNumber": "Número de serie",
+	"deviceType": "Tipo de dispositivo",
+	"ownedByContact": "Propiedad del contacto"
 }

@@ -36,6 +36,7 @@
 	"admnistration": "Administração",
 	"store": "Loja",
 	"onlineStore": "Loja online",
+	"status": "Status",
 
 	"logoutMessage": "Até logo! Você foi desconectado(a).",
 
@@ -540,5 +541,19 @@
 	"timelineNov2024Desc": "Cubiq iça as velas com o objetivo de oferecer soluções tecnológicas avançadas para PMEs; e um espaço de experimentação com produtos tecnológicos in-house, como foco em protocolos abertos e <i>permissionless</i>.",
 
 	"noDevicesConfigured": "Nenhum dispositivo configurado.",
-	"addDevice": "Adicionar Dispositivo"
+	"addDevice": "Adicionar Dispositivo",
+	"selectOrganization": "Selecione uma organização",
+
+	"loadingContacts": "Loading contacts...",
+	"selectContact": "Selecione um contato (opcional)",
+
+	"statusHealthy": "Saudável",
+	"statusWarning": "Precaução",
+	"statusCritical": "Crítico",
+	"statusMonitoring": "Monitorando",
+	"deviceID": "ID do dispositivo",
+	"remoteAccess": "Acesso Remoto",
+	"serialNumber": "Número de Série",
+	"deviceType": "Tipo de dispositivo",
+	"ownedByContact": "Propriedade do contato"
 }

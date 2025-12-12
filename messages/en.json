@@ -35,6 +35,7 @@
 	"admnistration": "Administration",
 	"store": "Store",
 	"onlineStore": "Online Store",
+	"status": "Status",
 
 	"logoutMessage": "Goodbye! You've been logged out.",
 
@@ -534,5 +535,18 @@
 
 	"noDevicesConfigured": "No devices configured.",
 	"organization": "Organization",
-	"organizations": "Organizations"
+	"organizations": "Organizations",
+	"selectOrganization": "Select an organization",
+	"loadingContacts": "Loading contacts...",
+	"selectContact": "Select a contact (optional)",
+
+	"statusHealthy": "Healthy",
+	"statusWarning": "Warning",
+	"statusCritical": "Critical",
+	"statusMonitoring": "Monitoring",
+	"deviceID": "Device ID",
+	"remoteAccess": "Remote Access",
+	"serialNumber": "Serial Number",
+	"deviceType": "Device Type",
+	"ownedByContact": "Owned by contact"
 }

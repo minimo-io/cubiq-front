@@ -190,9 +190,10 @@
 							<td>
 								<div class="flex items-center">
 									<a href={deviceUrl} class="text-primary">
-										{machineTypeCode(machine.type)}-{machine.device_id}{machine.isOwnedByContact
+										<!-- {machineTypeCode(machine.type)}-{machine.device_id}{machine.isOwnedByContact
 											? '-CP'
-											: ''}
+											: ''} -->
+										{machine.device_id}
 									</a>
 
 									<!-- Online/Offline status -->

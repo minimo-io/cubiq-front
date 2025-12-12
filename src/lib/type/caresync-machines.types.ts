@@ -27,7 +27,8 @@ export enum MachineStatus {
 export enum MachineType {
 	NOTEBOOK = 'NOTEBOOK',
 	DESKTOP = 'DESKTOP',
-	ALLINONE = 'ALLINONE'
+	ALLINONE = 'ALLINONE',
+	SERVER = 'SERVER'
 }
 
 export interface MachineContact {

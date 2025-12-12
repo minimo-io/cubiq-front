@@ -5,12 +5,15 @@
 
 	let { data } = $props();
 
-	// Set both contexts and active context from server data
-	userContextState.contexts = data.contexts;
-	userContextState.active = data.activeContext;
-
-	// Ensure cookie is set on client side (in case it wasn't set yet)
-	saveContextToCookie(data.activeContext);
+	// Use $effect to reactively update when data changes
+	// This ensures the state is updated after data is fully loaded
+	$effect(() => {
+		if (data?.contexts && data?.activeContext) {
+			userContextState.contexts = data.contexts;
+			userContextState.active = data.activeContext;
+			saveContextToCookie(data.activeContext);
+		}
+	});
 </script>
 
 <div class="flex flex-1">

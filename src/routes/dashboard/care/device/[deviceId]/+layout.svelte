@@ -16,11 +16,13 @@
 	let { children, data }: Props = $props();
 
 	let device: Device = $state(data.device);
-	let deviceName = $derived(
-		`${machineTypeCode(device.device_type)}-${device.device_id}${
-			device.is_owned_by_contact ? '-CP' : ''
-		}`
-	);
+	// let deviceName = $derived(
+	// 	`${machineTypeCode(device.device_type)}-${device.device_id}${
+	// 		device.is_owned_by_contact ? '-CP' : ''
+	// 	}`
+	// );
+
+	let deviceName = $derived(`${device.device_id}`);
 
 	let imageModal = $state<HTMLDialogElement>();
 	let selectedImage = $state<{ src: string; alt: string } | null>(null);

@@ -9,8 +9,6 @@ import type { CompanyContext } from '$types/caresync-machines.types';
 
 export const actions = dashboardCommonActions;
 
-const COOKIE_NAME = 'user_context';
-
 export const load: PageServerLoad = async (event) => {
 	const userData = event.locals.user;
 
@@ -32,7 +30,7 @@ export const load: PageServerLoad = async (event) => {
 
 		// Try to load the stored context from cookie
 		let activeContext: CompanyContext | undefined;
-		const storedContextCookie = event.cookies.get(COOKIE_NAME);
+		const storedContextCookie = event.cookies.get('user_context');
 
 		if (storedContextCookie) {
 			try {
