@@ -195,7 +195,7 @@
 			<!-- Serial number -->
 			<div class="form-control mb-4">
 				<label for="serial_number" class="label">
-					<span class="label-text text-gray-300">{m.serialNumber()}</span>
+					<span class="label-text text-gray-300">{m.serialNumber()} ({m.optional()})</span>
 				</label>
 				<input
 					type="text"

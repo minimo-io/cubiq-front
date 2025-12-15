@@ -10,7 +10,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { m } from '$paraglide/messages';
 	import apiClient from '$lib/api';
-	import CareSyncDashboardDevicesActions from './CareSyncDashboardDevicesActions.svelte';
+	import CareSyncDashboardDevicesActions from '../../../../lib/components/Dashboard/products/caresync-dash/CareSyncDashboardDevicesActions.svelte';
 	import { AppConfig } from '$lib/configs';
 	import { localizeHref } from '$paraglide/runtime';
 	import { machineTypeCode } from '$utils';
@@ -38,25 +38,6 @@
 
 			machines = apiData.map((device: any): Machine => {
 				const getStatus = (metrics: any, deviceStatus: MachineStatus): MachineStatus | string => {
-					// if (!metrics || Object.keys(metrics).length === 0 || !metrics.basic) {
-					// 	return MachineStatus.NO_DATA; // Default status if no metrics or basic metrics are available
-					// }
-					// const { cpu, memory, disk } = metrics.basic;
-					// if (
-					// 	(cpu && cpu.current > 90) ||
-					// 	(memory && memory.current_percent > 90) ||
-					// 	(disk && disk.percent > 95)
-					// ) {
-					// 	return MachineStatus.ALERT;
-					// }
-					// if (
-					// 	(cpu && cpu.current > 75) ||
-					// 	(memory && memory.current_percent > 75) ||
-					// 	(disk && disk.percent > 85)
-					// ) {
-					// 	return MachineStatus.PROBLEMS;
-					// }
-					// return MachineStatus.BOM;
 					return deviceStatus;
 				};
 
@@ -77,6 +58,7 @@
 					type: device.type,
 					isOwnedByContact: device.is_owned_by_contact,
 					remoteAccess: device.remoteAccess,
+					wasFirstPinged: device.was_first_pinged,
 					organization: device.company?.name || 'N/A',
 					user: {
 						name: device.contact?.name || undefined,
@@ -95,7 +77,7 @@
 						: 0,
 					serialNumber: device.deviceMetadata?.serial_number || 'N/A',
 					brand: device.deviceMetadata?.model ? device.deviceMetadata.model.split(' ')[0] : 'N/A',
-					model: device.deviceMetadata?.model || 'N/A'
+					model: device.model_id || 'N/A'
 				};
 			});
 		} catch (err: any) {
@@ -155,19 +137,20 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Nro Série</th>
-					<th>Contato</th>
-					<th>Tipo</th>
-					<th>A. Remoto</th>
-					<th>Online</th>
-					<th>Status</th>
+					<th>{m.serialNumber()}</th>
+					<th>{m.model()}</th>
+					<th>{m.model()}</th>
+					<th>{m.type()}</th>
+					<th>{m.rAccess()}</th>
+					<th>{m.connected()}</th>
+					<th>{m.status()}</th>
 					<!-- <th>Org</th> -->
 
 					<!-- <th>Última/Próxima Manutenção</th> -->
 					<!-- <th>Tempo Ativo</th> -->
 
-					<th>Marca</th>
-					<th>Acções</th>
+					<th>{m.manufacturer()}</th>
+					<th>{m.actions()}</th>
 				</tr>
 			</thead>
 
@@ -191,17 +174,15 @@
 							<td>
 								<div class="flex items-center">
 									<a href={deviceUrl} class="text-primary">
-										<!-- {machineTypeCode(machine.type)}-{machine.device_id}{machine.isOwnedByContact
-											? '-CP'
-											: ''} -->
 										{machine.device_id}
 									</a>
-
-									<!-- Online/Offline status -->
 								</div>
 							</td>
 							<td>
 								<span class="badge badge-ghost badge-sm uppercase">{machine.serialNumber}</span>
+							</td>
+							<td>
+								<span class="badge badge-ghost badge-sm uppercase">{machine.model}</span>
 							</td>
 							<td>
 								<div class="flex items-center gap-3">
@@ -258,27 +239,23 @@
 
 							<td>
 								<div class="flex items-center">
-									<div
-										class={[
-											'badge badge-outline relative flex items-center text-xs',
-											machine.online ? 'badge-success' : 'badge-neutral'
-										]}
-									>
-										{machine.online ? 'Online' : 'Offline'}
-									</div>
-
-									<!-- <div
-								class={[
-									'badge text-base-100 border-0 text-xs font-bold uppercase',
-									machine.status == 'ALERT' &&
-										'badge-error animate__animated animate__pulse animate__infinite infinite bg-red-500',
-									machine.status == 'FINE' && 'badge-success',
-									machine.status == 'PROBLEMS' && 'badge-warning',
-									machine.status == 'MONITORING' && 'badge-neutral'
-								]}
-							>
-								{machine.status}
-							</div> -->
+									{#if machine.wasFirstPinged}
+										<div
+											class={[
+												'badge badge-outline relative flex items-center text-xs',
+												machine.online ? 'badge-success' : 'badge-neutral'
+											]}
+										>
+											{machine.online ? 'Online' : 'Offline'}
+										</div>
+									{:else}
+										<button
+											onclick={() => alert('Configure device...')}
+											class="btn badge badge-outline badge-neutral relative flex items-center text-xs"
+										>
+											{m.notConfigured()}
+										</button>
+									{/if}
 								</div>
 							</td>
 							<td>
@@ -286,10 +263,10 @@
 									<div
 										class={[
 											'badge text-base-100 border-0 text-xs font-bold uppercase',
-											machine.status == 'ALERT' &&
+											machine.status == 'CRITICAL' &&
 												'badge-error animate__animated animate__pulse animate__infinite infinite bg-red-500',
-											machine.status == 'FINE' && 'badge-success',
-											machine.status == 'PROBLEMS' && 'badge-warning',
+											machine.status == 'HEALTHY' && 'badge-success',
+											machine.status == 'WARNING' && 'badge-warning',
 											machine.status == 'MONITORING' && 'badge-neutral',
 											machine.status == 'NO_DATA' && 'badge-info'
 										]}

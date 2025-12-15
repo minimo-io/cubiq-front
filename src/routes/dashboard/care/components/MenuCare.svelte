@@ -3,6 +3,7 @@
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
 	import { dashboardLeftMenuState } from '$stores/DashboardLeftMenu.state.svelte';
+	import { MachineType } from '$types/care/care.machines.types';
 	import {
 		BookOpen,
 		ClipboardMinus,
@@ -37,10 +38,13 @@
 		<li>
 			<a href={localizeHref(AppConfig.dashboards.care.base)}>Todos os ativos</a>
 		</li>
-		<li><a href={localizeHref(AppConfig.dashboards.care.base)}>Notebooks</a></li>
-		<li><a href={localizeHref(AppConfig.dashboards.care.base)}>Desktops</a></li>
-		<!-- <hr class="text-base-200 relative -right-3 mt-2 mb-1 h-[1px] w-1/2" />
-				<li><a href={localizeHref(AppConfig.dashboards.care.base)}>Peças</a></li> -->
+		{#each Object.values(MachineType) as type}
+			<li>
+				<a class="capitalize" href={localizeHref(AppConfig.dashboards.care.base)}
+					>{typeof m[type] == 'function' ? m[type]() : type}</a
+				>
+			</li>
+		{/each}
 	</ul>
 </li>
 <li>

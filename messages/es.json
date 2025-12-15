@@ -1,5 +1,9 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"actions": "Acciones",
+	"type": "Tipo",
+	"qrCode": "Codigo QR",
+	"images": "Imágenes",
 	"exit": "Salir",
 	"login": "Entrar",
 	"continue": "Continuar",
@@ -55,7 +59,7 @@
 	"refreshingIn": "Actualizando en {seconds}s",
 	"deviceAddedSuccess": "¡Dispositivo añadido con éxito!",
 	"deviceAddedError": "Error al añadir el dispositivo.",
-	"deviceAddedFailure": "Error al añadir el dispositivo debido a un error del servidor.",
+	"deviceAddedFailure": "Error al añadir el dispositivo.",
 	"addDevice": "Añadir Dispositivo",
 	"yes": "Sí",
 	"no": "No",
@@ -551,9 +555,21 @@
 	"statusMonitoring": "Monitoreando",
 	"deviceID": "ID del dispositivo",
 	"remoteAccess": "Acceso remoto",
+	"rAccess": "A. Remoto",
+
 	"serialNumber": "Número de serie",
 	"deviceType": "Tipo de dispositivo",
 	"ownedByContact": "Propiedad del contacto",
 	"selectDeviceType": "Selecionar tipo de dispositivo",
-	"selectManufacturer": "Seleccionar el fabricante"
+	"selectManufacturer": "Seleccionar el fabricante",
+	"model": "Modelo",
+	"setupMonitoring": "Configurar monitoreo",
+	"notConnected": "No conectado",
+	"connected": "Conectado",
+	"notConfigured": "No configurado",
+
+	"NOTEBOOK": "Notebooks",
+	"DESKTOP": "Desktops",
+	"ALLINONE": "All-In-Ones",
+	"SERVER": "Servidores"
 }

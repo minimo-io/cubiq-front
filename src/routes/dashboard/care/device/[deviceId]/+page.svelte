@@ -7,6 +7,7 @@
 	import { m } from '$paraglide/messages';
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
 	import { FwToast } from '$stores/Toast.state.svelte';
+	import DeviceGallery from '../../components/DeviceGallery.svelte';
 
 	let selectedEvent = $state<any>(null);
 	let isEditing = $state(false);
@@ -35,6 +36,7 @@
 </script>
 
 <Actions countdown={10} handleRefresh={() => {}} isRefreshing={false} />
+
 <div class="overflow-x-auto">
 	<table class="table w-full">
 		<thead>
@@ -66,6 +68,9 @@
 			{/if}
 		</tbody>
 	</table>
+</div>
+<div class="border-base-200 border-t">
+	<DeviceGallery />
 </div>
 
 <!-- Service Details Modal -->

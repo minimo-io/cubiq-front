@@ -1,6 +1,6 @@
 <!-- src/routes/dashboard/care/+page.svelte -->
 <script lang="ts">
-	import CareSyncDashboardDevices from '$dashboards/caresync-dash/CareSyncDashboardDevices.svelte';
+	import CareSyncDashboardDevices from './components/DevicesList.svelte';
 	import { userContextState, saveContextToCookie } from '$stores/UserContext.state.svelte.js';
 
 	let { data } = $props();

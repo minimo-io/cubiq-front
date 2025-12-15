@@ -14,12 +14,13 @@ export interface Machine {
 	serialNumber: string;
 	brand: string;
 	model: string;
+	wasFirstPinged: boolean;
 }
 
 export enum MachineStatus {
-	ALERT = 'ALERT',
-	BOM = 'FINE',
-	PROBLEMS = 'PROBLEMS',
+	CRITICAL = 'CRITICAL',
+	HEALTHY = 'HEALTHY',
+	WARNING = 'WARNING',
 	MONITORING = 'MONITORING',
 	NO_DATA = 'NO_DATA'
 }
@@ -45,6 +46,8 @@ export interface MachineContact {
 export interface Device {
 	id: string;
 	device_id: string;
+	serial_number: string;
+	was_first_pinged: boolean;
 	is_owned_by_contact: boolean;
 	device_type: string;
 	status: string;
@@ -57,6 +60,8 @@ export interface Device {
 	contact_name: string;
 	contact_email: string;
 	contact_phone: string;
+	manufacturer_model: string;
+
 	device_metadata: {
 		os: string;
 		hdd: string;

@@ -17,12 +17,13 @@ export const load: LayoutServerLoad = async ({ params }) => {
 			return knex('CareSync_Reports as r')
 				.select(
 					'r.*',
-					'r.is_owned_by_contact',
 					'c.name as contact_name',
 					'c.email as contact_email',
-					'c.phone as contact_phone'
+					'c.phone as contact_phone',
+					'mfm.manufacturer_model as model'
 				)
 				.leftJoin('CareSync_Device_Contacts as c', 'r.contact_id', 'c.id')
+				.leftJoin('Cq_Care_Manufacturers_Models as mfm', 'r.model_id', 'mfm.id')
 				.where('r.id', deviceId)
 				.first();
 		});

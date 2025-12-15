@@ -1,5 +1,9 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"actions": "Actions",
+	"type": "Type",
+	"images": "Images",
+	"qrCode": "QR Code",
 	"exit": "Exit",
 	"login": "Login",
 	"continue": "Continue",
@@ -55,7 +59,7 @@
 	"refreshingIn": "Refreshing in {seconds}s",
 	"deviceAddedSuccess": "Device added successfully!",
 	"deviceAddedError": "Failed to add device.",
-	"deviceAddedFailure": "Failed to add device due to a server error.",
+	"deviceAddedFailure": "Failed to add device.",
 	"addDevice": "Add Device",
 	"yes": "Yes",
 	"no": "No",
@@ -548,9 +552,21 @@
 	"statusMonitoring": "Monitoring",
 	"deviceID": "Device ID",
 	"remoteAccess": "Remote Access",
+	"rAccess": "R. Access",
+
 	"serialNumber": "Serial Number",
 	"deviceType": "Device Type",
 	"ownedByContact": "Owned by contact",
 	"selectDeviceType": "Select device type",
-	"selectManufacturer": "Select manufacturer"
+	"selectManufacturer": "Select manufacturer",
+	"model": "Model",
+	"setupMonitoring": "Setup monitoring",
+	"notConnected": "Not connected",
+	"connected": "Connected",
+	"notConfigured": "Not configured",
+
+	"NOTEBOOK": "Notebooks",
+	"DESKTOP": "Desktops",
+	"ALLINONE": "All-In-Ones",
+	"SERVER": "Servers"
 }
