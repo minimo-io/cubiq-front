@@ -116,7 +116,7 @@
 									<Info class="h-4 w-4" />
 								</button>
 							</div>
-							<p class="text-base-content font-bold">{m.careOptional()}</p>
+							<p class="text-base-content font-bold">{m.optional()}</p>
 						</div>
 
 						<div>
@@ -445,7 +445,7 @@
 							</div>
 						</td>
 						<td class="text-center">
-							<span class="text-base-content/80 text-sm">{m.careOptional()}</span>
+							<span class="text-base-content/80 text-sm">{m.optional()}</span>
 						</td>
 						<td class="text-center">
 							<span class="text-base-content/80 text-sm">{m.careIncludedUpTo150GB()}</span>

@@ -11,7 +11,7 @@
 // });
 
 // src/lib/stores/UserContext.state.svelte.ts
-import type { CompanyContext } from '$types/caresync-machines.types';
+import type { CompanyContext } from '$types/care/care.machines.types';
 import { browser } from '$app/environment';
 
 const COOKIE_NAME = 'user_context';

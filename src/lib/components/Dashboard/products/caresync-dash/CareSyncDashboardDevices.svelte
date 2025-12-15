@@ -6,7 +6,7 @@
 		MachineType,
 		type Device,
 		type Machine
-	} from '$lib/type/caresync-machines.types';
+	} from '$types/care/care.machines.types';
 	import { onMount, onDestroy } from 'svelte';
 	import { m } from '$paraglide/messages';
 	import apiClient from '$lib/api';
@@ -155,7 +155,8 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Usuário</th>
+					<th>Nro Série</th>
+					<th>Contato</th>
 					<th>Tipo</th>
 					<th>A. Remoto</th>
 					<th>Online</th>
@@ -164,7 +165,7 @@
 
 					<!-- <th>Última/Próxima Manutenção</th> -->
 					<!-- <th>Tempo Ativo</th> -->
-					<th>Nro Série</th>
+
 					<th>Marca</th>
 					<th>Acções</th>
 				</tr>
@@ -198,6 +199,9 @@
 
 									<!-- Online/Offline status -->
 								</div>
+							</td>
+							<td>
+								<span class="badge badge-ghost badge-sm uppercase">{machine.serialNumber}</span>
 							</td>
 							<td>
 								<div class="flex items-center gap-3">
@@ -304,9 +308,7 @@
 						{machine.nextService}
 					</td> -->
 							<!-- <td>{machine.timeActive} meses</td> -->
-							<td>
-								<span class="badge badge-ghost badge-sm uppercase">{machine.serialNumber}</span>
-							</td>
+
 							<td class="uppercase">
 								{machine.model}
 							</td>

@@ -2,11 +2,12 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { m } from '$paraglide/messages';
-	import { MachineType } from '$lib/type/caresync-machines.types';
+	import { MachineType } from '$types/care/care.machines.types.js';
 	import { goto } from '$app/navigation';
 	import apiClient from '$lib/api.js';
 	import { FwToast } from '$stores/Toast.state.svelte.js';
 	import { page } from '$app/state';
+	import { userContextState } from '$stores/UserContext.state.svelte';
 
 	let { data } = $props();
 
@@ -14,12 +15,11 @@
 	let isSuccess: boolean = $state(false);
 
 	// Company & contacts
-	let selectedCompanyId: string | undefined = $state(undefined);
+	let selectedCompanyId: string | undefined = $state(userContextState.active?.company_id);
 	let selectedContactId: string | undefined = $state(undefined);
 	// let deviceID: string = $state('NT-0032');
 
 	let filteredContacts = $state<any[]>([]);
-	let nextDeviceId = $state<any>(null);
 	let isContactsLoading = $state(false);
 
 	let user = $derived(page.data.user);
@@ -28,7 +28,6 @@
 	$effect(() => {
 		if (!selectedCompanyId) {
 			filteredContacts = [];
-			nextDeviceId = null;
 			return;
 		}
 
@@ -52,7 +51,6 @@
 					console.error('Failed to load contacts or next device id:', error);
 					FwToast.launch('Failed to load contacts or next device id', 'error');
 					filteredContacts = [];
-					nextDeviceId = null;
 				}
 			})
 			.finally(() => {
@@ -120,11 +118,12 @@
 					onchange={(e) => (selectedCompanyId = (e.target as HTMLSelectElement).value)}
 				>
 					<option value="">{m.selectOrganization()}</option>
-					<!-- {#each data.companies as company}
-						<option value={company.id}>{company.name}</option>
-					{/each} -->
 					{#each data.contexts as context}
-						<option value={context.company_id}>{context.company_name}</option>
+						<option
+							value={context.company_id}
+							selected={context.company_id == userContextState.active?.company_id}
+							>{context.company_name}</option
+						>
 					{/each}
 				</select>
 			</div>
@@ -132,7 +131,7 @@
 			<!-- Contact -->
 			<div class="form-control mb-4">
 				<label for="contact_id" class="label">
-					<span class="label-text text-gray-300">Contact</span>
+					<span class="label-text text-gray-300">{m.contact()}</span>
 				</label>
 				<select
 					id="contact_id"
@@ -143,7 +142,7 @@
 					{#if !selectedContactId && isContactsLoading}
 						<option value="">{m.loadingContacts()}</option>
 					{:else}
-						<option value="">{m.selectContact()}</option>
+						<option value="">{m.selectContact()} ({m.optional()})</option>
 					{/if}
 
 					{#if isContactsLoading}
@@ -173,13 +172,27 @@
 					<span class="label-text text-gray-300">{m.deviceType()}</span>
 				</label>
 				<select id="device_type" name="device_type" class="select select-bordered w-full">
-					<option value="">Select device type (optional)</option>
+					<option value="">{m.selectDeviceType()} ({m.optional()})</option>
 					{#each Object.values(MachineType) as type}
 						<option value={type}>{type}</option>
 					{/each}
 				</select>
 			</div>
 
+			<!-- Manufacturer -->
+			<div class="form-control mb-4">
+				<label for="manufacturer" class="label">
+					<span class="label-text text-gray-300">{m.manufacturer()}</span>
+				</label>
+				<select id="manufacturer" name="manufacturer_id" class="select select-bordered w-full">
+					<option value="">{m.selectManufacturer()} ({m.optional()})</option>
+					{#each data.manufacturers as manufacturer}
+						<option value={manufacturer.id}>{manufacturer.name}</option>
+					{/each}
+				</select>
+			</div>
+
+			<!-- Serial number -->
 			<div class="form-control mb-4">
 				<label for="serial_number" class="label">
 					<span class="label-text text-gray-300">{m.serialNumber()}</span>

@@ -37,6 +37,9 @@
 	"store": "Loja",
 	"onlineStore": "Loja online",
 	"status": "Status",
+	"manufacturer": "Fabricante",
+	"optional": "Opcional",
+	"contact": "Contato",
 
 	"logoutMessage": "Até logo! Você foi desconectado(a).",
 
@@ -496,7 +499,6 @@
 	"careBackupRecovery": "Backup e Recuperação de Sistemas",
 	"careBackupRecoveryDescription": "Os serviços de cópia de segurança e recuperação garantem que seus dados críticos estejam protegidos e possam ser restaurados rapidamente em caso de falha do sistema.",
 
-	"careOptional": "Opcional",
 	"careIncludedUpTo150GB": "Incluído (até 150GB/ativo)",
 	"careMonitoringDashboards": "Dashboards de Acompanhamento",
 	"careMonitoringDashboardsDescription": "Acesse painéis em tempo real para monitorar o desempenho dos ativos, métricas de saúde e receber alertas sobre possíveis problemas antes que se tornem críticos.",
@@ -545,7 +547,7 @@
 	"selectOrganization": "Selecione uma organização",
 
 	"loadingContacts": "Loading contacts...",
-	"selectContact": "Selecione um contato (opcional)",
+	"selectContact": "Selecione um contato",
 
 	"statusHealthy": "Saudável",
 	"statusWarning": "Precaução",
@@ -555,5 +557,7 @@
 	"remoteAccess": "Acesso Remoto",
 	"serialNumber": "Número de Série",
 	"deviceType": "Tipo de dispositivo",
-	"ownedByContact": "Propriedade do contato"
+	"ownedByContact": "Propriedade do contato",
+	"selectDeviceType": "Selecionar o tipo de dispositivo",
+	"selectManufacturer": "Selecionar o fabricante"
 }

@@ -36,6 +36,9 @@
 	"store": "Tienda",
 	"onlineStore": "Tienda online",
 	"estado": "Estado",
+	"manufacturer": "Fabricante",
+	"optional": "Opcional",
+	"contact": "Contacto",
 
 	"logoutMessage": "¡Adiós! Cerraste la sesión.",
 
@@ -493,7 +496,6 @@
 	"careBackupRecovery": "Backup y Recuperación de Sistemas",
 	"careBackupRecoveryDescription": "Los servicios de copia de seguridad y recuperación garantizan que sus datos críticos estén protegidos y puedan restaurarse rápidamente en caso de un fallo del sistema.",
 
-	"careOptional": "Opcional",
 	"careIncludedUpTo150GB": "Incluido (hasta 150GB/activo)",
 	"careMonitoringDashboards": "Dashboards de Seguimiento",
 	"careMonitoringDashboardsDescription": "Accede a paneles en tiempo real para monitorear el rendimiento de los activos, las métricas de salud y recibir alertas sobre posibles problemas antes de que se vuelvan críticos.",
@@ -541,7 +543,7 @@
 	"organizations": "Organizaciones",
 	"selectOrganization": "Selecciona una organización",
 	"loadingContacts": "Cargando contactos...",
-	"selectContact": "Seleccione un contacto (opcional)",
+	"selectContact": "Seleccione un contacto",
 
 	"statusHealthy": "Saludable",
 	"statusWarning": "Advertencia",
@@ -551,5 +553,7 @@
 	"remoteAccess": "Acceso remoto",
 	"serialNumber": "Número de serie",
 	"deviceType": "Tipo de dispositivo",
-	"ownedByContact": "Propiedad del contacto"
+	"ownedByContact": "Propiedad del contacto",
+	"selectDeviceType": "Selecionar tipo de dispositivo",
+	"selectManufacturer": "Seleccionar el fabricante"
 }

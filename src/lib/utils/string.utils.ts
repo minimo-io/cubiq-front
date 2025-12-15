@@ -1,5 +1,5 @@
 import type { PostAuthor } from '$types/blog.types';
-import type { MachineType } from '$types/caresync-machines.types';
+import type { MachineType } from '$types/care/care.machines.types';
 
 export function capitalize(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();

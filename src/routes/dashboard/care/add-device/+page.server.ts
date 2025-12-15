@@ -6,10 +6,12 @@ import { AuthService } from '$services/auth.service';
 import { localizeHref } from '$paraglide/runtime';
 import { Product } from '$types/products.types';
 import apiClient from '$lib/api';
+import type { Manufacturer } from '$types/care/care.manufacturers.types';
 
 export const load: PageServerLoad = async (event) => {
 	// const userOnCookie = cookies.get('user');
 	const userData = event.locals.user;
+	const origin = event.url.origin;
 
 	if (!userData) {
 		throw redirect(302, localizeHref('/login'));
@@ -18,8 +20,18 @@ export const load: PageServerLoad = async (event) => {
 	try {
 		// get companies for which the user has permission
 		const contexts = await AuthService.getUserCompanyContexts(userData.id, Product.CARE);
+		// get list of device manufacturers
+		let manufacturersList: Manufacturer[] = [];
+		try {
+			const manufacturers = await apiClient.get(`/care/manufacturers`, {
+				Origin: origin
+			});
+			manufacturersList = Array.isArray(manufacturers?.data?.data) ? manufacturers.data.data : [];
+		} catch (err) {
+			console.error(`Error fetching manufacturers`, err);
+		}
 
-		return { contexts };
+		return { contexts, manufacturers: manufacturersList };
 	} catch (error) {
 		console.error('Error loading data:', error);
 		return { companies: [], contacts: [] };
@@ -35,6 +47,7 @@ export const actions: Actions = {
 		const status = data.get('status')?.toString();
 		const device_type = data.get('device_type')?.toString() || null;
 		const serial_number = data.get('serial_number')?.toString() || null;
+		const manufacturer_id = data.get('manufacturer_id')?.toString() || null;
 		const remote_access = data.get('remote_access') === 'on';
 		const owned_by_contact = data.get('owned_by_contact') === 'on';
 
@@ -51,7 +64,8 @@ export const actions: Actions = {
 			device_type,
 			serial_number,
 			remote_access,
-			owned_by_contact
+			owned_by_contact,
+			manufacturer_id
 		};
 
 		try {

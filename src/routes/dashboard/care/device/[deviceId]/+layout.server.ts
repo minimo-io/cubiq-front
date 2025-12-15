@@ -3,7 +3,7 @@
 import type { LayoutServerLoad } from './$types';
 import { postgreService } from '$lib/databases/postgre.service';
 import { error } from '@sveltejs/kit';
-import type { Device, DeviceHistoryEvent } from '$lib/type/caresync-machines.types';
+import type { Device, DeviceHistoryEvent } from '$types/care/care.machines.types';
 
 export const load: LayoutServerLoad = async ({ params }) => {
 	const { deviceId } = params;

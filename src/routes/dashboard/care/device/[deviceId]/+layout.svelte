@@ -4,7 +4,7 @@
 	import type { LayoutData } from './$types';
 	import { Eye, Image, Laptop, PcCase } from '@lucide/svelte';
 	import { machineTypeCode } from '$utils';
-	import type { Device } from '$types/caresync-machines.types';
+	import type { Device } from '$types/care/care.machines.types';
 	import { m } from '$paraglide/messages';
 	import { formatPhoneNumberForWhatsapp } from '$utils/phone.utils';
 

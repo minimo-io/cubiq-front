@@ -36,6 +36,9 @@
 	"store": "Store",
 	"onlineStore": "Online Store",
 	"status": "Status",
+	"manufacturer": "Manufacturer",
+	"optional": "Optional",
+	"contact": "Contact",
 
 	"logoutMessage": "Goodbye! You've been logged out.",
 
@@ -493,7 +496,6 @@
 	"careBackupRecovery": "Backup and System Recovery",
 	"careBackupRecoveryDescription": "Backup and recovery services ensure your critical data is protected and can be restored quickly in case of system failure.",
 
-	"careOptional": "Optional",
 	"careIncludedUpTo150GB": "Included (up to 150GB/asset)",
 	"careMonitoringDashboards": "Monitoring Dashboards",
 	"careMonitoringDashboardsDescription": "Access real-time dashboards to monitor asset performance, health metrics, and receive alerts for potential issues before they become critical.",
@@ -538,7 +540,7 @@
 	"organizations": "Organizations",
 	"selectOrganization": "Select an organization",
 	"loadingContacts": "Loading contacts...",
-	"selectContact": "Select a contact (optional)",
+	"selectContact": "Select a contact",
 
 	"statusHealthy": "Healthy",
 	"statusWarning": "Warning",
@@ -548,5 +550,7 @@
 	"remoteAccess": "Remote Access",
 	"serialNumber": "Serial Number",
 	"deviceType": "Device Type",
-	"ownedByContact": "Owned by contact"
+	"ownedByContact": "Owned by contact",
+	"selectDeviceType": "Select device type",
+	"selectManufacturer": "Select manufacturer"
 }
