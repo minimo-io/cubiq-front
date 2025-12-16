@@ -546,10 +546,6 @@
 	"loadingContacts": "Loading contacts...",
 	"selectContact": "Select a contact",
 
-	"statusHealthy": "Healthy",
-	"statusWarning": "Warning",
-	"statusCritical": "Critical",
-	"statusMonitoring": "Monitoring",
 	"deviceID": "Device ID",
 	"remoteAccess": "Remote Access",
 	"rAccess": "R. Access",
@@ -559,14 +555,37 @@
 	"ownedByContact": "Owned by contact",
 	"selectDeviceType": "Select device type",
 	"selectManufacturer": "Select manufacturer",
+	"selectTechnician": "Select a technician",
+	"selectServiceType": "Select an service type",
+
 	"model": "Model",
 	"setupMonitoring": "Setup monitoring",
 	"notConnected": "Not connected",
 	"connected": "Connected",
 	"notConfigured": "Not configured",
+	"serviceDate": "Service date",
+	"serviceType": "Service type",
+	"technician": "Technician",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",
 	"ALLINONE": "All-In-Ones",
-	"SERVER": "Servers"
+	"SERVER": "Servers",
+
+	"HEALTHY": "Healthy",
+	"WARNING": "Warning",
+	"CRITICAL": "Critical",
+	"MONITORING": "Monitoring",
+
+	"OS_SYSTEM_RESET": "OS System Reset",
+	"OS_SYSTEM_ERROR": "OS System Error",
+	"SYSTEM_PERFORMANCE_ALERT": "System Performance Alert",
+	"SYSTEM_CLEANUP": "System Cleanup",
+	"SCHEDULED_MAINTENANCE": "Scheduled Maintenance",
+	"SOFTWARE_INSTALLATION_UPDATE": "Software Installation/Update",
+	"HARDWARE_UPGRADE": "Hardware Upgrade",
+	"HARDWARE_SOUND_PROBLEM": "Hardware (Sound) Problem",
+	"GENERAL_OTHER_FIXING": "General / Other Fixing",
+	"LIFECYCLE_ASSET_RETIREMENT": "Lifecycle: Asset Retirement",
+	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Lifecycle: New Asset Deployment"
 }

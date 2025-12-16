@@ -33,7 +33,13 @@
 			height: 'h-[40px]',
 			opacity: 'opacity-55'
 		},
-
+		{
+			href: '#',
+			src: '/clients/whitemedia-logo.png',
+			alt: 'Whitemedia',
+			height: 'h-[25px]',
+			opacity: 'opacity-55'
+		},
 		{
 			href: 'https://braaay.com',
 			src: '/clients/braaay-logo-new.svg',

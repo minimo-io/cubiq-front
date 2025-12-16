@@ -3,7 +3,7 @@
 	import { onMount, type Snippet } from 'svelte';
 	import type { LayoutData } from './$types';
 	import { Eye, Image, Laptop, PcCase } from '@lucide/svelte';
-	import type { Device } from '$types/care/care.machines.types';
+	import type { Device } from '$types/care/care.devices.types';
 	import { m } from '$paraglide/messages';
 	import { formatPhoneNumberForWhatsapp } from '$utils/phone.utils';
 	import DeviceScanCode from '../../components/DeviceScanCode.svelte';
@@ -18,11 +18,6 @@
 
 	let device: Device = $state(data.device);
 	let deviceId: string = $derived(device.id);
-	// let deviceName = $derived(
-	// 	`${machineTypeCode(device.device_type)}-${device.device_id}${
-	// 		device.is_owned_by_contact ? '-CP' : ''
-	// 	}`
-	// );
 
 	let deviceName = $derived(`${device.device_id}`);
 
@@ -147,6 +142,7 @@
 					<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
 						<div class="mr-3">{m.model()}:</div>
 						<span class="text-base-content text-base font-black">
+							{device.manufacturer_name}
 							{device.manufacturer_model}
 						</span>
 					</div>

@@ -1,12 +1,27 @@
-export interface Machine {
+export enum DeviceStatus {
+	CRITICAL = 'CRITICAL',
+	HEALTHY = 'HEALTHY',
+	WARNING = 'WARNING',
+	MONITORING = 'MONITORING',
+	NO_DATA = 'NO_DATA'
+}
+
+export enum DeviceType {
+	NOTEBOOK = 'NOTEBOOK',
+	DESKTOP = 'DESKTOP',
+	ALLINONE = 'ALLINONE',
+	SERVER = 'SERVER'
+}
+
+export interface DeviceForList {
 	id: string;
 	device_id: string;
 	online: boolean;
-	status: MachineStatus | string;
-	type: MachineType;
+	status: DeviceStatus | string;
+	type: DeviceType;
 	remoteAccess: boolean;
 	organization: string;
-	user: MachineContact;
+	user: DeviceContact;
 	isOwnedByContact: boolean;
 	lastService: string;
 	nextService: string;
@@ -15,24 +30,13 @@ export interface Machine {
 	brand: string;
 	model: string;
 	wasFirstPinged: boolean;
+	manufacturer: {
+		name: string;
+		model: string;
+	};
 }
 
-export enum MachineStatus {
-	CRITICAL = 'CRITICAL',
-	HEALTHY = 'HEALTHY',
-	WARNING = 'WARNING',
-	MONITORING = 'MONITORING',
-	NO_DATA = 'NO_DATA'
-}
-
-export enum MachineType {
-	NOTEBOOK = 'NOTEBOOK',
-	DESKTOP = 'DESKTOP',
-	ALLINONE = 'ALLINONE',
-	SERVER = 'SERVER'
-}
-
-export interface MachineContact {
+export interface DeviceContact {
 	name: string;
 	state: string;
 	city: string;
@@ -60,6 +64,7 @@ export interface Device {
 	contact_name: string;
 	contact_email: string;
 	contact_phone: string;
+	manufacturer_name: string;
 	manufacturer_model: string;
 
 	device_metadata: {

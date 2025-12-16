@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { machineTypeCode } from '$utils/string.utils';
 	import { localizeHref } from '$paraglide/runtime';
 	import { formatEventTime } from '$utils/date.utils';
 	import { AppConfig } from '$lib';
@@ -53,9 +52,7 @@
 						<tr>
 							<td class="text-base-content">
 								<a href={deviceUrl} class="text-primary">
-									{machineTypeCode(
-										alert.device_type
-									)}-{alert.device_report_id}{alert.is_owned_by_contact ? '-CP' : ''}
+									{alert.device_report_id}
 								</a>
 							</td>
 							<td class="text-base-content">{formatEventTime(alert.created_at)}</td>

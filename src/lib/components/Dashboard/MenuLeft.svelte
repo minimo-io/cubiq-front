@@ -12,7 +12,7 @@
 	import MenuNotes from '../../../routes/dashboard/notes/components/MenuNotes.svelte';
 	import { m } from '$paraglide/messages';
 	import { saveContextToCookie, userContextState } from '$stores/UserContext.state.svelte';
-	import type { CompanyContext } from '$types/care/care.machines.types';
+	import type { CompanyContext } from '$types/care/care.devices.types';
 
 	// State to track if menu is collapsed
 	let isCollapsed = $derived(dashboardLeftMenuState.collapsed);

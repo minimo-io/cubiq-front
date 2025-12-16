@@ -3,7 +3,7 @@
 import type { LayoutServerLoad } from './$types';
 import { postgreService } from '$lib/databases/postgre.service';
 import { error } from '@sveltejs/kit';
-import type { Device, DeviceHistoryEvent } from '$types/care/care.machines.types';
+import type { Device, DeviceHistoryEvent } from '$types/care/care.devices.types';
 
 export const load: LayoutServerLoad = async ({ params }) => {
 	const { deviceId } = params;
@@ -20,9 +20,11 @@ export const load: LayoutServerLoad = async ({ params }) => {
 					'c.name as contact_name',
 					'c.email as contact_email',
 					'c.phone as contact_phone',
-					'mfm.manufacturer_model as model'
+					'mfm.manufacturer_model as manufacturer_model',
+					'mf.name as manufacturer_name'
 				)
 				.leftJoin('CareSync_Device_Contacts as c', 'r.contact_id', 'c.id')
+				.leftJoin('Cq_Care_Manufacturers as mf', 'r.manufacturer_id', 'mf.id')
 				.leftJoin('Cq_Care_Manufacturers_Models as mfm', 'r.model_id', 'mfm.id')
 				.where('r.id', deviceId)
 				.first();

@@ -5,7 +5,7 @@ import { dashboardCommonActions } from '..';
 import type { PageServerLoad } from '../$types';
 import { localizeHref } from '$paraglide/runtime';
 import { Product } from '$types/products.types';
-import type { CompanyContext } from '$types/care/care.machines.types';
+import type { CompanyContext } from '$types/care/care.devices.types';
 
 export const actions = dashboardCommonActions;
 

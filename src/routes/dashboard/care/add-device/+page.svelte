@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { m } from '$paraglide/messages';
-	import { MachineType } from '$types/care/care.machines.types.js';
+	import { DeviceType } from '$types/care/care.devices.types.js';
 	import { goto } from '$app/navigation';
 	import apiClient from '$lib/api.js';
 	import { FwToast } from '$stores/Toast.state.svelte.js';
@@ -160,10 +160,10 @@
 					<span class="label-text text-gray-300">{m.status()}</span>
 				</label>
 				<select id="status" name="status" required class="select select-bordered w-full">
-					<option value="HEALTHY">{m.statusHealthy()}</option>
-					<option value="WARNING">{m.statusWarning()}</option>
-					<option value="CRITICAL">{m.statusCritical()}</option>
-					<option value="MONITORING">{m.statusMonitoring()}</option>
+					<option value="HEALTHY">{m.HEALTHY()}</option>
+					<option value="WARNING">{m.WARNING()}</option>
+					<option value="CRITICAL">{m.CRITICAL()}</option>
+					<option value="MONITORING">{m.MONITORING()}</option>
 				</select>
 			</div>
 
@@ -173,7 +173,7 @@
 				</label>
 				<select id="device_type" name="device_type" class="select select-bordered w-full">
 					<option value="">{m.selectDeviceType()} ({m.optional()})</option>
-					{#each Object.values(MachineType) as type}
+					{#each Object.values(DeviceType) as type}
 						<option value={type}>{type}</option>
 					{/each}
 				</select>

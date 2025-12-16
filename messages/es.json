@@ -549,10 +549,6 @@
 	"loadingContacts": "Cargando contactos...",
 	"selectContact": "Seleccione un contacto",
 
-	"statusHealthy": "Saludable",
-	"statusWarning": "Advertencia",
-	"statusCritical": "Crítico",
-	"statusMonitoring": "Monitoreando",
 	"deviceID": "ID del dispositivo",
 	"remoteAccess": "Acceso remoto",
 	"rAccess": "A. Remoto",
@@ -562,14 +558,37 @@
 	"ownedByContact": "Propiedad del contacto",
 	"selectDeviceType": "Selecionar tipo de dispositivo",
 	"selectManufacturer": "Seleccionar el fabricante",
+	"selectTechnician": "Seleccionar un técnico",
+	"selectServiceType": "Seleccionar un tipo de servicio",
+
 	"model": "Modelo",
 	"setupMonitoring": "Configurar monitoreo",
 	"notConnected": "No conectado",
 	"connected": "Conectado",
 	"notConfigured": "No configurado",
+	"serviceDate": "Fecha de servicio",
+	"serviceType": "Tipo de servicio",
+	"technician": "Técnico",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",
 	"ALLINONE": "All-In-Ones",
-	"SERVER": "Servidores"
+	"SERVER": "Servidores",
+
+	"HEALTHY": "Saludable",
+	"WARNING": "Advertencia",
+	"CRITICAL": "Crítico",
+	"MONITORING": "Monitoreando",
+
+	"OS_SYSTEM_RESET": "Restablecimiento del Sistema Operativo",
+	"OS_SYSTEM_ERROR": "Error del Sistema Operativo",
+	"SYSTEM_PERFORMANCE_ALERT": "Alerta de Rendimiento del Sistema",
+	"SYSTEM_CLEANUP": "Limpieza del Sistema",
+	"SCHEDULED_MAINTENANCE": "Mantenimiento Programado",
+	"SOFTWARE_INSTALLATION_UPDATE": "Instalación/Actualización de Software",
+	"HARDWARE_UPGRADE": "Actualización de Hardware",
+	"HARDWARE_SOUND_PROBLEM": "Problema de Hardware (Sonido)",
+	"GENERAL_OTHER_FIXING": "Reparación General / Otros Arreglos",
+	"LIFECYCLE_ASSET_RETIREMENT": "Ciclo de Vida: Retiro de Activo",
+	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Ciclo de Vida: Despliegue de Nuevo Activo"
 }

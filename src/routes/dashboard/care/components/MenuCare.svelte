@@ -3,7 +3,8 @@
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
 	import { dashboardLeftMenuState } from '$stores/DashboardLeftMenu.state.svelte';
-	import { MachineType } from '$types/care/care.machines.types';
+	import { DeviceType } from '$types/care/care.devices.types';
+	import { getTranslationFromCode } from '$utils/translations.utils';
 	import {
 		BookOpen,
 		ClipboardMinus,
@@ -38,11 +39,11 @@
 		<li>
 			<a href={localizeHref(AppConfig.dashboards.care.base)}>Todos os ativos</a>
 		</li>
-		{#each Object.values(MachineType) as type}
+		{#each Object.values(DeviceType) as type}
 			<li>
-				<a class="capitalize" href={localizeHref(AppConfig.dashboards.care.base)}
-					>{typeof m[type] == 'function' ? m[type]() : type}</a
-				>
+				<a class="capitalize" href={localizeHref(AppConfig.dashboards.care.base)}>
+					{getTranslationFromCode(type)}
+				</a>
 			</li>
 		{/each}
 	</ul>

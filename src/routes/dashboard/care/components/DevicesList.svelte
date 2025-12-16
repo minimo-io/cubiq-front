@@ -2,24 +2,24 @@
 <script lang="ts">
 	import { Check, Laptop, PcCase } from '@lucide/svelte';
 	import {
-		MachineStatus,
-		MachineType,
+		DeviceStatus,
+		DeviceType,
 		type Device,
-		type Machine
-	} from '$types/care/care.machines.types';
+		type DeviceForList
+	} from '$types/care/care.devices.types';
 	import { onMount, onDestroy } from 'svelte';
 	import { m } from '$paraglide/messages';
 	import apiClient from '$lib/api';
 	import CareSyncDashboardDevicesActions from '../../../../lib/components/Dashboard/products/caresync-dash/CareSyncDashboardDevicesActions.svelte';
 	import { AppConfig } from '$lib/configs';
 	import { localizeHref } from '$paraglide/runtime';
-	import { machineTypeCode } from '$utils';
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
 	import { userContextState } from '$stores/UserContext.state.svelte';
 	import { page } from '$app/state';
+	import { getTranslationFromCode } from '$utils/translations.utils';
 
 	let user = $derived(page.data.user);
-	let machines: Machine[] = $state([]);
+	let devices: DeviceForList[] = $state([]);
 
 	let isLoading = $state(true);
 	let isRefreshing = $state(false);
@@ -36,8 +36,8 @@
 			const apiData = response.data.data;
 			if (!apiData) throw new Error('No API Data fetched!');
 
-			machines = apiData.map((device: any): Machine => {
-				const getStatus = (metrics: any, deviceStatus: MachineStatus): MachineStatus | string => {
+			devices = apiData.map((device: any): DeviceForList => {
+				const getStatus = (metrics: any, deviceStatus: DeviceStatus): DeviceStatus | string => {
 					return deviceStatus;
 				};
 
@@ -50,9 +50,15 @@
 					return months <= 0 ? 0 : months;
 				};
 
+				// console.log('DEVICE', device);
+
 				return {
 					id: device.id,
 					device_id: device.deviceId,
+					manufacturer: {
+						name: device.manufacturer.name,
+						model: device.manufacturer.model
+					},
 					online: device.status === 'active',
 					status: getStatus(device.metrics, device.status),
 					type: device.type,
@@ -149,7 +155,6 @@
 					<!-- <th>Última/Próxima Manutenção</th> -->
 					<!-- <th>Tempo Ativo</th> -->
 
-					<th>{m.manufacturer()}</th>
 					<th>{m.actions()}</th>
 				</tr>
 			</thead>
@@ -165,39 +170,45 @@
 					<tr>
 						<td colspan="11" class="text-error text-center">{error}</td>
 					</tr>
-				{:else if machines.length <= 0}
+				{:else if devices.length <= 0}
 					<tr><td colspan="9" class="text-center">{m.noDevicesConfigured()}</td></tr>
 				{:else}
-					{#each machines as machine, i (i)}
-						{@const deviceUrl = localizeHref(`/dashboard/care/device/${machine.id}`)}
+					{#each devices as device, i (i)}
+						{@const deviceUrl = localizeHref(`/dashboard/care/device/${device.id}`)}
 						<tr class={{ '': i == 0 }}>
+							<!-- Id -->
 							<td>
 								<div class="flex items-center">
 									<a href={deviceUrl} class="text-primary">
-										{machine.device_id}
+										{device.device_id}
 									</a>
 								</div>
 							</td>
+							<!-- Serial number  -->
 							<td>
-								<span class="badge badge-ghost badge-sm uppercase">{machine.serialNumber}</span>
+								<span class="badge badge-ghost badge-sm uppercase">{device.serialNumber}</span>
 							</td>
+							<!-- Manufacturer/Model -->
 							<td>
-								<span class="badge badge-ghost badge-sm uppercase">{machine.model}</span>
+								<!-- <span class="badge badge-ghost badge-sm uppercase"> -->
+								{device.manufacturer.name}
+								{device.manufacturer.model}
+								<!-- </span> -->
 							</td>
 							<td>
 								<div class="flex items-center gap-3">
-									{#if machine.user && machine.user.name}
-										{#if machine.user.image}
+									{#if device.user && device.user.name}
+										{#if device.user.image}
 											<div class="avatar">
 												<div class="mask mask-squircle aspect-square h-8">
-													<img src={machine.user.image} alt="user" />
+													<img src={device.user.image} alt="user" />
 												</div>
 											</div>
 										{/if}
 										<div>
-											<div class="text-base font-bold">{machine.user.name}</div>
+											<div class="text-base font-bold">{device.user.name}</div>
 											<div class=" text-xs opacity-50">
-												{machine.user.state}, {machine.user.city}
+												{device.user.state}, {device.user.city}
 											</div>
 										</div>
 									{:else}
@@ -213,12 +224,12 @@
 							</td>
 							<td>
 								<div class="flex items-center">
-									{#if machine.type == 'NOTEBOOK'}
+									{#if device.type == 'NOTEBOOK'}
 										<Laptop class="mr-[1px] aspect-square h-4" />
 									{:else}
 										<PcCase class="mr-[1px] aspect-square h-4" />
 									{/if}
-									{machine.type}
+									{device.type}
 								</div>
 							</td>
 							<td>
@@ -226,10 +237,10 @@
 									<Check
 										class={[
 											'mr-[1px] aspect-square h-4 ',
-											machine.remoteAccess ? 'text-green-500' : 'text-red-500'
+											device.remoteAccess ? 'text-green-500' : 'text-red-500'
 										]}
 									/>
-									{#if machine.remoteAccess}
+									{#if device.remoteAccess}
 										{m.yes()}
 									{:else}
 										{m.no()}
@@ -239,14 +250,14 @@
 
 							<td>
 								<div class="flex items-center">
-									{#if machine.wasFirstPinged}
+									{#if device.wasFirstPinged}
 										<div
 											class={[
 												'badge badge-outline relative flex items-center text-xs',
-												machine.online ? 'badge-success' : 'badge-neutral'
+												device.online ? 'badge-success' : 'badge-neutral'
 											]}
 										>
-											{machine.online ? 'Online' : 'Offline'}
+											{device.online ? 'Online' : 'Offline'}
 										</div>
 									{:else}
 										<button
@@ -263,32 +274,19 @@
 									<div
 										class={[
 											'badge text-base-100 border-0 text-xs font-bold uppercase',
-											machine.status == 'CRITICAL' &&
+											device.status == 'CRITICAL' &&
 												'badge-error animate__animated animate__pulse animate__infinite infinite bg-red-500',
-											machine.status == 'HEALTHY' && 'badge-success',
-											machine.status == 'WARNING' && 'badge-warning',
-											machine.status == 'MONITORING' && 'badge-neutral',
-											machine.status == 'NO_DATA' && 'badge-info'
+											device.status == 'HEALTHY' && 'badge-success',
+											device.status == 'WARNING' && 'badge-warning',
+											device.status == 'MONITORING' && 'badge-neutral',
+											device.status == 'NO_DATA' && 'badge-info'
 										]}
 									>
-										{machine.status}
+										{getTranslationFromCode(device.status)}
 									</div>
 								</div>
 							</td>
-							<!-- <td>{machine.organization}</td> -->
 
-							<!-- <td>
-						<span class="text-neutral">
-							{machine.lastService}
-						</span>
-						<span class="mx-2"> › </span>
-						{machine.nextService}
-					</td> -->
-							<!-- <td>{machine.timeActive} meses</td> -->
-
-							<td class="uppercase">
-								{machine.model}
-							</td>
 							<th>
 								<DashboardButton type="primary" href={deviceUrl}>
 									{m.open()}

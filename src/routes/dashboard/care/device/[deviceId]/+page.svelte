@@ -8,6 +8,7 @@
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
 	import { FwToast } from '$stores/Toast.state.svelte';
 	import DeviceGallery from '../../components/DeviceGallery.svelte';
+	import { getTranslationFromCode } from '$utils/translations.utils';
 
 	let selectedEvent = $state<any>(null);
 	let isEditing = $state(false);
@@ -41,10 +42,10 @@
 	<table class="table w-full">
 		<thead>
 			<tr>
-				<th>Event Time</th>
-				<th>Event Type</th>
-				<th>Technician</th>
-				<th>Content</th>
+				<th>{m.serviceDate()}</th>
+				<th>{m.serviceType()}</th>
+				<th>{m.technician()}</th>
+				<th>{m.actions()}</th>
 			</tr>
 		</thead>
 		<tbody class="text-white">
@@ -52,7 +53,7 @@
 				{#each data.deviceHistory as event, i (i)}
 					<tr>
 						<td>{formatEventTime(event.event_time)}</td>
-						<td>{event.event_type}</td>
+						<td>{getTranslationFromCode(event.event_type)}</td>
 						<td>{event.technician_name}</td>
 						<td>
 							<DashboardButton type="primary" onclick={() => openModal(event)}>

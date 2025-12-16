@@ -6,8 +6,7 @@
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
 	import { m } from '$paraglide/messages';
 	import { FwToast } from '$stores/Toast.state.svelte';
-
-	console.log('Client-side script loaded.');
+	import { getTranslationFromCode } from '$utils/translations.utils';
 
 	let { data, form }: PageProps = $props();
 
@@ -18,6 +17,8 @@
 	const hours = now.getHours().toString().padStart(2, '0');
 	const minutes = now.getMinutes().toString().padStart(2, '0');
 	let eventTime = $state(`${year}-${month}-${day}T${hours}:${minutes}`);
+
+	const serviceTypes = $derived(data.serviceTypes);
 
 	$effect(() => {
 		if (form?.success) {
@@ -32,15 +33,16 @@
 	});
 </script>
 
-<div class="rounded-box text-base-content container mx-auto h-full max-w-xl p-8 text-left">
-	<h1 class="text-base-content mb-6 text-center text-lg font-bold">
-		Add Service for Device {data.deviceId}
+<div class="rounded-box text-base-content container mx-auto h-full max-w-xl p-4 text-left md:p-8">
+	<h1 class="text-base-content mb-6 text-left text-lg font-bold md:text-center">
+		{m.addService()}
+		<!-- {data.deviceId} -->
 	</h1>
 
 	<form method="POST" action="?" use:enhance class="space-y-4">
 		<div class="form-control">
 			<label for="event_time" class="label">
-				<span class="label-text">Event Time</span>
+				<span class="label-text">{m.serviceDate()}</span>
 			</label>
 			<input
 				type="datetime-local"
@@ -54,7 +56,7 @@
 
 		<div class="form-control">
 			<label for="technician_id" class="label">
-				<span class="label-text">Technician</span>
+				<span class="label-text">{m.technician()}</span>
 			</label>
 			<select
 				id="technician_id"
@@ -62,7 +64,7 @@
 				class="select select-bordered w-full"
 				required
 			>
-				<option value="" disabled selected>Select a technician</option>
+				<option value="" disabled selected>{m.selectTechnician()}</option>
 				{#each data.technicians as technician}
 					<option value={technician.id}>{technician.name}</option>
 				{/each}
@@ -71,19 +73,16 @@
 
 		<div class="form-control">
 			<label for="event_type" class="label">
-				<span class="label-text">Event Type</span>
+				<span class="label-text">{m.serviceType()}</span>
 			</label>
 			<select id="event_type" name="event_type" class="select select-bordered w-full" required>
-				<option value="" disabled selected>Select an event type</option>
-				<option value="OS_RESET">OS Reset</option>
-				<option value="OS_ERROR">OS Error</option>
-				<option value="PERFORMANCE_ALERT">Performance Alert</option>
-				<option value="CLEANUP">Cleanup</option>
-				<option value="SCHEDULED_MAINTENANCE">Scheduled Maintenance</option>
-				<option value="SOFTWARE_INSTALL_OR_UPDATE">Software Install/Update</option>
-				<option value="HARDWARE_UPGRADE">Hardware Upgrade</option>
-				<option value="SOUND_PROBLEM">Sound Problem</option>
-				<option value="FIXING">Other Fixing</option>
+				<option value="" disabled selected>{m.selectServiceType()}</option>
+				{#each serviceTypes as service}
+					<option value={service.service_type_code}>
+						<!-- {service.service_type_code} -->
+						{getTranslationFromCode(service.service_type_code)}
+					</option>
+				{/each}
 			</select>
 		</div>
 

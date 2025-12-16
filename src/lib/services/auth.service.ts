@@ -5,7 +5,7 @@ import { postgreService } from '$lib/databases';
 import jwt from 'jsonwebtoken';
 import { JWT_SECRET } from '$env/static/private';
 import { getUsername } from '$utils';
-import type { CompanyContext } from '$types/care/care.machines.types';
+import type { CompanyContext } from '$types/care/care.devices.types';
 // import { browser } from '$app/environment';
 
 export interface User {
