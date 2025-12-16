@@ -1,19 +1,28 @@
+// src/routes/dashboard/care/device/[deviceId]/add-service/+page.server.ts
 import { postgreService } from '$lib/databases/postgre.service';
 import type { Actions, PageServerLoad } from './$types';
 import { fail } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async ({ params }) => {
+	// Get technicians
 	const technicians = await postgreService.execute(async (db) => {
-		return db('CareSync_Technicians').select('id', 'name');
+		return db('Cq_Care_Technicians').select('id', 'name');
 	});
 
+	// Get services types
 	const serviceTypes = await postgreService.execute(async (knex) => {
 		return knex('Cq_Care_Service_Types').select('id', 'service_type_code');
+	});
+
+	// Get services statuses
+	const serviceStatuses = await postgreService.execute(async (knex) => {
+		return knex('Cq_Care_Service_Statuses').select('id', 'service_status_code');
 	});
 
 	return {
 		deviceId: params.deviceId,
 		serviceTypes,
+		serviceStatuses,
 		technicians
 	};
 };
@@ -25,6 +34,7 @@ export const actions: Actions = {
 		const event_time_str = formData.get('event_time');
 		const technician_id_str = formData.get('technician_id');
 		const event_type = formData.get('event_type');
+		const service_status = formData.get('service_status');
 		const description = formData.get('description');
 
 		if (!event_time_str || !technician_id_str || !event_type) {
@@ -42,12 +52,13 @@ export const actions: Actions = {
 
 		try {
 			await postgreService.execute(async (db) => {
-				await db('CareSync_Device_History').insert({
+				await db('Cq_Care_Device_Services').insert({
 					report_id: params.deviceId,
 					event_time,
 					technician_id,
 					event_type,
-					description
+					description,
+					service_status
 				});
 			});
 		} catch (error: unknown) {

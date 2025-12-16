@@ -1,3 +1,4 @@
+<!-- src/routes/dashboard/care/device/[deviceId]/add-service/+page.svelte -->
 <script lang="ts">
 	import type { PageProps } from './$types';
 	import { enhance } from '$app/forms';
@@ -7,6 +8,7 @@
 	import { m } from '$paraglide/messages';
 	import { FwToast } from '$stores/Toast.state.svelte';
 	import { getTranslationFromCode } from '$utils/translations.utils';
+	import { localizeHref } from '$paraglide/runtime';
 
 	let { data, form }: PageProps = $props();
 
@@ -18,14 +20,15 @@
 	const minutes = now.getMinutes().toString().padStart(2, '0');
 	let eventTime = $state(`${year}-${month}-${day}T${hours}:${minutes}`);
 
-	const serviceTypes = $derived(data.serviceTypes);
+	const serviceTypes = data.serviceTypes;
+	const serviceStatuses = data.serviceStatuses;
 
 	$effect(() => {
 		if (form?.success) {
 			FwToast.launch('Service added successfully!', 'success');
-
+			// Redirect
 			setTimeout(() => {
-				goto(`${AppConfig.dashboards.care.device}${data.deviceId}`);
+				goto(localizeHref(`${AppConfig.dashboards.care.device}${data.deviceId}`));
 			}, 1);
 		} else if (form?.error) {
 			FwToast.launch(form.error, 'error');
@@ -86,9 +89,29 @@
 			</select>
 		</div>
 
+		<!-- Service status -->
+		<div class="form-control">
+			<label for="service_status" class="label">
+				<span class="label-text">{m.serviceStatus()}</span>
+			</label>
+			<select
+				id="service_status"
+				name="service_status"
+				class="select select-bordered w-full"
+				required
+			>
+				<option value="" disabled selected>{m.selectServiceStatus()}</option>
+				{#each serviceStatuses as service}
+					<option value={service.service_status_code}>
+						{getTranslationFromCode(service.service_status_code)}
+					</option>
+				{/each}
+			</select>
+		</div>
+
 		<div class="form-control">
 			<label for="description" class="label">
-				<span class="label-text">Description</span>
+				<span class="label-text">{m.description()}</span>
 			</label>
 			<textarea
 				id="description"
@@ -104,7 +127,7 @@
 			</DashboardButton>
 			<DashboardButton
 				type="gray"
-				onclick={() => goto(`${AppConfig.dashboards.care.device}${data.deviceId}`)}
+				onclick={() => goto(localizeHref(`${AppConfig.dashboards.care.device}${data.deviceId}`))}
 			>
 				{m.cancel()}
 			</DashboardButton>

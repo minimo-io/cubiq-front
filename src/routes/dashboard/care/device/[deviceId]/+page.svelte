@@ -17,6 +17,8 @@
 
 	let { data } = $props();
 
+	// console.log('DATA', data);
+
 	function openModal(event: any) {
 		selectedEvent = event;
 		isEditing = false;
@@ -44,6 +46,7 @@
 			<tr>
 				<th>{m.serviceDate()}</th>
 				<th>{m.serviceType()}</th>
+				<th>{m.serviceStatus()}</th>
 				<th>{m.technician()}</th>
 				<th>{m.actions()}</th>
 			</tr>
@@ -54,6 +57,27 @@
 					<tr>
 						<td>{formatEventTime(event.event_time)}</td>
 						<td>{getTranslationFromCode(event.event_type)}</td>
+						<!-- <td>{getTranslationFromCode(event.status_code)}</td> -->
+						<td>
+							<div
+								class={[
+									'badge text-base-100 border-0 text-xs font-bold uppercase',
+									event.status_code == 'CANCELED' && 'badge-error  bg-red-500',
+									event.status_code == 'COMPLETED_FAILURE' && 'badge-error  bg-red-500',
+
+									event.status_code == 'COMPLETED_SUCCESS' && 'badge-success',
+
+									event.status_code == 'ON_HOLD' && 'badge-warning',
+									event.event_type == 'PENDING_APPROVAL' && 'badge-warning',
+									event.status_code == 'IN_PROGRESS' && 'badge-warning',
+
+									event.status_code == 'MONITORING' && 'badge-neutral',
+									event.status_code == 'SCHEDULED' && 'badge-info'
+								]}
+							>
+								{getTranslationFromCode(event.status_code)}
+							</div>
+						</td>
 						<td>{event.technician_name}</td>
 						<td>
 							<DashboardButton type="primary" onclick={() => openModal(event)}>

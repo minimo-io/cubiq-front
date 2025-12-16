@@ -35,12 +35,20 @@ export const load: LayoutServerLoad = async ({ params }) => {
 		}
 
 		const deviceHistory = await postgreService.execute<DeviceHistoryEvent[]>(async (knex) => {
-			return knex('CareSync_Device_History as h')
-				.select('h.*', 't.name as technician_name', 't.id as technician_id')
-				.leftJoin('CareSync_Technicians as t', 'h.technician_id', 't.id')
+			return knex('Cq_Care_Device_Services as h')
+				.select(
+					'h.*',
+					't.name as technician_name',
+					't.id as technician_id',
+					'st.service_status_code as status_code'
+				)
+				.leftJoin('Cq_Care_Technicians as t', 'h.technician_id', 't.id')
+				.leftJoin('Cq_Care_Service_Statuses as st', 'h.service_status', 'st.service_status_code')
 				.where('h.report_id', deviceId)
 				.orderBy('h.event_time', 'desc');
 		});
+
+		console.log('DEVICE_HISTORY', deviceHistory);
 
 		return { device, deviceHistory };
 	} catch (err) {

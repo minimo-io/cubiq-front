@@ -1,8 +1,10 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"description": "Descrição",
 	"actions": "Ações",
 	"type": "Tipo",
 	"qrCode": "Código QR",
+	"barCode": "Código de barras",
 	"images": "Imagens",
 	"exit": "Saír",
 	"login": "Entrar",
@@ -563,7 +565,8 @@
 	"selectManufacturer": "Selecionar o fabricante",
 	"selectTechnician": "Selecionar um técnico",
 	"selectServiceType": "Selecionar um tipo de serviço",
-
+	"selectServiceStatus": "Selecionar status do serviço",
+	"serviceStatus": "Status do serviço",
 	"model": "Modelo",
 	"setupMonitoring": "Configurar monitoramento",
 	"notConnected": "Não conectado",
@@ -572,6 +575,7 @@
 	"serviceDate": "Data do serviço",
 	"serviceType": "Tipo de serviço",
 	"technician": "Técnico",
+	"serviceAddedSuccessfully": "Serviço adicionado com sucesso!",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",
@@ -593,5 +597,13 @@
 	"HARDWARE_SOUND_PROBLEM": "Problema de Hardware (Som)",
 	"GENERAL_OTHER_FIXING": "Correção Geral / Outros",
 	"LIFECYCLE_ASSET_RETIREMENT": "Ciclo de Vida: Desativação de Ativo",
-	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Ciclo de Vida: Implementação de Novo Ativo"
+	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Ciclo de Vida: Implementação de Novo Ativo",
+
+	"PENDING_APPROVAL": "Aguardando Aprovação",
+	"IN_PROGRESS": "Em Andamento",
+	"ON_HOLD": "Em Espera",
+	"COMPLETED_SUCCESS": "Concluído - Sucesso",
+	"COMPLETED_FAILURE": "Concluído - Falha",
+	"CANCELED": "Cancelado",
+	"SCHEDULED": "Agendado"
 }

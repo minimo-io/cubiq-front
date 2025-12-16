@@ -123,6 +123,7 @@ export interface DeviceHistoryEvent {
 	created_at: string;
 	updated_at: string;
 	technician_name: string;
+	status_code: string;
 }
 
 export interface CompanyContext {

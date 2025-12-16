@@ -20,7 +20,7 @@ export const actions: Actions = {
 		try {
 			// Update the service history record
 			const updatedRecord = await postgreService.execute(async (knex) => {
-				return knex('CareSync_Device_History')
+				return knex('Cq_Care_Device_Services')
 					.where('id', historyId)
 					.update({
 						description: description.trim(),

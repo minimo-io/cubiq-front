@@ -68,10 +68,10 @@ export const AuthService = {
 	 */
 	async getUserCompanyContexts(userId: string, productKey: string): Promise<CompanyContext[]> {
 		return await postgreService.execute(async (knex) => {
-			// This query joins Fw_User_Contexts with CareSync_Companies
+			// This query joins Fw_User_Contexts with Cq_Care_Companies
 			const rawContexts = await knex('Cq_User_Contexts as ctx')
 				.select('ctx.company_id', 'ctx.role', 'ctx.permissions', 'c.name as company_name')
-				.innerJoin('CareSync_Companies as c', 'ctx.company_id', 'c.id')
+				.innerJoin('Cq_Care_Companies as c', 'ctx.company_id', 'c.id')
 				.where('ctx.user_id', userId)
 				.andWhere('ctx.product_key', productKey)
 				.orderBy('c.name', 'asc');

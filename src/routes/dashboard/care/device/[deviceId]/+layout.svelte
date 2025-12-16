@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { onMount, type Snippet } from 'svelte';
 	import type { LayoutData } from './$types';
-	import { Eye, Image, Laptop, PcCase } from '@lucide/svelte';
+	import { ChevronDown, Eye, Image, Laptop, PcCase } from '@lucide/svelte';
 	import type { Device } from '$types/care/care.devices.types';
 	import { m } from '$paraglide/messages';
 	import { formatPhoneNumberForWhatsapp } from '$utils/phone.utils';
@@ -114,7 +114,29 @@
 
 					<!-- Scan code -->
 					<div class="border-base-200 flex items-center justify-between border-b p-3">
-						<div class="mr-3">{m.qrCode()}:</div>
+						<div class="mr-3 flex items-center">
+							<!-- <button class="btn btn-outline border-base-200 btn-sm border">
+								{m.qrCode()}
+								<ChevronDown class="h-3" />
+							</button> -->
+							<div class="dropdown">
+								<div
+									tabindex="0"
+									role="button"
+									class="btn btn-outline border-base-200 btn-sm border"
+								>
+									{m.qrCode()}
+									<ChevronDown class="h-3" />
+								</div>
+								<ul
+									tabindex="-1"
+									class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+								>
+									<li><button>{m.qrCode()}</button></li>
+									<li><button>{m.barCode()}</button></li>
+								</ul>
+							</div>
+						</div>
 						<div class="w-[100px]">
 							<DeviceScanCode />
 						</div>

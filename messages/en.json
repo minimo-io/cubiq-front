@@ -1,9 +1,11 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"description": "Description",
 	"actions": "Actions",
 	"type": "Type",
 	"images": "Images",
 	"qrCode": "QR Code",
+	"barCode": "Barcode",
 	"exit": "Exit",
 	"login": "Login",
 	"continue": "Continue",
@@ -557,7 +559,8 @@
 	"selectManufacturer": "Select manufacturer",
 	"selectTechnician": "Select a technician",
 	"selectServiceType": "Select an service type",
-
+	"selectServiceStatus": "Select service status",
+	"serviceStatus": "Service status",
 	"model": "Model",
 	"setupMonitoring": "Setup monitoring",
 	"notConnected": "Not connected",
@@ -566,6 +569,7 @@
 	"serviceDate": "Service date",
 	"serviceType": "Service type",
 	"technician": "Technician",
+	"serviceAddedSuccessfully": "Service added successfully!",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",
@@ -587,5 +591,13 @@
 	"HARDWARE_SOUND_PROBLEM": "Hardware (Sound) Problem",
 	"GENERAL_OTHER_FIXING": "General / Other Fixing",
 	"LIFECYCLE_ASSET_RETIREMENT": "Lifecycle: Asset Retirement",
-	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Lifecycle: New Asset Deployment"
+	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Lifecycle: New Asset Deployment",
+
+	"PENDING_APPROVAL": "Pending Approval",
+	"IN_PROGRESS": "In Progress",
+	"ON_HOLD": "On Hold",
+	"COMPLETED_SUCCESS": "Completed - Success",
+	"COMPLETED_FAILURE": "Completed - Failure",
+	"CANCELED": "Canceled",
+	"SCHEDULED": "Scheduled"
 }

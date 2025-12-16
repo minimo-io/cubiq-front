@@ -202,16 +202,16 @@ export default defineConfig({
 					pattern: '/dashboard/care/device/:id',
 					localized: [
 						['pt', '/dashboard/care/device/:id'],
-						['es', '/dashboard/care/dispositivo/:id'],
-						['en', '/dashboard/care/device/:id']
+						['es', '/es/dashboard/care/dispositivo/:id'],
+						['en', '/en/dashboard/care/device/:id']
 					]
 				},
 				{
 					pattern: '/dashboard/care/device/:id/add-service',
 					localized: [
 						['pt', '/dashboard/care/device/:id/adicionar-servico'],
-						['es', '/dashboard/care/device/:id/agregar-servicio'],
-						['en', '/dashboard/care/device/:id/add-device']
+						['es', '/es/dashboard/care/device/:id/agregar-servicio'],
+						['en', '/en/dashboard/care/device/:id/add-device']
 					]
 				},
 

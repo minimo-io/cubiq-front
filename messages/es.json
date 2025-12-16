@@ -1,8 +1,10 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"description": "Descrpción",
 	"actions": "Acciones",
 	"type": "Tipo",
 	"qrCode": "Codigo QR",
+	"barCode": "Código de barras",
 	"images": "Imágenes",
 	"exit": "Salir",
 	"login": "Entrar",
@@ -258,7 +260,7 @@
 
 	"product": "Producto",
 
-	"addService": "Adicionar servicio",
+	"addService": "Agregar servicio",
 	"servicesHistory": "Historico de servicios",
 	"today": "Hoy",
 	"yesterday": "Ayer",
@@ -560,7 +562,7 @@
 	"selectManufacturer": "Seleccionar el fabricante",
 	"selectTechnician": "Seleccionar un técnico",
 	"selectServiceType": "Seleccionar un tipo de servicio",
-
+	"selectServiceStatus": "Seleccionar estado del servicio",
 	"model": "Modelo",
 	"setupMonitoring": "Configurar monitoreo",
 	"notConnected": "No conectado",
@@ -569,6 +571,7 @@
 	"serviceDate": "Fecha de servicio",
 	"serviceType": "Tipo de servicio",
 	"technician": "Técnico",
+	"serviceAddedSuccessfully": "¡Servicio agregado con éxito!",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",
@@ -590,5 +593,13 @@
 	"HARDWARE_SOUND_PROBLEM": "Problema de Hardware (Sonido)",
 	"GENERAL_OTHER_FIXING": "Reparación General / Otros Arreglos",
 	"LIFECYCLE_ASSET_RETIREMENT": "Ciclo de Vida: Retiro de Activo",
-	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Ciclo de Vida: Despliegue de Nuevo Activo"
+	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Ciclo de Vida: Despliegue de Nuevo Activo",
+
+	"PENDING_APPROVAL": "Pendiente de Aprobación",
+	"IN_PROGRESS": "En Curso",
+	"ON_HOLD": "En Espera",
+	"COMPLETED_SUCCESS": "Completado - Éxito",
+	"COMPLETED_FAILURE": "Completado - Fallo",
+	"CANCELED": "Cancelado",
+	"SCHEDULED": "Programado"
 }
