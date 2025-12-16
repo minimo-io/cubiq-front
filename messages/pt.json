@@ -1,5 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"finished": "Finalizado",
+	"notFinished": "Não finalizado",
 	"description": "Descrição",
 	"actions": "Ações",
 	"type": "Tipo",
@@ -573,6 +575,9 @@
 	"connected": "Conectado",
 	"notConfigured": "Não configurado",
 	"serviceDate": "Data do serviço",
+	"finishServiceDate": "Finalização do serviço",
+	"isServiceFinished": "Serviço finalizado?",
+
 	"serviceType": "Tipo de serviço",
 	"technician": "Técnico",
 	"serviceAddedSuccessfully": "Serviço adicionado com sucesso!",
@@ -602,8 +607,8 @@
 	"PENDING_APPROVAL": "Aguardando Aprovação",
 	"IN_PROGRESS": "Em Andamento",
 	"ON_HOLD": "Em Espera",
-	"COMPLETED_SUCCESS": "Concluído - Sucesso",
-	"COMPLETED_FAILURE": "Concluído - Falha",
+	"COMPLETED_SUCCESS": "Concluído",
+	"COMPLETED_FAILURE": "Falhou",
 	"CANCELED": "Cancelado",
 	"SCHEDULED": "Agendado"
 }

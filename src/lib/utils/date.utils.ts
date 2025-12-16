@@ -1,5 +1,27 @@
 import { m } from '$paraglide/messages';
 
+// export function getCurrentDateString() {
+// 	const now = new Date();
+// 	const year = now.getFullYear();
+// 	const month = (now.getMonth() + 1).toString().padStart(2, '0');
+// 	const day = now.getDate().toString().padStart(2, '0');
+// 	const hours = now.getHours().toString().padStart(2, '0');
+// 	const minutes = now.getMinutes().toString().padStart(2, '0');
+
+// 	return `$${year}-${month}-${day}T${hours}:${minutes}`;
+// }
+
+export function getDateTimeLocalString(date?: Date | string | null) {
+	const d = date ? new Date(date) : new Date();
+	const year = d.getFullYear();
+	const month = (d.getMonth() + 1).toString().padStart(2, '0');
+	const day = d.getDate().toString().padStart(2, '0');
+	const hours = d.getHours().toString().padStart(2, '0');
+	const minutes = d.getMinutes().toString().padStart(2, '0');
+
+	return `${year}-${month}-${day}T${hours}:${minutes}`;
+}
+
 export function getCurrentYear(): number {
 	return new Date().getFullYear();
 }

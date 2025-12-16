@@ -29,13 +29,14 @@ export const load: PageServerLoad = async ({ params }) => {
 
 export const actions: Actions = {
 	default: async ({ request, params }) => {
-		console.log('params.deviceId at action start:', params.deviceId);
 		const formData = await request.formData();
 		const event_time_str = formData.get('event_time');
 		const technician_id_str = formData.get('technician_id');
 		const event_type = formData.get('event_type');
 		const service_status = formData.get('service_status');
 		const description = formData.get('description');
+		const finishTimeToggle = formData.get('finish_time_toggle') === 'on';
+		const finish_time_str = formData.get('finish_time');
 
 		if (!event_time_str || !technician_id_str || !event_type) {
 			return fail(400, {
@@ -49,6 +50,10 @@ export const actions: Actions = {
 
 		const event_time = new Date(event_time_str as string);
 		const technician_id = technician_id_str as string;
+		let finish_time;
+		if (finishTimeToggle) {
+			finish_time = new Date(finish_time_str as string);
+		}
 
 		try {
 			await postgreService.execute(async (db) => {
@@ -58,7 +63,8 @@ export const actions: Actions = {
 					technician_id,
 					event_type,
 					description,
-					service_status
+					service_status,
+					finish_time
 				});
 			});
 		} catch (error: unknown) {

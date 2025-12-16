@@ -9,16 +9,13 @@
 	import { FwToast } from '$stores/Toast.state.svelte';
 	import { getTranslationFromCode } from '$utils/translations.utils';
 	import { localizeHref } from '$paraglide/runtime';
+	import { getDateTimeLocalString } from '$utils';
 
 	let { data, form }: PageProps = $props();
 
-	const now = new Date();
-	const year = now.getFullYear();
-	const month = (now.getMonth() + 1).toString().padStart(2, '0');
-	const day = now.getDate().toString().padStart(2, '0');
-	const hours = now.getHours().toString().padStart(2, '0');
-	const minutes = now.getMinutes().toString().padStart(2, '0');
-	let eventTime = $state(`${year}-${month}-${day}T${hours}:${minutes}`);
+	let eventTime = $state(getDateTimeLocalString());
+	let finishTime = $state(getDateTimeLocalString());
+	let showFinishTime = $state(false);
 
 	const serviceTypes = data.serviceTypes;
 	const serviceStatuses = data.serviceStatuses;
@@ -43,6 +40,7 @@
 	</h1>
 
 	<form method="POST" action="?" use:enhance class="space-y-4">
+		<!-- Date -->
 		<div class="form-control">
 			<label for="event_time" class="label">
 				<span class="label-text">{m.serviceDate()}</span>
@@ -57,6 +55,38 @@
 			/>
 		</div>
 
+		<!-- Checkbos for finish toggle -->
+		<div class="form-control mb-4">
+			<label for="finish_time_toggle" class="label cursor-pointer">
+				<span class="label-text text-gray-300">{m.isServiceFinished()}</span>
+				<input
+					type="checkbox"
+					name="finish_time_toggle"
+					id="finish_time_toggle"
+					class="checkbox checkbox-primary"
+					bind:checked={showFinishTime}
+				/>
+			</label>
+		</div>
+
+		<!-- Finish date if any -->
+		{#if showFinishTime}
+			<div class="form-control">
+				<label for="finish_time" class="label">
+					<span class="label-text">{m.finishServiceDate()}</span>
+				</label>
+				<input
+					type="datetime-local"
+					id="finish_time"
+					name="finish_time"
+					class="input input-bordered w-full"
+					bind:value={finishTime}
+					required
+				/>
+			</div>
+		{/if}
+
+		<!-- Technician -->
 		<div class="form-control">
 			<label for="technician_id" class="label">
 				<span class="label-text">{m.technician()}</span>

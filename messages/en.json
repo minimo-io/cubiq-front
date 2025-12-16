@@ -1,5 +1,7 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"finished": "Finished",
+	"notFinished": "Not finished",
 	"description": "Description",
 	"actions": "Actions",
 	"type": "Type",
@@ -570,6 +572,8 @@
 	"serviceType": "Service type",
 	"technician": "Technician",
 	"serviceAddedSuccessfully": "Service added successfully!",
+	"finishServiceDate": "Service completion",
+	"isServiceFinished": "Is service finished?",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",
@@ -596,8 +600,8 @@
 	"PENDING_APPROVAL": "Pending Approval",
 	"IN_PROGRESS": "In Progress",
 	"ON_HOLD": "On Hold",
-	"COMPLETED_SUCCESS": "Completed - Success",
-	"COMPLETED_FAILURE": "Completed - Failure",
+	"COMPLETED_SUCCESS": "Completed",
+	"COMPLETED_FAILURE": "Failure",
 	"CANCELED": "Canceled",
 	"SCHEDULED": "Scheduled"
 }

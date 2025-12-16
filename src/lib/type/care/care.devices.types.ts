@@ -124,6 +124,7 @@ export interface DeviceHistoryEvent {
 	updated_at: string;
 	technician_name: string;
 	status_code: string;
+	finish_time: string;
 }
 
 export interface CompanyContext {

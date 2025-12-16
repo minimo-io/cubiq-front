@@ -1,6 +1,16 @@
 import { postgreService } from '$databases';
 import { fail, type Actions } from '@sveltejs/kit';
 import { dashboardCommonActions } from '../../..';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async () => {
+	// Get services statuses
+	const serviceStatuses = await postgreService.execute(async (knex) => {
+		return knex('Cq_Care_Service_Statuses').select('id', 'service_status_code');
+	});
+
+	return { serviceStatuses };
+};
 
 export const actions: Actions = {
 	...dashboardCommonActions,

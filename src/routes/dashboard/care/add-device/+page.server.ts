@@ -37,6 +37,7 @@ export const load: PageServerLoad = async (event) => {
 		return { companies: [], contacts: [] };
 	}
 };
+
 export const actions: Actions = {
 	addDevice: async ({ request, url }) => {
 		const origin = url.origin;

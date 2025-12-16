@@ -48,7 +48,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 				.orderBy('h.event_time', 'desc');
 		});
 
-		console.log('DEVICE_HISTORY', deviceHistory);
+		// 	Get services statuses
 
 		return { device, deviceHistory };
 	} catch (err) {
