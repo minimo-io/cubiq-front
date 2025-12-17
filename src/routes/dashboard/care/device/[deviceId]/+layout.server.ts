@@ -21,6 +21,7 @@ export const load: LayoutServerLoad = async ({ params }) => {
 					'c.email as contact_email',
 					'c.phone as contact_phone',
 					'mfm.manufacturer_model as manufacturer_model',
+					'mfm.driver_page_url as manufacturer_model_url',
 					'mf.name as manufacturer_name'
 				)
 				.leftJoin('CareSync_Device_Contacts as c', 'r.contact_id', 'c.id')

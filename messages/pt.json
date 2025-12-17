@@ -1,5 +1,6 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"device": "Dispositivo",
 	"finished": "Finalizado",
 	"notFinished": "Não finalizado",
 	"description": "Descrição",

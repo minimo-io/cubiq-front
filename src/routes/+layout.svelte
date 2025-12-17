@@ -18,6 +18,7 @@
 	import Toast from '$lib/components/Toast.svelte';
 	import { FwToastState, FwToast } from '$stores/Toast.state.svelte';
 	import { m } from '$paraglide/messages';
+	import GlobalModal from '$lib/components/Modal/GlobalModal.svelte';
 
 	let { children } = $props();
 
@@ -124,6 +125,9 @@
 	type={FwToastState.type}
 	position={FwToastState.position}
 />
+
+<!-- Global modal -->
+<GlobalModal />
 
 <!-- Footer -->
 {#if !deLocalizeHref(page.route.id || '').startsWith('/dashboard')}

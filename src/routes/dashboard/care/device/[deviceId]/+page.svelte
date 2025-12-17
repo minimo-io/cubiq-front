@@ -1,3 +1,4 @@
+<!-- src/routes/dashboard/care/device/[deviceId]/+page.svelte -->
 <script lang="ts">
 	import Actions from './components/Actions.svelte';
 	import { enhance } from '$app/forms';
@@ -11,6 +12,7 @@
 	import { getTranslationFromCode } from '$utils/translations.utils';
 	import type { DeviceHistoryEvent } from '$types/care/care.devices.types';
 	import ServiceStatusCodePill from '../../components/ServiceStatusCodePill.svelte';
+	import { toggleLoader } from '$stores/Loader.state.svelte';
 	// import { onMount } from 'svelte';
 
 	let selectedEvent = $state<DeviceHistoryEvent | null>(null);
@@ -43,7 +45,7 @@
 	}
 </script>
 
-<Actions countdown={10} handleRefresh={() => {}} isRefreshing={false} />
+<!-- <Actions countdown={10} handleRefresh={() => {}} isRefreshing={false} /> -->
 
 <div class="overflow-x-auto">
 	<table class="table w-full">
@@ -188,6 +190,7 @@
 				id="edit-service-form"
 				use:enhance={() => {
 					return async ({ result }) => {
+						toggleLoader();
 						if (result.type === 'success') {
 							isEditing = false;
 							modal?.close();
@@ -196,11 +199,41 @@
 						} else if (result.type === 'error') {
 							FwToast.launch('Failed to update service history.', 'error', 'top', 2500);
 						}
+						toggleLoader();
 					};
 				}}
 			>
 				<!-- Service history id -->
 				<input type="hidden" name="historyId" value={selectedEvent?.id} />
+
+				<!-- Service status -->
+				<div class="form-control mt-2 text-left">
+					<label for="service_status" class="label ml-1">
+						<span class="label-text text-base-content text-sm">{m.serviceStatus()}</span>
+					</label>
+
+					<!-- svelte-ignore component_name_lowercase -->
+					<select
+						id="service_status"
+						name="service_status_code"
+						class="select select-bordered text-base-content mt-1 w-full"
+						required
+					>
+						<option value="" disabled selected class="text-base-content">
+							{m.selectServiceStatus()}
+						</option>
+						{#each data.serviceStatuses as service}
+							<option
+								selected={service.service_status_code == selectedEvent?.status_code}
+								value={service.service_status_code}
+								class="text-base-content"
+							>
+								{getTranslationFromCode(service.service_status_code)}
+							</option>
+						{/each}
+					</select>
+				</div>
+
 				<!-- Service end date -->
 				<div class="form-control mt-3 flex flex-col text-left">
 					<label for="finish_time" class="label">
@@ -214,32 +247,9 @@
 						value={selectedEvent?.finish_time
 							? getDateTimeLocalString(selectedEvent?.finish_time)
 							: ''}
-						required
 					/>
 				</div>
-				<!-- Service status -->
-				<div class="form-control mt-2 text-left">
-					<label for="service_status" class="label ml-1">
-						<span class="label-text text-base-content text-sm">{m.serviceStatus()}</span>
-					</label>
 
-					<!-- svelte-ignore component_name_lowercase -->
-					<select
-						id="service_status"
-						name="service_status"
-						class="select select-bordered text-base-content mt-1 w-full"
-						required
-					>
-						<option value="" disabled selected class="text-base-content"
-							>{m.selectServiceStatus()}</option
-						>
-						{#each data.serviceStatuses as service}
-							<option value={service.service_status_code} class="text-base-content">
-								{getTranslationFromCode(service.service_status_code)}
-							</option>
-						{/each}
-					</select>
-				</div>
 				<!-- Service content -->
 				<div class="mt-2 flex h-full flex-col">
 					<label for="description" class="label">

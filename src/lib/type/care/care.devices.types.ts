@@ -66,6 +66,7 @@ export interface Device {
 	contact_phone: string;
 	manufacturer_name: string;
 	manufacturer_model: string;
+	manufacturer_model_url: string;
 
 	device_metadata: {
 		os: string;

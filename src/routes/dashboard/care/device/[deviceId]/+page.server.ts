@@ -20,6 +20,8 @@ export const actions: Actions = {
 		const formData = await request.formData();
 		const historyId = formData.get('historyId') as string;
 		const description = formData.get('description') as string;
+		const statusCode = formData.get('service_status_code') as string;
+		const finishTime = (formData.get('finish_time') as string) || null;
 
 		if (!historyId || !description) {
 			return fail(400, {
@@ -34,7 +36,8 @@ export const actions: Actions = {
 					.where('id', historyId)
 					.update({
 						description: description.trim(),
-						updated_at: new Date()
+						service_status: statusCode,
+						finish_time: finishTime
 					})
 					.returning('*');
 			});

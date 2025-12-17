@@ -8,6 +8,7 @@
 	import { formatPhoneNumberForWhatsapp } from '$utils/phone.utils';
 	import DeviceScanCode from '../../components/DeviceScanCode.svelte';
 	import { browser } from '$app/environment';
+	import Actions from './components/Actions.svelte';
 
 	interface Props {
 		children: Snippet<[]>;
@@ -36,8 +37,13 @@
 {/snippet}
 
 <div class="flex w-full flex-col">
+	<!-- Actions -->
+	<div class="">
+		<Actions countdown={10} handleRefresh={() => {}} isRefreshing={false} />
+	</div>
+
 	<!-- Title -->
-	<div class="flex flex-row border-r border-b">
+	<div class="flex flex-row border-b">
 		<div class="border-base-200 flex w-full justify-between border-r p-5 md:w-1/4">
 			<h1 class="text-base-content mr-2 flex flex-1 items-center text-left text-xl font-bold">
 				{#if device.device_type == 'NOTEBOOK'}
@@ -163,9 +169,21 @@
 					<!-- Model -->
 					<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
 						<div class="mr-3">{m.model()}:</div>
-						<span class="text-base-content text-base font-black">
-							{device.manufacturer_name}
-							{device.manufacturer_model}
+						<span class="text-base-content text-base">
+							{#if device.manufacturer_model_url}
+								<a
+									href={device.manufacturer_model_url}
+									class="text-primary hover:underline"
+									target="_blank"
+									rel="nofollow noreferrer noopener"
+								>
+									{device.manufacturer_name}
+									{device.manufacturer_model}
+								</a>
+							{:else}
+								{device.manufacturer_name}
+								{device.manufacturer_model}
+							{/if}
 						</span>
 					</div>
 
@@ -191,6 +209,7 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- Right -->
 		<div class="py-0 md:w-3/4">
 			<div class="border-base-200 flex border-b md:hidden">
