@@ -577,6 +577,8 @@
 	"serviceAddedSuccessfully": "¡Servicio agregado con éxito!",
 	"finishServiceDate": "Finalización del servicio",
 	"isServiceFinished": "Servicio finalizado?",
+	"serviceHistoryUpdatedOk": "¡Historial de servicio actualizado con éxito!",
+	"serviceHistoryUpdateFailed": "Error al actualizar el historial de servicio.",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",

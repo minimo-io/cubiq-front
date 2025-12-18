@@ -1,4 +1,4 @@
-<!-- Buttons for the dashboard actions menues -->
+<!-- src/lib/components/Buttons/DashboardButton.svelte -->
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 

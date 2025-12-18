@@ -581,7 +581,8 @@
 
 	"serviceType": "Tipo de serviço",
 	"technician": "Técnico",
-	"serviceAddedSuccessfully": "Serviço adicionado com sucesso!",
+	"serviceHistoryUpdatedOk": "Histórico de serviço atualizado com sucesso!",
+	"serviceHistoryUpdateFailed": "Falha ao atualizar o histórico de serviço.",
 
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",

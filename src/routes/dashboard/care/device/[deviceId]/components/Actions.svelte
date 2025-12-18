@@ -1,3 +1,4 @@
+<!-- src/routes/dashboard/care/device/[deviceId]/components/Actions.svelte -->
 <script lang="ts">
 	import { RefreshCw, Share } from '@lucide/svelte';
 	import { m } from '$paraglide/messages';
@@ -26,7 +27,6 @@
 
 		<!-- Share -->
 		<DashboardButton
-			type="primary"
 			onclick={async () => {
 				if (FwShare.hasShareAPI) {
 					FwShare.share({

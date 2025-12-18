@@ -1,7 +1,7 @@
 // src/lib/stores/Modal.state.svelte.ts
 import type { Component, Snippet } from 'svelte';
 
-export type ModalSize = 'sm' | 'md' | 'lg' | 'xl' | 'full';
+export type ModalSize = 'sm' | 'md' | 'lg' | 'xl' | 'full' | 'auto';
 
 export interface ModalConfig {
 	component?: Component;

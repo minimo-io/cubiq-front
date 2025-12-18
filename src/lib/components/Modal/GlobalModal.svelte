@@ -17,15 +17,25 @@
 		}
 	});
 
+	function handleClose() {
+		// Sync state when dialog closes by any method (ESC, close button, etc)
+		if (modalState.isOpen) {
+			modalState.close();
+		}
+	}
+
 	function handleBackdropClick(e: MouseEvent) {
 		if (modalState.config?.closeOnBackdrop && e.target === dialogElement) {
 			modalState.close();
 		}
 	}
 
-	function handleEscape(e: KeyboardEvent) {
-		if (e.key === 'Escape' && !modalState.config?.closeOnEscape) {
+	function handleCancel(e: Event) {
+		// Handle ESC key press
+		if (!modalState.config?.closeOnEscape) {
 			e.preventDefault();
+		} else {
+			modalState.close();
 		}
 	}
 
@@ -42,7 +52,8 @@
 	bind:this={dialogElement}
 	class="modal"
 	onclick={handleBackdropClick}
-	onkeydown={handleEscape}
+	onclose={handleClose}
+	oncancel={handleCancel}
 >
 	<div class="modal-backdrop h-dvh bg-[rgba(0,0,0,0.8)]"></div>
 
@@ -54,21 +65,23 @@
 			class:max-w-5xl={modalState.config.size === 'lg' || !modalState.config.size}
 			class:max-w-7xl={modalState.config.size === 'xl'}
 			class:max-w-full={modalState.config.size === 'full'}
+			class:max-w-fit={modalState.config.size === 'auto'}
 		>
-			<form method="dialog">
-				<button
-					class="btn btn-sm btn-circle btn-ghost absolute top-2 right-2 text-white"
-					onclick={() => modalState.close()}
-				>
-					✕
-				</button>
-			</form>
-
 			{#if modalSnippet}
 				{@render modalSnippet(modalState.config.props)}
 			{:else if ModalContent}
 				<ModalContent {...modalState.config.props} />
 			{/if}
+
+			<!-- Close button -->
+			<form method="dialog">
+				<button
+					class="btn btn-sm btn-circle btn-ghost absolute top-1 right-1 z-50 text-white"
+					onclick={() => modalState.close()}
+				>
+					✕
+				</button>
+			</form>
 		</div>
 	{/if}
 </dialog>
