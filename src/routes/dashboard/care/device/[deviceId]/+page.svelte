@@ -206,7 +206,10 @@
 	{/if}
 {/snippet}
 
-<div class="overflow-x-auto">
+<div class="border-base-200 w-full border-b p-5 text-left">
+	<h2 class="text-base-content text-xl font-bold">{m.servicesHistory()}</h2>
+</div>
+<div class="w-full overflow-x-auto">
 	<table class="table w-full">
 		<thead>
 			<tr>
@@ -261,6 +264,6 @@
 		</tbody>
 	</table>
 </div>
-<div class="border-base-200 border-t">
+<div class="border-base-200 w-full border-t">
 	<DeviceGallery />
 </div>

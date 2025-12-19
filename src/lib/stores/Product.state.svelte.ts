@@ -1,3 +1,4 @@
+// src/lib/stores/Product.state.svelte.ts
 import { Product } from '$lib/type/products.types';
 
 // eslint-disable-next-line prefer-const

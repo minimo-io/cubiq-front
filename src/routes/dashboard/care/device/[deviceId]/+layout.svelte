@@ -9,6 +9,7 @@
 	import DeviceScanCode from '../../components/DeviceScanCode.svelte';
 	import { browser } from '$app/environment';
 	import Actions from './components/Actions.svelte';
+	import { page } from '$app/state';
 
 	interface Props {
 		children: Snippet<[]>;
@@ -24,6 +25,8 @@
 
 	let deviceCodeSelection = $state('qr-code');
 
+	const pageRouteId = $derived(page.route.id);
+
 	function connectDevice(deviceId: string) {
 		if (browser) {
 			alert('Conectar dispositivo...');
@@ -31,23 +34,20 @@
 	}
 </script>
 
-{#snippet sevicesTitle()}
-	<!-- Services title -->
-	<div class="p-5 text-left md:w-3/4">
-		<h2 class="text-base-content text-xl font-bold">{m.servicesHistory()}</h2>
-	</div>
-{/snippet}
-
 <div class="flex w-full flex-col">
 	<!-- Actions -->
 	<div class="">
 		<Actions countdown={10} handleRefresh={() => {}} isRefreshing={false} />
 	</div>
 
-	<!-- Title -->
+	<!-- Content -->
 	<div class="flex flex-col border-b md:flex-row">
 		<!-- Right column -->
-		<div class="border-base-200 flex w-full flex-col justify-between border-r md:w-1/4">
+		<div
+			class="border-base-200 {pageRouteId == '/dashboard/care/device/[deviceId]/add-service'
+				? 'order-1 md:order-0'
+				: ''} flex w-full flex-col justify-between border-r md:w-1/4"
+		>
 			<!-- Device title -->
 			<div class="flex w-full justify-between border-b p-5">
 				<h1 class="text-base-content mr-2 flex flex-1 items-center text-left text-xl font-bold">
@@ -90,8 +90,8 @@
 			<!-- Device details -->
 			<div class="text-base-content flex-1">
 				<!-- Contact -->
-				<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
-					<div class="text-base-content/40 mr-3">{m.contact()}</div>
+				<div class="border-base-200/60 flex flex-wrap justify-between border-b p-3">
+					<div class="text-base-content/40 mr-3 self-center">{m.contact()}</div>
 					<div class="text-right">
 						<span class="text-base">{device.contact_name ?? 'N/A'}</span>
 						{#if device.contact_email}
@@ -118,7 +118,7 @@
 				<!-- Scan code -->
 				<div
 					class={[
-						'border-base-200 flex justify-between border-b p-3',
+						'border-base-200/60 flex justify-between border-b p-3',
 						deviceCodeSelection == 'qr-code' && 'items-center',
 						deviceCodeSelection == 'bar-code' && 'flex-col justify-center'
 					]}
@@ -146,7 +146,7 @@
 
 				<!-- Serial number -->
 				{#if device.serial_number}
-					<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
+					<div class="border-base-200/60 flex flex-wrap justify-between border-b p-3">
 						<div class="text-base-content/40 mr-3">{m.serialNumber()}</div>
 
 						{device.serial_number ?? 'N/A'}
@@ -154,7 +154,7 @@
 				{/if}
 
 				<!-- Model -->
-				<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
+				<div class="border-base-200/60 flex flex-wrap justify-between border-b p-3">
 					<div class="text-base-content/40 mr-3">{m.model()}</div>
 					<span class="text-base-content text-base">
 						{#if device.manufacturer_model_url}
@@ -186,15 +186,15 @@
 
 				{#if device.was_first_pinged}
 					<!-- Other serialized data -->
-					<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
+					<div class="border-base-200/60 flex flex-wrap justify-between border-b p-3">
 						<div class="mr-3">Procesador:</div>
 						{data.device?.device_metadata?.processor}
 					</div>
-					<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
+					<div class="border-base-200/60 flex flex-wrap justify-between border-b p-3">
 						<div class="mr-3">HDD:</div>
 						{data.device?.device_metadata?.hdd}
 					</div>
-					<div class="border-base-200 flex flex-wrap justify-between border-b p-3">
+					<div class="border-base-200/60 flex flex-wrap justify-between border-b p-3">
 						<div class="mr-3">RAM:</div>
 						{data.device?.device_metadata?.ram}
 					</div>
@@ -207,8 +207,12 @@
 		</div>
 
 		<!-- Left column -->
-		<div class="md:w-3/4">
-			{@render sevicesTitle()}
+		<div
+			class="flex flex-col items-start justify-start {pageRouteId ==
+			'/dashboard/care/device/[deviceId]/add-service'
+				? 'order-0 md:order-1'
+				: ''} order-0 md:w-3/4"
+		>
 			{@render children()}
 		</div>
 	</div>

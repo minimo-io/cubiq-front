@@ -13,18 +13,22 @@
 </script>
 
 <div class="border-base-200 flex justify-start border-b">
-	<div class="flex items-center justify-end gap-2 p-4">
-		<!-- Add new device -->
-		<DashboardButton href={localizeHref(AppConfig.dashboards.care.actions.addDevice)}>
-			{m.addDevice()}
-		</DashboardButton>
+	<div
+		class="flex w-full flex-col items-start justify-start gap-2 border p-4 md:flex-row md:items-center"
+	>
+		<div class="flex w-fit gap-2">
+			<!-- Add new device -->
+			<DashboardButton href={localizeHref(AppConfig.dashboards.care.actions.addDevice)}>
+				{m.addDevice()}
+			</DashboardButton>
 
-		<!-- Refresh -->
-		<DashboardButton type="primary" onclick={handleRefresh} disabled={isRefreshing}>
-			<RefreshCw class="h-4 w-4 {isRefreshing ? 'animate-spin' : ''}" />
-			{m.refresh()}
-		</DashboardButton>
-
+			<!-- Refresh -->
+			<DashboardButton type="primary" onclick={handleRefresh} disabled={isRefreshing}>
+				<RefreshCw class="h-4 w-4 {isRefreshing ? 'animate-spin' : ''}" />
+				{m.refresh()}
+			</DashboardButton>
+		</div>
+		<!-- Refreshing -->
 		<div class="ml-4 text-sm text-gray-500">
 			{m.refreshingIn({ seconds: countdown })}
 		</div>

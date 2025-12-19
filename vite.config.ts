@@ -211,7 +211,7 @@ export default defineConfig({
 					localized: [
 						['pt', '/dashboard/care/device/:id/adicionar-servico'],
 						['es', '/es/dashboard/care/device/:id/agregar-servicio'],
-						['en', '/en/dashboard/care/device/:id/add-device']
+						['en', '/en/dashboard/care/device/:id/add-service']
 					]
 				},
 

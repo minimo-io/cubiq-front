@@ -9,6 +9,7 @@
 	import LoginDashboardButton from '../Buttons/LoginDashboardButton.svelte';
 	import UserButton from '../Buttons/UserButton.svelte';
 	import { page } from '$app/state';
+	import ChatLlmButton from '../Buttons/ChatLlmButton.svelte';
 
 	interface Props {
 		showToolsShortcuts?: boolean;
@@ -59,6 +60,7 @@
 		{#if user}
 			<UserButton {user} />
 		{/if}
+
 		<LoginDashboardButton />
 
 		<!-- Mobile Menu Trigger Button -->

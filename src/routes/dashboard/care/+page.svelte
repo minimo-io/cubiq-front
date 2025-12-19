@@ -1,6 +1,6 @@
 <!-- src/routes/dashboard/care/+page.svelte -->
 <script lang="ts">
-	import CareSyncDashboardDevices from './components/DevicesList.svelte';
+	import DevicesList from './components/DevicesList.svelte';
 	import { userContextState, saveContextToCookie } from '$stores/UserContext.state.svelte.js';
 
 	let { data } = $props();
@@ -17,5 +17,5 @@
 </script>
 
 <div class="flex flex-1">
-	<CareSyncDashboardDevices />
+	<DevicesList />
 </div>

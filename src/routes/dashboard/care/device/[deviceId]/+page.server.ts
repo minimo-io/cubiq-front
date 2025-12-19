@@ -2,14 +2,32 @@ import { postgreService } from '$databases';
 import { fail, type Actions } from '@sveltejs/kit';
 import { dashboardCommonActions } from '../../..';
 import type { PageServerLoad } from './$types';
+import type { DeviceHistoryEvent } from '$types/care/care.devices.types';
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ params }) => {
+	const { deviceId } = params;
+
 	// Get services statuses
 	const serviceStatuses = await postgreService.execute(async (knex) => {
 		return knex('Cq_Care_Service_Statuses').select('id', 'service_status_code');
 	});
 
-	return { serviceStatuses };
+	// Get device history
+	const deviceHistory = await postgreService.execute<DeviceHistoryEvent[]>(async (knex) => {
+		return knex('Cq_Care_Device_Services as h')
+			.select(
+				'h.*',
+				't.name as technician_name',
+				't.id as technician_id',
+				'st.service_status_code as status_code'
+			)
+			.leftJoin('Cq_Care_Technicians as t', 'h.technician_id', 't.id')
+			.leftJoin('Cq_Care_Service_Statuses as st', 'h.service_status', 'st.service_status_code')
+			.where('h.report_id', deviceId)
+			.orderBy('h.event_time', 'desc');
+	});
+
+	return { serviceStatuses, deviceHistory };
 };
 
 export const actions: Actions = {
