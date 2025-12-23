@@ -12,17 +12,17 @@ authors:
     avatar: /claude-logo.png
 ---
 
-Cubiq nasceu com a intenção de apoiar empresas em crescimento, PMEs e startups que precisam de um **sócio tecnológico confiável e eficiente** para acompanhar sua transformação.
+A Cubiq nasceu com a intenção de apoiar empresas em crescimento, PMEs e Startups que precisam de um sócio tecnológico confiável e eficiente para acompanhar sua transformação.
 
-Cubiq é mais do que uma empresa de desenvolvimento ou uma coleção de ferramentas. Somos uma <span>Plataforma de Produtos Digitais</span> e um <a href="/lab" class="text-primary">Laboratório de Desenvolvimento</a> que projeta, cria e implanta produtos próprios e produtos sob medida para terceiros.
+A Cubiq é mais do que uma empresa de desenvolvimento ou uma coleção de ferramentas. Somos uma <span>Plataforma de Produtos Digitais</span> e um <a href="/lab" class="text-primary">Laboratório de Desenvolvimento</a> que projeta, cria e implanta produtos próprios e produtos sob medida para terceiros.
 
-Nossa equipe fornece o design e o desenvolvimento que sustentam as três camadas de serviços da nossa oferta.
+Nossa equipe fornece o design e o desenvolvimento que alimentam as três camadas de serviços da nossa oferta.
 
-<blockquote><strong class="text-primary">//</strong> Aqui você pode conhecer mais sobre <a href="/#more">nosso stack tecnológico</a>.</blockquote>
+<strong class="text-primary">//</strong> Aqui você pode conhecer mais sobre <a href="/#more">nosso stack tecnológico</a>.
 
 ## A plataforma
 
-A [plataforma integrada](https://www.cubiq.lat) da Cubiq conta com uma base de 4 produtos digitais:
+A [plataforma integrada](https://www.cubiq.lat/) da Cubiq conta com uma base de 4 produtos digitais:
 
 - **[CARE](/care)**: Gestão e locação de ativos de TI.
 - **[STORE](/store)**: E-commerce headless sob medida.
@@ -33,26 +33,36 @@ Mas há mais produtos sendo incubados no laboratório:
 
 - **LAW**: Uma ferramenta de micropagamentos que analisa instantaneamente contratos globais, identificando riscos e sugerindo edições, eliminando a necessidade inicial de advogados caros.
 
-Somos também um <a href="/lab">DevLab</a>, oferecendo desenvolvimento sob medida e uma série de produtos próprios.
+Somos também um <a href="/lab">DevLab</a>, oferecendo desenvolvimentos sob medida e uma série de produtos próprios.
 
 ## O laboratório
 
-Por meio de seu [Laboratório](https://www.cubiq.lat), a Cubiq experimenta e cria produtos próprios, como:
+Por meio de seu [Laboratório](https://www.cubiq.lat), a Cubiq experimenta e cria produtos próprios como:
 
 - **[BETIZEN](https://www.betizen.org/)**: O primeiro site de listagens de Cassino, Binárias e Forex com os incentivos corretos: karma, mérito e proof-of-work.
-- **[HOPCHAIN](/blog/beer-app)** (antes Ln-Beer): A HopChain conecta cervejarias e bitcoiners com pagamentos em satoshis, sem fricção.
+- **[HOPCHAIN](/blog/beer-app)** (antes Ln-Beer): A HopChain conecta cervejarias e bitcoiners com pagamentos em satoshis sem fricção.
 
 ![HopChain](/products/project-lightning-beer.webp)
 
-Além disso, a mesma equipe de programação e design do laboratório desenvolve soluções sob medida para terceiros.
+Além disso, a mesma equipe de programação e design do laboratório cria desenvolvimentos sob medida para terceiros.
 
-Desde sites institucionais:
+Desde desenvolvimento de marca e design no Figma:
+
+![ViiVPay-Design](/clients/viivpay-splash.png)
+
+Até sites institucionais:
 
 ![AGF-Splash](/clients/agf-splash.jpeg)
 
-Até e-commerces sob medida:
+Desde uma implementação de e-commerce:
 ![Braaay-Splash](/clients/braaay-splash.jpeg)
 
-Somos o parceiro tecnológico que permite que empresas e startups se concentrem em seu negócio principal.
+Até aplicativos mobile:
+
+![Hops-Splash](/clients/hops-splash.webp)
+
+![LoveInABox-Splash](/clients/loveinabox-splash.webp)
+
+Somos o parceiro tecnológico que permite que empresas e startups foquem no seu negócio principal.
 <br>
-Se você tem uma ideia, entre em contato e vamos agendar uma conversa!
+Se você tem uma ideia, entre em contato e agendamos uma conversa!

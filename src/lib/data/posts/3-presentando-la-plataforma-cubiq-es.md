@@ -46,12 +46,22 @@ A través de su [Laboratório](https://www.cubiq.lat) Cubiq experimenta y crea p
 
 Adicionalmente el mismo equipo de programación y diseño del laboratório crea desarrollos a medida para terceros.
 
-Desde sitios institucionales:
+Desde desarrollos de marca y diseño en Figma:
+
+![ViiVPay-Design](/clients/viivpay-splash.png)
+
+Hasta sitios institucionales:
 
 ![AGF-Splash](/clients/agf-splash.jpeg)
 
-Hasta e-commerce a medida:
+Desde una implementación de e-Commerce:
 ![Braaay-Splash](/clients/braaay-splash.jpeg)
+
+Hasta aplicaciones mobile:
+
+![Hops-Splash](/clients/hops-splash.webp)
+
+![LoveInABox-Splash](/clients/loveinabox-splash.webp)
 
 Somos el socio tecnológico que permite a las empresas y startups centrarse en su negocio principal.
 <br>

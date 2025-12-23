@@ -12,46 +12,56 @@ authors:
     avatar: /claude-logo.png
 ---
 
-Cubiq was born with the intention of supporting growing companies, SMEs, and startups that need a **reliable and efficient technology partner** to support their transformation.
+Cubiq was born with the intention of supporting growing companies, SMEs, and Startups that need a reliable and efficient technology partner to accompany their transformation.
 
-Cubiq is more than a development company or a collection of tools. We are a <span>Digital Products Platform</span> and a <a href="/lab" class="text-primary">Development Laboratory</a> that designs, builds, and deploys proprietary products as well as custom-made solutions for third parties.
+Cubiq is more than a development company or a collection of tools. We are a <span>Digital Products Platform</span> and a <a href="/en/lab" class="text-primary">Development Laboratory</a> that designs, builds, and deploys proprietary products as well as custom-made products for third parties.
 
 Our team provides the design and development that power the three service layers of our offering.
 
-<blockquote><strong class="text-primary">//</strong> Here you can learn more about <a href="/en/#more">our technology stack</a>.</blockquote>
+<strong class="text-primary">//</strong> Here you can learn more about <a href="/en/#more">our technology stack</a>.
 
 ## The platform
 
-Cubiq’s [integrated platform](https://www.cubiq.lat) is built on a foundation of 4 digital products:
+Cubiq’s [integrated platform](https://www.cubiq.lat/en) is built on a base of 4 digital products:
 
 - **[CARE](/en/care)**: IT asset management and rental.
 - **[STORE](/en/store)**: Custom headless e-commerce.
-- **[PAY](/en/pay)**: BTC/USDT payments with instant settlement and cross-border capabilities, via Lightning.
-- **[APIs](https://api.cubiq.lat/)**: For startups that want to leverage the technologies powering our own products.
+- **[PAY](/en/pay)**: BTC/USDT payments with instant settlement and cross-border support via Lightning.
+- **[APIs](https://api.cubiq.lat/)**: For startups that want to use the technologies that power our own products.
 
 But there are more products being incubated in the laboratory:
 
-- **LAW**: A micropayments tool that instantly analyzes global contracts, identifying risks and suggesting edits, removing the initial need for expensive lawyers.
+- **LAW**: A micropayment tool that instantly analyzes global contracts, identifying risks and suggesting edits, eliminating the initial need for expensive lawyers.
 
-We are also a <a href="/en/lab">DevLab</a>, offering custom development and a portfolio of proprietary products.
+We are also a <a href="/en/lab">DevLab</a>, offering custom development and a range of proprietary products.
 
 ## The laboratory
 
 Through its [Laboratory](https://www.cubiq.lat), Cubiq experiments with and creates proprietary products such as:
 
-- **[BETIZEN](https://www.betizen.org/)**: The first listing platform for Casino, Binary Options, and Forex with the right incentives: karma, merit, and proof-of-work.
+- **[BETIZEN](https://www.betizen.org/)**: The first Casino, Binary Options, and Forex listings site with the right incentives: karma, merit, and proof-of-work.
 - **[HOPCHAIN](/en/blog/beer-app)** (formerly Ln-Beer): HopChain connects breweries and bitcoiners with frictionless payments in satoshis.
 
 ![HopChain](/products/project-lightning-beer.webp)
 
-In addition, the same programming and design team from the laboratory builds custom solutions for third parties.
+Additionally, the same programming and design team from the laboratory creates custom solutions for third parties.
 
-From institutional websites:
+From brand development and design in Figma:
+
+![ViiVPay-Design](/clients/viivpay-splash.png)
+
+To institutional websites:
 
 ![AGF-Splash](/clients/agf-splash.jpeg)
 
-To custom e-commerce solutions:
+From an e-commerce implementation:
 ![Braaay-Splash](/clients/braaay-splash.jpeg)
+
+To mobile applications:
+
+![Hops-Splash](/clients/hops-splash.webp)
+
+![LoveInABox-Splash](/clients/loveinabox-splash.webp)
 
 We are the technology partner that enables companies and startups to focus on their core business.
 <br>

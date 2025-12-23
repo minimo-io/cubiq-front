@@ -99,7 +99,7 @@
 			<!-- Content -->
 			<!-- <div class="fw-article-content text-left font-sans text-base text-[#ededed] md:text-lg"> -->
 			<div
-				class="fw-article-content prose min-w-full text-left font-sans text-base text-[#ededed] md:text-lg"
+				class="fw-article-content prose prose-img:rounded-3xl min-w-full text-left font-sans text-base text-[#ededed] md:text-lg"
 			>
 				{@html data.post.content}
 			</div>
