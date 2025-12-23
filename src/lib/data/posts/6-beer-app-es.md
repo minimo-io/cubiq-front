@@ -1,6 +1,6 @@
 ---
-title: '🍺 HopChain: Descubre y compra cervezas artesanales locales'
-excerpt: 'Descubre cervezas artesanales locales y paga con bitcoin. HopChain conecta cervecerías y bitcoiners con pagos en satoshis sin fricción.'
+title: '🍺 HopChain: Descubrí y compra cervezas artesanales locales'
+excerpt: 'Descubrí cervezas artesanales locales y paga con bitcoin. HopChain conecta cervecerías y bitcoiners con pagos en satoshis sin fricción.'
 date: 2025-09-01
 featured: false
 isMain: false

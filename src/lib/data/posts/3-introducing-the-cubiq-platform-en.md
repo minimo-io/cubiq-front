@@ -12,22 +12,47 @@ authors:
     avatar: /claude-logo.png
 ---
 
-SMEs and startups need to embrace digital transformation. It’s to support this transformation that we created Cubiq.
+Cubiq was born with the intention of supporting growing companies, SMEs, and startups that need a **reliable and efficient technology partner** to support their transformation.
 
-Cubiq is more than just a collection of tools. It’s an [integrated ecosystem](https://www.cubiq.lat), designed to deliver affordable, modular, and intelligent solutions for growing businesses.
+Cubiq is more than a development company or a collection of tools. We are a <span>Digital Products Platform</span> and a <a href="/lab" class="text-primary">Development Laboratory</a> that designs, builds, and deploys proprietary products as well as custom-made solutions for third parties.
 
-We began this journey inspired by companies like Every… and with an initial suite of products that will expand as our experiments are validated.
+Our team provides the design and development that power the three service layers of our offering.
 
-We’re launching with 4 products:
+<blockquote><strong class="text-primary">//</strong> Here you can learn more about <a href="/en/#more">our technology stack</a>.</blockquote>
 
-- **CARE**: IT asset management and leasing
-- **STORE**: Custom headless e-commerce
-- **PAY**: Cross-border BTC/USDT payments via Lightning
-- **APIs**: For startups who want to leverage the technologies powering our own products
+## The platform
 
-But there’s more in the experiment vault:
+Cubiq’s [integrated platform](https://www.cubiq.lat) is built on a foundation of 4 digital products:
 
-- **LAW**: A micropayment-powered tool that instantly analyzes global contracts for $4.99, identifying risks and suggesting legal edits—eliminating the initial need for expensive lawyers.
+- **[CARE](/en/care)**: IT asset management and rental.
+- **[STORE](/en/store)**: Custom headless e-commerce.
+- **[PAY](/en/pay)**: BTC/USDT payments with instant settlement and cross-border capabilities, via Lightning.
+- **[APIs](https://api.cubiq.lat/)**: For startups that want to leverage the technologies powering our own products.
 
-**Cubiq**  
-_A unified digital products platform for Latin America._
+But there are more products being incubated in the laboratory:
+
+- **LAW**: A micropayments tool that instantly analyzes global contracts, identifying risks and suggesting edits, removing the initial need for expensive lawyers.
+
+We are also a <a href="/en/lab">DevLab</a>, offering custom development and a portfolio of proprietary products.
+
+## The laboratory
+
+Through its [Laboratory](https://www.cubiq.lat), Cubiq experiments with and creates proprietary products such as:
+
+- **[BETIZEN](https://www.betizen.org/)**: The first listing platform for Casino, Binary Options, and Forex with the right incentives: karma, merit, and proof-of-work.
+- **[HOPCHAIN](/en/blog/beer-app)** (formerly Ln-Beer): HopChain connects breweries and bitcoiners with frictionless payments in satoshis.
+
+![HopChain](/products/project-lightning-beer.webp)
+
+In addition, the same programming and design team from the laboratory builds custom solutions for third parties.
+
+From institutional websites:
+
+![AGF-Splash](/clients/agf-splash.jpeg)
+
+To custom e-commerce solutions:
+![Braaay-Splash](/clients/braaay-splash.jpeg)
+
+We are the technology partner that enables companies and startups to focus on their core business.
+<br>
+If you have an idea, get in touch and let’s schedule a conversation!
