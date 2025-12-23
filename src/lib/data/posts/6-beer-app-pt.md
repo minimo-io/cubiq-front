@@ -1,6 +1,6 @@
 ---
-title: '🍺 BeerChain: Descubra e compre cervejas artesanais locais'
-excerpt: 'Descubra cervejas artesanais locais e pague com bitcoin. A BeerChain aproxima cervejarias e bitcoiners com pagamentos em satoshis sem fricção.'
+title: '🍺 HopChain: Descubra e compre cervejas artesanais locais'
+excerpt: 'Descubra cervejas artesanais locais e pague com bitcoin. A HopChain aproxima cervejarias e bitcoiners com pagamentos em satoshis sem fricção.'
 date: 2025-09-01
 featured: false
 isMain: false
@@ -11,7 +11,7 @@ authors:
     avatar: /me.jpeg
 ---
 
-BeerChain é um aplicativo de prova de conceito para aqueles de nós que desejam usar bitcoin como dinheiro, não apenas como mais um ativo especulativo, para que possamos comprar nossos packs de 6 artesanais usando satoshis, em vez de apenas deixá-los parados.
+HopChain é um aplicativo de prova de conceito para aqueles de nós que desejam usar bitcoin como dinheiro, não apenas como mais um ativo especulativo, para que possamos comprar nossos packs de 6 artesanais usando satoshis, em vez de apenas deixá-los parados.
 
 As cervejas serão entregues por lojas de varejo parceiras e amigáveis ao #bitcoin.
 

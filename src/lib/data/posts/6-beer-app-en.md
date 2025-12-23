@@ -1,6 +1,6 @@
 ---
-title: '🍺 BeerChain: Discover and buy local craft beers'
-excerpt: 'Discover local craft beers and pay with bitcoin. BeerChain brings breweries and bitcoiners together with seamless satoshi payments.'
+title: '🍺 HopChain: Discover and buy local craft beers'
+excerpt: 'Discover local craft beers and pay with bitcoin. HopChain brings breweries and bitcoiners together with seamless satoshi payments.'
 date: 2025-09-01
 featured: false
 isMain: false
@@ -11,7 +11,7 @@ authors:
     avatar: /me.jpeg
 ---
 
-BeerChain is as a proof-of-concept app for those of us willing to use bitcoin as money, not just as one more speculative asset, so we can buy our craft 6-packs using satoshis, instead of just sitting above them.
+HopChain is as a proof-of-concept app for those of us willing to use bitcoin as money, not just as one more speculative asset, so we can buy our craft 6-packs using satoshis, instead of just sitting above them.
 
 Beers will be delivered by 3rd party #bitcoin friendly retail stores.
 
