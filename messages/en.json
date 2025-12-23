@@ -99,9 +99,9 @@
 	"construction": "construction",
 	"constructionContent": "We are building a unified platform for <span class='text-base-content opacity-80'>E-Commerce</span>, <span class='text-base-content opacity-80'>Cross-Border Payments</span>, and <span class='text-base-content opacity-80'>IT Asset Monitoring</span>. Contact us while we finish this page.",
 
-	"heroContentHomeXXX": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation around permissionless protocols.",
+	"heroContentHome": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation around permissionless protocols.",
 
-	"heroContentHome": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation applied to projects that explore the digital frontier.",
+	"heroContentHomeXXX": "We are a <span class='text-base-content opacity-80'>B2B Digital Products Platform</span> for Startups and SMEs, and a <span class='text-base-content opacity-80'>Development Lab</span> focused on tailored enterprise solutions and on innovation applied to projects that explore the digital frontier.",
 
 	"heroContentFinXXX": "<div class='text-[#AEAEAE]'>Real-time payments with <span class='text-base-content opacity-80'>Instant Global Settlements</span> in BTC/USDT via Lightning Network. Eg. <span class='text-base-content'>Receive in Argentina and settle abroad</span>, instantly, with 100% compliance and verifiable transparency.</div>",
 
