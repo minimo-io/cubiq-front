@@ -100,7 +100,7 @@
 			<li>
 				<a href="mailto:{AppConfig.cubiq.socials.email}"> Email </a>
 			</li>
-			<li>
+			<li class="hidden">
 				<a target="_blank" rel="nofollow noreferrer" href={AppConfig.cubiq.socials.nostr}>Nostr</a>
 			</li>
 		</ul>

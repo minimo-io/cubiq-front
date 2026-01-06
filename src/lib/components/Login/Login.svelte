@@ -133,7 +133,7 @@
 							alert(`${m.soon()}`);
 						}}
 						type="button"
-						class="mb-3 flex w-full items-center justify-center gap-2 rounded-md bg-white py-2 font-medium text-black shadow-sm transition hover:shadow-md"
+						class="mb-3 flex hidden! w-full items-center justify-center gap-2 rounded-md bg-white py-2 font-medium text-black shadow-sm transition hover:shadow-md"
 					>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18"
 							><path
