@@ -48,6 +48,7 @@
 	"manufacturer": "Manufacturer",
 	"optional": "Optional",
 	"contact": "Contact",
+	"languages": "Languages",
 
 	"logoutMessage": "Goodbye! You've been logged out.",
 

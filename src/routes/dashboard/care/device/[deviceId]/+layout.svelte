@@ -49,8 +49,10 @@
 				: ''} flex w-full flex-col justify-between border-r md:w-1/4"
 		>
 			<!-- Device title -->
-			<div class="flex w-full justify-between border-b p-5">
-				<h1 class="text-base-content mr-2 flex flex-1 items-center text-left text-xl font-bold">
+			<div class="flex w-full flex-wrap items-center justify-between gap-2 border-b p-5">
+				<h1
+					class="text-base-content flex items-center text-left text-xl font-bold whitespace-nowrap"
+				>
 					{#if device.device_type == 'NOTEBOOK'}
 						<Laptop class="mr-[1px] aspect-square h-4" />
 					{:else}
@@ -63,7 +65,7 @@
 					{#if data.device.was_first_pinged}
 						<div
 							class={[
-								'badge text-base-100 border-0 text-xs font-bold  uppercase',
+								'badge text-base-100 border-0 text-xs font-bold uppercase',
 								data.device.status == 'CRITICAL' &&
 									'badge-error animate__animated animate__pulse animate__infinite infinite bg-red-500',
 								data.device.status == 'HEALTHY' && 'badge-success',
@@ -77,9 +79,7 @@
 					{:else}
 						<button
 							onclick={() => connectDevice(deviceId)}
-							class={[
-								'badge text-base-100 btn badge-neutral border-0  text-xs font-bold uppercase'
-							]}
+							class={['badge text-base-100 btn badge-neutral border-0 text-xs font-bold uppercase']}
 						>
 							{m.notConfigured()}
 						</button>

@@ -1,3 +1,4 @@
+// src/routes/dashboard/+layout.server.ts
 // import { productState } from '$stores/Product.state.svelte';
 import { error, redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';

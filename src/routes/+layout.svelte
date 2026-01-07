@@ -19,6 +19,7 @@
 	import { FwToastState, FwToast } from '$stores/Toast.state.svelte';
 	import { m } from '$paraglide/messages';
 	import GlobalModal from '$lib/components/Modal/GlobalModal.svelte';
+	import DrawerDashboard from '$lib/components/Drawer/dashboard/DrawerDashboard.svelte';
 
 	let { children } = $props();
 
@@ -116,7 +117,11 @@
 <CommandPalette />
 
 <!-- Used as a mobile menu -->
-<Drawer />
+{#if !deLocalizeHref(page.route.id || '').startsWith('/dashboard')}
+	<Drawer />
+{:else}
+	<DrawerDashboard products={page.data.permissionList} />
+{/if}
 
 <!-- Global toast -->
 <Toast
@@ -139,69 +144,3 @@
 	<BackToTop />
 	<Tools />
 </div>
-
-<style global>
-	/* Loader styles: a fixed top progress bar */
-	.loader {
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 4px;
-		width: 0%;
-		background: linear-gradient(90deg, #ff4016, #212680);
-		z-index: 9999;
-		transition: width 0.3s ease;
-	}
-	/* When active, the width can animate (you can customize this) */
-	.loader.active {
-		width: 100%;
-		animation: loaderAnimation 2s infinite;
-	}
-
-	@keyframes loaderAnimation {
-		0% {
-			width: 0%;
-		}
-		50% {
-			width: 80%;
-		}
-		100% {
-			width: 100%;
-		}
-	}
-
-	.loader-wrapper {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 9999;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		pointer-events: none;
-	}
-	.loader-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		/* height: 100%; */
-		height: 100dvh;
-		background-color: rgba(249, 249, 249, 0.2);
-		z-index: 9998;
-		animation: fadeIn 0.3s ease-in-out;
-		pointer-events: all;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-</style>

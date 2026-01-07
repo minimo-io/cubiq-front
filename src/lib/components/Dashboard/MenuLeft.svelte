@@ -17,6 +17,7 @@
 	// State to track if menu is collapsed
 	let isCollapsed = $derived(dashboardLeftMenuState.collapsed);
 	let careActiveUserContext = $derived(userContextState.active);
+	let userContextCount = $derived(userContextState.contexts.length);
 
 	let { products }: { products: string[] } = $props();
 
@@ -51,25 +52,16 @@
 	<div
 		class="border-base-200 relative {isCollapsed
 			? ''
-			: productState.active == 'CARE'
+			: productState.active == 'CARE' && userContextCount > 1
 				? 'h-[120px]'
 				: 'h-[73px]'} hidden border-b md:block"
 	>
-		<!-- <button
-			onclick={toggleMenu}
-			class="border-base-200 absolute -top-3 -right-3 hidden h-[23px] w-[23px] items-center justify-center rounded-full border bg-black transition-all duration-200 hover:scale-110 md:flex"
-		>
-			{#if isCollapsed}
-				<ChevronRight class="relative -right-[1px] h-[13px]" strokeWidth="3" />
-			{:else}
-				<ChevronLeft class="relative -left-[1px] h-[13px]" strokeWidth="3" />
-			{/if}
-		</button> -->
 		<div class="{isCollapsed ? 'hidden' : 'hidden md:block'} ">
 			<ProductSwitchButton productsWithPermission={products} />
 		</div>
 
-		{#if productState.active == Product.CARE && !isCollapsed}
+		<!-- User context button -->
+		{#if productState.active == Product.CARE && userContextCount > 1 && !isCollapsed}
 			<div class="border-base-200 flex justify-center border-t">
 				<div class="dropdown dropdown-bottom dropdown-center relative">
 					<div

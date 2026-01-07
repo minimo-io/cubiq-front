@@ -290,7 +290,7 @@
 
 			<!-- Actions -->
 			<div class="modal-action">
-				<button class="btn btn-sm" onclick={close}>Cancel</button>
+				<button class="btn btn-sm" onclick={close}>{m.cancel()}</button>
 			</div>
 		</div>
 		<div
