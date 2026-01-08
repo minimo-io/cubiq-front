@@ -29,7 +29,7 @@
 		>
 			{m.product()}
 		</div>
-		<button class="my-2 flex w-full justify-center hover:opacity-100">
+		<!-- <button class="my-2 flex w-full justify-center hover:opacity-100">
 			<div class="flex flex-row items-center gap-1 hover:opacity-50">
 				<span class="text-primary font-pixel text-[20px] font-bold uppercase">
 					{formattedActiveProduct || m.select()}
@@ -49,6 +49,35 @@
 							role="menuitem"
 							onclick={() => setProduct(product)}
 							class="font-pixel text-[16px] tracking-wide uppercase"
+						>
+							{formatProductName(product)}
+						</button>
+					</li>
+				{/if}
+			{/each}
+		</ul> -->
+		<button type="button" class="my-2 flex w-full justify-center hover:opacity-100">
+			<div class="flex flex-row items-center gap-1 hover:opacity-50">
+				<span class="text-primary font-pixel text-[20px] font-bold uppercase">
+					{formattedActiveProduct || m.select()}
+				</span>
+				<ChevronDown class="text-primary h-4 w-4" />
+			</div>
+		</button>
+
+		<ul
+			tabindex="0"
+			role="menu"
+			class="dropdown-content menu bg-base-100 rounded-box border-base-200 z-[50] mt-2 w-36 border p-2 shadow"
+		>
+			{#each systemProducts as product}
+				{#if product !== productState.active && productsWithPermission.includes(product)}
+					<li role="presentation">
+						<button
+							type="button"
+							role="menuitem"
+							onpointerdown={() => setProduct(product)}
+							class="font-pixel active:bg-primary text-[16px] tracking-wide uppercase"
 						>
 							{formatProductName(product)}
 						</button>
