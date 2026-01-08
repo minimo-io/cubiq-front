@@ -14,7 +14,7 @@
 
 <div class="border-base-200 flex justify-start border-b">
 	<div
-		class="flex w-full flex-col items-start justify-start gap-2 border p-4 md:flex-row md:items-center"
+		class="flex w-full flex-col items-start justify-start gap-2 p-4 md:max-h-[69px] md:flex-row md:items-center"
 	>
 		<div class="flex w-fit gap-2">
 			<!-- Add new device -->

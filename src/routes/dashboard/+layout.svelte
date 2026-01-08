@@ -60,7 +60,7 @@
 		<div
 			class="border-base-200 flex h-[65px] {dashboardLeftMenuState.collapsed
 				? ''
-				: 'md:h-25'} items-center justify-between border-b"
+				: 'md:h-[95px]'} items-center justify-between border-b"
 		>
 			<!-- Dashboard title with breadcrumb -->
 			<div
