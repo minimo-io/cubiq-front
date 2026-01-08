@@ -23,61 +23,36 @@
 </script>
 
 <div class="flex justify-center">
-	<div class="dropdown dropdown-bottom dropdown-center relative my-2">
+	<div class="dropdown dropdown-bottom dropdown-center my-2">
 		<div
-			class="badge badge-xs absolute -top-[16px] left-1/2 -translate-x-1/2 transform px-3 font-bold tracking-widest uppercase"
+			class="badge badge-xs absolute -top-[16px] left-1/2 z-10 -translate-x-1/2 transform border! border-red-600 px-3 font-bold tracking-widest uppercase"
 		>
 			{m.product()}
 		</div>
-		<!-- <button class="my-2 flex w-full justify-center hover:opacity-100">
-			<div class="flex flex-row items-center gap-1 hover:opacity-50">
-				<span class="text-primary font-pixel text-[20px] font-bold uppercase">
-					{formattedActiveProduct || m.select()}
-				</span>
-				<ChevronDown class="text-primary h-4 w-4" />
-			</div>
-		</button>
-		<ul
-			tabindex="0"
-			role="menu"
-			class="dropdown-content menu bg-base-100 rounded-box border-base-200 z-[1] mt-2 w-36 border p-2 shadow"
+
+		<div
+			tabindex="-1"
+			role="button"
+			class="my-2 flex w-full cursor-pointer justify-center border hover:opacity-100"
 		>
-			{#each systemProducts as product}
-				{#if product !== productState.active && productsWithPermission.includes(product)}
-					<li role="presentation">
-						<button
-							role="menuitem"
-							onclick={() => setProduct(product)}
-							class="font-pixel text-[16px] tracking-wide uppercase"
-						>
-							{formatProductName(product)}
-						</button>
-					</li>
-				{/if}
-			{/each}
-		</ul> -->
-		<button type="button" class="my-2 flex w-full justify-center hover:opacity-100">
 			<div class="flex flex-row items-center gap-1 hover:opacity-50">
 				<span class="text-primary font-pixel text-[20px] font-bold uppercase">
 					{formattedActiveProduct || m.select()}
 				</span>
 				<ChevronDown class="text-primary h-4 w-4" />
 			</div>
-		</button>
+		</div>
 
 		<ul
-			tabindex="0"
-			role="menu"
-			class="dropdown-content menu bg-base-100 rounded-box border-base-200 z-[50] mt-2 w-36 border p-2 shadow"
+			tabindex="-1"
+			class="dropdown-content menu bg-base-100 rounded-box border-base-200 z-[100] mt-2 w-36 border p-2 shadow"
 		>
 			{#each systemProducts as product}
 				{#if product !== productState.active && productsWithPermission.includes(product)}
-					<li role="presentation">
+					<li>
 						<button
-							type="button"
-							role="menuitem"
-							onpointerdown={() => setProduct(product)}
-							class="font-pixel active:bg-primary text-[16px] tracking-wide uppercase"
+							onclick={() => setProduct(product)}
+							class="font-pixel active:bg-base-300 text-[16px] tracking-wide uppercase"
 						>
 							{formatProductName(product)}
 						</button>
