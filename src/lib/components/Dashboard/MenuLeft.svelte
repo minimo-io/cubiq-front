@@ -13,6 +13,9 @@
 	import { m } from '$paraglide/messages';
 	import { saveContextToCookie, userContextState } from '$stores/UserContext.state.svelte';
 	import type { CompanyContext } from '$types/care/care.devices.types';
+	import { drawerState } from '$stores/DrawerState.state.svelte';
+	import { localizeHref } from '$paraglide/runtime';
+	import { goto } from '$app/navigation';
 
 	// State to track if menu is collapsed
 	let isCollapsed = $derived(dashboardLeftMenuState.collapsed);
@@ -27,7 +30,10 @@
 
 	function setUserContext(context: CompanyContext) {
 		userContextState.active = context;
+		drawerState.active = false;
+		// console.log('Context changed!');
 		saveContextToCookie(context);
+		goto(localizeHref('/dashboard/care'));
 
 		if (document.activeElement instanceof HTMLElement) {
 			document.activeElement.blur();
@@ -36,7 +42,7 @@
 </script>
 
 <div
-	class="border-base-200 flex min-h-dvh flex-col border-r transition-all duration-300 ease-in-out {isCollapsed
+	class="border-base-200 hidden min-h-dvh flex-col border-r transition-all duration-300 ease-in-out md:flex {isCollapsed
 		? ''
 		: 'md:w-60'}"
 >

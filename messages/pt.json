@@ -50,6 +50,16 @@
 	"optional": "Opcional",
 	"contact": "Contato",
 	"languages": "Idiomas",
+	"recycling": "Reciclagem",
+	"reports": "Relatórios",
+	"serviceOrders": "Ordens de Serviço",
+	"inventory": "Inventário",
+	"billing": "Faturamento",
+	"allAssets": "Todos os ativos",
+	"users": "Usuários",
+	"user": "Usuário",
+	"clientsEmployees": "Clientes / Funcionários",
+	"technicians": "Técnicos",
 
 	"logoutMessage": "Até logo! Você foi desconectado(a).",
 

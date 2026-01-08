@@ -49,6 +49,16 @@
 	"optional": "Opcional",
 	"contact": "Contacto",
 	"languages": "Idiomas",
+	"recycling": "Reciclaje",
+	"reports": "Informes",
+	"serviceOrders": "Órdenes de Servicio",
+	"inventory": "Inventario",
+	"billing": "Facturación",
+	"allAssets": "Todos los activos",
+	"users": "Usuarios",
+	"user": "Usuario",
+	"clientsEmployees": "Clientes / Empleados",
+	"technicians": "Técnicos",
 
 	"logoutMessage": "¡Adiós! Cerraste la sesión.",
 

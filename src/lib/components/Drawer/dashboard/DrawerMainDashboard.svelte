@@ -8,12 +8,13 @@
 		HeartPlus,
 		FileClock,
 		PenLine,
-		ChevronDown
+		ChevronDown,
+		User
 	} from '@lucide/svelte';
-	import { openSubmenu } from '$stores/DrawerState.state.svelte';
+	import { drawerState, openSubmenu } from '$stores/DrawerState.state.svelte';
 	import { localizeHref, getLocale } from '$paraglide/runtime';
 
-	import { getLocaleName } from '$utils';
+	import { capitalize, getLocaleName } from '$utils';
 	import { m, product } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
 	import { Product, type ProductData } from '$types/products.types';
@@ -23,8 +24,15 @@
 	import { productState } from '$stores/Product.state.svelte';
 	import { saveContextToCookie, userContextState } from '$stores/UserContext.state.svelte';
 	import type { CompanyContext } from '$types/care/care.devices.types';
+	import MenuCare from '../../../../routes/dashboard/care/components/MenuCare.svelte';
+	import MenuNotes from '../../../../routes/dashboard/notes/components/MenuNotes.svelte';
+	import { toggleLoader } from '$stores/Loader.state.svelte';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
 
 	let { products }: { products: string[] } = $props();
+
+	let user = $derived(page.data.user);
 
 	const locale = $state(getLocale());
 	let PRODUCTS = getProducts(locale);
@@ -34,8 +42,12 @@
 	let userContextCount = $derived(userContextState.contexts.length);
 
 	function setUserContext(context: CompanyContext) {
+		// toggleLoader();
 		userContextState.active = context;
+		drawerState.active = false;
+		// console.log('Context changed!');
 		saveContextToCookie(context);
+		goto(localizeHref('/dashboard/care'));
 
 		if (document.activeElement instanceof HTMLElement) {
 			document.activeElement.blur();
@@ -46,7 +58,7 @@
 <div
 	class="border-base-300 flex flex-1 flex-col overflow-x-hidden overflow-y-auto border-t px-0 text-xs"
 >
-	<!-- Item with submenu -->
+	<!-- Languages -->
 	<button
 		onclick={() => openSubmenu('fw_menu_languages', m.languages())}
 		class="border-base-300 font-roboto text-grey-dark shine-effect flex w-full justify-between border-b px-[30px] py-3 text-left align-middle text-sm"
@@ -58,6 +70,31 @@
 				<span>—</span>
 				<img src="/flags/{locale}.png" alt="flag-{locale}" class="aspect-1 h-[16px]" />
 				<span class="capitalize">{getLocaleName(locale)}</span>
+			</div>
+		</div>
+		<div class="text-grey-medium flex flex-row self-center align-middle">
+			<ChevronRight class="aspect-1 text-grey-dark w-4" />
+		</div>
+	</button>
+
+	<!-- User -->
+	<button
+		onclick={() => openSubmenu('fw_menu_dashboard_user', m.user())}
+		class="border-base-300 font-roboto text-grey-dark shine-effect flex w-full justify-between border-b px-[30px] py-3 text-left align-middle text-sm"
+	>
+		<div class="flex justify-center self-center text-left align-middle">
+			<User class="mr-2 h-4 w-4 self-center" />
+			<div class="self-center font-semibold">{m.user()}</div>
+			<div class="text-secondary ml-1 flex items-center gap-1">
+				<span>—</span>
+				<!-- <img src="/flags/{locale}.png" alt="flag-{locale}" class="aspect-1 h-[16px]" /> -->
+				<span class="capitalize">
+					{#if user}
+						<span class="px-1 font-sans text-sm tracking-wide lowercase">
+							{user.email}
+						</span>
+					{/if}
+				</span>
 			</div>
 		</div>
 		<div class="text-grey-medium flex flex-row self-center align-middle">
@@ -106,6 +143,12 @@
 				</ul>
 			</div>
 		</div>
+	{/if}
+
+	{#if productState.active == Product.CARE}
+		<MenuCare isDrawer={true} />
+	{:else if productState.active == Product.NOTES}
+		<MenuNotes isDrawer={true} />
 	{/if}
 
 	<!-- Fixed Extra Menu -->

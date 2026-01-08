@@ -10,6 +10,7 @@
 	import DrawerAccount from '../DrawerAccount.svelte';
 	import DrawerLanguages from '../DrawerLanguages.svelte';
 	import DrawerMainDashboard from './DrawerMainDashboard.svelte';
+	import DrawerUser from './DrawerUser.svelte';
 	// import { onMount } from 'svelte';
 
 	let { products }: { products: string[] } = $props();
@@ -67,6 +68,10 @@
 					class="overflow-y-auto"
 				>
 					<DrawerAccount />
+				</div>
+			{:else if drawerState.currentSubmenu === 'fw_menu_dashboard_user'}
+				<div in:fly={{ x: 300, duration: 300, easing: quintOut }} class="overflow-y-auto">
+					<DrawerUser />
 				</div>
 			{:else if drawerState.currentSubmenu === 'fw_menu_languages'}
 				<div in:fly={{ x: 300, duration: 300, easing: quintOut }} class="overflow-y-auto">

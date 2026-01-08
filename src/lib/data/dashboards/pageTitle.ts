@@ -35,7 +35,7 @@ export function getPageTitles(product: Product): Record<RouteId, PageTitle> {
 				title: m.dashboardCareAddDevice(),
 				documentTitle: m.dashboardCareAddDeviceDoc(),
 				breadcrumb: [
-					{ label: m.breadcrumbCare(), path: '/dashboard/care' },
+					// { label: m.breadcrumbCare(), path: '/dashboard/care' },
 					{ label: m.dashboardCareAddDevice() }
 				]
 			},
@@ -43,7 +43,7 @@ export function getPageTitles(product: Product): Record<RouteId, PageTitle> {
 				title: m.dashboardCareAlerts(),
 				documentTitle: m.dashboardCareAlertsDoc(),
 				breadcrumb: [
-					{ label: m.breadcrumbCare(), path: '/dashboard/care' },
+					// { label: m.breadcrumbCare(), path: '/dashboard/care' },
 					{ label: m.dashboardCareAlerts() }
 				]
 			},
@@ -51,7 +51,7 @@ export function getPageTitles(product: Product): Record<RouteId, PageTitle> {
 				title: m.dashboardCareDevices(),
 				documentTitle: m.dashboardCareDevicesDoc(),
 				breadcrumb: [
-					{ label: m.breadcrumbCare(), path: '/dashboard/care' },
+					// { label: m.breadcrumbCare(), path: '/dashboard/care' },
 					{ label: m.breadcrumbDevices() }
 				]
 			},
@@ -59,7 +59,7 @@ export function getPageTitles(product: Product): Record<RouteId, PageTitle> {
 				title: m.dashboardCareDeviceDetails(),
 				documentTitle: m.dashboardCareDeviceDetailsDoc(),
 				breadcrumb: [
-					{ label: m.breadcrumbCare(), path: '/dashboard/care' },
+					// { label: m.breadcrumbCare(), path: '/dashboard/care' },
 					{ label: m.breadcrumbDevices(), path: '/dashboard/care/device' },
 					{ label: m.breadcrumbDetails() }
 				]
@@ -68,7 +68,7 @@ export function getPageTitles(product: Product): Record<RouteId, PageTitle> {
 				title: m.dashboardCareAddService(),
 				documentTitle: m.dashboardCareAddServiceDoc(),
 				breadcrumb: [
-					{ label: m.breadcrumbCare(), path: '/dashboard/care' },
+					// { label: m.breadcrumbCare(), path: '/dashboard/care' },
 					{ label: m.breadcrumbDevices(), path: '/dashboard/care/device' },
 					{ label: m.breadcrumbDetails() }, // No path since it's dynamic
 					{ label: m.dashboardCareAddService() }

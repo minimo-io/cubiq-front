@@ -9,9 +9,10 @@
 	import { productState } from '$stores/Product.state.svelte';
 	import type { Product } from '$types/products.types.js';
 	import { getPageTitle } from '$lib/data/dashboards/pageTitle.js';
-	import { EllipsisVertical } from '@lucide/svelte';
+	import { EllipsisVertical, House } from '@lucide/svelte';
 	import { m } from '$paraglide/messages';
 	import { browser } from '$app/environment';
+	import { localizeHref } from '$paraglide/runtime.js';
 
 	let { children, data } = $props();
 	productState.active = data.selectedProduct as Product;
@@ -65,6 +66,9 @@
 			<div
 				class="text-primary flex max-w-full items-center justify-center gap-1 pl-5 text-lg font-black uppercase"
 			>
+				<a href={localizeHref(`/dashboard/${productState.active?.toLowerCase()}`)}>
+					<House class="mr-2 h-6" strokeWidth="1" />
+				</a>
 				{#if pageTitleState.breadcrumb && pageTitleState.breadcrumb.length > 1}
 					<!-- Mobile dropdown -->
 					<details class="dropdown mr-1 rounded-xs border sm:hidden">

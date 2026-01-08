@@ -49,6 +49,16 @@
 	"optional": "Optional",
 	"contact": "Contact",
 	"languages": "Languages",
+	"recycling": "Recycling",
+	"reports": "Reports",
+	"serviceOrders": "Service Orders",
+	"inventory": "Inventory",
+	"billing": "Billing",
+	"allAssets": "All assets",
+	"users": "Users",
+	"user": "User",
+	"clientsEmployees": "Clients / Employees",
+	"technicians": "Technicians",
 
 	"logoutMessage": "Goodbye! You've been logged out.",
 
