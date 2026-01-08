@@ -25,7 +25,7 @@
 <div class="flex justify-center">
 	<div class="dropdown dropdown-bottom dropdown-center my-2">
 		<div
-			class="badge badge-xs absolute -top-[16px] left-1/2 z-10 -translate-x-1/2 transform border! border-red-600 px-3 font-bold tracking-widest uppercase"
+			class="badge badge-xs absolute -top-[16px] left-1/2 z-10 -translate-x-1/2 transform border! px-3 font-bold tracking-widest uppercase"
 		>
 			{m.product()}
 		</div>
@@ -33,7 +33,7 @@
 		<div
 			tabindex="-1"
 			role="button"
-			class="my-2 flex w-full cursor-pointer justify-center border hover:opacity-100"
+			class="my-2 flex w-full cursor-pointer justify-center hover:opacity-100"
 		>
 			<div class="flex flex-row items-center gap-1 hover:opacity-50">
 				<span class="text-primary font-pixel text-[20px] font-bold uppercase">
@@ -45,7 +45,7 @@
 
 		<ul
 			tabindex="-1"
-			class="dropdown-content menu bg-base-100 rounded-box border-base-200 z-[100] mt-2 w-36 border p-2 shadow"
+			class="dropdown-content menu bg-base-100 rounded-box border-base-200 z-[100] mt-2 w-36 p-2 shadow"
 		>
 			{#each systemProducts as product}
 				{#if product !== productState.active && productsWithPermission.includes(product)}
