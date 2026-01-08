@@ -577,6 +577,7 @@
 	"serviceStatus": "Service status",
 	"model": "Model",
 	"setupMonitoring": "Setup monitoring",
+	"setupMonitoringText": "Instale el software predictivo de Cubiq e inicie sesión desde él para que aparezca en su lista de dispositivos.",
 	"notConnected": "Not connected",
 	"connected": "Connected",
 	"notConfigured": "Not configured",

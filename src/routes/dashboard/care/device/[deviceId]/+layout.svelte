@@ -10,6 +10,8 @@
 	import { browser } from '$app/environment';
 	import Actions from './components/Actions.svelte';
 	import { page } from '$app/state';
+	import { modalState } from '$stores/Modal.state.svelte';
+	import ConfigureDevice from '../../components/ConfigureDevice.svelte';
 
 	interface Props {
 		children: Snippet<[]>;
@@ -29,7 +31,14 @@
 
 	function connectDevice(deviceId: string) {
 		if (browser) {
-			alert('Conectar dispositivo...');
+			modalState.open({
+				component: ConfigureDevice,
+				props: {},
+				size: 'md',
+				closeOnBackdrop: false,
+				closeOnEscape: false
+			});
+			// alert('Conectar dispositivo...');
 		}
 	}
 </script>

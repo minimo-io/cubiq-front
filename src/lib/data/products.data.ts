@@ -30,7 +30,7 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		primary: false,
 		isBold: true,
 		online: true,
-		unavailable: true,
+		unavailable: false,
 		url: localizeHref('/store', { locale: locale })
 	},
 	{

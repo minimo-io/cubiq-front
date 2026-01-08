@@ -60,7 +60,6 @@
 	"user": "Usuário",
 	"clientsEmployees": "Clientes / Funcionários",
 	"technicians": "Técnicos",
-
 	"logoutMessage": "Até logo! Você foi desconectado(a).",
 
 	"loggingIn": "Entrando...",
@@ -583,6 +582,7 @@
 	"serviceStatus": "Status do serviço",
 	"model": "Modelo",
 	"setupMonitoring": "Configurar monitoramento",
+	"setupMonitoringText": "Instale o software preditivo da Cubiq e inicie sessão a partir dele para que apareça na sua lista de dispositivos.",
 	"notConnected": "Não conectado",
 	"connected": "Conectado",
 	"notConfigured": "Não configurado",

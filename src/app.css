@@ -301,8 +301,8 @@ body {
 		@apply bg-[url('/bgs/header-moving-stars-2-2.webp')] opacity-20;
 	}
 	.fw-bg-bagity {
-		/* @apply bg-conic bg-[url('/bgs/header-bagity-4.png')] opacity-50; */
-		@apply bg-conic bg-[url('/bgs/header-purple-haze.jpeg')] opacity-45;
+		/* @apply bg-conic bg-[url('/bgs/header-purple-haze.jpeg')] opacity-50; */
+		@apply bg-conic bg-[url('/bgs/header-lab.jpeg')] opacity-45;
 	}
 	.fw-bg-construction {
 		@apply bg-[url('/bgs/header-underconstruction.jpeg')];
