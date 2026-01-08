@@ -9,7 +9,8 @@
 		FileClock,
 		PenLine,
 		ChevronDown,
-		User
+		User,
+		House
 	} from '@lucide/svelte';
 	import { drawerState, openSubmenu } from '$stores/DrawerState.state.svelte';
 	import { localizeHref, getLocale } from '$paraglide/runtime';
@@ -156,6 +157,17 @@
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
 		{m.resources()}
 	</h2>
+
+	<!-- Homepage -->
+	<a
+		href={localizeHref('/')}
+		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
+	>
+		<div class="flex justify-center self-center text-left align-middle">
+			<House class="text-sun mr-2 h-4 w-4 self-center" />
+			<span class="self-center font-semibold">{m.homepage()}</span>
+		</div>
+	</a>
 
 	<!-- Docs -->
 	<a
