@@ -103,13 +103,13 @@
 	</button>
 
 	<!-- Product switcher -->
-	<div class="border-base-300 border-b">
+	<div class="border-base-300 border border-b border-blue-400">
 		<ProductSwitchButton productsWithPermission={products} />
 	</div>
 
 	<!-- User context -->
 	{#if productState.active == Product.CARE && userContextCount > 1}
-		<div class="border-base-200 flex justify-center border-t border-b">
+		<div class="border-base-200 flex justify-center border border-t border-b border-red-400!">
 			<div class="dropdown dropdown-bottom dropdown-center relative">
 				<div
 					class="badge badge-xs absolute -top-[9px] left-1/2 -translate-x-1/2 transform px-3 font-bold tracking-widest uppercase"
