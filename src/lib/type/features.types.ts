@@ -8,6 +8,7 @@ export type Feature = {
 	button?: {
 		text: string;
 		href: string;
+		blank?: boolean;
 	};
 	pill?: {
 		text: string;

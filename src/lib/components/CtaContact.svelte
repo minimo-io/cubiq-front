@@ -14,7 +14,7 @@
 		{m.ctaText()}
 	</p>
 	<a
-		href={AppConfig.cubiq.socials.whatsapp[getLocale()]}
+		href={AppConfig.cubiq.socials.whatsapp['es']}
 		target="_blank"
 		rel="nofollow noreferrer"
 		class="font-pixel inline-block rounded-full bg-white px-6 py-2 text-black uppercase transition hover:bg-gray-200"

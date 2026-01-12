@@ -49,7 +49,8 @@
 			button: {
 				text: m.downloadSoftware(),
 				// href: localizeHref('/care/software-preditivo')
-				href: localizeHref('/soon')
+				href: AppConfig.care.preditiveSoftwareReleasesLink,
+				blank: true
 			}
 		},
 		{

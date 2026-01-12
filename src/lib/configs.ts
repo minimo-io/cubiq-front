@@ -3,7 +3,9 @@ export const AppConfig = {
 	calendar: 'https://calendar.app.google/PFL1kPtd8VYFaXzc6',
 	status: 'https://stats.uptimerobot.com/pPaLEt4eBM',
 	care: {
-		deviceRefreshIntervalSeconds: 30
+		deviceRefreshIntervalSeconds: 30,
+		preditiveSoftwareReleasesLink:
+			'https://github.com/cubiq-lat/cubiq-care-monitor/releases/latest/'
 	},
 	toast: {
 		duration: 2500

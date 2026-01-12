@@ -252,6 +252,7 @@
 											<!-- Featured button -->
 											{#if feature.button}
 												<a
+													target={feature.button.blank ? '_blank' : undefined}
 													href={feature.button.href}
 													class="btn btn-xs md:btn-sm bg-primary/10 border-primary text-primary hover:bg-primary relative mt-0 rounded-full border hover:text-black"
 												>
