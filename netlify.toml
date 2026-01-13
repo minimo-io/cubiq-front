@@ -15,3 +15,9 @@
   to = "https://www.cubiq.lat/store"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/en/docs"
+  to = "https://api.cubiq.lat/docs"
+  status = 301
+  force = true
