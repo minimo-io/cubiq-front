@@ -11,7 +11,8 @@
 		Book,
 		HeartPlus,
 		FileClock,
-		PenLine
+		PenLine,
+		User
 	} from '@lucide/svelte';
 	import { openSubmenu } from '$stores/DrawerState.state.svelte';
 	import { localizeHref, getLocale } from '$paraglide/runtime';
@@ -21,6 +22,9 @@
 	import { AppConfig } from '$lib/configs';
 	import type { ProductData } from '$types/products.types';
 	import { getProducts } from '$lib/data/products.data';
+	import { page } from '$app/state';
+
+	let user = $derived(page.data.user);
 
 	const locale = $state(getLocale());
 	let PRODUCTS = getProducts(locale);
@@ -30,7 +34,7 @@
 <div
 	class="border-base-300 flex flex-1 flex-col overflow-x-hidden overflow-y-auto border-t px-0 text-xs"
 >
-	<!-- Item with submenu -->
+	<!-- Language -->
 	<button
 		onclick={() => openSubmenu('fw_menu_languages', m.languages())}
 		class="border-base-300 font-roboto text-grey-dark shine-effect flex w-full justify-between border-b px-[30px] py-3 text-left align-middle text-sm"
@@ -48,6 +52,33 @@
 			<ChevronRight class="aspect-1 text-grey-dark w-4" />
 		</div>
 	</button>
+
+	<!-- User -->
+	{#if user && user.email}
+		<button
+			onclick={() => openSubmenu('fw_menu_dashboard_user', m.user())}
+			class="border-base-300 font-roboto text-grey-dark shine-effect flex w-full justify-between border-b px-[30px] py-3 text-left align-middle text-sm"
+		>
+			<div class="flex justify-center self-center text-left align-middle">
+				<User class="mr-2 h-4 w-4 self-center" />
+				<div class="self-center font-semibold">{m.user()}</div>
+				<div class="text-secondary ml-1 flex items-center gap-1">
+					<span>—</span>
+					<!-- <img src="/flags/{locale}.png" alt="flag-{locale}" class="aspect-1 h-[16px]" /> -->
+					<span class="capitalize">
+						{#if user}
+							<span class="px-1 font-sans text-sm tracking-wide lowercase">
+								{user.email}
+							</span>
+						{/if}
+					</span>
+				</div>
+			</div>
+			<div class="text-grey-medium flex flex-row self-center align-middle">
+				<ChevronRight class="aspect-1 text-grey-dark w-4" />
+			</div>
+		</button>
+	{/if}
 
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
 		{m.menuProducts()}

@@ -20,6 +20,7 @@
 	import ProductsNew from '$lib/components/Home/ProductsNew.svelte';
 	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 	import { type DashboardImageType } from '$types/dashboardImages.types';
+	import TopPosts from '$lib/components/blog/topPosts.svelte';
 
 	const dashboardImages: DashboardImageType[] = $state([
 		{
@@ -109,6 +110,29 @@
 
 	<!-- About Section -->
 	<About />
+</div>
+
+<!-- Featured blog posts -->
+
+<div
+	class="max-w-fw border-x-base-200 relative container my-0 text-center md:mx-auto md:border-0 md:border-x"
+>
+	<div
+		class="border-base-200 flex items-center justify-between border-t border-b px-6 py-8 md:px-12"
+	>
+		<div
+			class="text-left font-sans text-[25px] leading-tight font-black md:text-[36px] md:leading-normal"
+		>
+			{m.latestNews()}
+		</div>
+		<div class="text-right font-sans text-sm md:text-base">
+			{m.subscriveVia()} <a href="/#" class="text-primary font-bold">RSS</a>
+			{m.or()}
+			<a href="/#" class="text-primary font-bold">Email</a>
+		</div>
+	</div>
+
+	<TopPosts />
 </div>
 
 <!-- <div class="border-base-200 mx-(--cubiq-app-margin) mb-12 md:mx-0">

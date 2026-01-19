@@ -9,6 +9,7 @@
 	import DrawerMain from './DrawerMain.svelte';
 	import DrawerAccount from './DrawerAccount.svelte';
 	import DrawerLanguages from './DrawerLanguages.svelte';
+	import DrawerUser from './dashboard/DrawerUser.svelte';
 
 	// Effect to add/remove no-scroll class when drawer state changes
 	$effect(() => {
@@ -62,6 +63,10 @@
 			{:else if drawerState.currentSubmenu === 'fw_menu_languages'}
 				<div in:fly={{ x: 300, duration: 300, easing: quintOut }} class="overflow-y-auto">
 					<DrawerLanguages />
+				</div>
+			{:else if drawerState.currentSubmenu === 'fw_menu_dashboard_user'}
+				<div in:fly={{ x: 300, duration: 300, easing: quintOut }} class="overflow-y-auto">
+					<DrawerUser />
 				</div>
 			{/if}
 		</div>

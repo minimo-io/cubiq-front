@@ -118,7 +118,7 @@
 					href={localizeHref('/roadmap')}
 					class={[
 						'flex py-3 align-middle text-[16px] tracking-wider',
-						'border-b border-b-gray-700'
+						'border-b-0 border-b-gray-700'
 					]}
 				>
 					<FileClock class="h-4" />
@@ -126,7 +126,7 @@
 				</a>
 			</li>
 
-			<li>
+			<!-- <li>
 				<a
 					href={localizeHref('/blog')}
 					class={['flex py-3 align-middle text-[16px] tracking-wider']}
@@ -134,7 +134,7 @@
 					<PenLine class="h-4" />
 					Blog
 				</a>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 

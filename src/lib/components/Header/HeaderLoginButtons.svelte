@@ -60,7 +60,7 @@
 		</a>
 		<!-- Sign-up -->
 		<a
-			href={localizeHref('/signup')}
+			href={localizeHref('/sign-up')}
 			class="bg-base-200 hover:bg-base-100 flex items-center rounded-full px-5 py-3 text-[13px] font-light uppercase md:px-6 md:text-[15px]"
 		>
 			<span class="relative top-[1px] flex items-center"> {m.signUp()} </span>
