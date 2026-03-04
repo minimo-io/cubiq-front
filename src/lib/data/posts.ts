@@ -3,10 +3,10 @@ import { Beer, Database, Braces } from '@lucide/svelte';
 export const posts = {
 	en: [
 		{
-			title: "🍺 HopChain: Discover and buy local craft beers",
+			title: "🍺 TapTapGo: Discover and buy local craft beers",
 			image: "/products/project-lightning-beer.webp",
-			excerpt: "Discover local craft beers and pay with bitcoin. HopChain brings breweries and bitcoiners together with seamless satoshi payments.",
-			content: "<p>HopChain is as a proof-of-concept app for those of us willing to use bitcoin as money, not just as one more speculative asset, so we can buy our craft 6-packs using satoshis, instead of just sitting above them.</p>\n<p>Beers will be delivered by 3rd party #bitcoin friendly retail stores.</p>\n<p>If you are a store owner and are interested please get in touch!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visit project</a></p>\n",
+			excerpt: "Discover local craft beers and pay with bitcoin. TapTapGo brings breweries and bitcoiners together with seamless satoshi payments.",
+			content: "<p>TapTapGo is as a proof-of-concept app for those of us willing to use bitcoin as money, not just as one more speculative asset, so we can buy our craft 6-packs using satoshis, instead of just sitting above them.</p>\n<p>Beers will be delivered by 3rd party #bitcoin friendly retail stores.</p>\n<p>If you are a store owner and are interested please get in touch!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visit project</a></p>\n",
 			date: "August 31",
 			slug: "/en/blog/beer-app",
 			isMain: false,
@@ -169,10 +169,10 @@ export const posts = {
 	],
 	es: [
 		{
-			title: "🍺 HopChain: Descubrí y compra cervezas artesanales locales",
+			title: "🍺 TapTapGo: Descubrí y compra cervezas artesanales locales",
 			image: "/products/project-lightning-beer.webp",
-			excerpt: "Descubrí cervezas artesanales locales y paga con bitcoin. HopChain conecta cervecerías y bitcoiners con pagos en satoshis sin fricción.",
-			content: "<p>HopChain es una aplicación de prueba de concepto para quienes queremos usar bitcoin como dinero, no solo como otro activo especulativo, para así poder comprar nuestros packs de 6 artesanales usando satoshis en lugar de simplemente tenerlos acumulados.</p>\n<p>Las cervezas serán entregadas por tiendas minoristas asociadas y amigables con #bitcoin.</p>\n<p>Si eres dueño de una tienda y estás interesado, ¡ponte en contacto!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visitar proyecto</a></p>\n",
+			excerpt: "Descubrí cervezas artesanales locales y paga con bitcoin. TapTapGo conecta cervecerías y bitcoiners con pagos en satoshis sin fricción.",
+			content: "<p>TapTapGo es una aplicación de prueba de concepto para quienes queremos usar bitcoin como dinero, no solo como otro activo especulativo, para así poder comprar nuestros packs de 6 artesanales usando satoshis en lugar de simplemente tenerlos acumulados.</p>\n<p>Las cervezas serán entregadas por tiendas minoristas asociadas y amigables con #bitcoin.</p>\n<p>Si eres dueño de una tienda y estás interesado, ¡ponte en contacto!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visitar proyecto</a></p>\n",
 			date: "31 de agosto",
 			slug: "/es/blog/beer-app",
 			isMain: false,
@@ -319,10 +319,10 @@ export const posts = {
 	],
 	pt: [
 		{
-			title: "🍺 HopChain: Descubra e compre cervejas artesanais locais",
+			title: "🍺 TapTapGo: Descubra e compre cervejas artesanais locais",
 			image: "/products/project-lightning-beer.webp",
-			excerpt: "Descubra cervejas artesanais locais e pague com bitcoin. A HopChain aproxima cervejarias e bitcoiners com pagamentos em satoshis sem fricção.",
-			content: "<p>HopChain é um aplicativo de prova de conceito para aqueles de nós que desejam usar bitcoin como dinheiro, não apenas como mais um ativo especulativo, para que possamos comprar nossos packs de 6 artesanais usando satoshis, em vez de apenas deixá-los parados.</p>\n<p>As cervejas serão entregues por lojas de varejo parceiras e amigáveis ao #bitcoin.</p>\n<p>Se você é dono de uma loja e tem interesse, entre em contato!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Vistar projeto</a></p>\n",
+			excerpt: "Descubra cervejas artesanais locais e pague com bitcoin. A TapTapGo aproxima cervejarias e bitcoiners com pagamentos em satoshis sem fricção.",
+			content: "<p>TapTapGo é um aplicativo de prova de conceito para aqueles de nós que desejam usar bitcoin como dinheiro, não apenas como mais um ativo especulativo, para que possamos comprar nossos packs de 6 artesanais usando satoshis, em vez de apenas deixá-los parados.</p>\n<p>As cervejas serão entregues por lojas de varejo parceiras e amigáveis ao #bitcoin.</p>\n<p>Se você é dono de uma loja e tem interesse, entre em contato!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Vistar projeto</a></p>\n",
 			date: "31 de agosto",
 			slug: "/blog/beer-app",
 			isMain: false,

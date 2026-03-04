@@ -21,7 +21,7 @@
 
 	<div class="md:pb-3">
 		<div class="relative -top-1 hidden scale-95 text-center md:block">
-			<PillFlower title={m.menuProducts()} />
+			<PillFlower title={m.platform()} />
 		</div>
 
 		<h2 class="text-center text-[28px] tracking-wide md:hidden">{m.menuProducts()}</h2>

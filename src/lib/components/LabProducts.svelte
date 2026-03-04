@@ -12,7 +12,7 @@
 	let {
 		hideSlogan = false,
 		noSpaces = false,
-		experimentsTitle = m.menuExperiments(),
+		experimentsTitle = m.menuProducts(),
 		smallerTopMargins = false
 	} = $props();
 

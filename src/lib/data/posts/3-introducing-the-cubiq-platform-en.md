@@ -40,9 +40,9 @@ We are also a <a href="/en/lab">DevLab</a>, offering custom development and a ra
 Through its [Laboratory](https://www.cubiq.lat), Cubiq experiments with and creates proprietary products such as:
 
 - **[BETIZEN](https://www.betizen.org/)**: The first Casino, Binary Options, and Forex listings site with the right incentives: karma, merit, and proof-of-work.
-- **[HOPCHAIN](/en/blog/beer-app)** (formerly Ln-Beer): HopChain connects breweries and bitcoiners with frictionless payments in satoshis.
+- **[TAPTAPGO](/en/blog/beer-app)** (formerly Ln-Beer): TapTapGo connects breweries and bitcoiners with frictionless payments in satoshis.
 
-![HopChain](/products/project-lightning-beer.webp)
+![TapTapGo](/products/project-lightning-beer.webp)
 
 Additionally, the same programming and design team from the laboratory creates custom solutions for third parties.
 
