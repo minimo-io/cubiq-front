@@ -133,8 +133,10 @@
 	</div>
 	<!-- Navigation Dots -->
 	<HeaderDots />
+	
 	<!-- Decorations -->
 	<HeaderDecorations />
+
 	<!-- Decoration cube -->
 	{#if hideCube === false}
 		<div class="max-w-fw relative mx-auto hidden md:block">
