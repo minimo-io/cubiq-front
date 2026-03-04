@@ -112,11 +112,11 @@
 	"construction": "construção",
 	"constructionContent": "Estamos construindo uma plataforma unificada de <span class='text-base-content opacity-80'>E-Commerce</span>, <span class='text-base-content opacity-80'>Pagamentos X-Border</span> e <span class='text-base-content opacity-80'>Monitoramento de Ativos de TI</span>. Entre em contato em quanto finalizamos esta página.",
 
-	"heroContentHomexx": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida, e na inovação aplicada a projetos que exploram as fronteiras do digital.",
-
-	"heroContentHome": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida e na inovação sobre protocolos permissionless.",
-
+	"heroContentHome_OLD": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida, e na inovação aplicada a projetos que exploram as fronteiras do digital.",
+	"heroContentHome_LESS_OLD": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida e na inovação sobre protocolos permissionless.",
 	"heroContentHome1": "Somos uma <span class='text-base-content opacity-80'>Plataforma B2B de Produtos Digitais</span> para Startups e PMEs, e um <span class='text-base-content opacity-80'>Laboratório de Desenvolvimento</span> focado em soluções empresariais sob medida e na inovação, com produtos in-house.",
+
+	"heroContentHome": "<span class='text-base-content opacity-80'>Software Factory</span> orientada a produtos, <span class='text-base-content opacity-80'>Plataforma Digital</span> para PMEs e <span class='text-base-content opacity-80'>Backend-as-a-Service</span> para Startups. Impulsionados por IA, geridos por humanos, <span class='text-base-content opacity-80'>criamos, operamos e escalamos negócios digitais em LATAM</span> 🚀",
 
 	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagamentos em tempo real com <span class='text-base-content opacity-80'>Settlements Globais Instantâneos</span> em BTC/USDT, via Lightning Network. Ex.: <span class='text-base-content'>Receba desde qualquer lugar do mundo e liquide no instante na sua carteira</span>, com transparência 100% verificável!<div class='ml-2 pb-[1px] badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary font-sans text-xs!'>Indisponível</div></div>",
 

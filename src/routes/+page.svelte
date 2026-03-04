@@ -83,7 +83,9 @@
 	<div class="mb-[8px]">
 		<Clients addDesktopPadding={true} />
 	</div>
+
 	<ProductsNew />
+
 	<LabProducts />
 
 	<Developers />
