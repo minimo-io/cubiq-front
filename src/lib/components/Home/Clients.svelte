@@ -1,6 +1,6 @@
 <script lang="ts">
-	import PillFlower from '../PillFlower.svelte';
-	import { m } from '$paraglide/messages';
+	// import PillFlower from '../PillFlower.svelte';
+	// import { m } from '$paraglide/messages';
 	import Hr from '../Hr.svelte';
 	import { onMount } from 'svelte';
 
@@ -27,6 +27,13 @@
 			opacity: 'opacity-100'
 		},
 		{
+			href: '/en/blog/beer-app',
+			src: '/clients/taptapgo-logo.png',
+			alt: 'TapTapGo',
+			height: 'h-[42px] mt-0',
+			opacity: 'opacity-100'
+		},
+		{
 			href: 'https://agentefaz.net',
 			src: '/clients/agf-color.png',
 			alt: 'AGF',
@@ -40,13 +47,13 @@
 			height: 'h-[25px]',
 			opacity: 'opacity-55'
 		},
-		{
-			href: 'https://braaay.com',
-			src: '/clients/braaay-logo-new.svg',
-			alt: 'Braaay',
-			height: 'h-[32px] mt-1',
-			opacity: 'opacity-90'
-		},
+		// {
+		// 	href: 'https://braaay.com',
+		// 	src: '/clients/braaay-logo-new.svg',
+		// 	alt: 'Braaay',
+		// 	height: 'h-[32px] mt-1',
+		// 	opacity: 'opacity-90'
+		// },
 
 		{
 			href: 'https://dribbble.com/shots/19431388-Hops-v2-Craft-Beer-Marketplace',
@@ -77,7 +84,7 @@
 		if (!marqueeContainer) return;
 
 		// Calculate how many duplicate sets we need based on speed and container width
-		const containerWidth = marqueeContainer.offsetWidth;
+		// const containerWidth = marqueeContainer.offsetWidth;
 		const isMobile = window.innerWidth < 768;
 		const currentSpeed = isMobile ? mobileSpeed : desktopSpeed;
 
@@ -113,9 +120,10 @@
 				class="marquee-container"
 				style="--desktop-speed: {desktopSpeed}s; --mobile-speed: {mobileSpeed}s; --duplicate-count: {duplicateCount};"
 			>
-				{#each Array(duplicateCount) as _, setIndex}
+				{#each Array(duplicateCount) as _, setIndex (setIndex)}
 					<div class="marquee-content">
-						{#each clients as client}
+						{#each clients as client, clientIndex (`${setIndex}-${clientIndex}`)}
+							<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 							<a href={client.href} rel="nofollow noopener" target="_blank" class="marquee-item">
 								<div class="flex flex-col justify-center">
 									<img
