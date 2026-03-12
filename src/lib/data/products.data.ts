@@ -6,6 +6,20 @@ import { AppConfig } from '$lib/configs';
 
 export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 	{
+		id: Product.PAY,
+		name: Product.PAY,
+		isMain: true,
+		slogan: m.productPaySlogan({}, { locale: locale }),
+		sloganSimple: m.productPaySloganSimple({}, { locale: locale }),
+		details: m.productPayDetails({}, { locale: locale }),
+		icon: Zap,
+		isBold: true,
+		primary: false,
+		underDevelopment: true,
+		unavailable: true,
+		url: localizeHref('/pay', { locale: locale })
+	},
+	{
 		id: Product.CARE,
 		name: Product.CARE,
 		isMain: true,
@@ -33,20 +47,7 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		unavailable: false,
 		url: localizeHref('/store', { locale: locale })
 	},
-	{
-		id: Product.PAY,
-		name: Product.PAY,
-		isMain: true,
-		slogan: m.productPaySlogan({}, { locale: locale }),
-		sloganSimple: m.productPaySloganSimple({}, { locale: locale }),
-		details: m.productPayDetails({}, { locale: locale }),
-		icon: Zap,
-		isBold: true,
-		primary: false,
-		underDevelopment: true,
-		unavailable: true,
-		url: localizeHref('/pay', { locale: locale })
-	},
+
 
 	{
 		id: Product.APIS,

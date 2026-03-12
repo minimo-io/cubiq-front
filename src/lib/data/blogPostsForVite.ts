@@ -43,11 +43,11 @@ const blogPosts: Array<{
 		]
 	},
 	{
-		pattern: '/blog/apresentando-a-plataforma-cubiq',
+		pattern: '/blog/tailscale-for-infraestructure-managment',
 		localized: [
-			['pt', '/blog/apresentando-a-plataforma-cubiq'],
-			['en', '/en/blog/introducing-the-cubiq-platform'],
-			['es', '/es/blog/presentando-la-plataforma-cubiq']
+			['pt', '/blog/tailscale-for-infraestructure-managment'],
+			['en', '/en/blog/tailscale-for-infraestructure-managment'],
+			['es', '/es/blog/tailscale-for-infraestructure-managment']
 		]
 	},
 	{
