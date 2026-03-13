@@ -24,7 +24,7 @@
 			<PillFlower title={m.platform()} />
 		</div>
 
-		<h2 class="text-center text-[28px] tracking-wide md:hidden">{m.menuProducts()}</h2>
+		<h2 class="text-center text-[28px] tracking-wide md:hidden">{m.platform()}</h2>
 		<div
 			class="text-accent mx-auto mt-5 w-full text-center font-sans text-xl md:flex md:max-w-[40%] md:text-2xl"
 		>
