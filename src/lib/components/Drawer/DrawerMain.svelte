@@ -81,7 +81,7 @@
 	{/if}
 
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
-		{m.menuProducts()}
+		{m.platform()}
 	</h2>
 	<!-- Item with submenu -->
 	<!-- <h2 class="my-5 px-[30px] text-base font-extrabold uppercase">PRODUTOS</h2> -->
@@ -190,7 +190,7 @@
 	<!-- Changelog -->
 	<a
 		href={localizeHref('/roadmap')}
-		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
+		class="border-base-300 font-roboto text-grey-dark shine-effect flex hidden justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
 	>
 		<div class="flex justify-center self-center text-left align-middle">
 			<FileClock class="text-sun mr-2 h-4 w-4 self-center" />
