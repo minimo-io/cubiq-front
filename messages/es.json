@@ -61,19 +61,15 @@
 	"technicians": "Técnicos",
 	"homepage": "Página de inicio",
 	"signUp": "Registro",
-
 	"logoutMessage": "¡Adiós! Cerraste la sesión.",
-
 	"latestNews": "Últimas notícias",
 	"subscriveVia": "Suscribirse vía",
 	"contactSupport": "Entre en contacto",
 	"saveChanges": "Guardar cambios",
 	"requestQuotation": "Solicitar presupuesto",
-
 	"refresh": "Actualizar",
 	"searchPlaceholder": "Buscar herramientas y comandos...",
 	"searchSimplePlaceholder": "Buscar...",
-
 	"refreshingIn": "Actualizando en {seconds}s",
 	"deviceAddedSuccess": "¡Dispositivo añadido con éxito!",
 	"deviceAddedError": "Error al añadir el dispositivo.",
@@ -84,15 +80,11 @@
 	"loginEmailRequired": "Se requiere un email",
 	"loginPasswordRequired": "Se requiere la contraseña",
 	"loginInvalidCredentials": "Credenciales inválidas",
-
 	"knowledgeBase": "Conocimiento",
-
 	"prototyping": "Prototipado",
-
 	"readMore": "Leer todo",
 	"readLess": "Leer menos",
 	"showLess": "Mostrar menos",
-
 	"or": "ó",
 	"soon": "En breve",
 	"getInTouch": "Entrar en contacto",
@@ -102,272 +94,188 @@
 	"apiStatus": "Status API",
 	"lab": "Laboratorio",
 	"others": "Otros",
-
 	"and": "y",
 	"the": "El",
-
 	"welcome": "Bienvenido",
 	"theFuture": "Al Futuro",
-
 	"under": "En",
 	"construction": "construcción",
 	"constructionContent": "Estamos construyendo una plataforma unificada de <span class='text-base-content opacity-80'>Comercio Electrónico</span>, <span class='text-base-content opacity-80'>Pagos Transfronterizos</span> y <span class='text-base-content opacity-80'>Monitoreo de Activos de TI</span>. Contáctanos mientras finalizamos esta página.",
-
 	"heroContentHomeXX": "SUna <span class='text-base-content opacity-80'>Plataforma B2B de Productos Digitales</span> para Startups y PyMEs, y un <span class='text-base-content opacity-80'>Laboratorio de Desarrollo</span> centrado en soluciones empresariales a medida y en la innovación aplicada a proyectos que exploran las fronteras de lo digital.",
-
 	"heroContentHomeXXX": "Somos una <span class='text-base-content opacity-80'>Plataforma B2B de Productos Digitales</span> para Startups y PyMEs, y un <span class='text-base-content opacity-80'>Laboratorio de Desarrollo</span> centrado en soluciones empresariales a medida y en la innovación sobre protocolos permissionless.",
-
 	"heroContentHome": "Somos una <span class='text-base-content opacity-80'>Software Factory</span> orientada a productos, una <span class='text-base-content opacity-80'>Plataforma Digital</span> para PyMEs y <span class='text-base-content opacity-80'>Backend-as-a-Service</span> para Startups. Impulsados por IA, gestionados por humanos: <span class='text-base-content opacity-80'>creamos, operamos y escalamos negocios digitales</span> en LATAM 🚀",
-
 	"heroContentHome1": "Somos una <span class='text-base-content opacity-80'>Plataforma de Productos Digitales</span> y un Laboratorio de Desarrollo enfocados en la Innovación en las áreas de <span class='text-base-content opacity-80'>E-Commerce, Pagos X-Border en Tiempo Real, IA y Máquinas (IoT)</span>.",
-
 	"heroContentFinX": "<div class='text-[#AEAEAE]'>Pagos en tiempo real con <span class='text-base-content opacity-80'>Settlements Globales Instantáneos</span> en BTC/USDT, vía Lightning Network. Ej.: <span class='text-base-content'>Recibí desde cualquier lugar del mundo y liquidá en el instante en tu wallet</span>, con transparencia 100% verificable. <div class='ml-2 pb-[1px] badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary font-sans text-xs!'>No disponible</div></div>",
-
 	"heroContentCareSyncXXX": "Plataforma de <span class='text-base-content opacity-80'>Mantenimiento Predictivo</span> y Gestión de Activos (ITSM + ITAM) <span class='text-base-content opacity-80'>para profesionales de TI y PyMEs</span> — con IA aplicada al Monitoreo en Tiempo Real, Base de Conocimiento y Marketplace de Clientes.",
-
 	"heroContentCareSync": "Gestión completa del ciclo de vida de TI para empresas en crecimiento — integrando <span class='text-base-content opacity-80'>Gestión tercerizada de activos de TI</span>, <span class='text-base-content opacity-80'>Hardware-como-Servicio (HaaS/Alquiler)</span> y <span class='text-base-content opacity-80'>Mantenimiento predictivo</span> potenciado por diagnósticos de IA.",
-
 	"heroContentBagity": "<span class='text-base-content opacity-80'>E-Commerce Premium a Medida</span>: Customizamos sin límites: Diseño, UX e Integraciones, con IA de Contenido y Pagos USDT/Bitcoin. ¿Qué esperar? <span class='text-base-content opacity-80'>Tiendas únicas, planes previsíveis</span>, <span class='text-base-content opacity-80'>sin comisiones por venta</span>.",
-
 	"homeProductsSlogan": "Plataforma Unificada de Produtos Digitais e APIs para PMEs e Startups focada em LATAM.",
-
 	"learnMore": "Más info",
 	"scheduleMeeting": "Solicita una demo",
-
 	"menuClients": "Socios / Clientes",
 	"menuProducts": "Productos",
 	"menuHelp": "Recursos",
 	"menuLab": "Lab",
 	"menuPrices": "Precios",
 	"menuExperiments": "Laboratorio",
-
 	"devSlogan": "Plataforma unificada,<br />APIs modernas.",
 	"devText": "<p>Además de nuestros paneles de control, Cubiq ofrece una interfaz única y elegante que simplifica la integración empresarial.</p><p>Con API listas para usar para integrar cada uno de nuestros productos en su sistema.</p>",
-
 	"documentation": "Documentación",
 	"getYourAPIKey": "Obtenga su API key",
-
 	"devConfira": "Consulta también nuestros temas de editor para",
-
 	"aboutUs": "Sobre nosotros",
 	"aboutUsTitleLeft": "SOBRE<br/>",
 	"aboutUsTitleRight": "CUBIQ",
-
 	"quote": "<span class='text-primary font-pixel text-5xl font-bold'>C</span>ubiq ofrece tecnología B2B y B2C de alt rendimiento en piezas modulares y eficientes. Somos la Máquina que crea la Máquina, una Software Factory orientada a productos, una Plataforma para PYMEs y proveedores de Backend-As-A-Service para Startups.",
-
-	"aboutText": "<p><span class='fw-text-pixel'>S</span>omos una Plataforma de Productos Digitales verticalmente integrada y un <a href='/es/lab' class='fw-pixel !text-primary'>Laboratorio</a> de Desarrollo e Innovación enfocado en LATAM.</p><p><span class='fw-text-pixel'>O</span>frecemos una Plataforma Unificada de <span class='fw-pixel text-primary'>Productos</span> & <span class='fw-pixel text-primary'>APIs</span> enfocada en la innovación en las áreas de E-Commerce, Pagos Cross-Border con Liquidaciones Instantáneas BTC/USDT, e Inteligencia Artificial Aplicada al Monitoreo de Activos Físicos de TI.</p><p><span class='fw-text-pixel'>N</span>os especializamos en ofrecer <span class='fw-pixel text-primary'>Soluciones Tecnológicas A Medida</span> para PyMEs, ayudándolas a dar el salto hacia el futuro con servicios premium a costos justos; al tiempo que impulsamos y <a href='/es/blog/presentando-la-plataforma-cubiq' class='fw-pixel !text-primary'>facilitamos la adopción de Bitcoin</a> por parte de nuestros clientes y colaboradores.</p><p><span class='fw-text-pixel'>C</span>reemos en la transparencia verificable de costos y en corregir las ineficiencias en las empresas a través de la tecnología.</p><p><span class='fw-text-pixel'>C</span>reemos en la tecnología que mejora la vida de las personas y los resultados empresariales.</p><p>Creemos que <a target='_blank' class='underline hover:opacity-50 !text-primary' href='https://youtube.com/watch?v=fgbBtnCvcDI'>IA es la nueva electricidad</a>, inteligencia que impulsa nuevas acciones y logros humanos. También creemos que el dinero es una de las consecuencias de crear excelentes productos y resolver los problemas de las personas y las empresas.</p><p><span class='fw-text-pixel'>S</span>omos eficientes y minimalistas. Construimos para el largo plazo. Apuntamos a crear sistemas de alto rendimiento con recursos optimizados. Usamos lo que funciona mejor, no reinventamos la rueda, ni cobramos por ello. Somos <a target='_blank' rel='nofollow noopener' href='https://a16z.com/the-techno-optimist-manifesto/' class='underline hover:opacity-50  !text-primary'>tecno-optimistas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> ¡Diseñamos, experimentamos, enviamos!</p><p><p><span class='fw-text-pixel'>E</span>xperimentamos con nuevas tecnologías en nuestro <a class='!text-primary font-pixel' href='/es/lab'>Laboratorio</a>. </p><p><span class='fw-text-pixel'>D</span>esde la integración de las APIs de Lightspark para Liquidaciones Instantáneas Internacionales vía Lightning Network, un Servidor MCP para permitir que LLMs hagan pedidos en nuestros clientes de E-Commerce — <a href='/es/store'>Store</a> — hasta herramientas de Pay-Per-Use para entusiastas de <a rel='nofollow noopener noreferrer' target='_blank' href='https://nostr.how/es/what-is-nostr' class='fw-pixel !text-primary'>Nostr</a>.</p>Algunos experimentos fallan, no se convierten en productos — sino en conocimiento adquirido en forma de herramientas y librerías para desarrolladores, diseños y <a href='/es/blog' class='!text-primary'>artículos</a>.</p><p>A veces las ideas no van más allá del papel — así que las dejamos madurar en el <a href='/en/lab' class='underline !text-primary'>Laboratorio de Ideas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> El stack.</p><p class='relative'><span class='fw-text-pixel'>E</span>l stack tecnológico de Cubiq es simple pero poderoso: <span class='!text-primary !mx-0 !font-sans font-bold'>Svelte</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>Figma</span> para el front-end, <span class='!text-primary !mx-0 !font-sans font-bold'>Claude</span> para vibe coding, <span class='!text-primary !mx-0 !font-sans font-bold'>NestJS</span> para nuestras APIs, <span class='!text-primary !mx-0 !font-sans font-bold'>Python</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Transformers.js</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>Tensorflow.js</span> para IA, <span class='!text-primary !mx-0 !font-sans font-bold'>MicroPython</span> para sistemas embebidos, <span class='!text-primary !mx-0 !font-sans font-bold'>Docker</span> para containerización, <span class='!text-primary !mx-0 !font-sans font-bold'>Bitcoin</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>USDT</span> vía <span class='!text-primary !mx-0 !font-sans font-bold'>Lightning</span> para pagos, preservación y transmisión de valor, <span class='!text-primary !mx-0 !font-sans font-bold'>Vercel</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Render</span>, <span class='!text-primary !mx-0 !font-sans font-bold'>Cloudflare</span> y <span class='!text-primary !mx-0 !font-sans font-bold'>Self-Hosting</span> para infraestructura cloud.</p><p><span class='fw-text-pixel'>A</span>poyamos <span class='!text-primary'>protocolos abiertos, globales y permissionless</span> (Bitcoin, MCP, Nostr, WebRTC, etc).</p><p><span class='fw-text-pixel'>R</span>esolvemos nuestros propios problemas y los de nuestros socios usando tecnología — y de estas experiencias, creamos Productos y APIs de valor para el mundo real.</p><p><span class='fw-text-pixel'>N</span>os gusta trabajar junto a clientes con visión de futuro, ¡con optimistas!</p><p class='text-base-content font-sans font-bold italic'><span>//</span> OS.</p><p><span class='fw-text-pixel'>N</span>os alimentamos de código abierto, así que contribuimos al código abierto. Muchas de las librerías que creamos son gratuitas y abiertas. ¡A veces hasta proyectos completos!</p><p>¿Tenés una idea loca? Hablemos, nos va a encantar — <a target='_blank' rel='nofollow noopener noreferer' href='https://wa.me/59892284428' class='underline hover:opacity-50 !text-primary'>¡Contactanos!</a></p><p>¡Sé audaz, vamos a crear juntos el futuro!</p>",
-
+	"aboutText": "<p><span class='fw-text-pixel'>S</span>omos una <span class='fw-pixel text-primary'>Software Factory</span> orientada a productos, una Plataforma Digital para PYMES, y un <span class='fw-pixel text-primary'>Backend-as-a-Service</span> para Startups. Impulsados por IA, gestionados por humanos: creamos, operamos y escalamos negocios digitales en <span class='fw-pixel text-primary'>LATAM</span>.</p><p><span class='fw-text-pixel'>C</span>onstruimos nuestros propios productos y desarrollamos una plataforma de APIs y bibliotecas para ser eficientes en ello. Con la ayuda de la IA, prototipamos y lanzamos proyectos digitales rápidamente — la máquina que crea la máquina — y también ofrecemos las APIs que creamos para nosotros mismos como <span class=\"fw-pixel text-primary\">Backend-as-a-Service</span> a otras startups.</p><p><span class='fw-text-pixel'>C</span>reemos en la transparencia verificable de costos y en la corrección de ineficiencias en las empresas a través de la tecnología.</p><p><span class='fw-text-pixel'>C</span>reemos que la <a target='_blank' class='underline hover:opacity-50 !text-primary' href='https://youtube.com/watch?v=fgbBtnCvcDI'>IA es la nueva electricidad</a>, inteligencia que impulsa nuevas acciones y logros humanos. También creemos que el dinero es una consecuencia de crear grandes productos y resolver los problemas de las personas y las empresas.</p><p><span class='fw-text-pixel'>S</span>omos eficientes y minimalistas. Construimos para el largo plazo. Buscamos crear sistemas de alto rendimiento con recursos optimizados. Usamos lo que funciona mejor, no reinventamos la rueda, ni cobramos por ello. Somos <a target='_blank' rel='nofollow noopener' href='https://a16z.com/the-techno-optimist-manifesto/' class='underline hover:opacity-50 !text-primary'>tecno-optimistas</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> ¡Diseñamos, experimentamos, entregamos!</p><p><span class='fw-text-pixel'>E</span>n nuestro <a class='!text-primary font-pixel' href='/lab'>Laboratorio</a> experimentamos con nuevas tecnologías. Desde APIs de pagos internacionales via Lightning Network hasta herramientas para desarrolladores.</p><p>Algunos experimentos fallan, no se convierten en productos — sino conocimiento adquirido en forma de herramientas, bibliotecas, diseños y <a class='!text-primary' href='/blog'>artículos</a>.</p><p class='text-base-content font-sans font-bold italic'><span>//</span> El stack.</p><p class='relative'><span class='fw-text-pixel'>E</span>l stack tecnológico de Cubiq: <span class='!text-primary !mx-0 !font-sans font-bold'>Svelte</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>SvelteKit</span> con <span class='!text-primary !mx-0 !font-sans font-bold'>Tailwind CSS</span> & <span class='!text-primary !mx-0 !font-sans font-bold'>DaisyUI</span> para front-end, <span class='!text-primary !mx-0 !font-sans font-bold'>Figma</span> para diseño, <span class='!text-primary !mx-0 !font-sans font-bold'>NestJS</span> para APIs, <span class='!text-primary !mx-0 !font-sans font-bold'>Docker</span> para containerización, <span class='!text-primary !mx-0 !font-sans font-bold'>Supabase</span> para base de datos, <span class='!text-primary !mx-0 !font-sans font-bold'>Tailscale</span> para orquestación de servidores, <span class='!text-primary !mx-0 !font-sans font-bold'>Tauri</span> para apps.</p><p>Para IA: <span class='!text-primary !mx-0 !font-sans font-bold'>Opencode</span> (conectado a Fireworks AI/OpenRouter), <span class='!text-primary !mx-0 !font-sans font-bold'>Claude</span> en el navegador, <span class='!text-primary !mx-0 !font-sans font-bold'>Transformers.js</span> para IA local (ej: detección de spam).</p><p><span class='fw-text-pixel'>C</span>reemos en <span class='!text-primary'>protocolos abiertos, globales y permissionless</span> (Bitcoin, Nostr, WebRTC, etc).</p><p><span class='fw-text-pixel'>R</span>esolvemos nuestros propios problemas y los de nuestros socios usando tecnología — y a partir de esas experiencias, creamos Productos y APIs de valor para el mundo real.</p><p><span class='fw-text-pixel'>N</span>os gusta trabajar con clientes con visión de futuro, ¡con optimistas!</p><p class='text-base-content font-sans font-bold italic'><span>//</span> Open Source.</p><p><span class='fw-text-pixel'>N</span>os alimentamos del open source, entonces contribuimos al open source. Muchas de las bibliotecas que creamos son gratuitas y abiertas. ¡A veces hasta proyectos completos!</p><p>¿Tenés una idea loca? Hablemos, nos encanta — ¡Contactanos!</p><p>Seamos audaces, ¡creemos el futuro juntos!</p>",
 	"social": "Redes",
 	"developers": "Desarrolladores",
-
 	"resources": "Recursos",
-
 	"metaBaseTitle": "Cubiq",
-
 	"metaHomeTitle": "Plataforma Digital y Laboratorio de Innovación en Desarrollo",
 	"metaHomeDescription": "Plataforma de Productos Digitales Impulsada por IA y un DevLab enfocado en la Innovación en las áreas de E-Commerce, Pagos X-Border y Monitoreo de Activos de TI.",
-
 	"metaUnderDevelopmentTitle": "En desarrollo",
 	"metaUnderDevelopmentDescription": "Estamos construyendo una plataforma unificada de Comercio Electrónico, Pagos X-Border y Monitoreo de Activos de TI ¡Contáctanos!",
-
 	"metaSignUpTitle": "Registro",
 	"metaSignUpDescription": "Da el primer paso hacia el futuro digital de LATAM. Conecta, innova y crece con Cubiq.",
-
 	"metaLoginTitle": "Entrar",
 	"metaLoginDescription": "Accede a Cubiq: Tu próximo paso hacia el futuro comienza aquí.",
-
 	"metaErrorTitle": "Error",
 	"metaErrorDescription": "",
-
 	"metaLabTitle": "Lab",
 	"metaLabDescription": "Un espacio para prototipar, explorar y llevar al límite lo posible con la tecnología",
 	"labLaunchText": "<span class='hidden md:inline-block font-bold'>Lanzamiento!&nbsp;</span><u>TapTapGo</u>",
 	"labLaunchSubText": "Cervezas artesanales x Lightning",
 	"labToolsTitle": "Proyectos, herramientas y PoCs <br /> del laboratorio.",
 	"labToolsSubtitle": "Creamos experimentos, prototipos y herramientas que exploran nuevas tecnologías, modelos descentralizados y experiencias innovadoras.",
-
 	"metaFinxTitle": "Cubiq Pay - Pagos instantáneos en BTC/USDT a través de Lightning Network",
 	"metaFinxDescription": "Pagos en tiempo real con Settlements Globales Instantáneas en USDT/BTC, vía Lightning Network. Ej.: Recibí en Argentina y liquidá en el exterior, al instante, con 100% de compliance y transparencia verificable.",
-
 	"metaCareSyncTitle": "Cubiq Care - Gestión completa del ciclo de vida de TI para PyMEs",
 	"metaCareSyncDescription": "Todo lo que necesitas para ofrecer tus servicios de TI. Todo lo que los clientes necesitan para contratar a los mejores profesionales de TI. ITSM + Marketplace.",
-
 	"metaStoreTitle": "Cubiq Store: Headless E-Commerce",
 	"metaStoreDescription": "",
-
 	"careSyncSlogan": "Cuide de su empresa, \nnosotros cuidamos de su TI",
-
 	"loginYourEmail": "Su email...",
 	"loginYourPassword": "Su contraseña...",
-
 	"loginPassword": "Contraseña",
-
 	"loginContinueWithGoogle": "Continuar con Google",
 	"loginDontHaveAccount": "¿No tienes una cuenta?",
 	"loginStartNow": "Comenzar ahora",
-
 	"ctaStillHaveQuestions": "¿TODAVÍA TIENES PREGUNTAS?",
 	"ctaText": "Cuéntenos sus desafíos, en Cubiq nos encanta superarlos. Podemos ayudar con todo, desde las mejores prácticas técnicas hasta planes y precios.",
 	"ctaScheduleACall": "Programar una llamada",
-
 	"startNow": "Comenzar ahora",
-
 	"allSystemsWorking": "Todos los sistemas funcionando",
-
 	"careSyncAssetManagment": "Gestión de Activos",
 	"careSyncLearning": "Cursos online",
 	"careSyncMarketplace": "Tienda Integrada",
 	"careSyncPredictiveSoftware": "Software predictivo",
 	"careSyncAuto": "Para empresas",
 	"careSyncManaged": "Para clientes",
-
 	"careSyncIdealFor": "IDEAL PARA",
-
 	"careSyncYouControl": "Gestión de TI para PyMes",
 	"careSyncWeTakeCare": "¿Tenés un problem con tu Laptop/PC?",
 	"careSyncToggleMore": "Ver más",
 	"careSyncToggleLess": "Ver menos",
-
 	"payPerUseTitle": "¿Sos Profesional de TI?",
 	"payPerUseDescription": "Gestioná los activos físicos de tus clientes en tiempo real, crea y enviá reportes de servicios, reparaciones y alertas, accedé a clientes en el Marketplace y mucho más en nuestra plataforma ITMS <span class='text-base-content'> por un costo fijo previsible</span>.",
 	"payPerUsePriceCurrency": "ARS$",
 	"payPerUsePriceAmount": "1000",
 	"payPerUsePriceUnit": "/mes",
-
 	"payPerUseFeatureTransparent": "Gestión 360 de activos TI",
 	"payPerUseFeatureCustom": "Reportes, Tickets y Alertas de Servicios",
 	"payPerUseFeatureVolume": "Marketplace de Clientes",
 	"payPerUseFeatureOnline": "Sistemas de Etiquetado QR para Rastreo",
-
 	"payPerUseFeatureTransparentDashboard": "Cero comisiones <br />Transparencia total a través del Dashboard",
 	"payPerUseFeatureRemoteEmergency": "Módulo de alertas preditivas",
 	"payPerUseFeatureCostControl": "Monitorea dispositivos ilimitados",
-
 	"bagityBasic": "Store básico",
 	"bagityBasicPrice": "$u999/mes fijo",
 	"bagityBasicDescription": "Plan que ofrece acceso completo a la plataforma, con <span class='text-base-content'>tienda lista para vender</span>, integración de pagos vía Cubiq Pay + todas las funcionalidades esenciales. La personalización es opcional, contratada por tarea, ideal <span class='text-base-content'>para quienes buscan control de costos y autonomía</span>.",
-
 	"bagityPro": "Store <span class='bg-primary relative -top-[2px] ml-1 rounded-lg px-3 py-[2px] text-xl'>PRO+</span>",
 	"bagityProPrice": "5–10% por venta",
 	"bagityProDescription": "Modelo comisionado por venta (dependiendo de la facturación), pensado <span class='text-base-content'>para quienes buscan un e-commerce premium</span>, sin preocuparse por la tecnología. <span class='text-base-content'>Nos encargamos de todo</span> — Diseño, Desarrollo y Hosting — y todas las personalizaciones incluidas.",
-
 	"bagityDifferentials": "Diferenciales",
-
 	"bagityFeature1Title": "Tecnología del futuro",
 	"bagityFeature1Desc": "Generación de contenido con IA, MCP Server para comunicación con LLMs, front-ends headless de alto rendimiento, atención automatizada y más.",
-
 	"bagityFeature2Title": "Soluciones por segmento",
 	"bagityFeature2Desc": "Estudiamos la competencia para crear soluciones específicas para tu segmento. Alineamos estrategias en reuniones de onboarding.",
-
 	"bagityFeature3Title": "Integraciones a medida",
 	"bagityFeature3Desc": "Integraciones de calidad vía API y Webhooks con los principales ERPs y desarrollos a medida en el Plan PRO.",
-
 	"bagityFeature4Title": "Diseños personalizados a medida",
 	"bagityFeature4Desc": "Nos encargamos del diseño para crear tiendas únicas con tecnología Headless de última generación. Evita ser solo otra tienda online.",
-
 	"bagityFeature5Title": "Un socio tecnológico",
 	"bagityFeature5Desc": "Queremos construir tiendas únicas, para clientes únicos, y con foco en el factor humano. Por eso acompañamos la evolución de todos nuestros clientes con videollamadas mensuales.",
-
 	"bagityFeature6Title": "Checkout express",
 	"bagityFeature6Desc": "Nuestra solución de pago propia — <a href='/es/finx' class='text-primary hover:opacity-40'>Cubiq Pay</a> — nos permite simplificar el checkout, alcanzando altas tasas de conversión y reduciendo costes operativos.",
-
 	"bagityFeature7Title": "Front-ends Componibles",
 	"bagityFeature7Desc": "Nuestra tecnología headless permite conectar tu tienda a cualquier backend o API, lo que resulta en interfaces rápidas, modulares y multicanal.",
-
 	"bagityFeature8Title": "Atendimientos inteligentes",
 	"bagityFeature8Desc": "Integración con nuestro chatbot de primer contacto, entrenado con IA para representar su marca, responder dudas, cualificar leads e integrarse automáticamente a su CRM.",
-
 	"product": "Producto",
-
 	"addService": "Agregar servicio",
 	"servicesHistory": "Historico de servicios",
 	"today": "Hoy",
 	"yesterday": "Ayer",
 	"days_ago": "Hace {count} días",
 	"serviceDetails": "Detalles del servicio",
-
 	"details": "Detalles",
 	"configurations": "Configuraciones",
 	"logout": "Cerrar sesión",
-
 	"needTIService": "Contratar servicio de TI",
 	"top10TI": "Top 10 Profesionales de TI<br/>de 🇦🇷 Argentina",
 	"whyUseCare": "Recursos de la Plataforma",
 	"findTechnician": "Encontrar Técnico",
 	"caresyncFeature01Title": "Gestión administrada de activos",
 	"caresyncFeature01Desc": "Acompañamos todo el ciclo de vida de tus equipos. Desde la adquisición y la asistencia técnica hasta la disposición final, ofrecemos seguimiento en tiempo real y control total a través de un panel (dashboard).",
-
 	"caresyncFeature02Title": "Asistencia técnica remota",
 	"caresyncFeature02Desc": "No importa dónde estén tus colaboradores —en Brasil o en el exterior—, brindamos resolución rápida de incidentes y soporte al usuario para evitar pérdida de productividad.",
-
 	"caresyncFeature03Title": "Mantenimientos preventivos programados",
 	"caresyncFeature03Desc": "Mediante la ejecución proactiva de mantenimientos programados para cada activo, reducimos significativamente el riesgo de fallas,  <span class='text-white'>aumentando la vida útil de los equipos y la productividad</span>.",
-
 	"caresyncFeature04Title": "Respaldo y recuperación de sistemas",
 	"caresyncFeature04Desc": "Para estar tranquilos realizamos copias de seguridad, de manera que, en caso de falla, el sistema pueda recuperarse de forma limpia con restauración segura y reinstalación.",
-
 	"caresyncFeature1Title": "Paneles de seguimiento",
 	"caresyncFeature1Desc": "Seguimiento de toda nuestra gestión a través de nuestros paneles. Generá informes de costos, servicios y rendimiento, ¡garantizando total transparencia!",
-
 	"caresyncFeature2Title": "Costos fijos y previsibles",
 	"caresyncFeature2Desc": "No cobramos comisiones ni a los profesionales ni a los clientes del Marketplace. Nuestro modelo es simple: costos fijos y accesibles, alineados con nuestra misión de mejorar el mundo de TI.",
-
 	"caresyncFeature3Title": "Marketplace de técnicos y clientes",
 	"caresyncFeature3Desc": "Si sos profesional de TI o cliente, la Comunidad y el Marketplace de Cubiq Care están disponibles 24/7 para ofrecer o contratar servicios.",
-
 	"caresyncFeature4Title": "Monitoreo predictivo 24/7",
 	"caresyncFeature4Desc": "Instala nuestro software de monitoreo predictivo y obtén cobertura 24/7 para la detección de anomalías y la predicción de fallos con nuestra IA entrenada para generar alertas proactivas.",
-
 	"caresyncFeature5Title": "Control de inventario",
 	"caresyncFeature5Desc": "Controlá tu inventario de activos a través de nuestros paneles, con gestión de servicios, alertas, programación de mantenimiento e informes por correo con un resumen mensual.",
-
 	"caresyncFeature6Title": "Base de conocimiento",
 	"caresyncFeature6Desc": "Contamos con una base de conocimiento para técnicos de TI, con tutoriales y cursos para que te desarrolles en tu trayecto profesional y ofrezcas un excelente servicio a tus clientes. ¿Problemas para abrir una carcasa? Buscá el video en la base.",
-
 	"caresyncFeature7Title": "Módulo de facturación",
 	"caresyncFeature7Desc": "No solo vas a poder enviar informes automatizados de los trabajos realizados y alertas a tus clientes, sino también contar con un módulo de facturación y control de gastos integrado con Cubiq Pay.",
-
 	"caresyncFeature8Title": "Módulo de compras",
 	"caresyncFeature8Desc": "Todos los clientes de la plataforma van a tener acceso a nuestra tienda para comprar equipos y piezas a los mejores precios del mercado.",
-
 	"careSyncFeaturedSlogan": "Gestionamos y mantenemos todos sus equipos, ofreciendo soporte completo a sus colaboradores para evitar cualquier pérdida de productividad. <span class='text-base-content opacity-80'>Usted cuida de su empresa, nosotros cuidamos de su TI.</span>",
-
 	"careHaaSFeature1Title": "Instalación y configuración de los equipos",
 	"careHaaSFeature1Desc": "Reciba cada equipo totalmente configurado con sistemas, software, políticas de seguridad y pruebas previas, garantizando una implementación rápida, estandarizada y lista para usar por su equipo.",
-
 	"careHaaSFeature2Title": "Logística gestionada",
 	"careHaaSFeature2Desc": "Realizamos entregas en todos los estados, con rastreo, programación flexible y logística inversa estructurada para cambios, devoluciones, retiros y reubicaciones de equipos en cualquier región.",
-
 	"careHaaSFeature3Title": "Reparación de piezas y sustitución de máquinas",
 	"careHaaSFeature3Desc": "Ofrecemos reparación, análisis técnico rápido y sustitución inmediata del equipo en caso de falla, reduciendo el tiempo de inactividad y garantizando la continuidad operativa.",
-
 	"careHaaSFeature4Title": "Plazos flexibles",
 	"careHaaSFeature4Desc": "Contratos altamente flexibles, desde un único día de uso hasta proyectos largos. Escalamos según su demanda, permitiendo parques completos, ampliaciones y ajustes sin burocracia.",
-
 	"careHaaSFeature5Title": "Mantenimiento incluido",
 	"careHaaSFeature5Desc": "Soporte técnico completo incluido en el servicio, con apertura de tickets, orientación especializada, mantenimiento preventivo, actualización de sistemas y seguimiento continuo del rendimiento de los equipos.",
-
 	"careHaaSFeature6Title": "Sin inversión inicial",
 	"careHaaSFeature6Desc": "Elimine la gran inversión inicial, preserve el flujo de caja y las líneas de crédito, evite perder capital en otros gastos y prescinda de desplazamientos o búsquedas para comprar equipos.",
-
 	"careHaaSSlogan": "Alquile su equipo desde cualquier lugar con mantenimiento incluido. Sea persona física o jurídica, libere caja. <span class='text-base-content opacity-80'>Usted enfóquese en su negocio, nosotros cuidamos de su TI.</span>",
-
 	"careStoreFeature2Title": "Cashback para clientes Care",
 	"careStoreFeature2Desc": "Si ya es cliente de Cubiq Care, recibirá cashback acumulable en todas las compras de productos vendidos directamente por Cubiq.",
 	"careStoreSlogan": "Tenga acceso a nuestra tienda de equipos y piezas con los mejores precios del mercado.",
-
 	"careStoreFeatureRent": "Alquiler de Equipos",
 	"careStoreFeatureRentDesc": "Accede a la Cubiq Store para alquilar nuevos equipos con mantenimiento incluido y reemplazo inmediato. Todo 100% configurado con tus políticas de seguridad y listo para usar, preservando el flujo de caja de tu empresa.",
-
 	"finxPayMainTitle": "Pagos globales en tiempo real con seguridad y enfoque en América Latina",
 	"finxPayMainSubtitle": "Recibe USDT/BTC desde cualquier lugar del mundo y liquida al instante, en tu billetera, con transparencia verificable",
-
 	"finxPayExampleTitle": "Un ejemplo de cómo Cubiq Pay puede ayudar a tu negocio",
 	"finxPayExampleSubtitle": "Una plataforma colombiana de cursos en línea vende a estudiantes argentinos.",
 	"finxPayExampleStep1": "El alumno paga 4000 Sats.",
 	"finxPayExampleStep2": "La plataforma convierte a USDT automáticamente.",
 	"finxPayExampleStep3": "El valor se liquida al instante en la billetera de la empresa en Colombia, sin tarifas ocultas.",
-
 	"finxPayFeature1": "Descuentos por volumen",
 	"finxPayFeature2": "Settlement instantáneo 24/7",
 	"finxPayFeature3": "Transparencia total, verificable",
@@ -380,76 +288,58 @@
 	"finxPayFeature10": "Resolución de disputas",
 	"finxPayFeature11": "Menor tasa de transacción",
 	"finxPayFeature12": "API y Dashboard unificados",
-
 	"finxEnterpriseText": "Soluciones financieras personalizadas para quienes tienen <span class='text-base-content'>alto volumen de transacciones</span> y necesitan conciliación ágil y eficiente, con altas tasas de conversión e integración entre sistemas. ¡Todo esto 24/7, simple y 100% compliant!",
 	"finxStartupsText": "Como empresa de tecnología, entendemos que <span class='text-base-content'>velocidad y buena documentación</span> son clave. Nuestra API es de integración sencilla, permitiendo que tu equipo se concentre en el crecimiento de tu negocio.",
 	"finxEcommerce": "Aumenta tu tasa de conversión, simplifica tu conciliación, ten split de pagos, <span class='text-base-content'>checkout transparente</span>, link de pagos, Pix recurrente y reversión parcial o total de transacciones.",
-
 	"allCourses": "Todos los cursos",
 	"allCoursesSlogan": "Desarrolla tu carrera en TI con especializaciones fundamentales y cursos cortos específicos de habilidades, impartidos por líderes en el campo.",
 	"allCoursesMostPopular": "Mas populares",
 	"allCoursesTopRated": "Mejor valorados",
-
 	"error404Title": "Página no encontrada",
 	"error500Title": "La página que buscas no existe.",
-
 	"productCareSlogan": "Gestión y Alquiler de activos de TI",
 	"productCareSloganSimple": "",
 	"productCareDetails": "HaaS (Hardware-As-A-Service) y Gestión administrada de activos de TI para PYMEs",
-
 	"productStoreSlogan": "E-commerce Headless a Medida",
 	"productStoreSloganSimple": "E-commerce a Medida",
 	"productStoreDetails": "E-Commerce a medida, Pagos vía BTC/USDT + Front-end Headless",
-
 	"productPaySlogan": "Pagos BTC/USDT vía Lightning",
 	"productPaySloganSimple": "Pagos BTC/USDT vía Lightning",
 	"productPayDetails": "Pagos BTC/USDT vía Lightning Network con liquidación en tiempo real",
-
 	"productAPISlogan": "Integraciones empresariales para startups",
 	"productAPISloganSimple": "",
 	"productAPIDetails": "Una interfaz RESTful que abstrae las integraciones empresariales para startups",
-
 	"productNotesSlogan": "Notas locales, encripatdas en el navegador",
 	"productNotesSloganSimple": "Notas locales y encriptadas",
 	"productNotesDetails": "Notas locales, encriptadas y sincronizables<br /> en el navegador",
-
 	"productBetizenSlogan": "Rankings justos de casinos & forex",
 	"productBetizenDetails": "Rankings de iGaming y Forex<br />por el mérito & PoW",
 	"productLnBeerSlogan": "Cerveza artesanal locales",
 	"productLnBeerDetails": "Descubrí y Comprá<br />Cervezas artesanales",
 	"productBilbioSlogan": "Lector de E-books PWA <br />Via Nostr",
-
 	"heroContentRoadmap": "Acá encontrás el resultado de nuestro ciclo de desarrollo: <span class=\"text-base-content\">Proyección, Experimentación y Entrega</span>. Abajo, detallamos la lista de lanzamientos, hitos y Pruebas de Concepto (PoCs) — el registro vivo de nuestras creaciones más recientes ⛵️🚀",
-
 	"addNote": "Nueva nota",
 	"addNotePlaceholder": "Entonces, escribe tu nota aquí...",
-
 	"notSynced": "No sincronizada",
 	"confirmDelete": "¿Estás seguro de que quieres eliminar esta nota?",
 	"noteDeleted": "Nota eliminada con éxito!",
 	"noteSaved": "¡Nota guardada!",
 	"searchNotes": "Buscar notas...",
 	"notesWarningUnencrypteed": "<strong>¡Advertencia!</strong> Las notas sin encriptar estarán disponibles en texto plano en el almacenamiento local del navegador incluso después de cerrar sesión!",
-
 	"heroContentLab": "Además de nuestra Plataforma de Productos, en Cubiq Lab <span class='text-base-content opacity-80'>experimentamos con nuevas tecnologías, ideas y pruebas de concepto</span>.",
-
 	"labProductsSlogan": "Los proyectos de nuestro laboratorio van desde pruebas de concepto hasta productos activos en el mercado... <a href='/es/lab' class='hover:text-underline text-white'>saiba más</a>",
-
 	"invoicing": "Facturación",
 	"forBTCOnlyStores": "<span class='hidden md:flex'>Tiendas</span> Sólo Bitcoin",
 	"allStores": "Todas las tiendas",
 	"tailorMade": "A<br />medida",
-
 	"storeImplementationStep": "Etapa de Implementación",
 	"storeMaintenanceStep": "Etapa de Mantenimiento",
-
 	"storePricingStarter": "Starter",
 	"storePricingPro": "Pro",
 	"storePricingEnterprise": "Enterprise",
 	"storePricingRecommended": "Recomendado",
 	"storePricingTailorMade": "A medida",
 	"storePricingPerMonth": "/mes",
-
 	"storeStarterPrice": "U$S 50",
 	"storeStarterUsers": "1 usuario admin",
 	"storeStarterHosting": "Hosting + SSL + Backups",
@@ -457,7 +347,6 @@
 	"storeStarterSupport": "Soporte por email (24h)",
 	"storeStarterPaymentGateway": "1 pasarela de pagos tradicional",
 	"storeStarterCubiqPay": "Pagos <br /> USDT/BTC",
-
 	"storeProPrice": "U$S 100",
 	"storeProUsers": "3 usuarios admin + 2 editores",
 	"storeProInfrastructure": "Infraestructura y CDN premium",
@@ -466,7 +355,6 @@
 	"storeProSEO": "SEO + CRO + Analytics",
 	"storeProAI": "IA de Contenido + Recomendaciones",
 	"storeProPaymentGateways": "3 pasarelas de pagos",
-
 	"storeEnterpriseUsers": "Usuarios ilimitados + SSO",
 	"storeEnterpriseArchitecture": "Arquitectura cloud escalable",
 	"storeEnterpriseSupport": "Soporte proactivo y prioritario 24/7",
@@ -475,9 +363,7 @@
 	"storeEnterpriseIntegrations": "Integraciones avanzadas (ERPs/Pasarelas/APIs)",
 	"storeEnterpriseMCP": "Integración del Servidor MCP",
 	"storeEnterpriseConsulting": "Consultoría estratégica mensual",
-
 	"storePricingFooter": "Dashboards listos, simples y asistidos por IA.",
-
 	"storeDesignFigma": "Nos ocupamos del diseño en Figma",
 	"storeInitialIntegrations": "Nos ocupamos de las integraciones iniciales",
 	"storeServerManagement": "Nos ocupamos de los servidores",
@@ -485,15 +371,12 @@
 	"storeHumanizedSupport": "Ofrecemos soporte humanizado",
 	"storeNoCommissions": "Sin comisiones por venta u ocultas",
 	"storeBTCOnlyDiscount": "50% OFF para tiendas<br /> solo Bitcoin",
-
 	"labNostrFollowbackDescription": "Descubre quién no te sigue de vuelta en Nostr: Esta es una micro-app conceptual con el objetivo de tener un primer contacto con el Protocolo Nostr, y probar bibliotecas como NDK por pablof7z.",
 	"labBzStatsDescription": "Un script de Node.js + Playwright que extrae automáticamente datos de ganancias de programas de afiliados utilizando la plataforma Netrefer, los compara con la ejecución anterior y envía alertas a través de Telegram o correo electrónico.",
 	"labLoveInABoxDescription": "❤️ LoveInABox es una aplicación de cocina donde podrás descubrir nuevas recetas y pedir un pequeño y lindo kit con los ingredientes para cocinarlas. Es como HelloFresh® con esteroides.",
 	"labViiVPayDescription": "Tecnología financiera transfronteriza con enfoque en el mercado LATAM, proyecto y app diseñados en Figma. Pagos transparentes y sin fronteras.",
-
 	"careAccessStore": "Accede a la Cubiq Store",
 	"careAccessStoreDesc": "Encuentra todo para tu infraestructura: alquileres, equipos, software con licencia y accesorios. Gestiona y compra tu TI en un solo lugar.",
-
 	"careCTA": "Descuentos por volumen y <span class='text-base-content'>presupuestos a medida</span>.",
 	"careEssentialPlanName": "Esencial",
 	"careCompletePlanName": "Completo",
@@ -508,7 +391,6 @@
 	"careThreeHours": "3 horas",
 	"careLifecycleManagement": "Gestión de Ciclo de Vida (ITAM)",
 	"careLifecycleManagementDescription": "La gestión del ciclo de vida incluye el seguimiento de la salud de los activos, la planificación de actualizaciones y la gestión de las transiciones de fin de vida útil para maximizar el valor del equipo.",
-
 	"careScheduledPreventiveMaintenance": "Mantenimientos Preventivos Programados",
 	"careRemotePreventiveMaintenance": "Mantenimientos Preventivos Programados (Remotos)",
 	"careQuarterly": "Trimestrales",
@@ -520,35 +402,27 @@
 	"careEvery3Months": "Cada 3 meses",
 	"careBackupRecovery": "Backup y Recuperación de Sistemas",
 	"careBackupRecoveryDescription": "Los servicios de copia de seguridad y recuperación garantizan que sus datos críticos estén protegidos y puedan restaurarse rápidamente en caso de un fallo del sistema.",
-
 	"careIncludedUpTo150GB": "Incluido (hasta 150GB/activo)",
 	"careMonitoringDashboards": "Dashboards de Seguimiento",
 	"careMonitoringDashboardsDescription": "Accede a paneles en tiempo real para monitorear el rendimiento de los activos, las métricas de salud y recibir alertas sobre posibles problemas antes de que se vuelvan críticos.",
-
 	"careBasicAccess": "Acceso Básico (Histórico/Costos)",
 	"careCompleteAccess": "Acceso Completo (Tiempo Real/Rendimiento)",
 	"careExtraSupportHourCost": "Costo de la Hora Extra de Soporte",
 	"careExtraRemoteSupportHourCost": "Costo de la Hora Extra de Soporte Remoto",
 	"careExtraRemoteSupportHourCostDescription": "Acceda a soporte experto ilimitado más allá de las horas incluidas en su plan (1h/3h). Garantice la resolución inmediata de cualquier incidente y mantenga la máxima continuidad operativa para sus activos de TI, pagando solo por el tiempo adicional que realmente utilice.",
 	"carePricingFooter": "Todos los precios son transparentes y sin tarifas ocultas",
-
 	"careEmergencyMaintenance": "Mantenimiento de Emergencia/Correctivo (Bajo Demanda)",
 	"careEmergencyMaintenanceDescription": "El Mantenimiento de Correctivo bajo demanda es para fallas inesperadas fuera del mantenimiento preventivo programado. Esto cubre fallas de hardware, caídas del sistema y otros problemas urgentes. El diagnóstico remoto siempre está incluido en su plan mensual sin costo adicional. Si se requiere una visita presencial, hay una tarifa de servicio más el costo de las piezas de reemplazo necesarias. Los clientes del plan Complete reciben tarifas descontadas.",
-
 	"careEmergencyEssentialPrice": "$U 1000/visita + repuestos",
 	"careEmergencyCompletePrice": "$U 500/visita + repuestos (50% OFF)",
-
 	"carePricingEssentiaPrice": "$U 500,00",
 	"carePricingCompletePrice": "$U 1000,00",
-
 	"careExtraHourEssentialSupportCost": "$U 250,00",
 	"careExtraHourCompleteSupportCost": "$U 250,00",
-
 	"timelineJan2025": "Enero, 2026",
 	"timelineJan2025Item1": "Care Dashboards polishing",
 	"timelineJan2025Item2": "Care Predictive Software (Tauri)",
 	"timelineJan2025Item3": "Care Store & API",
-
 	"timelineDec2024": "Diciembre, 2025",
 	"timelineDec2024Item1Title": "RBAC para Dashboards",
 	"timelineDec2024Item1Desc": "Control de Acceso Basado en Roles y Productos",
@@ -558,22 +432,18 @@
 	"timelineDec2024Item3Desc": "Finalización del sitio web.",
 	"timelineDec2024Item4Title": "API: Auth & Voting",
 	"timelineDec2024Item4Desc": "Servicio inicial de Autenticación y Registro de Votos optimizado para alto rendimiento con prueba de persistencia vía SQLite (modo WAL).",
-
 	"timelineNov2024": "Noviembre, 2025",
 	"timelineNov2024Title": "Ideación de Cubiq",
 	"timelineNov2024Desc": "Cubiq iza las velas con el objetivo de ofrecer soluciones tecnológicas avanzadas para PyMEs; y un espacio de experimentación con productos tecnológicos in-house, con foco en protocolos abiertos y <i>permissionless</i>.",
-
 	"noDevicesConfigured": "No hay dispositivos configurados.",
 	"organization": "Organización",
 	"organizations": "Organizaciones",
 	"selectOrganization": "Selecciona una organización",
 	"loadingContacts": "Cargando contactos...",
 	"selectContact": "Seleccione un contacto",
-
 	"deviceID": "ID del dispositivo",
 	"remoteAccess": "Acceso remoto",
 	"rAccess": "A. Remoto",
-
 	"serialNumber": "Número de serie",
 	"deviceType": "Tipo de dispositivo",
 	"ownedByContact": "Propiedad del contacto",
@@ -596,7 +466,6 @@
 	"isServiceFinished": "Servicio finalizado?",
 	"serviceHistoryUpdatedOk": "¡Historial de servicio actualizado con éxito!",
 	"serviceHistoryUpdateFailed": "Error al actualizar el historial de servicio.",
-
 	"dashboardCareOverview": "Resumen de Care",
 	"dashboardCare": "Panel Care",
 	"dashboardCareAddAgent": "Agregar Agente",
@@ -629,17 +498,14 @@
 	"breadcrumbApis": "APIs",
 	"breadcrumbNotes": "Notas",
 	"breadcrumbNote": "Nota",
-
 	"NOTEBOOK": "Notebooks",
 	"DESKTOP": "Desktops",
 	"ALLINONE": "All-In-Ones",
 	"SERVER": "Servidores",
-
 	"HEALTHY": "Saludable",
 	"WARNING": "Advertencia",
 	"CRITICAL": "Crítico",
 	"MONITORING": "Monitoreando",
-
 	"OS_SYSTEM_RESET": "Restablecimiento del Sistema Operativo",
 	"OS_SYSTEM_ERROR": "Error del Sistema Operativo",
 	"SYSTEM_PERFORMANCE_ALERT": "Alerta de Rendimiento del Sistema",
@@ -651,7 +517,6 @@
 	"GENERAL_OTHER_FIXING": "Reparación General / Otros Arreglos",
 	"LIFECYCLE_ASSET_RETIREMENT": "Ciclo de Vida: Retiro de Activo",
 	"LIFECYCLE_NEW_ASSET_DEPLOYMENT": "Ciclo de Vida: Despliegue de Nuevo Activo",
-
 	"PENDING_APPROVAL": "Pendiente de Aprobación",
 	"IN_PROGRESS": "En Curso",
 	"ON_HOLD": "En Espera",
