@@ -6,6 +6,9 @@ import { defineConfig } from 'vite';
 import { blogPosts } from './src/lib/data/blogPostsForVite';
 
 export default defineConfig({
+	define: {
+		'process.env.PACKAGE_VERSION': JSON.stringify(require('./package.json').version)
+	},
 	plugins: [
 		paraglideVitePlugin({
 			project: './project.inlang',
