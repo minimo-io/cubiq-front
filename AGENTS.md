@@ -18,10 +18,26 @@ It is a private repository located at <https://github.com/minimo-io/cubiq-front>
 
 # Commands
 
-- `npm run dev` - Start dev server
+- `npm run dev` - Start dev server (local only)
+- `npm run dev -- --host` - Start dev server with network access
 - `npm run build` - Build for production
 - `npm run lint` - Run linting
 - `npm run check` - Run type checking
+- `npm run format` - Auto-fix formatting
+
+# Project Structure
+
+- `src/routes/` - SvelteKit page routes
+- `src/lib/components/` - Svelte components
+- `src/lib/components/Drawer/` - Mobile drawer/navigation components
+- `messages/` - Translation source files
+
+# Code Style
+
+- Uses **Svelte 5** with runes: `$state`, `$derived`, `$effect`
+- UI components use **DaisyUI** classes
+- Custom pixel font styling: `fw-pixel` class
+- Dark theme via `data-theme="cubiq-dark"`
 
 # Translations
 
