@@ -183,6 +183,14 @@ export default defineConfig({
 						['en', '/en/lab']
 					]
 				},
+				{
+					pattern: '/docs',
+					localized: [
+						['pt', '/docs'],
+						['es', '/es/docs'],
+						['en', '/en/docs']
+					]
+				},
 				// Products
 				{
 					pattern: '/pay',

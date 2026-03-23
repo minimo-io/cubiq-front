@@ -1,5 +1,6 @@
 <script lang="ts">
 	import {
+		Cable,
 		ChevronRight,
 		Tag,
 		Headset,
@@ -21,7 +22,7 @@
 	import { m, product } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
 	import type { ProductData } from '$types/products.types';
-	import { getProductsFromLab } from '$lib/data/products.data';
+	import { getProductsFromLab, getProducts } from '$lib/data/products.data';
 	import { page } from '$app/state';
 
 	let user = $derived(page.data.user);
@@ -29,6 +30,11 @@
 	const locale = $state(getLocale());
 	const PRODUCTS = getProductsFromLab(locale);
 	const drawerProductsForLang = $state(PRODUCTS.filter((prod: ProductData) => prod.isMain));
+
+	const API_PRODUCTS = getProducts(locale);
+	const drawerApisForLang = $state(
+		API_PRODUCTS.filter((prod: ProductData) => prod.isMain).slice(0, 3)
+	);
 </script>
 
 <div
@@ -154,6 +160,50 @@
 		<div class="text-grey-medium flex flex-row self-center align-middle">
 		</div>
 	</a> -->
+
+	<!-- API Section -->
+	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
+		{m.menuAPIs()}
+	</h2>
+	{#each drawerApisForLang as api, i}
+		<a
+			href={localizeHref(api.url || '/')}
+			class={[
+				'border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-b px-[30px] py-3 text-left align-middle text-sm',
+				i == 0 ? 'border-t' : ''
+			]}
+		>
+			<div class="flex min-w-0 flex-1 items-center">
+				{#if api.icon}
+					<api.icon class="mr-2 h-4 w-4 flex-shrink-0 self-center" />
+				{/if}
+				<div
+					class={[
+						'font-pixel flex-shrink-0 self-center tracking-[0.06em]',
+						api.isBold ? 'font-bold' : 'font-semibold'
+					]}
+				>
+					{api.name}
+				</div>
+				{#if api.slogan}
+					<div class="text-secondary ml-1 min-w-0 flex-1 truncate">
+						— {api.slogan}
+					</div>
+				{/if}
+			</div>
+		</a>
+	{/each}
+	<a
+		href={localizeHref('/docs')}
+		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-b px-[30px] py-3 text-left align-middle text-sm"
+	>
+		<div class="flex min-w-0 flex-1 items-center">
+			<Cable class="mr-2 h-4 w-4 flex-shrink-0 self-center" />
+			<div class="font-pixel flex-shrink-0 self-center font-bold tracking-[0.06em]">
+				{m.menuAllAPIs()}
+			</div>
+		</div>
+	</a>
 
 	<!-- Fixed Extra Menu -->
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">

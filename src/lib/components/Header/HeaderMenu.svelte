@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Book, ChevronDown, FileClock, Headset, HeartPlus, PenLine, Zap } from '@lucide/svelte';
+	import { Book, Cable, ChevronDown, Headset, HeartPlus, PenLine, Zap } from '@lucide/svelte';
 	import { getLocale, localizeHref } from '$paraglide/runtime';
-	import { getProductsFromLab } from '$lib/data/products.data';
+	import { getProductsFromLab, getProducts } from '$lib/data/products.data';
 	import { m } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
 	import type { ProductData } from '$types/products.types';
@@ -12,6 +12,9 @@
 	const locale = $state(getLocale());
 	const PRODUCTS = getProductsFromLab(locale);
 	let productsForLang = $state(PRODUCTS.filter((prod: ProductData) => prod.isMain));
+
+	const API_PRODUCTS = getProducts(locale);
+	let apisForLang = $state(API_PRODUCTS.filter((prod: ProductData) => prod.isMain).slice(0, 3));
 </script>
 
 <div class="fw-header-fs z-50 hidden items-center justify-center gap-10 md:flex">
@@ -80,6 +83,56 @@
 
 	<div class="dropdown relative">
 		<div class="cursor-fw flex items-center uppercase" tabindex="0" role="button">
+			{m.menuAPIs()}
+			<span><ChevronDown class="ml-1 h-5" /></span>
+		</div>
+		<ul
+			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[490px] px-5 py-3 shadow-md"
+		>
+			{#each apisForLang as api, i}
+				<li class="w-full">
+					<a
+						href={localizeHref(api.url || '/')}
+						class={[
+							'flex w-full items-center justify-start gap-2 py-3 text-left align-middle text-sm',
+							i + 1 == apisForLang.length ? '' : 'border-b border-b-gray-700'
+						]}
+					>
+						{#if api.icon}
+							<api.icon class="mr-2 h-4 w-4 self-center" />
+						{/if}
+						<div
+							class={[
+								'self-center text-[16px] tracking-wider',
+								api.isBold ? 'font-bold' : 'font-semibold'
+							]}
+						>
+							{api.name}
+						</div>
+						{#if api.slogan}
+							<div class="text-secondary ml-1 min-w-0 flex-1 truncate text-[16px]">
+								— {api.slogan}
+							</div>
+						{/if}
+					</a>
+				</li>
+			{/each}
+			<li class="w-full border-t border-gray-700">
+				<a
+					href={localizeHref('/docs')}
+					class="flex w-full items-center justify-start gap-2 py-3 text-left align-middle text-sm"
+				>
+					<Cable class="mr-2 h-4 w-4 self-center" />
+					<div class="self-center text-[16px] font-bold tracking-wider">
+						{m.menuAllAPIs()}
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="dropdown relative">
+		<div class="cursor-fw flex items-center uppercase" tabindex="0" role="button">
 			{m.menuHelp()}
 			<span><ChevronDown class="ml-1 h-5" /></span>
 		</div>
@@ -117,23 +170,11 @@
 					target="_blank"
 					class={[
 						'flex py-3 align-middle text-[16px] tracking-wider',
-						'border-b border-b-gray-700'
+						'border-b-0 border-b-gray-700'
 					]}
 				>
 					<HeartPlus class="h-4" />
 					{m.apiStatus()}
-				</a>
-			</li>
-			<li>
-				<a
-					href={localizeHref('/roadmap')}
-					class={[
-						'flex py-3 align-middle text-[16px] tracking-wider',
-						'border-b-0 border-b-gray-700'
-					]}
-				>
-					<FileClock class="h-4" />
-					Roadmap
 				</a>
 			</li>
 
@@ -152,11 +193,6 @@
 	<!-- <a class="uppercase" href={localizeHref('/soon')}>{m.menuPrices()}</a> -->
 	<!-- <a class="uppercase" href={localizeHref('/blog')}>Blog</a> -->
 	<!-- <a class="uppercase" href={localizeHref('/blog')}>Blog</a> -->
-
-	<a href={localizeHref('/lab')} class="flex items-center tracking-wide uppercase">
-		<!-- <FlaskConical class="h-4" /> -->
-		{m.menuLab()}
-	</a>
 
 	<a class="uppercase" href={localizeHref('/blog')}>Blog</a>
 </div>

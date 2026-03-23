@@ -4,14 +4,20 @@
 	import { getCurrentYear } from '$utils';
 	import { AppConfig } from '$lib';
 	import SystemStatus from './SystemStatus.svelte';
-	import { localizeHref } from '$paraglide/runtime';
+	import { localizeHref, getLocale } from '$paraglide/runtime';
 	import { m } from '$paraglide/messages';
+	import { getProductsFromLab } from '$lib/data/products.data';
+	import type { ProductData } from '$types/products.types';
 
 	// Footer year
 	let currentYear = getCurrentYear();
 	const date = new Date(AppConfig.cubiq.founded);
 	const foundationYear = date.getFullYear();
 	const finalYear = `${currentYear != foundationYear ? `${foundationYear} - ${currentYear}` : currentYear}`;
+
+	const locale = getLocale();
+	const LAB_PRODUCTS = getProductsFromLab(locale);
+	const labProductsForLang = LAB_PRODUCTS.filter((prod: ProductData) => prod.isMain).slice(0, 4);
 </script>
 
 <footer
@@ -24,22 +30,18 @@
 				<div>
 					<h3 class="font-pixel text-base-100 mb-4 text-xl">{m.menuProducts()}</h3>
 					<ul class="space-y-2">
-						<li><a href={localizeHref('/care')} class="text-secondary">Care</a></li>
-						<li><a href={localizeHref('/pay')} class="text-secondary">Pay</a></li>
-						<li><a href={localizeHref('/store')} class="text-secondary">Store</a></li>
-						<li>
-							<a href={localizeHref(AppConfig.cubiq.docs)} target="_blank" class="text-secondary"
-								>APIs</a
-							>
-						</li>
-						<!-- <li>
-							<a
-								href="https://braaay.com"
-								target="_blank"
-								rel="nofollow noopener"
-								class="text-secondary">Braaay</a
-							>
-						</li> -->
+						{#each labProductsForLang as product}
+							<li>
+								<a
+									href={product.url}
+									target={product.newWindow ? '_blank' : undefined}
+									rel={product.newWindow ? 'nofollow noopener' : undefined}
+									class="text-secondary"
+								>
+									{product.name}
+								</a>
+							</li>
+						{/each}
 					</ul>
 				</div>
 
@@ -59,9 +61,6 @@
 								target="_blank"
 								rel="nofollow noopener">Status</a
 							>
-						</li>
-						<li>
-							<a href={AppConfig.status} class="text-secondary">Roadmap</a>
 						</li>
 						<li>
 							<a href={localizeHref('/blog')} class="text-secondary">Blog</a>
