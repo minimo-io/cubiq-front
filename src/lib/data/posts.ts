@@ -3,10 +3,10 @@ import { Beer, Database, Braces } from '@lucide/svelte';
 export const posts = {
 	en: [
 		{
-			title: "🍺 TapTapGo: Discover and buy local craft beers",
+			title: "🍺 TapTapGo: Craft Beer Marketplace & Community",
 			image: "/products/project-lightning-beer.webp",
-			excerpt: "Discover local craft beers and pay with bitcoin. TapTapGo brings breweries and bitcoiners together with seamless satoshi payments.",
-			content: "<p>TapTapGo is as a proof-of-concept app for those of us willing to use bitcoin as money, not just as one more speculative asset, so we can buy our craft 6-packs using satoshis, instead of just sitting above them.</p>\n<p>Beers will be delivered by 3rd party #bitcoin friendly retail stores.</p>\n<p>If you are a store owner and are interested please get in touch!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visit project</a></p>\n",
+			excerpt: "Discover, rate, and buy special craft beers. TapTapGo is a marketplace connecting craft beer lovers, producers, and stores with seamless payments.",
+			content: "<p>TapTapGo is a marketplace and community for craft and special beer enthusiasts. Finding these beers has always been a challenge — offers are scattered across dozens of specialty store websites, each with their own inventory and prices.</p>\n<p>Our mission is to bring demand and supply together in one place.</p>\n<p><strong>For beer lovers:</strong> Discover new breweries, rate and evaluate your favorites, compare prices, and buy directly — all in one app.</p>\n<p><strong>For producers:</strong> Sell your craft beers directly to consumers without intermediaries. Launch promotions to boost visibility, track and manage orders in real-time, and build your own customer base — all from one dashboard.</p>\n<p><strong>For stores:</strong> Reach a wider audience and manage your craft beer inventory in a dedicated marketplace. Run promotions, control incoming orders, and access detailed customer data to grow your business and build lasting relationships.</p>\n<p>Payments are seamless, with support for bitcoin.</p>\n<p>Interested in joining as a producer or store? Get in touch!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visit project</a></p>\n<p>Follow us on Instagram: <a href=\"https://www.instagram.com/taptapgo_uy/\">@taptapgo_uy</a></p>\n",
 			date: "August 31",
 			slug: "/en/blog/beer-app",
 			isMain: false,
@@ -15,6 +15,10 @@ export const posts = {
 				{
 					fullName: "Nicolas Erramuspe",
 					avatar: "/me.jpeg"
+				},
+				{
+					fullName: "MiMo Omni",
+					avatar: "/mimo-logo.png"
 				}
 			]
 		},
@@ -169,10 +173,10 @@ export const posts = {
 	],
 	es: [
 		{
-			title: "🍺 TapTapGo: Descubrí y compra cervezas artesanales locales",
+			title: "🍺 TapTapGo: Marketplace y Comunidad de Cervezas Especiales",
 			image: "/products/project-lightning-beer.webp",
-			excerpt: "Descubrí cervezas artesanales locales y paga con bitcoin. TapTapGo conecta cervecerías y bitcoiners con pagos en satoshis sin fricción.",
-			content: "<p>TapTapGo es una aplicación de prueba de concepto para quienes queremos usar bitcoin como dinero, no solo como otro activo especulativo, para así poder comprar nuestros packs de 6 artesanales usando satoshis en lugar de simplemente tenerlos acumulados.</p>\n<p>Las cervezas serán entregadas por tiendas minoristas asociadas y amigables con #bitcoin.</p>\n<p>Si eres dueño de una tienda y estás interesado, ¡ponte en contacto!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visitar proyecto</a></p>\n",
+			excerpt: "Descubrí, calificá y comprá cervezas especiales. TapTapGo es un marketplace que conecta amantes de la cerveza artesanal, productores y tiendas.",
+			content: "<p>TapTapGo es un marketplace y comunidad para amantes de las cervezas artesanales y especiales. Encontrar estas cervezas siempre fue un desafío — las ofertas están dispersas en docenas de tiendas especializadas, cada una con su propio inventario y precios.</p>\n<p>Nuestra misión es reunir la demanda y la oferta en un solo lugar.</p>\n<p><strong>Para amantes de la cerveza:</strong> Descubrí nuevas cervecerías, calificá y evaluá tus favoritas, compará precios y comprá directamente — todo en una sola app.</p>\n<p><strong>Para productores:</strong> Vendé tus cervezas artesanales directamente a los consumidores sin intermediarios. Lanzá promociones para aumentar tu visibilidad, seguí y gestioná pedidos en tiempo real, y construí tu propia base de clientes — todo desde un solo panel.</p>\n<p><strong>Para tiendas:</strong> Llegá a más público y gestioná tu inventario de cervezas artesanales en un marketplace dedicado. Creá promociones, controlá los pedidos entrantes y accedé a datos detallados de clientes para hacer crecer tu negocio.</p>\n<p>Los pagos son sin fricción, con soporte para bitcoin.</p>\n<p>¿Interesado en participar como productor o tienda? ¡Ponete en contacto!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visitar proyecto</a></p>\n<p>Seguinos en Instagram: <a href=\"https://www.instagram.com/taptapgo_uy/\">@taptapgo_uy</a></p>\n",
 			date: "31 de agosto",
 			slug: "/es/blog/beer-app",
 			isMain: false,
@@ -181,6 +185,10 @@ export const posts = {
 				{
 					fullName: "Nicolas Erramuspe",
 					avatar: "/me.jpeg"
+				},
+				{
+					fullName: "MiMo Omni",
+					avatar: "/mimo-logo.png"
 				}
 			]
 		},
@@ -319,10 +327,10 @@ export const posts = {
 	],
 	pt: [
 		{
-			title: "🍺 TapTapGo: Descubra e compre cervejas artesanais locais",
+			title: "🍺 TapTapGo: Marketplace & Comunidade de Cervejas Especiais",
 			image: "/products/project-lightning-beer.webp",
-			excerpt: "Descubra cervejas artesanais locais e pague com bitcoin. A TapTapGo aproxima cervejarias e bitcoiners com pagamentos em satoshis sem fricção.",
-			content: "<p>TapTapGo é um aplicativo de prova de conceito para aqueles de nós que desejam usar bitcoin como dinheiro, não apenas como mais um ativo especulativo, para que possamos comprar nossos packs de 6 artesanais usando satoshis, em vez de apenas deixá-los parados.</p>\n<p>As cervejas serão entregues por lojas de varejo parceiras e amigáveis ao #bitcoin.</p>\n<p>Se você é dono de uma loja e tem interesse, entre em contato!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Vistar projeto</a></p>\n",
+			excerpt: "Descubra, avalie e compre cervejas especiais. TapTapGo é um marketplace que conecta amantes de cerveja artesanal, produtores e lojas.",
+			content: "<p>TapTapGo é um marketplace e comunidade para amantes de cervejas artesanais e especiais. Encontrar essas cervejas sempre foi um desafio — as ofertas estão dispersas em dezenas de lojas especializadas, cada uma com seu próprio estoque e preços.</p>\n<p>Nossa missão é reunir demanda e oferta em um só lugar.</p>\n<p><strong>Para amantes de cerveja:</strong> Descubra novas cervejarias, avalie suas favoritas, compare preços e compre diretamente — tudo em um só app.</p>\n<p><strong>Para produtores:</strong> Venda suas cervejas artesanais diretamente aos consumidores sem intermediários. Lance promoções para aumentar sua visibilidade, acompanhe e gerencie pedidos em tempo real e construa sua própria base de clientes — tudo em um único painel.</p>\n<p><strong>Para lojas:</strong> Alcance mais público e gerencie seu estoque de cervejas artesanais em um marketplace dedicado. Crie promoções, controle os pedidos recebidos e acesse dados detalhados de clientes para expandir seu negócio.</p>\n<p>Os pagamentos são sem atrito, com suporte para bitcoin.</p>\n<p>Interessado em participar como produtor ou loja? Entre em contato!</p>\n<p><a rel=\"nofollow noreferrer noopener\" target=\"_blank\" href=\"https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1\" class=\"btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary\">Visitar projeto</a></p>\n<p>Siga-nos no Instagram: <a href=\"https://www.instagram.com/taptapgo_uy/\">@taptapgo_uy</a></p>\n",
 			date: "31 de agosto",
 			slug: "/blog/beer-app",
 			isMain: false,
@@ -331,6 +339,10 @@ export const posts = {
 				{
 					fullName: "Nicolas Erramuspe",
 					avatar: "/me.jpeg"
+				},
+				{
+					fullName: "MiMo Omni",
+					avatar: "/mimo-logo.png"
 				}
 			]
 		},

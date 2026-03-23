@@ -1,6 +1,6 @@
 ---
-title: '🍺 TapTapGo: Descubrí y compra cervezas artesanales locales'
-excerpt: 'Descubrí cervezas artesanales locales y paga con bitcoin. TapTapGo conecta cervecerías y bitcoiners con pagos en satoshis sin fricción.'
+title: '🍺 TapTapGo: Marketplace y Comunidad de Cervezas Especiales'
+excerpt: 'Descubrí, calificá y comprá cervezas especiales. TapTapGo es un marketplace que conecta amantes de la cerveza artesanal, productores y tiendas.'
 date: 2025-09-01
 featured: false
 isMain: false
@@ -9,12 +9,24 @@ image: /products/project-lightning-beer.webp
 authors:
   - name: Nicolas Erramuspe
     avatar: /me.jpeg
+  - name: MiMo Omni
+    avatar: /mimo-logo.png
 ---
 
-TapTapGo es una aplicación de prueba de concepto para quienes queremos usar bitcoin como dinero, no solo como otro activo especulativo, para así poder comprar nuestros packs de 6 artesanales usando satoshis en lugar de simplemente tenerlos acumulados.
+TapTapGo es un marketplace y comunidad para amantes de las cervezas artesanales y especiales. Encontrar estas cervezas siempre fue un desafío — las ofertas están dispersas en docenas de tiendas especializadas, cada una con su propio inventario y precios.
 
-Las cervezas serán entregadas por tiendas minoristas asociadas y amigables con #bitcoin.
+Nuestra misión es reunir la demanda y la oferta en un solo lugar.
 
-Si eres dueño de una tienda y estás interesado, ¡ponte en contacto!
+**Para amantes de la cerveza:** Descubrí nuevas cervecerías, calificá y evaluá tus favoritas, compará precios y comprá directamente — todo en una sola app.
+
+**Para productores:** Vendé tus cervezas artesanales directamente a los consumidores sin intermediarios. Lanzá promociones para aumentar tu visibilidad, seguí y gestioná pedidos en tiempo real, y construí tu propia base de clientes — todo desde un solo panel.
+
+**Para tiendas:** Llegá a más público y gestioná tu inventario de cervezas artesanales en un marketplace dedicado. Creá promociones, controlá los pedidos entrantes y accedé a datos detallados de clientes para hacer crecer tu negocio.
+
+Los pagos son sin fricción, con soporte para bitcoin.
+
+¿Interesado en participar como productor o tienda? ¡Ponete en contacto!
 
 <a rel="nofollow noreferrer noopener" target="_blank" href="https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1" class="btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary">Visitar proyecto</a>
+
+Seguinos en Instagram: [@taptapgo_uy](https://www.instagram.com/taptapgo_uy/)
