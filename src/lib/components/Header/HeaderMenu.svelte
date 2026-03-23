@@ -87,7 +87,7 @@
 			<span><ChevronDown class="ml-1 h-5" /></span>
 		</div>
 		<ul
-			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[490px] px-5 py-3 shadow-md"
+			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[400px] px-5 py-3 shadow-md"
 		>
 			{#each apisForLang as api, i}
 				<li class="w-full">

@@ -46,7 +46,7 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 
 	{
 		id: Product.APIS,
-		name: 'APIs',
+		name: m.productAPIsName({}, { locale: locale }),
 		isMain: true,
 		slogan: m.productAPISlogan({}, { locale: locale }),
 		sloganSimple: m.productAPISloganSimple({}, { locale: locale }),
@@ -55,7 +55,7 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		primary: true,
 		isBold: true,
 		underDevelopment: true,
-		url: localizeHref(AppConfig.cubiq.docs, { locale: locale })
+		url: localizeHref('/docs', { locale: locale })
 	}
 ];
 
