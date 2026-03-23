@@ -15,6 +15,12 @@
 
 	const API_PRODUCTS = getProducts(locale);
 	let apisForLang = $state(API_PRODUCTS.filter((prod: ProductData) => prod.isMain).slice(0, 3));
+
+	function getHref(url: string | undefined): string {
+		if (!url) return '/';
+		if (url.startsWith('http')) return url;
+		return localizeHref(url, { locale: locale });
+	}
 </script>
 
 <div class="fw-header-fs z-50 hidden items-center justify-center gap-10 md:flex">
@@ -34,7 +40,9 @@
 			{#each productsForLang as drawer, i}
 				<li class="w-full">
 					<a
-						href={localizeHref(drawer.url || '/')}
+						href={getHref(drawer.url)}
+						target={drawer.url?.startsWith('http') ? '_blank' : undefined}
+						rel={drawer.url?.startsWith('http') ? 'noopener noreferrer' : undefined}
 						class={[
 							'flex w-full items-center justify-start gap-2 py-3 text-left align-middle text-sm',
 							i + 1 == productsForLang.length ? '' : 'border-b border-b-gray-700'
@@ -92,7 +100,9 @@
 			{#each apisForLang as api, i}
 				<li class="w-full">
 					<a
-						href={localizeHref(api.url || '/')}
+						href={getHref(api.url)}
+						target={api.url?.startsWith('http') ? '_blank' : undefined}
+						rel={api.url?.startsWith('http') ? 'noopener noreferrer' : undefined}
 						class={[
 							'flex w-full items-center justify-start gap-2 py-3 text-left align-middle text-sm',
 							i + 1 == apisForLang.length ? '' : 'border-b border-b-gray-700'
@@ -119,7 +129,7 @@
 			{/each}
 			<li class="w-full border-t border-gray-700">
 				<a
-					href={localizeHref('/docs')}
+					href={getHref('/docs')}
 					class="flex w-full items-center justify-start gap-2 py-3 text-left align-middle text-sm"
 				>
 					<Cable class="mr-2 h-4 w-4 self-center" />

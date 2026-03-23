@@ -35,6 +35,12 @@
 	const drawerApisForLang = $state(
 		API_PRODUCTS.filter((prod: ProductData) => prod.isMain).slice(0, 3)
 	);
+
+	function getHref(url: string | undefined): string {
+		if (!url) return '/';
+		if (url.startsWith('http')) return url;
+		return localizeHref(url, { locale: locale });
+	}
 </script>
 
 <div
@@ -93,7 +99,9 @@
 	<!-- <h2 class="my-5 px-[30px] text-base font-extrabold uppercase">PRODUTOS</h2> -->
 	{#each drawerProductsForLang as drawer, i}
 		<a
-			href={drawer.url}
+			href={getHref(drawer.url)}
+			target={drawer.url?.startsWith('http') ? '_blank' : undefined}
+			rel={drawer.url?.startsWith('http') ? 'noopener noreferrer' : undefined}
 			class={[
 				'border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-b px-[30px] py-3 text-left align-middle text-sm',
 				i == 0 ? 'border-t' : ''
@@ -167,7 +175,9 @@
 	</h2>
 	{#each drawerApisForLang as api, i}
 		<a
-			href={localizeHref(api.url || '/')}
+			href={getHref(api.url)}
+			target={api.url?.startsWith('http') ? '_blank' : undefined}
+			rel={api.url?.startsWith('http') ? 'noopener noreferrer' : undefined}
 			class={[
 				'border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-b px-[30px] py-3 text-left align-middle text-sm',
 				i == 0 ? 'border-t' : ''

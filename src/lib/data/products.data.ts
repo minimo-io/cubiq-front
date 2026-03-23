@@ -17,7 +17,7 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		primary: false,
 		underDevelopment: true,
 		unavailable: true,
-		url: localizeHref('/pay', { locale: locale })
+		url: 'https://api.cubiq.lat/docs#/Pay'
 	},
 	{
 		id: Product.AI,
@@ -29,7 +29,7 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		isBold: true,
 		primary: false,
 		underDevelopment: false,
-		url: localizeHref('/care', { locale: locale })
+		url: 'https://api.cubiq.lat/docs#/AI'
 	},
 	{
 		id: Product.AUTH,
@@ -41,7 +41,7 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		isBold: true,
 		primary: false,
 		underDevelopment: false,
-		url: localizeHref('/care', { locale: locale })
+		url: 'https://api.cubiq.lat/docs#/Users'
 	},
 
 	{
