@@ -1,4 +1,4 @@
-import { Activity, BrainCircuit, Cable, Key, ShoppingBag, User, Zap } from '@lucide/svelte';
+import { BrainCircuit, Cable, Key, Zap } from '@lucide/svelte';
 import { LabProduct, Product, type ProductsList } from '$lib/type/products.types';
 import { localizeHref } from '$paraglide/runtime';
 import { m } from '$paraglide/messages';
@@ -58,10 +58,8 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		isBold: true,
 		underDevelopment: true,
 		url: localizeHref(AppConfig.cubiq.docs, { locale: locale })
-	},
-
+	}
 ];
-
 
 // export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 // 	{
@@ -107,7 +105,6 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 // 		url: localizeHref('/store', { locale: locale })
 // 	},
 
-
 // 	{
 // 		id: Product.APIS,
 // 		name: 'APIs',
@@ -141,6 +138,7 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		id: LabProduct.BETIZEN,
 		name: LabProduct.BETIZEN,
 		logo: '/products/betizen-logo.png',
+		logoSquare: '/products/betizen-logo-round.png',
 		isMain: true,
 		slogan: m.productBetizenSlogan({}, { locale: locale }),
 		sloganSimple: '',
@@ -155,6 +153,7 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		id: LabProduct.LNBEER,
 		name: LabProduct.LNBEER,
 		logo: '/products/taptapgo-logo.png',
+		logoSquare: '/products/taptapgo-logo-round.png',
 		isMain: true,
 		slogan: m.productLnBeerSlogan({}, { locale: locale }),
 		sloganSimple: '',

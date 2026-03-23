@@ -21,13 +21,13 @@
 	import { m, product } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
 	import type { ProductData } from '$types/products.types';
-	import { getProducts } from '$lib/data/products.data';
+	import { getProductsFromLab } from '$lib/data/products.data';
 	import { page } from '$app/state';
 
 	let user = $derived(page.data.user);
 
 	const locale = $state(getLocale());
-	let PRODUCTS = getProducts(locale);
+	const PRODUCTS = getProductsFromLab(locale);
 	const drawerProductsForLang = $state(PRODUCTS.filter((prod: ProductData) => prod.isMain));
 </script>
 
@@ -81,7 +81,7 @@
 	{/if}
 
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
-		{m.platform()}
+		{m.menuProducts()}
 	</h2>
 	<!-- Item with submenu -->
 	<!-- <h2 class="my-5 px-[30px] text-base font-extrabold uppercase">PRODUTOS</h2> -->
@@ -94,7 +94,13 @@
 			]}
 		>
 			<div class="flex min-w-0 flex-1 items-center">
-				{#if drawer.logo}
+				{#if drawer.logoSquare}
+					<img
+						src={drawer.logoSquare}
+						alt={`${drawer.name} logo`}
+						class="mr-1 aspect-square w-6 max-w-6 flex-shrink-0 object-cover"
+					/>
+				{:else if drawer.logo}
 					<img
 						src={drawer.logo}
 						alt={`${drawer.name} logo`}
@@ -105,9 +111,10 @@
 				{/if}
 				<div
 					class={[
-						'font-pixel flex-shrink-0 self-center tracking-wider',
+						'font-pixel flex-shrink-0 self-center tracking-[0.06em]',
 						drawer.isBold ? 'font-bold' : 'font-semibold'
 					]}
+					class:ml-2={!!drawer.logoSquare}
 				>
 					{drawer.name}
 				</div>

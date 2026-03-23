@@ -3,6 +3,14 @@
 This is the Cubiq.lat front-end institutional website and platform repository hosted by Netlify at the moment and re-deployed via CI/CD on every push.
 It is a private repository located at <https://github.com/minimo-io/cubiq-front>
 
+## Company Context
+
+Cubiq is a product-led software factory based in Uruguay, building digital products and a Backend-as-a-Service platform for LATAM startups. They are an AI-driven company, managed by humans: they create, operate, and scale digital businesses in LATAM.
+
+- Institutional site: https://www.cubiq.lat
+- API: https://api.cubiq.lat
+- API docs: https://api.cubiq.lat/docs — JSON format: https://api.cubiq.lat/docs-json
+
 # Tech Stack
 
 - **Framework**: SvelteKit

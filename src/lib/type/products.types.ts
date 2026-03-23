@@ -11,12 +11,12 @@ export enum Product {
 
 	AI = 'AI',
 	PAY = 'PAY',
-	AUTH = 'AUTH',
+	AUTH = 'AUTH'
 }
 
 export enum LabProduct {
 	BETIZEN = 'BETIZEN',
-	LNBEER = 'LNBEER',
+	LNBEER = 'TAPTAPGO',
 	BIBLIO = 'BIBLIO'
 }
 
@@ -33,6 +33,7 @@ export interface ProductData {
 	isBold?: boolean;
 	primary: boolean;
 	logo?: string;
+	logoSquare?: string;
 	underDevelopment?: boolean;
 	online?: boolean;
 	unavailable?: boolean;

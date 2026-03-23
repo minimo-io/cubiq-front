@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Book, ChevronDown, FileClock, Headset, HeartPlus, PenLine, Zap } from '@lucide/svelte';
 	import { getLocale, localizeHref } from '$paraglide/runtime';
-	import { getProducts } from '$lib/data/products.data';
+	import { getProductsFromLab } from '$lib/data/products.data';
 	import { m } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
 	import type { ProductData } from '$types/products.types';
@@ -10,7 +10,7 @@
 	import { onMount } from 'svelte';
 
 	const locale = $state(getLocale());
-	const PRODUCTS = getProducts(locale);
+	const PRODUCTS = getProductsFromLab(locale);
 	let productsForLang = $state(PRODUCTS.filter((prod: ProductData) => prod.isMain));
 </script>
 
@@ -26,20 +26,28 @@
 		</div>
 		<!-- Main menu -->
 		<ul
-			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[435px] px-5 py-3 shadow-md"
+			class="menu dropdown-content bg-base-100 rounded-box z-1 mt-4 w-[490px] px-5 py-3 shadow-md"
 		>
 			{#each productsForLang as drawer, i}
-				<li>
+				<li class="w-full">
 					<a
 						href={localizeHref(drawer.url || '/')}
 						class={[
-							'flex justify-between py-3 text-left align-middle text-sm',
+							'flex w-full items-center justify-start gap-2 py-3 text-left align-middle text-sm',
 							i + 1 == productsForLang.length ? '' : 'border-b border-b-gray-700'
 						]}
 					>
 						<!-- {i} - {productsForLang.length} -->
-						<div class="flex justify-center self-center text-left align-middle">
-							{#if drawer.logo}
+						<div
+							class="flex max-w-full min-w-0 justify-center self-center overflow-hidden text-left align-middle"
+						>
+							{#if drawer.logoSquare}
+								<img
+									src={drawer.logoSquare}
+									alt={`${drawer.name} logo`}
+									class="mr-1 aspect-square w-7 max-w-7 object-cover antialiased"
+								/>
+							{:else if drawer.logo}
 								<img
 									src={drawer.logo}
 									alt={`${drawer.name} logo`}
@@ -54,11 +62,14 @@
 									'self-center text-[16px] tracking-wider',
 									drawer.isBold ? 'font-bold' : 'font-semibold'
 								]}
+								class:ml-2={!!drawer.logoSquare}
 							>
 								{drawer.name}
 							</div>
 							{#if drawer.slogan}
-								<div class="text-secondary ml-1 text-[16px]">— {drawer.slogan}</div>
+								<div class="text-secondary ml-1 min-w-0 flex-1 truncate text-[16px]">
+									— {drawer.slogan}
+								</div>
 							{/if}
 						</div>
 					</a>

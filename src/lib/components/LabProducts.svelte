@@ -1,4 +1,3 @@
-<!-- src/lib/components/Home/Products.svelte -->
 <script lang="ts">
 	import ProductSingle from '$lib/components/Home/ProductSingle.svelte';
 	// import { getLocale } from '$paraglide/runtime';
@@ -6,7 +5,7 @@
 	import { m } from '$paraglide/messages';
 	import Hr from './Hr.svelte';
 	import type { ProductData } from '$types/products.types';
-	import { getLocale, localizeHref } from '$paraglide/runtime';
+	import { getLocale } from '$paraglide/runtime';
 	import { getProductsFromLab } from '$lib/data/products.data';
 
 	let {
