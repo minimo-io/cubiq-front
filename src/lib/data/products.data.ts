@@ -1,4 +1,4 @@
-import { Activity, Cable, ShoppingBag, Zap } from '@lucide/svelte';
+import { Activity, BrainCircuit, Cable, Key, ShoppingBag, User, Zap } from '@lucide/svelte';
 import { LabProduct, Product, type ProductsList } from '$lib/type/products.types';
 import { localizeHref } from '$paraglide/runtime';
 import { m } from '$paraglide/messages';
@@ -20,34 +20,31 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		url: localizeHref('/pay', { locale: locale })
 	},
 	{
-		id: Product.CARE,
-		name: Product.CARE,
+		id: Product.AI,
+		name: Product.AI,
 		isMain: true,
 		slogan: m.productCareSlogan({}, { locale: locale }),
 		sloganSimple: m.productCareSloganSimple({}, { locale: locale }),
 		details: m.productCareDetails({}, { locale: locale }),
-		icon: Activity,
+		icon: BrainCircuit,
 		isBold: true,
 		primary: false,
 		underDevelopment: false,
 		url: localizeHref('/care', { locale: locale })
 	},
-
 	{
-		id: Product.STORE,
-		name: Product.STORE,
+		id: Product.AUTH,
+		name: Product.AUTH,
 		isMain: true,
-		slogan: m.productStoreSlogan({}, { locale: locale }),
-		sloganSimple: m.productStoreSloganSimple({}, { locale: locale }),
-		details: m.productStoreDetails({}, { locale: locale }),
-		icon: ShoppingBag,
-		primary: false,
+		slogan: m.productCareSlogan({}, { locale: locale }),
+		sloganSimple: m.productCareSloganSimple({}, { locale: locale }),
+		details: m.productCareDetails({}, { locale: locale }),
+		icon: Key,
 		isBold: true,
-		online: true,
-		unavailable: false,
-		url: localizeHref('/store', { locale: locale })
+		primary: false,
+		underDevelopment: false,
+		url: localizeHref('/care', { locale: locale })
 	},
-
 
 	{
 		id: Product.APIS,
@@ -62,20 +59,82 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		underDevelopment: true,
 		url: localizeHref(AppConfig.cubiq.docs, { locale: locale })
 	},
-	{
-		id: Product.NOTES,
-		name: Product.NOTES,
-		isMain: false,
-		slogan: m.productNotesSlogan({}, { locale: locale }),
-		sloganSimple: m.productNotesSloganSimple({}, { locale: locale }),
-		details: m.productNotesDetails({}, { locale: locale }),
-		icon: Cable,
-		primary: true,
-		isBold: true,
-		underDevelopment: true,
-		url: localizeHref('/dashboard/notes', { locale: locale })
-	}
+
 ];
+
+
+// export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
+// 	{
+// 		id: Product.PAY,
+// 		name: Product.PAY,
+// 		isMain: true,
+// 		slogan: m.productPaySlogan({}, { locale: locale }),
+// 		sloganSimple: m.productPaySloganSimple({}, { locale: locale }),
+// 		details: m.productPayDetails({}, { locale: locale }),
+// 		icon: Zap,
+// 		isBold: true,
+// 		primary: false,
+// 		underDevelopment: true,
+// 		unavailable: true,
+// 		url: localizeHref('/pay', { locale: locale })
+// 	},
+// 	{
+// 		id: Product.CARE,
+// 		name: Product.CARE,
+// 		isMain: true,
+// 		slogan: m.productCareSlogan({}, { locale: locale }),
+// 		sloganSimple: m.productCareSloganSimple({}, { locale: locale }),
+// 		details: m.productCareDetails({}, { locale: locale }),
+// 		icon: Activity,
+// 		isBold: true,
+// 		primary: false,
+// 		underDevelopment: false,
+// 		url: localizeHref('/care', { locale: locale })
+// 	},
+
+// 	{
+// 		id: Product.STORE,
+// 		name: Product.STORE,
+// 		isMain: true,
+// 		slogan: m.productStoreSlogan({}, { locale: locale }),
+// 		sloganSimple: m.productStoreSloganSimple({}, { locale: locale }),
+// 		details: m.productStoreDetails({}, { locale: locale }),
+// 		icon: ShoppingBag,
+// 		primary: false,
+// 		isBold: true,
+// 		online: true,
+// 		unavailable: false,
+// 		url: localizeHref('/store', { locale: locale })
+// 	},
+
+
+// 	{
+// 		id: Product.APIS,
+// 		name: 'APIs',
+// 		isMain: true,
+// 		slogan: m.productAPISlogan({}, { locale: locale }),
+// 		sloganSimple: m.productAPISloganSimple({}, { locale: locale }),
+// 		details: m.productAPIDetails({}, { locale: locale }),
+// 		icon: Cable,
+// 		primary: true,
+// 		isBold: true,
+// 		underDevelopment: true,
+// 		url: localizeHref(AppConfig.cubiq.docs, { locale: locale })
+// 	},
+// 	{
+// 		id: Product.NOTES,
+// 		name: Product.NOTES,
+// 		isMain: false,
+// 		slogan: m.productNotesSlogan({}, { locale: locale }),
+// 		sloganSimple: m.productNotesSloganSimple({}, { locale: locale }),
+// 		details: m.productNotesDetails({}, { locale: locale }),
+// 		icon: Cable,
+// 		primary: true,
+// 		isBold: true,
+// 		underDevelopment: true,
+// 		url: localizeHref('/dashboard/notes', { locale: locale })
+// 	}
+// ];
 
 export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 	{

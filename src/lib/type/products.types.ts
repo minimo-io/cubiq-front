@@ -4,10 +4,14 @@ export type ProductsList = ProductData[];
 
 export enum Product {
 	CARE = 'CARE',
-	PAY = 'PAY',
+
 	STORE = 'STORE',
 	APIS = 'APIS',
-	NOTES = 'NOTES'
+	NOTES = 'NOTES',
+
+	AI = 'AI',
+	PAY = 'PAY',
+	AUTH = 'AUTH',
 }
 
 export enum LabProduct {
