@@ -32,7 +32,7 @@
 					<div class="flex flex-row items-center gap-3">
 						<div class="font-sans text-lg leading-[105%] tracking-wide group-hover:text-black">
 							<span class="font-bold">Nicolas Erramuspe</span> <br />
-							<span class="text-[15px]">@ Cubiq.lat</span> -
+							<span class="text-[15px]">Cubiq Co-Founder -</span>
 							<a
 								target="_blank"
 								rel="noreferrer noopener"
