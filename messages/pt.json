@@ -136,6 +136,8 @@
 	"contactFormContactUs": "Fale conosco",
 	"contactFormWhatsapp": "WhatsApp",
 	"contactFormTelegram": "Telegram",
+	"contactFormHomepage": "Início",
+	"contactFormError": "Falha ao enviar mensagem",
 	"menuClients": "Parceiros / Clientes",
 	"menuProducts": "Produtos",
 	"menuAPIs": "APIs",

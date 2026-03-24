@@ -6,7 +6,7 @@
 	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
 	import type { Snippet } from 'svelte';
 
-	const smoothAction = [conditionalSmoothScroll, '#more'] as const;
+	// const smoothAction = [conditionalSmoothScroll, '#more'] as const;
 
 	let url = '#more';
 	interface Props {

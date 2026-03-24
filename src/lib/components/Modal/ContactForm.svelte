@@ -2,6 +2,7 @@
 	import { AppConfig } from '$lib/configs';
 	import { m } from '$paraglide/messages';
 	import { getLocale } from '$paraglide/runtime';
+	import { page } from '$app/state';
 	import { modalState } from '$stores/Modal.state.svelte';
 	import { FwToast } from '$stores/Toast.state.svelte';
 	import { MessageCircle, Send, Loader2 } from '@lucide/svelte';
@@ -30,7 +31,7 @@
 					...formData,
 					timestamp: formOpenTime,
 					locale: getLocale(),
-					pageUrl: window.location.href
+					pagePath: page.url.pathname === '/' ? m.contactFormHomepage() : page.url.pathname
 				})
 			});
 
@@ -141,17 +142,15 @@
 
 		<!-- Contact Links Section -->
 		<div
-			class="border-base-300 mt-6 border-t pt-6 md:mt-0 md:border-t-0 md:border-l md:pt-0 md:pl-8"
+			class="border-base-300 mt-6 hidden pt-6 md:mt-0 md:inline-block md:border-l md:pt-0 md:pl-8"
 		>
-			<h3 class="mb-4 text-lg font-semibold">{m.contactFormContactUs()}</h3>
-
 			<div class="space-y-4">
 				<!-- WhatsApp -->
 				<a
 					href={AppConfig.cubiq.socials.whatsapp[locale]}
 					target="_blank"
 					rel="nofollow noreferrer"
-					class="btn btn-outline btn-sm w-full justify-start"
+					class="btn btn-sm bg-base-100 border-base-300 text-base-content hover:border-base-content w-full justify-start transition-opacity hover:opacity-80"
 				>
 					<img src="/whatsapp.png" alt="WhatsApp" class="mr-2 h-4 w-4" />
 					{m.contactFormWhatsapp()}
@@ -162,7 +161,7 @@
 					href={AppConfig.cubiq.socials.telegram}
 					target="_blank"
 					rel="nofollow noreferrer"
-					class="btn btn-outline btn-sm w-full justify-start"
+					class="btn btn-sm bg-base-100 border-base-300 text-base-content hover:border-base-content w-full justify-start transition-opacity hover:opacity-80"
 				>
 					<MessageCircle class="mr-2 h-4 w-4" />
 					{m.contactFormTelegram()}

@@ -1,9 +1,10 @@
 import { json } from '@sveltejs/kit';
 import { CUBIQ_API_APP_TOKEN } from '$env/static/private';
+import { m } from '$paraglide/messages';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request, getClientAddress }) => {
-	const { name, email, interest, message, timestamp, locale, pageUrl } = await request.json();
+	const { name, email, interest, message, timestamp, locale, pagePath } = await request.json();
 	const ip = getClientAddress();
 
 	// Time check - reject if submitted too fast (< 3 seconds)
@@ -17,8 +18,10 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
 		es: 'Español'
 	};
 
+	const displayPath = pagePath === '/' ? m.contactFormHomepage() : pagePath;
+
 	const subject = `[Formulário de Contato] ${interest} - ${name}`;
-	const text = `Nome: ${name}\nEmail: ${email}\nInteresse: ${interest}\nIdioma: ${locale}\nIP: ${ip}\n\n${message}\n\nEnviado desde: ${pageUrl}`;
+	const text = `Nome: ${name}\nEmail: ${email}\nInteresse: ${interest}\nIdioma: ${locale}\nIP: ${ip}\n\n${message}\n\nEnviado desde: ${displayPath}`;
 
 	const html = `
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e5e5e5;">
@@ -56,7 +59,7 @@ export const POST: RequestHandler = async ({ request, getClientAddress }) => {
   </div>
   <div style="background: #1a1a1a; color: #999; padding: 16px 24px; text-align: center; font-size: 12px;">
     <span>Enviado desde: </span>
-    <a href="${pageUrl}" style="color: #fff; text-decoration: underline;">${pageUrl}</a>
+    <span style="color: #fff;">${displayPath}</span>
   </div>
 </div>`;
 

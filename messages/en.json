@@ -132,6 +132,8 @@
 	"contactFormContactUs": "Contact us",
 	"contactFormWhatsapp": "WhatsApp",
 	"contactFormTelegram": "Telegram",
+	"contactFormHomepage": "Homepage",
+	"contactFormError": "Failed to send message",
 	"menuClients": "Partners / Clients",
 	"menuProducts": "Products",
 	"menuAPIs": "APIs",
