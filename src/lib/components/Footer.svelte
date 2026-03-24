@@ -170,7 +170,7 @@
 				<!-- ©  -->
 				<span class="font-pixel text-primary mr-2">//</span>
 				<div>
-					{finalYear}, Cubiq.
+					{finalYear}, Cubiq. <span class="ml-1">v{process.env.PACKAGE_VERSION}</span>
 				</div>
 			</div>
 		</div>

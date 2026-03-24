@@ -4,9 +4,12 @@
 	import { getLocale } from '$paraglide/runtime';
 	import { modalState } from '$stores/Modal.state.svelte';
 	import { FwToast } from '$stores/Toast.state.svelte';
-	import { MessageCircle, Send } from '@lucide/svelte';
+	import { MessageCircle, Send, Loader2 } from '@lucide/svelte';
 
 	const locale = getLocale();
+
+	let formOpenTime = Date.now();
+	let isSubmitting = $state(false);
 
 	let formData = $state({
 		name: '',
@@ -15,12 +18,35 @@
 		message: ''
 	});
 
-	function handleSubmit(e: Event) {
+	async function handleSubmit(e: Event) {
 		e.preventDefault();
-		// TODO: Add actual form submission logic
-		console.log('Form submitted:', formData);
-		FwToast.launch(m.contactFormSuccess(), 'success', 'top');
-		modalState.close();
+		isSubmitting = true;
+
+		try {
+			const res = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({
+					...formData,
+					timestamp: formOpenTime,
+					locale: getLocale(),
+					pageUrl: window.location.href
+				})
+			});
+
+			const result = await res.json();
+
+			if (res.ok && result.success) {
+				FwToast.launch(m.contactFormSuccess(), 'success', 'top');
+				modalState.close();
+			} else {
+				FwToast.launch(result.message || 'Failed to send message', 'error', 'top');
+			}
+		} catch (error) {
+			FwToast.launch('Failed to send message', 'error', 'top');
+		} finally {
+			isSubmitting = false;
+		}
 	}
 </script>
 
@@ -102,8 +128,12 @@
 				</div>
 
 				<!-- Submit -->
-				<button type="submit" class="btn btn-primary w-full">
-					<Send class="mr-2 h-4 w-4" />
+				<button type="submit" class="btn btn-primary w-full" disabled={isSubmitting}>
+					{#if isSubmitting}
+						<Loader2 class="mr-2 h-4 w-4 animate-spin" />
+					{:else}
+						<Send class="mr-2 h-4 w-4" />
+					{/if}
 					{m.contactFormSend()}
 				</button>
 			</form>

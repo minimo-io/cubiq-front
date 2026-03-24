@@ -2,6 +2,8 @@
 	import { AppConfig } from '$lib/configs';
 	import { m } from '$paraglide/messages';
 	import { getLocale } from '$paraglide/runtime';
+	import { modalState } from '$stores/Modal.state.svelte';
+	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
 	import { CircleQuestionMark, X } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 
@@ -61,6 +63,15 @@
 	function showTools() {
 		alert(`${m.soon()}`);
 	}
+
+	function openContactModal() {
+		isMenuOpen = false;
+		dropdownButton?.blur();
+		modalState.open({
+			component: ContactForm,
+			props: {}
+		});
+	}
 </script>
 
 <svelte:window bind:scrollY />
@@ -85,21 +96,21 @@
 			class="dropdown-content menu-sm menu rounded-box border-accent z-50 mt-3 w-[100px]! gap-2 rounded-lg border bg-black py-3 font-sans tracking-wider! shadow-xl"
 		>
 			<li>
-				<a target="_blank" rel="nofollow noreferrer" href={AppConfig.cubiq.socials.telegram}
-					>Telegram</a
-				>
+				<button onclick={openContactModal}>Email</button>
 			</li>
-			<!-- <li>
+			<li>
 				<a
 					target="_blank"
 					rel="nofollow noreferrer"
 					href={AppConfig.cubiq.socials.whatsapp[getLocale()]}>Whatsapp</a
 				>
-			</li> -->
-
-			<li>
-				<a href="mailto:{AppConfig.cubiq.socials.email}"> Email </a>
 			</li>
+			<li>
+				<a target="_blank" rel="nofollow noreferrer" href={AppConfig.cubiq.socials.telegram}
+					>Telegram</a
+				>
+			</li>
+
 			<li class="hidden">
 				<a target="_blank" rel="nofollow noreferrer" href={AppConfig.cubiq.socials.nostr}>Nostr</a>
 			</li>
