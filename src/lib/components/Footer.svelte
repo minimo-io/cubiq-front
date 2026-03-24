@@ -121,14 +121,6 @@
 								class="text-secondary">HuggingFace</a
 							>
 						</li>
-						<li>
-							<a
-								rel="nofollow noopener"
-								target="_blank"
-								href={AppConfig.cubiq.socials.nostr}
-								class="text-secondary">Nostr</a
-							>
-						</li>
 					</ul>
 				</div>
 			</div>
