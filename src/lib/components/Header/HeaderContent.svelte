@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { m } from '$paraglide/messages';
 	import TitleSection from '../TitleSection.svelte';
-	import { conditionalSmoothScroll, smoothScroll } from '$utils';
-	// import { localizeHref } from '$paraglide/runtime';
-	import { AppConfig } from '$lib/configs';
+	import { conditionalSmoothScroll } from '$utils';
+	import { modalState } from '$stores/Modal.state.svelte';
+	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
 	import type { Snippet } from 'svelte';
-	import { Product } from '$types/products.types';
-	import { getLocale } from '$paraglide/runtime';
 
 	const smoothAction = [conditionalSmoothScroll, '#more'] as const;
 
@@ -27,6 +25,15 @@
 		slidedTitle = true,
 		buttonsSnippet = undefined
 	}: Props = $props();
+
+	function openContactModal() {
+		modalState.open({
+			component: ContactForm,
+			size: 'lg',
+			closeOnBackdrop: true,
+			closeOnEscape: true
+		});
+	}
 </script>
 
 <!-- Hero Section -->
@@ -46,14 +53,9 @@
 				<a href={url} use:conditionalSmoothScroll={url} class="fw-button fw-button-lg">
 					<span>{m.learnMore()}</span>
 				</a>
-				<a
-					href={AppConfig.cubiq.socials.whatsapp[getLocale()]}
-					target="_blank"
-					rel="nofollow noopener	"
-					class="fw-button fw-button-lg fw-button-outline"
-				>
+				<button onclick={openContactModal} class="fw-button fw-button-lg fw-button-outline">
 					<span>{m.scheduleMeeting()}</span>
-				</a>
+				</button>
 			</div>
 		{/if}
 	{:else}

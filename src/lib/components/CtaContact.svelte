@@ -1,7 +1,16 @@
 <script lang="ts">
-	import { AppConfig } from '$lib/configs';
 	import { m } from '$paraglide/messages';
-	import { getLocale } from '$paraglide/runtime';
+	import { modalState } from '$stores/Modal.state.svelte';
+	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
+
+	function openContactModal() {
+		modalState.open({
+			component: ContactForm,
+			size: 'lg',
+			closeOnBackdrop: true,
+			closeOnEscape: true
+		});
+	}
 </script>
 
 <section
@@ -13,14 +22,12 @@
 	<p class="text-secondary mx-auto mb-6 max-w-3xl font-sans text-lg md:text-xl">
 		{m.ctaText()}
 	</p>
-	<a
-		href={AppConfig.cubiq.socials.whatsapp['es']}
-		target="_blank"
-		rel="nofollow noreferrer"
+	<button
+		onclick={openContactModal}
 		class="font-pixel inline-block rounded-full bg-white px-6 py-2 text-black uppercase transition hover:bg-gray-200"
 	>
 		{m.scheduleMeeting()}
-	</a>
+	</button>
 
 	<!-- Decoration -->
 	<div

@@ -2,6 +2,7 @@
 <script lang="ts">
 	import { modalState } from '$stores/Modal.state.svelte';
 	import { onMount } from 'svelte';
+	import { scale, fade } from 'svelte/transition';
 
 	let dialogElement = $state<HTMLDialogElement>();
 
@@ -66,6 +67,8 @@
 			class:max-w-7xl={modalState.config.size === 'xl'}
 			class:max-w-full={modalState.config.size === 'full'}
 			class:max-w-fit={modalState.config.size === 'auto'}
+			in:scale={{ duration: 150, start: 0.95 }}
+			out:fade={{ duration: 100 }}
 		>
 			{#if modalSnippet}
 				{@render modalSnippet(modalState.config.props)}

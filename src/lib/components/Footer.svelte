@@ -8,6 +8,8 @@
 	import { m } from '$paraglide/messages';
 	import { getProductsFromLab } from '$lib/data/products.data';
 	import type { ProductData } from '$types/products.types';
+	import { modalState } from '$stores/Modal.state.svelte';
+	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
 
 	// Footer year
 	let currentYear = getCurrentYear();
@@ -18,6 +20,15 @@
 	const locale = getLocale();
 	const LAB_PRODUCTS = getProductsFromLab(locale);
 	const labProductsForLang = LAB_PRODUCTS.filter((prod: ProductData) => prod.isMain).slice(0, 4);
+
+	function openContactModal() {
+		modalState.open({
+			component: ContactForm,
+			size: 'lg',
+			closeOnBackdrop: true,
+			closeOnEscape: true
+		});
+	}
 </script>
 
 <footer
@@ -73,8 +84,11 @@
 					<ul class="space-y-2">
 						<li><a href={localizeHref('/#more')} class="text-secondary">{m.aboutUs()}</a></li>
 						<li><a href={localizeHref('/lab')} class="text-secondary">Laboratório</a></li>
-						<li><a href={localizeHref('/soon')} class="text-secondary">One Pager</a></li>
-						<li><a href="/" class="text-secondary">Contato</a></li>
+						<li>
+							<button onclick={openContactModal} class="text-secondary cursor-pointer">
+								{m.contactFormContactUs()}
+							</button>
+						</li>
 					</ul>
 				</div>
 
