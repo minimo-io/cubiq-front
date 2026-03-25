@@ -96,6 +96,15 @@ export default defineConfig({
 						['en', '/en/roadmap']
 					]
 				},
+				// Changelog
+				{
+					pattern: '/changelog',
+					localized: [
+						['pt', '/changelog'],
+						['es', '/es/changelog'],
+						['en', '/en/changelog']
+					]
+				},
 				// Sign-up
 				{
 					pattern: '/sign-up',

@@ -1,5 +1,14 @@
 <script lang="ts">
-	import { Book, Cable, ChevronDown, Headset, HeartPlus, PenLine, Zap } from '@lucide/svelte';
+	import {
+		Book,
+		Cable,
+		ChevronDown,
+		FileClock,
+		Headset,
+		HeartPlus,
+		PenLine,
+		Zap
+	} from '@lucide/svelte';
 	import { getLocale, localizeHref } from '$paraglide/runtime';
 	import { getProductsFromLab, getProducts } from '$lib/data/products.data';
 	import { m } from '$paraglide/messages';
@@ -180,11 +189,23 @@
 					target="_blank"
 					class={[
 						'flex py-3 align-middle text-[16px] tracking-wider',
-						'border-b-0 border-b-gray-700'
+						'border-b border-b-gray-700'
 					]}
 				>
 					<HeartPlus class="h-4" />
 					{m.apiStatus()}
+				</a>
+			</li>
+			<li>
+				<a
+					href={localizeHref('/changelog')}
+					class={[
+						'flex py-3 align-middle text-[16px] tracking-wider',
+						'border-b-0 border-b-gray-700'
+					]}
+				>
+					<FileClock class="h-4" />
+					Changelog
 				</a>
 			</li>
 
