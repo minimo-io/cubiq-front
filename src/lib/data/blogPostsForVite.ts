@@ -51,6 +51,14 @@ const blogPosts: Array<{
 		]
 	},
 	{
+		pattern: '/blog/bqpay-prelaunch',
+		localized: [
+			['pt', '/blog/bqpay-prelaunch'],
+			['en', '/en/blog/bqpay-prelaunch'],
+			['es', '/es/blog/bqpay-prelaunch']
+		]
+	},
+	{
 		pattern: '/blog/autenticacao-e-votacao-headless-usando-apis-da-cubiq',
 		localized: [
 			['pt', '/blog/autenticacao-e-votacao-headless-usando-apis-da-cubiq'],

@@ -3,6 +3,22 @@ import { Beer, Database, Braces } from '@lucide/svelte';
 export const posts = {
 	en: [
 		{
+			title: "BqPay: Instant Payments for LATAM",
+			image: "/products/bqpay-logo-square.png",
+			excerpt: "Cross-border and local payments in Fiat/USDT/BTC. The new payment solution for Uruguay and Brasil, working within regulation.",
+			content: "<p>BqPay is our new payment solution designed specifically for the Latin American market. We are building instant payments infrastructure that works across borders and locally, starting with Uruguay and Brasil.</p>\n<p>Our approach is simple: work within the regulations of each country while supporting multiple currencies and payment methods. We support Fiat (local currencies), USDT, and BTC — giving users and businesses the flexibility they need.</p>\n<p>Each country has its own instant payment rails, and we integrate with all of them. For Brasil, we&#39;re connecting to Pix and other local rails. For Uruguay, we&#39;re building on top of available local infrastructure. We&#39;re also integrating Lightning Network, Spark, and other regulated instant payment rails as they become available.</p>\n<p>Whether you&#39;re a business accepting payments or an individual sending money across borders, BqPay makes it fast, secure, and compliant.</p>\n<p>Coming soon to Uruguay and Brasil. Stay tuned!</p>\n",
+			date: "March 24",
+			slug: "/en/blog/bqpay-prelaunch",
+			isMain: false,
+			icon: undefined,
+			authors: [
+				{
+					fullName: "Opencode",
+					avatar: "/opencode-logo.png"
+				}
+			]
+		},
+		{
 			title: "🍺 TapTapGo: Craft Beer Marketplace & Community",
 			image: "/products/project-lightning-beer.webp",
 			excerpt: "Discover, rate, and buy special craft beers. TapTapGo is a marketplace connecting craft beer lovers, producers, and stores with seamless payments.",
@@ -173,6 +189,22 @@ export const posts = {
 	],
 	es: [
 		{
+			title: "BqPay: Pagos Instantáneos para LATAM",
+			image: "/products/bqpay-logo-square.png",
+			excerpt: "Pagos transfronterizos y locales en Fiat/USDT/BTC. La nueva solución de pagos para Uruguay y Brasil, operando dentro de la regulación.",
+			content: "<p>BqPay es nuestra nueva solución de pagos diseñada específicamente para el mercado latinoamericano. Estamos construyendo una infraestructura de pagos instantáneos que funciona entre fronteras y localmente, comenzando con Uruguay y Brasil.</p>\n<p>Nuestro enfoque es simple: trabajar dentro de las regulaciones de cada país mientras apoyamos múltiples monedas y métodos de pago. Soportamos Fiat (monedas locales), USDT y BTC — dando a usuarios y negocios la flexibilidad que necesitan.</p>\n<p>Cada país tiene sus propios sistemas de pagos instantáneos, y nos integramos con todos ellos. Para Brasil, nos conectamos a Pix y otras rails locales. Para Uruguay, estamos construyendo sobre la infraestructura local disponible. También estamos integrando Lightning Network, Spark y otras rails de pagos instantáneos regulados a medida que estén disponibles.</p>\n<p>Ya seas un negocio que acepta pagos o un individuo que envía dinero entre fronteras, BqPay lo hace rápido, seguro y conforme.</p>\n<p>Próximamente en Uruguay y Brasil. ¡Mantente atento!</p>\n",
+			date: "24 de marzo",
+			slug: "/es/blog/bqpay-prelaunch",
+			isMain: false,
+			icon: undefined,
+			authors: [
+				{
+					fullName: "Opencode",
+					avatar: "/opencode-logo.png"
+				}
+			]
+		},
+		{
 			title: "🍺 TapTapGo: Marketplace y Comunidad de Cervezas Especiales",
 			image: "/products/project-lightning-beer.webp",
 			excerpt: "Descubrí, calificá y comprá cervezas especiales. TapTapGo es un marketplace que conecta amantes de la cerveza artesanal, productores y tiendas.",
@@ -326,6 +358,22 @@ export const posts = {
 		}
 	],
 	pt: [
+		{
+			title: "BqPay: Pagamentos Instantâneos para LATAM",
+			image: "/products/bqpay-logo-square.png",
+			excerpt: "Pagamentos transfronteiriços e locais em Fiat/USDT/BTC. A nova solução de pagamentos para Uruguai e Brasil, operando dentro da regulamentação.",
+			content: "<p>BqPay é nossa nova solução de pagamentos projetada especificamente para o mercado latino-americano. Estamos construindo uma infraestrutura de pagamentos instantâneos que funciona entre fronteiras e localmente, começando pelo Uruguai e Brasil.</p>\n<p>Nossa abordagem é simples: trabalhar dentro das regulamentações de cada país enquanto apoiamos múltiplas moedas e métodos de pagamento. Suportamos Fiat (moedas locais), USDT e BTC — dando aos usuários e empresas a flexibilidade de que precisam.</p>\n<p>Cada país tem suas próprias railways de pagamentos instantâneos, e nos integramos com todos eles. Para o Brasil, nos conectamos ao Pix e outras railways locais. Para o Uruguai, estamos construindo sobre a infraestrutura local disponível. Também estamos integrando Lightning Network, Spark e outras railways de pagamentos instantâneos regulados conforme ficam disponíveis.</p>\n<p>Seja você uma empresa que aceita pagamentos ou um indivíduo que envia dinheiro entre fronteiras, BqPay torna tudo rápido, seguro e conforme.</p>\n<p>Em breve no Uruguai e Brasil. Fique atento!</p>\n",
+			date: "24 de março",
+			slug: "/blog/bqpay-prelaunch",
+			isMain: false,
+			icon: undefined,
+			authors: [
+				{
+					fullName: "Opencode",
+					avatar: "/opencode-logo.png"
+				}
+			]
+		},
 		{
 			title: "🍺 TapTapGo: Marketplace & Comunidade de Cervejas Especiais",
 			image: "/products/project-lightning-beer.webp",

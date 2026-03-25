@@ -92,3 +92,43 @@ Search in `messages/{locale}.json`. Base locale is `pt`.
 
 <span>{m.welcome()}</span>
 ```
+
+# Blog Posts
+
+Blog posts are stored as Markdown files in `src/lib/data/posts/`. The build process automatically generates `posts.ts` and `featuredPosts.ts` from these files.
+
+## Adding a new blog post
+
+1. **Create MD files** for each language:
+   - `src/lib/data/posts/{number}-{slug}-en.md` (English)
+   - `src/lib/data/posts/{number}-{slug}-es.md` (Spanish)
+   - `src/lib/data/posts/{number}-{slug}-pt.md` (Portuguese)
+
+2. **Frontmatter format**:
+
+   ```yaml
+   ---
+   title: 'Post Title'
+   excerpt: 'Short description'
+   date: 2026-03-25
+   featured: false
+   isMain: false
+   image: /path/to/image.png
+   authors:
+     - name: Author Name
+       avatar: /avatar.png
+   ---
+   ```
+
+3. **Run the build script**:
+   ```bash
+   npm run process:posts
+   ```
+
+## Notes
+
+- The `number` prefix determines processing order (e.g., `16-` comes after `15-`)
+- The `slug` in the filename becomes the URL slug
+- Slug format generated: `/blog/{slug}` (pt), `/en/blog/{slug}` (en), `/es/blog/{slug}` (es)
+- Do NOT edit `posts.ts` or `featuredPosts.ts` manually - they are auto-generated
+- The `icon` field is optional and only used for featured posts (use icon name like `Beer`, `Terminal`, etc.)
