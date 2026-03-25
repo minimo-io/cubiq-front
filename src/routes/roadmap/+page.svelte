@@ -4,11 +4,11 @@
 	import { m } from '$paraglide/messages';
 </script>
 
-<Meta title={'Roadmap'} description={''} />
+<Meta title="Roadmap" description="" />
 
 <Header
 	titleLeft={m.the()}
-	titleRight={'Roadmap'}
+	titleRight="Roadmap"
 	background="rocket"
 	heroContent={m.heroContentRoadmap()}
 	buttons={false}

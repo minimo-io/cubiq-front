@@ -2,7 +2,6 @@
 	import Features from '$lib/components/Store/Features.svelte';
 	import StorePricing from '$lib/components/Store/StorePricing.svelte';
 	import TransparentButton from '$lib/components/Buttons/TransparentButton.svelte';
-	import ServiceOrders from '$lib/components/Care/ServiceOrders.svelte';
 	import Slogan from '$lib/components/Care/Slogan.svelte';
 	import CtaContact from '$lib/components/CtaContact.svelte';
 	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
@@ -17,19 +16,15 @@
 	import { Product } from '$types/products.types';
 	import {
 		Blocks,
-		BrainCircuit,
 		ChartNoAxesCombined,
-		CircleDollarSign,
 		Cpu,
 		DollarSign,
 		Glasses,
 		Layers,
-		MessageCircleHeart,
-		ShoppingCart
+		MessageCircleHeart
 	} from '@lucide/svelte';
 	import StoreCarrousel from '$lib/components/Store/StoreCarrousel.svelte';
 	import StorePricingVertical from '$lib/components/Store/StorePricingVertical.svelte';
-	import Hr from '$lib/components/Hr.svelte';
 	import { conditionalSmoothScroll } from '$utils';
 	import { AppConfig } from '$lib';
 
@@ -108,7 +103,7 @@
 <Header
 	background="commerce"
 	opacity="0"
-	titleLeft={'>'}
+	titleLeft=">"
 	slidedTitle={false}
 	titleRight={Product.STORE}
 	heroContent={m.heroContentBagity()}

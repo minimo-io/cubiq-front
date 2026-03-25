@@ -10,7 +10,6 @@
 
 	let {
 		hideSlogan = false,
-		noSpaces = false,
 		experimentsTitle = m.menuProducts(),
 		smallerTopMargins = false
 	} = $props();

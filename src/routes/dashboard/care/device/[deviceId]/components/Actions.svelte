@@ -1,19 +1,12 @@
 <!-- src/routes/dashboard/care/device/[deviceId]/components/Actions.svelte -->
 <script lang="ts">
-	import { RefreshCw, Share } from '@lucide/svelte';
+	import { Share } from '@lucide/svelte';
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
 	import { page } from '$app/state';
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
 	import { FwShare } from '$utils';
 	import { FwToast } from '$stores/Toast.state.svelte';
-
-	interface Props {
-		handleRefresh: () => unknown;
-		isRefreshing: boolean;
-		countdown: number;
-	}
-	const { handleRefresh, isRefreshing, countdown }: Props = $props();
 
 	let deviceId = page.params.deviceId;
 </script>

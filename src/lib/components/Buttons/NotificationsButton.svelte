@@ -1,10 +1,5 @@
 <script lang="ts">
-	import { getLocaleName, redirectLocale } from '$utils';
-	import { Bell, Globe } from '@lucide/svelte';
-	import { getLocale, locales } from '$paraglide/runtime';
-	import { page } from '$app/state';
-
-	let locale = $state(getLocale());
+	import { Bell } from '@lucide/svelte';
 </script>
 
 <div class="dropdown dropdown-end">

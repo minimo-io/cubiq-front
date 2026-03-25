@@ -1,17 +1,14 @@
 <script lang="ts">
-	import { page } from '$app/state';
 	import * as m from '$paraglide/messages';
-	// import { language } from '$paraglide/runtime';
 
 	interface Props {
 		title?: string;
 		description?: string;
 		noindex?: boolean;
 		nofollow?: boolean;
-		canonical?: string;
 	}
 
-	let { title, description, noindex = false, nofollow = false, canonical }: Props = $props();
+	let { title, description, noindex = false, nofollow = false }: Props = $props();
 
 	// Reactive computations using runes
 	const pageTitle = $derived(() => {
@@ -26,10 +23,6 @@
 
 	const pageDescription = $derived(() => {
 		return description || m.metaHomeDescription(); // Default description from Paraglide
-	});
-
-	const currentUrl = $derived(() => {
-		return canonical || page.url.href;
 	});
 
 	const robotsContent = $derived(() => {

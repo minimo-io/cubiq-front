@@ -173,7 +173,7 @@
 <Header
 	background="astronaut"
 	opacity="0"
-	titleLeft={'>'}
+	titleLeft=">"
 	slidedTitle={false}
 	titleRight={Product.CARE}
 	heroContent={m.heroContentCareSync()}

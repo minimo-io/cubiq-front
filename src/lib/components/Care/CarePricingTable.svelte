@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { m } from '$paraglide/messages';
-	import { Check, Info } from '@lucide/svelte';
+	import { Info } from '@lucide/svelte';
 
 	let infoDialog = $state<HTMLDialogElement>();
 	let modalContent = $state({ title: '', description: '' });

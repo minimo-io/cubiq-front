@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { AppConfig } from '$lib/configs';
-	import { m } from '$paraglide/messages';
 	import { getLocale } from '$paraglide/runtime';
 	import { modalState } from '$stores/Modal.state.svelte';
 	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
@@ -16,7 +15,7 @@
 	let mobileMenu: HTMLUListElement | undefined = $state();
 
 	let servicesOpen = $state(false);
-	// Reactive width based on servicesOpen state
+
 	const menuWidth = $state('12rem'); // w-64 : w-52
 
 	// Show button when user scrolls down 300px
@@ -59,10 +58,6 @@
 			window.removeEventListener('scroll', updateScrollY);
 		};
 	});
-
-	function showTools() {
-		alert(`${m.soon()}`);
-	}
 
 	function openContactModal() {
 		isMenuOpen = false;

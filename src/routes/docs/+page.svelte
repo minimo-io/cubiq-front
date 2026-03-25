@@ -1,16 +1,15 @@
 <script lang="ts">
 	import Header from '$lib/components/Header/Header.svelte';
 	import Meta from '$lib/components/Meta.svelte';
-	import { m } from '$paraglide/messages';
 </script>
 
-<Meta title={'APIs'} description={'Cubiq Backend-as-a-Service APIs'} />
+<Meta title="APIs" description="Cubiq Backend-as-a-Service APIs" />
 
 <Header
-	titleLeft={'Backend'}
-	titleRight={'APIs'}
+	titleLeft="Backend"
+	titleRight="APIs"
 	background="rocket"
-	heroContent={'Explore our Backend-as-a-Service APIs.'}
+	heroContent="Explore our Backend-as-a-Service APIs."
 	buttons={false}
 />
 

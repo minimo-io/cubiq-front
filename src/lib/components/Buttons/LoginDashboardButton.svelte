@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
 	import { page } from '$app/state';
 	import { productState } from '$stores/Product.state.svelte';

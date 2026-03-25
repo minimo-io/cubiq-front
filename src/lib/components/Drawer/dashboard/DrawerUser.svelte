@@ -1,17 +1,11 @@
 <!-- src/lib/components/Drawer/dashboard/DrawerUser.svelte -->
 <script lang="ts">
-	import { locales, localizeHref } from '$paraglide/runtime';
+	import { localizeHref } from '$paraglide/runtime';
 	import { page } from '$app/state';
-	import { redirectLocale, getLocaleName } from '$utils';
-	import { openSubmenu } from '$stores/DrawerState.state.svelte';
 	import { m } from '$paraglide/messages';
 	import { enhance } from '$app/forms';
 	import { toggleLoader } from '$stores/Loader.state.svelte';
 	import { goto } from '$app/navigation';
-
-	async function handleLogout() {
-		console.log('Simulated logout');
-	}
 </script>
 
 <div class="flex flex-1 flex-col px-0 text-xs">

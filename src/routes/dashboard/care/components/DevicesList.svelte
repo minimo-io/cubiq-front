@@ -1,11 +1,6 @@
 <script lang="ts">
 	import { Check, Laptop, PcCase } from '@lucide/svelte';
-	import {
-		DeviceStatus,
-		DeviceType,
-		type Device,
-		type DeviceForList
-	} from '$types/care/care.devices.types';
+	import { DeviceStatus, type DeviceForList } from '$types/care/care.devices.types';
 	import { onMount, onDestroy } from 'svelte';
 	import { m } from '$paraglide/messages';
 	import apiClient from '$lib/api';

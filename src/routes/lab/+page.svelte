@@ -1,17 +1,12 @@
 <script lang="ts">
-	import { AppConfig } from '$lib';
-	import TopPosts from '$lib/components/blog/topPosts.svelte';
-	import TopPostsCard from '$lib/components/blog/topPostsCard.svelte';
 	import CtaContact from '$lib/components/CtaContact.svelte';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Hr from '$lib/components/Hr.svelte';
 	import LabProducts from '$lib/components/LabProducts.svelte';
 	import Meta from '$lib/components/Meta.svelte';
-	import TitleSection from '$lib/components/TitleSection.svelte';
 	import { m } from '$paraglide/messages';
 	import { localizeHref, getLocale } from '$paraglide/runtime';
-	import { conditionalSmoothScroll } from '$utils';
-	import { Zap, Github, ExternalLink } from '@lucide/svelte';
+	import { Github, ExternalLink } from '@lucide/svelte';
 	import { getLabToolsAndProjects } from '$lib/data/lab.data';
 
 	// Get projects with current locale
@@ -21,8 +16,8 @@
 <Meta title={m.metaLabTitle()} description={m.metaLabDescription()} />
 
 <Header
-	titleLeft={'Nosso'}
-	titleRight={'LABORATÓRIO'}
+	titleLeft="Nosso"
+	titleRight="LABORATÓRIO"
 	background="stars"
 	heroContent={m.heroContentLab()}
 >
@@ -37,12 +32,7 @@
 </Header>
 
 <div class="relative -top-3 md:top-0">
-	<LabProducts
-		noSpaces={true}
-		hideSlogan={true}
-		experimentsTitle={m.experiments()}
-		smallerTopMargins={true}
-	/>
+	<LabProducts hideSlogan={true} experimentsTitle={m.experiments()} smallerTopMargins={true} />
 </div>
 
 <section class="max-w-fw mx-(--cubiq-app-margin) mb-10 md:mx-auto">

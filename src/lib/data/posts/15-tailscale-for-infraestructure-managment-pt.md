@@ -31,7 +31,7 @@ O Tailscale entrega as três enquanto faz as soluções legadas parecerem relíq
 
 Portas expostas publicamente são o caminho para as empresas acabarem em manchetes que preferimos evitar.
 
-O Tailscale constrói uma sobreposição **Zero Trust** de verdade (com WireGuard por baixo, claro). Toda conexão é criptografada ponta a ponta e controlada por *identidade* — não por IPs que podem ser falsificados, compartilhados ou trocados num café.
+O Tailscale constrói uma sobreposição **Zero Trust** de verdade (com WireGuard por baixo, claro). Toda conexão é criptografada ponta a ponta e controlada por _identidade_ — não por IPs que podem ser falsificados, compartilhados ou trocados num café.
 
 Sem endpoints públicos. Sem bastions acumulando poeira e CVEs. Só “você está no tailnet → aqui está seu servidor”. A superfície de ataque encolhe drasticamente. As features de 2026 como peer-relay e workload identity deixam tudo ainda mais limpo para pipelines e workloads na borda.
 
@@ -57,11 +57,11 @@ Logs de auditoria centralizados, permissões baseadas em papéis e um único pai
 
 O Tailscale nos permitiu:
 
-- Eliminar praticamente nossa superfície de ataque pública  
-- Transformar a conectividade dos devs em algo que não é problema  
+- Eliminar praticamente nossa superfície de ataque pública
+- Transformar a conectividade dos devs em algo que não é problema
 - Conseguir controle nível enterprise sem a burocracia nível enterprise
 
-Num mar de ferramentas “seguras porque são complicadas”, o Tailscale se destaca por ser seguro *e* simples. Não somos patrocinados — somos só fãs de tudo que para de fazer a gente perder tempo.
+Num mar de ferramentas “seguras porque são complicadas”, o Tailscale se destaca por ser seguro _e_ simples. Não somos patrocinados — somos só fãs de tudo que para de fazer a gente perder tempo.
 
 Se a sua infra ainda parece estar rodando com lógica de rede de 2010, experimente o Tailscale. Entre no tailnet, veja a bagunça sumir e volte a construir.
 

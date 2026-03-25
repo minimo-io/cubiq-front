@@ -1,17 +1,6 @@
 <!-- src/routes/dashboard/notes/components/ActionsNotes.svelte -->
 <script lang="ts">
-	import {
-		ChevronDown,
-		Circle,
-		Clipboard,
-		Code,
-		Delete,
-		Loader,
-		Plus,
-		Recycle,
-		Share,
-		X
-	} from '@lucide/svelte';
+	import { ChevronDown, Circle, Clipboard, Code, Delete, Plus, Share, X } from '@lucide/svelte';
 	import { m } from '$paraglide/messages';
 	import DashboardButton from '$lib/components/Buttons/DashboardButton.svelte';
 	import { FwToast } from '$stores/Toast.state.svelte';
@@ -19,8 +8,6 @@
 	import { goto } from '$app/navigation';
 	import { createNotesService } from '$services/notes.service';
 	import { page } from '$app/state';
-	import type { Note } from '$types/notes.types';
-	import { browser } from '$app/environment';
 	import { FwShare } from '$utils';
 
 	let NotesService = createNotesService(page.data.user);

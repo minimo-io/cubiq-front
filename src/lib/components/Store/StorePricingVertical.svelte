@@ -1,6 +1,5 @@
 <script>
 	import { m } from '$paraglide/messages';
-	import { localizeHref } from '$paraglide/runtime';
 	import { Check } from '@lucide/svelte';
 </script>
 

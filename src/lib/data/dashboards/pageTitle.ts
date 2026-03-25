@@ -110,7 +110,9 @@ export function getPageTitles(product: Product): Record<RouteId, PageTitle> {
 					{ label: m.breadcrumbNote() }
 				]
 			}
-		}
+		},
+		[Product.AI]: {},
+		[Product.AUTH]: {}
 	};
 
 	return productTitles[product];

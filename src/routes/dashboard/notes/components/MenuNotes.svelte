@@ -1,6 +1,5 @@
 <!-- src/routes/dashboard/notes/components/MenuNotes.svelte -->
 <script lang="ts">
-	import { AppConfig } from '$lib';
 	import { localizeHref } from '$paraglide/runtime';
 	import { dashboardLeftMenuState } from '$stores/DashboardLeftMenu.state.svelte';
 	import { NotebookTabs, Settings, Trash2, Search, X } from '@lucide/svelte';

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { m } from '$paraglide/messages';
 	import Meta from '$lib/components/Meta.svelte';
 	import HeaderDefined from '$lib/components/Header/HeaderDefined.svelte';
 	import CtaContact from '$lib/components/CtaContact.svelte';
@@ -80,7 +79,7 @@
 				class="text-secondary my-5 flex w-full justify-between font-sans text-sm md:my-10 md:text-base"
 			>
 				<div>{data.post.date}</div>
-				<div>{'6 min read'}</div>
+				<div>6 min read</div>
 			</div>
 
 			{#if data.post.image}

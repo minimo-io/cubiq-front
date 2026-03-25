@@ -2,7 +2,6 @@ import { BrainCircuit, Cable, Key, Zap } from '@lucide/svelte';
 import { LabProduct, Product, type ProductsList } from '$lib/type/products.types';
 import { localizeHref } from '$paraglide/runtime';
 import { m } from '$paraglide/messages';
-import { AppConfig } from '$lib/configs';
 
 export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 	{

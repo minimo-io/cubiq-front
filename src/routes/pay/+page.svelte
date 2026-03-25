@@ -40,7 +40,7 @@
 <Header
 	background="rocket"
 	opacity="0"
-	titleLeft={'>'}
+	titleLeft=">"
 	titleRight={Product.PAY}
 	slidedTitle={false}
 	heroContent={m.heroContentFinX()}

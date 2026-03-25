@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { ChevronDown, User } from '@lucide/svelte';
-	import { getLocale } from '$paraglide/runtime';
 	import type { User as UserType } from '$services/auth.service';
 	import { enhance } from '$app/forms';
 	import { toggleLoader } from '$stores/Loader.state.svelte';
@@ -9,7 +8,6 @@
 	import { capitalize } from '$utils';
 
 	let { user }: { user?: UserType } = $props();
-	let locale = $state(getLocale());
 </script>
 
 <div class="dropdown dropdown-end">

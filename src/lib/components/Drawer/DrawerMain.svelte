@@ -2,13 +2,9 @@
 	import {
 		Cable,
 		ChevronRight,
-		Tag,
 		Headset,
 		Globe,
 		FlaskConical,
-		PencilLine,
-		Rss,
-		FileCode,
 		Book,
 		HeartPlus,
 		FileClock,
@@ -19,7 +15,7 @@
 	import { localizeHref, getLocale } from '$paraglide/runtime';
 	import WhatsappButton from '../WhatsappButton.svelte';
 	import { getLocaleName } from '$utils';
-	import { m, product } from '$paraglide/messages';
+	import { m } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
 	import type { ProductData } from '$types/products.types';
 	import { getProductsFromLab, getProducts } from '$lib/data/products.data';

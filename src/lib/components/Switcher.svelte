@@ -2,8 +2,7 @@
 <script lang="ts">
 	import { m } from '$paraglide/messages';
 	import { localizeHref } from '$paraglide/runtime';
-	import { Info } from '@lucide/svelte';
-	import { fly, fade } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	let {
 		options = ['Autopilot', 'Copilot'],

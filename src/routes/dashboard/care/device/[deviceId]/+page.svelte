@@ -75,7 +75,7 @@
 					<DashboardButton onclick={cancelEditing} type="gray">
 						{m.cancel()}
 					</DashboardButton>
-					<DashboardButton type="primary" isSubmit={true} submitForm={'edit-service-form'}>
+					<DashboardButton type="primary" isSubmit={true} submitForm="edit-service-form">
 						{m.saveChanges()}
 					</DashboardButton>
 				</div>

@@ -1,14 +1,10 @@
 <script lang="ts">
-	import Dot from './Dot.svelte';
-	import Hr from './Hr.svelte';
-	import PillFlower from './PillFlower.svelte';
 	interface Props {
-		breadcrumb: string;
 		titleLeft: string;
 		titleRight: string;
 	}
 
-	let { breadcrumb, titleLeft, titleRight }: Props = $props();
+	let { titleLeft, titleRight }: Props = $props();
 </script>
 
 <section

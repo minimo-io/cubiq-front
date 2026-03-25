@@ -1,11 +1,8 @@
 <script lang="ts">
 	import { BotMessageSquare } from '@lucide/svelte';
-	import { getLocale } from '$paraglide/runtime';
-	import { scale, fade, fly } from 'svelte/transition';
+	import { scale, fade } from 'svelte/transition';
 
 	let { showCheck = true }: { showCheck?: boolean } = $props();
-
-	const locale = $state(getLocale());
 	let isChatOpen = $state(false);
 
 	function openChat() {

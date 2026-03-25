@@ -31,7 +31,7 @@ Tailscale checks every box while making legacy solutions look like museum pieces
 
 Publicly exposed ports are how companies end up in headlines we’d rather not star in.
 
-Tailscale builds a proper **Zero Trust** overlay (WireGuard underneath, naturally). Every connection is end-to-end encrypted and gated by *identity* — not IP addresses that can be spoofed, shared, or coffee-shop-rotated.
+Tailscale builds a proper **Zero Trust** overlay (WireGuard underneath, naturally). Every connection is end-to-end encrypted and gated by _identity_ — not IP addresses that can be spoofed, shared, or coffee-shop-rotated.
 
 No public endpoints. No bastion hosts collecting dust and CVEs. Just “you’re in the tailnet → here’s your server.” Attack surface shrinks dramatically. The 2026 peer-relay and workload-identity features only make it cleaner for pipelines and edge workloads.
 
@@ -57,11 +57,11 @@ Centralized audit logs, role-based permissions, and a single pane of glass mean 
 
 Tailscale let us:
 
-- Practically eliminate our public attack surface  
-- Turn developer connectivity into a non-issue  
+- Practically eliminate our public attack surface
+- Turn developer connectivity into a non-issue
 - Get enterprise-grade control without enterprise-grade bureaucracy
 
-In a sea of “secure because it’s complicated” tools, Tailscale stands out by being secure *and* simple. We’re not sponsored — we’re just fans of anything that stops wasting our time.
+In a sea of “secure because it’s complicated” tools, Tailscale stands out by being secure _and_ simple. We’re not sponsored — we’re just fans of anything that stops wasting our time.
 
 If your infra still feels like it’s running on 2010 networking logic, give Tailscale a spin. Join the tailnet, watch the nonsense disappear, and get back to building.
 

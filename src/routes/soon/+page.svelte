@@ -2,7 +2,6 @@
 	import Header from '$lib/components/Header/Header.svelte';
 	import Meta from '$lib/components/Meta.svelte';
 	import { m } from '$paraglide/messages';
-	import { Send } from '@lucide/svelte';
 </script>
 
 <Meta title={m.metaUnderDevelopmentTitle()} description={m.metaUnderDevelopmentDescription()} />

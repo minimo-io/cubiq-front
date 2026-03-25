@@ -11,6 +11,9 @@
 
 	let { data } = $props();
 
+	let contexts = $derived(data.contexts ?? []);
+	let manufacturers = $derived(data.manufacturers ?? []);
+
 	let formMessage: string | null = $state(null);
 	let isSuccess: boolean = $state(false);
 
@@ -118,7 +121,7 @@
 					onchange={(e) => (selectedCompanyId = (e.target as HTMLSelectElement).value)}
 				>
 					<option value="">{m.selectOrganization()}</option>
-					{#each data.contexts as context}
+					{#each contexts as context}
 						<option
 							value={context.company_id}
 							selected={context.company_id == userContextState.active?.company_id}
@@ -186,7 +189,7 @@
 				</label>
 				<select id="manufacturer" name="manufacturer_id" class="select select-bordered w-full">
 					<option value="">{m.selectManufacturer()} ({m.optional()})</option>
-					{#each data.manufacturers as manufacturer}
+					{#each manufacturers as manufacturer}
 						<option value={manufacturer.id}>{manufacturer.name}</option>
 					{/each}
 				</select>

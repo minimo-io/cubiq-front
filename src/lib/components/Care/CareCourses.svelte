@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { m } from '$paraglide/messages';
-	import { AppConfig } from '$lib';
 	import { Search, Star, TrendingUp } from '@lucide/svelte';
 
 	// Svelte 5 runes for props and state

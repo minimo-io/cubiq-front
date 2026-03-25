@@ -1,9 +1,6 @@
 <script lang="ts">
 	import { AppConfig } from '$lib/configs';
 	import { m } from '$paraglide/messages';
-	import { getLocale, localizeHref } from '$paraglide/runtime';
-
-	let locale = $state(getLocale());
 </script>
 
 <a

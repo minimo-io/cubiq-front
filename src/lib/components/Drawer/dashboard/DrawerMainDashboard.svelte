@@ -15,11 +15,10 @@
 	import { drawerState, openSubmenu } from '$stores/DrawerState.state.svelte';
 	import { localizeHref, getLocale } from '$paraglide/runtime';
 
-	import { capitalize, getLocaleName } from '$utils';
-	import { m, product } from '$paraglide/messages';
+	import { getLocaleName } from '$utils';
+	import { m } from '$paraglide/messages';
 	import { AppConfig } from '$lib/configs';
-	import { Product, type ProductData } from '$types/products.types';
-	import { getProducts } from '$lib/data/products.data';
+	import { Product } from '$types/products.types';
 	import WhatsappButton from '$lib/components/WhatsappButton.svelte';
 	import ProductSwitchButton from '$lib/components/Buttons/ProductSwitchButton.svelte';
 	import { productState } from '$stores/Product.state.svelte';
@@ -27,7 +26,6 @@
 	import type { CompanyContext } from '$types/care/care.devices.types';
 	import MenuCare from '../../../../routes/dashboard/care/components/MenuCare.svelte';
 	import MenuNotes from '../../../../routes/dashboard/notes/components/MenuNotes.svelte';
-	import { toggleLoader } from '$stores/Loader.state.svelte';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
 
@@ -36,14 +34,11 @@
 	let user = $derived(page.data.user);
 
 	const locale = $state(getLocale());
-	let PRODUCTS = getProducts(locale);
-	const drawerProductsForLang = $state(PRODUCTS.filter((prod: ProductData) => prod.isMain));
 
 	let careActiveUserContext = $derived(userContextState.active);
 	let userContextCount = $derived(userContextState.contexts.length);
 
 	function setUserContext(context: CompanyContext) {
-		// toggleLoader();
 		userContextState.active = context;
 		drawerState.active = false;
 		// console.log('Context changed!');

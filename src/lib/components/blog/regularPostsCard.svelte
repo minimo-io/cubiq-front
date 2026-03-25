@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Post, PostAuthor } from '$lib/type/blog.types';
+	import type { Post } from '$lib/type/blog.types';
 	import { localizeHref } from '$paraglide/runtime';
 	import { authorsComposeName } from '$utils';
 

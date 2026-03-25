@@ -1,6 +1,5 @@
 <script>
 	import { m } from '$paraglide/messages';
-	import { localizeHref } from '$paraglide/runtime';
 </script>
 
 <div class="relative -top-5 px-0 pt-4 md:-top-14 md:pt-12">

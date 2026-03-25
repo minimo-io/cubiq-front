@@ -43,7 +43,7 @@
 			} else {
 				FwToast.launch(result.message || 'Failed to send message', 'error', 'top');
 			}
-		} catch (error) {
+		} catch {
 			FwToast.launch('Failed to send message', 'error', 'top');
 		} finally {
 			isSubmitting = false;

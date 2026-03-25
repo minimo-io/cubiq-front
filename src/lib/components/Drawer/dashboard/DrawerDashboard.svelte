@@ -6,12 +6,10 @@
 	import { drawerState, goBackToMainMenu } from '$stores/DrawerState.state.svelte';
 	import { CircleArrowLeft } from '@lucide/svelte';
 
-	import DrawerMain from '../DrawerMain.svelte';
 	import DrawerAccount from '../DrawerAccount.svelte';
 	import DrawerLanguages from '../DrawerLanguages.svelte';
 	import DrawerMainDashboard from './DrawerMainDashboard.svelte';
 	import DrawerUser from './DrawerUser.svelte';
-	// import { onMount } from 'svelte';
 
 	let { products }: { products: string[] } = $props();
 

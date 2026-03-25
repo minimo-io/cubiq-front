@@ -31,7 +31,7 @@ Tailscale cumple con las tres mientras hace que las soluciones legacy parezcan p
 
 Los puertos expuestos públicamente son la forma en que las empresas terminan en titulares que preferimos evitar.
 
-Tailscale construye una superposición **Zero Trust** propiamente dicha (con WireGuard debajo, naturalmente). Cada conexión está encriptada de extremo a extremo y controlada por *identidad* —no por direcciones IP que se pueden falsificar, compartir o rotar en un café.
+Tailscale construye una superposición **Zero Trust** propiamente dicha (con WireGuard debajo, naturalmente). Cada conexión está encriptada de extremo a extremo y controlada por _identidad_ —no por direcciones IP que se pueden falsificar, compartir o rotar en un café.
 
 Sin endpoints públicos. Sin hosts bastión acumulando polvo y vulnerabilidades. Solo “estás en el tailnet → aquí tienes tu servidor”. La superficie de ataque se reduce drásticamente. Las funciones de 2026 como peer-relay y workload identity lo hacen aún más limpio para pipelines y cargas de trabajo en el edge.
 
@@ -57,11 +57,11 @@ Logs de auditoría centralizados, permisos basados en roles y un único panel de
 
 Tailscale nos permitió:
 
-- Eliminar prácticamente nuestra superficie de ataque pública  
-- Convertir la conectividad de desarrolladores en algo que no es un problema  
+- Eliminar prácticamente nuestra superficie de ataque pública
+- Convertir la conectividad de desarrolladores en algo que no es un problema
 - Obtener control de nivel enterprise sin la burocracia de nivel enterprise
 
-En un mar de herramientas “seguras porque son complicadas”, Tailscale destaca por ser seguro *y* simple. No estamos patrocinados —solo somos fans de todo lo que deja de hacernos perder tiempo.
+En un mar de herramientas “seguras porque son complicadas”, Tailscale destaca por ser seguro _y_ simple. No estamos patrocinados —solo somos fans de todo lo que deja de hacernos perder tiempo.
 
 Si tu infraestructura todavía se siente como si estuviera corriendo con lógica de red de 2010, probá Tailscale. Unite al tailnet, mirá cómo desaparece el sinsentido y volvé a construir.
 

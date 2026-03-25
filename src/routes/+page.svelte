@@ -1,8 +1,6 @@
 <script lang="ts">
-	// import Clients from '$lib/components/Home/Clients.svelte';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Developers from '$lib/components/Home/Developers.svelte';
-	import Products from '$lib/components/Home/Products.svelte';
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import TitleFullWidth from '$lib/components/TitleFullWidth.svelte';
 	import Quote from '$lib/components/Home/Quote.svelte';
@@ -10,7 +8,6 @@
 	import { m } from '$paraglide/messages';
 	import CtaContact from '$lib/components/CtaContact.svelte';
 	import Meta from '$lib/components/Meta.svelte';
-	import ServiceOrders from '$lib/components/Care/ServiceOrders.svelte';
 	import { afterNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { smoothScroll } from '$utils';
@@ -100,11 +97,7 @@
 </main>
 
 <!-- Lab Section Title -->
-<TitleFullWidth
-	breadcrumb={m.aboutUs()}
-	titleLeft={m.aboutUsTitleLeft()}
-	titleRight={m.aboutUsTitleRight()}
-/>
+<TitleFullWidth titleLeft={m.aboutUsTitleLeft()} titleRight={m.aboutUsTitleRight()} />
 
 <div class="2xl:px-[10%]">
 	<!-- Quote Section -->

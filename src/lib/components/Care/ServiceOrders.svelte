@@ -2,8 +2,6 @@
 	import DashboardImages from '../DashboardImages.svelte';
 	import Hr from '../Hr.svelte';
 	import { m } from '$paraglide/messages';
-	import TransparentButton from '../Buttons/TransparentButton.svelte';
-	import { localizeHref } from '$paraglide/runtime';
 
 	let { image, title, description }: { image?: string; title?: string; description?: string } =
 		$props();

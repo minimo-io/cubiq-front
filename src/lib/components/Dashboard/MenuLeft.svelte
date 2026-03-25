@@ -1,11 +1,8 @@
 <script lang="ts">
-	import { ChevronDown, ChevronLeft, ChevronRight } from '@lucide/svelte';
+	import { ChevronDown } from '@lucide/svelte';
 	import HeaderLogo from '../Header/HeaderLogo.svelte';
 	import ProductSwitchButton from '../Buttons/ProductSwitchButton.svelte';
-	import {
-		toggleDashboardLeftMenuCollapse,
-		dashboardLeftMenuState
-	} from '$stores/DashboardLeftMenu.state.svelte';
+	import { dashboardLeftMenuState } from '$stores/DashboardLeftMenu.state.svelte';
 	import { productState } from '$stores/Product.state.svelte';
 	import { Product } from '$types/products.types';
 	import MenuCare from '../../../routes/dashboard/care/components/MenuCare.svelte';
@@ -23,10 +20,6 @@
 	let userContextCount = $derived(userContextState.contexts.length);
 
 	let { products }: { products: string[] } = $props();
-
-	function toggleMenu() {
-		toggleDashboardLeftMenuCollapse();
-	}
 
 	function setUserContext(context: CompanyContext) {
 		userContextState.active = context;

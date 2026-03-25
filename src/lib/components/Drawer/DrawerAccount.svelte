@@ -1,16 +1,6 @@
 <script lang="ts">
-	// import { page } from '$app/state';
-	// import Button from '../buttons/Button.svelte';
-
-	// import WhatsappButton from '$components/ui/buttons/WhatsappButton.svelte';
 	import { slide } from 'svelte/transition';
-	// import { login } from '$lib/graphql/auth';
-	// import { redirectHref } from '$lib/utils';
-	// import { toggleLoader } from '$stores/loaderStore.state.svelte';
-	import { localizeHref } from '../../../paraglide/runtime';
 	import { Eye, EyeOff } from '@lucide/svelte';
-	// import SignupBenefits from '../SignupBenefits.svelte';
-	// import { onMount } from 'svelte';
 
 	let showReset = $state(false);
 

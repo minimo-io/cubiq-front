@@ -1,8 +1,8 @@
 <!-- src/routes/dashboard/care/device/[deviceId]/+layout.svelte -->
 <script lang="ts">
-	import { onMount, type Snippet } from 'svelte';
+	import { type Snippet } from 'svelte';
 	import type { LayoutData } from './$types';
-	import { ChevronDown, ExternalLink, Eye, Image, Laptop, PcCase } from '@lucide/svelte';
+	import { ExternalLink, Laptop, PcCase } from '@lucide/svelte';
 	import type { Device } from '$types/care/care.devices.types';
 	import { m } from '$paraglide/messages';
 	import { formatPhoneNumberForWhatsapp } from '$utils/phone.utils';
@@ -46,7 +46,7 @@
 <div class="flex w-full flex-col">
 	<!-- Actions -->
 	<div class="">
-		<Actions countdown={10} handleRefresh={() => {}} isRefreshing={false} />
+		<Actions />
 	</div>
 
 	<!-- Content -->

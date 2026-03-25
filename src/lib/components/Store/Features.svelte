@@ -2,7 +2,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { m } from '$paraglide/messages';
-	import { Product } from '$types/products.types';
 	import Pill from '../Pill.svelte';
 	import type { Feature } from '$types/features.types';
 	import { Download, ChevronDown, ChevronUp } from '@lucide/svelte';
@@ -130,10 +129,6 @@
 		return () => window.removeEventListener('resize', checkMobile);
 	});
 </script>
-
-{#snippet item(itemData)}
-	<li>{itemData.name}: {itemData.value}</li>
-{/snippet}
 
 <div class={['max-w-fw mx-auto !pb-5 md:px-10 md:py-10 md:!pb-10', noPaddingMobile ? '' : 'py-10']}>
 	<!-- Carousel container -->
@@ -286,7 +281,7 @@
 				onclick={goToPrev}
 				aria-label="Previous features"
 			>
-				{'<'}
+				&lt;
 			</button>
 		</div>
 
@@ -297,7 +292,7 @@
 				onclick={goToNext}
 				aria-label="Next features"
 			>
-				{'>'}
+				&gt;
 			</button>
 		</div>
 

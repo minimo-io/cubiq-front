@@ -4,7 +4,7 @@ export function formatPhoneNumberForWhatsapp(phone: string | null | undefined): 
 	}
 
 	// Remove all non-numeric characters
-	let cleaned = phone.replace(/\D/g, '');
+	const cleaned = phone.replace(/\D/g, '');
 
 	// Check if it already has the country code
 	if (cleaned.length === 13 && cleaned.startsWith('55')) {

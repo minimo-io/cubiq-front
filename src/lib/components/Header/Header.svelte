@@ -133,7 +133,7 @@
 	</div>
 	<!-- Navigation Dots -->
 	<HeaderDots />
-	
+
 	<!-- Decorations -->
 	<HeaderDecorations />
 
