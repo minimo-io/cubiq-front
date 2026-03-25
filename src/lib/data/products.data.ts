@@ -132,18 +132,18 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 
 export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 	{
-		id: LabProduct.BETIZEN,
-		name: LabProduct.BETIZEN,
-		logo: '/products/betizen-logo.png',
-		logoSquare: '/products/betizen-logo-round.png',
+		id: LabProduct.BQPAY,
+		name: LabProduct.BQPAY,
+		logo: '/products/bqpay-logo.png',
+		logoSquare: '/products/bqpay-logo-round.png',
 		isMain: true,
-		slogan: m.productBetizenSlogan({}, { locale: locale }),
+		slogan: m.productBqPaySlogan({}, { locale: locale }),
 		sloganSimple: '',
-		details: m.productBetizenDetails({}, { locale: locale }),
+		details: m.productBqPayDetails({}, { locale: locale }),
 		isBold: true,
 		primary: true,
-		underDevelopment: false,
-		url: 'https://www.betizen.org',
+		underDevelopment: true,
+		url: localizeHref('/blog/bqpay-prelaunch'),
 		newWindow: true
 	},
 	{
@@ -160,7 +160,23 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		underDevelopment: true,
 		url: localizeHref('/blog/beer-app'),
 		newWindow: false
+	},
+	{
+		id: LabProduct.BETIZEN,
+		name: LabProduct.BETIZEN,
+		logo: '/products/betizen-logo.png',
+		logoSquare: '/products/betizen-logo-round.png',
+		isMain: true,
+		slogan: m.productBetizenSlogan({}, { locale: locale }),
+		sloganSimple: '',
+		details: m.productBetizenDetails({}, { locale: locale }),
+		isBold: true,
+		primary: true,
+		underDevelopment: false,
+		url: 'https://www.betizen.org',
+		newWindow: true
 	}
+
 	// {
 	// 	id: LabProduct.BIBLIO,
 	// 	name: LabProduct.BIBLIO,
