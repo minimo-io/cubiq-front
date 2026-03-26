@@ -171,8 +171,6 @@
 			<li>
 				<a
 					href={localizeHref(AppConfig.cubiq.docs)}
-					target="_blank"
-					rel="nofollow noreferrer"
 					class={[
 						'flex py-3 align-middle text-[16px] tracking-wider',
 						'border-b border-b-gray-700'

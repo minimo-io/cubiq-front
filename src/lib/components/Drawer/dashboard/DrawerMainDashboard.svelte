@@ -167,7 +167,6 @@
 	<!-- Docs -->
 	<a
 		href={localizeHref(AppConfig.cubiq.docs)}
-		target="_blank"
 		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
 	>
 		<div class="flex justify-center self-center text-left align-middle">

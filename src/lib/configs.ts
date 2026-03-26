@@ -27,7 +27,7 @@ export const AppConfig = {
 			nostr:
 				'https://yakihonne.com/profile/nprofile1qqsz94fayf7uh4f0ewqgk0n6dehzl5anuzax796d87gshr56utyec0cmzu69t'
 		},
-		docs: 'https://api.cubiq.lat/docs'
+		docs: '/docs'
 	},
 
 	dashboards: {

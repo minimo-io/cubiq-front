@@ -32,11 +32,8 @@ const profile = await cubiq.getProfileAndToken({
 				{@html m.devText()}
 			</div>
 			<div class="mt-8 flex flex-row items-center md:mt-0">
-				<a
-					href={localizeHref(AppConfig.cubiq.docs)}
-					target="_blank"
-					rel="nofollow"
-					class="fw-button !my-1 mr-4">{m.documentation()}</a
+				<a href={localizeHref(AppConfig.cubiq.docs)} class="fw-button !my-1 mr-4"
+					>{m.documentation()}</a
 				>
 				<a
 					href={localizeHref('/login#signup')}
