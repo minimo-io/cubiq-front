@@ -144,7 +144,7 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		primary: true,
 		underDevelopment: true,
 		url: localizeHref('/blog/bqpay-prelaunch'),
-		newWindow: true
+		newWindow: false
 	},
 	{
 		id: LabProduct.LNBEER,
