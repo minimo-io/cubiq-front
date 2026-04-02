@@ -29,11 +29,22 @@
 	$effect(() => {
 		if (form?.success === true && form?.commits) {
 			const newCommits = form.commits as Commit[];
-			if (newCommits.length === 0) {
+
+			// Filter duplicates by SHA
+			const existingShas = new Set(commits.map((c) => c.sha));
+			const uniqueCommits = newCommits.filter((c) => !existingShas.has(c.sha));
+
+			if (uniqueCommits.length !== newCommits.length) {
+				console.warn(
+					`Changelog: Filtered out ${newCommits.length - uniqueCommits.length} duplicate commits`
+				);
+			}
+
+			if (uniqueCommits.length === 0) {
 				hasMore = false;
 			} else {
-				commits = [...commits, ...newCommits];
-				if (newCommits.length < 10) {
+				commits = [...commits, ...uniqueCommits];
+				if (uniqueCommits.length < 10) {
 					hasMore = false;
 				}
 			}
@@ -63,23 +74,23 @@
 	}
 
 	function getPreviousMonth(startDate: string): { start: string; end: string } {
-		const date = new Date(startDate);
-		const currentMonth = date.getMonth();
-		const currentYear = date.getFullYear();
+		const [yearStr, monthStr] = startDate.split('-');
+		const year = parseInt(yearStr, 10);
+		const month = parseInt(monthStr, 10);
 
-		let prevMonth = currentMonth - 1;
-		let prevYear = currentYear;
+		let prevMonth = month - 1;
+		let prevYear = year;
 
-		if (prevMonth < 0) {
-			prevMonth = 11;
-			prevYear = currentYear - 1;
+		if (prevMonth < 1) {
+			prevMonth = 12;
+			prevYear = year - 1;
 		}
 
-		const lastDay = new Date(prevYear, prevMonth + 1, 0).getDate();
+		const lastDay = new Date(prevYear, prevMonth, 0).getDate();
 
 		return {
-			start: `${prevYear}-${String(prevMonth + 1).padStart(2, '0')}-01`,
-			end: `${prevYear}-${String(prevMonth + 1).padStart(2, '0')}-${lastDay}`
+			start: `${prevYear}-${String(prevMonth).padStart(2, '0')}-01`,
+			end: `${prevYear}-${String(prevMonth).padStart(2, '0')}-${lastDay}`
 		};
 	}
 
@@ -100,8 +111,37 @@
 
 	function triggerLoadMore() {
 		if (loading || !hasMore) return;
+
+		const newRange = getPreviousMonth(currentStartDate);
+
+		console.log(
+			`Changelog: Fetching previous month - from ${currentStartDate} to ${newRange.start}`
+		);
+
+		// Update form inputs directly before submission
+		const startInput = document.getElementById('start-date-input') as HTMLInputElement;
+		const endInput = document.getElementById('end-date-input') as HTMLInputElement;
+		const refreshInput = document.getElementById('refresh-input') as HTMLInputElement;
+
+		if (startInput) startInput.value = newRange.start;
+		if (endInput) endInput.value = newRange.end;
+
+		const newStartDateObj = new Date(newRange.start);
+		const today = new Date();
+		const daysSince = Math.floor(
+			(today.getTime() - newStartDateObj.getTime()) / (1000 * 60 * 60 * 24)
+		);
+		const needsRefresh = daysSince > RETENTION_DAYS;
+		if (refreshInput) refreshInput.value = needsRefresh ? 'true' : 'false';
+
+		console.log(
+			`Changelog: Form values - startDate: ${newRange.start}, endDate: ${newRange.end}, refresh: ${needsRefresh}`
+		);
+
 		loading = true;
-		updateDateRange();
+		currentStartDate = newRange.start;
+		currentEndDate = newRange.end;
+
 		const formEl = document.getElementById('load-more-form') as HTMLFormElement;
 		formEl?.requestSubmit();
 	}
@@ -152,11 +192,22 @@
 
 				if (actionData.success && Array.isArray(actionData.commits)) {
 					const newCommits = actionData.commits;
-					if (newCommits.length === 0) {
+
+					// Filter duplicates by SHA
+					const existingShas = new Set(commits.map((c) => c.sha));
+					const uniqueCommits = newCommits.filter((c) => !existingShas.has(c.sha));
+
+					if (uniqueCommits.length !== newCommits.length) {
+						console.warn(
+							`Changelog: Filtered out ${newCommits.length - uniqueCommits.length} duplicate commits`
+						);
+					}
+
+					if (uniqueCommits.length === 0) {
 						hasMore = false;
 					} else {
-						commits = [...commits, ...newCommits];
-						if (newCommits.length < 10) {
+						commits = [...commits, ...uniqueCommits];
+						if (uniqueCommits.length < 10) {
 							hasMore = false;
 						}
 					}
@@ -171,9 +222,14 @@
 		};
 	}}
 >
-	<input type="hidden" name="startDate" value={currentStartDate} />
-	<input type="hidden" name="endDate" value={currentEndDate} />
-	<input type="hidden" name="refresh" value={shouldRefresh() ? 'true' : 'false'} />
+	<input type="hidden" name="startDate" id="start-date-input" value={currentStartDate} />
+	<input type="hidden" name="endDate" id="end-date-input" value={currentEndDate} />
+	<input
+		type="hidden"
+		name="refresh"
+		id="refresh-input"
+		value={shouldRefresh() ? 'true' : 'false'}
+	/>
 </form>
 
 <div class="max-w-fw mx-(--cubiq-app-margin) my-20 md:mx-auto">

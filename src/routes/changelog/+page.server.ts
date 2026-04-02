@@ -46,17 +46,7 @@ export const actions: Actions = {
 				Authorization: `Bearer ${CUBIQ_API_APP_TOKEN}`
 			});
 
-			const allCommits = result.data?.data || [];
-
-			// Filter out commits that are already in the loaded date range
-			// This prevents duplicates when date ranges overlap
-			const loadedStartDate = new Date(startDate);
-			const uniqueCommits = allCommits.filter((commit: { date: string }) => {
-				const commitDate = new Date(commit.date);
-				return commitDate < loadedStartDate;
-			});
-
-			return { success: true, commits: uniqueCommits };
+			return { success: true, commits: result.data?.data || [] };
 		} catch (e) {
 			console.error('Changelog: Failed to load more commits:', e);
 			return { success: false, commits: [], error: 'Failed to load more commits' };
