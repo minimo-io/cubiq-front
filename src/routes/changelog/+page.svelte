@@ -24,8 +24,6 @@
 	let hasMore = $state(true);
 	let mounted = $state(false);
 
-	const RETENTION_DAYS = 90;
-
 	$effect(() => {
 		if (form?.success === true && form?.commits) {
 			const newCommits = form.commits as Commit[];
@@ -100,15 +98,6 @@
 		currentEndDate = newRange.end;
 	}
 
-	function shouldRefresh(): boolean {
-		const newStartDateObj = new Date(currentStartDate);
-		const today = new Date();
-		const daysSince = Math.floor(
-			(today.getTime() - newStartDateObj.getTime()) / (1000 * 60 * 60 * 24)
-		);
-		return daysSince > RETENTION_DAYS;
-	}
-
 	function triggerLoadMore() {
 		if (loading || !hasMore) return;
 
@@ -125,18 +114,9 @@
 
 		if (startInput) startInput.value = newRange.start;
 		if (endInput) endInput.value = newRange.end;
+		if (refreshInput) refreshInput.value = 'false';
 
-		const newStartDateObj = new Date(newRange.start);
-		const today = new Date();
-		const daysSince = Math.floor(
-			(today.getTime() - newStartDateObj.getTime()) / (1000 * 60 * 60 * 24)
-		);
-		const needsRefresh = daysSince > RETENTION_DAYS;
-		if (refreshInput) refreshInput.value = needsRefresh ? 'true' : 'false';
-
-		console.log(
-			`Changelog: Form values - startDate: ${newRange.start}, endDate: ${newRange.end}, refresh: ${needsRefresh}`
-		);
+		console.log(`Changelog: Form values - startDate: ${newRange.start}, endDate: ${newRange.end}`);
 
 		loading = true;
 		currentStartDate = newRange.start;
@@ -224,12 +204,7 @@
 >
 	<input type="hidden" name="startDate" id="start-date-input" value={currentStartDate} />
 	<input type="hidden" name="endDate" id="end-date-input" value={currentEndDate} />
-	<input
-		type="hidden"
-		name="refresh"
-		id="refresh-input"
-		value={shouldRefresh() ? 'true' : 'false'}
-	/>
+	<input type="hidden" name="refresh" id="refresh-input" value="false" />
 </form>
 
 <div class="max-w-fw mx-(--cubiq-app-margin) my-20 md:mx-auto">
