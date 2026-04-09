@@ -149,7 +149,7 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 	{
 		id: LabProduct.LNBEER,
 		name: LabProduct.LNBEER,
-		logo: '/products/taptapgo-logo.png',
+		logo: '/products/malthaus-logo.png',
 		logoSquare: '/products/taptapgo-logo-round.png',
 		isMain: true,
 		slogan: m.productLnBeerSlogan({}, { locale: locale }),

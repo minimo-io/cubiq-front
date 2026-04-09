@@ -28,18 +28,18 @@
 		},
 		{
 			href: '/en/blog/beer-app',
-			src: '/clients/taptapgo-logo.png',
-			alt: 'TapTapGo',
+			src: '/products/malthaus-logo.png',
+			alt: 'Malthaus',
 			height: 'h-[42px] mt-0',
 			opacity: 'opacity-100'
 		},
-		{
-			href: 'https://agentefaz.net',
-			src: '/clients/agf-color.png',
-			alt: 'AGF',
-			height: 'h-[40px]',
-			opacity: 'opacity-55'
-		},
+		// {
+		// 	href: 'https://agentefaz.net',
+		// 	src: '/clients/agf-color.png',
+		// 	alt: 'AGF',
+		// 	height: 'h-[40px]',
+		// 	opacity: 'opacity-55'
+		// },
 		{
 			href: '#',
 			src: '/clients/whitemedia-logo.png',

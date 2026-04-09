@@ -1,6 +1,6 @@
 ---
-title: '🍺 TapTapGo: Marketplace & Comunidade de Cervejas Especiais'
-excerpt: 'Descubra, avalie e compre cervejas especiais. TapTapGo é um marketplace que conecta amantes de cerveja artesanal, produtores e lojas.'
+title: '🍺 Malthaus: Marketplace & Comunidade de Cervejas Especiais'
+excerpt: 'Descubra, avalie e compre cervejas especiais. Malthaus é um marketplace que conecta amantes de cerveja artesanal, produtores e lojas.'
 date: 2025-09-01
 featured: false
 isMain: false
@@ -13,7 +13,7 @@ authors:
     avatar: /mimo-logo.png
 ---
 
-TapTapGo é um marketplace e comunidade para amantes de cervejas artesanais e especiais. Encontrar essas cervejas sempre foi um desafio — as ofertas estão dispersas em dezenas de lojas especializadas, cada uma com seu próprio estoque e preços.
+Malthaus é um marketplace e comunidade para amantes de cervejas artesanais e especiais. Encontrar essas cervejas sempre foi um desafio — as ofertas estão dispersas em dezenas de lojas especializadas, cada uma com seu próprio estoque e preços.
 
 Nossa missão é reunir demanda e oferta em um só lugar.
 
@@ -29,4 +29,4 @@ Interessado em participar como produtor ou loja? Entre em contato!
 
 <a rel="nofollow noreferrer noopener" target="_blank" href="https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1" class="btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary">Visitar projeto</a>
 
-Siga-nos no Instagram: [@taptapgo_uy](https://www.instagram.com/taptapgo_uy/)
+Siga-nos no Instagram: [@malthaus_uy](https://www.instagram.com/malthaus_uy/)

@@ -16,7 +16,7 @@ export enum Product {
 
 export enum LabProduct {
 	BETIZEN = 'BETIZEN',
-	LNBEER = 'TAPTAPGO',
+	LNBEER = 'MALTHAUS',
 	BIBLIO = 'BIBLIO',
 	BQPAY = 'BQPAY'
 }

@@ -1,6 +1,6 @@
 ---
-title: '🍺 TapTapGo: Craft Beer Marketplace & Community'
-excerpt: 'Discover, rate, and buy special craft beers. TapTapGo is a marketplace connecting craft beer lovers, producers, and stores with seamless payments.'
+title: '🍺 Malthaus: Craft Beer Marketplace & Community'
+excerpt: 'Discover, rate, and buy special craft beers. Malthaus is a marketplace connecting craft beer lovers, producers, and stores with seamless payments.'
 date: 2025-09-01
 featured: false
 isMain: false
@@ -13,7 +13,7 @@ authors:
     avatar: /mimo-logo.png
 ---
 
-TapTapGo is a marketplace and community for craft and special beer enthusiasts. Finding these beers has always been a challenge — offers are scattered across dozens of specialty store websites, each with their own inventory and prices.
+Malthaus is a marketplace and community for craft and special beer enthusiasts. Finding these beers has always been a challenge — offers are scattered across dozens of specialty store websites, each with their own inventory and prices.
 
 Our mission is to bring demand and supply together in one place.
 
@@ -29,4 +29,4 @@ Interested in joining as a producer or store? Get in touch!
 
 <a rel="nofollow noreferrer noopener" target="_blank" href="https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1" class="btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary">Visit project</a>
 
-Follow us on Instagram: [@taptapgo_uy](https://www.instagram.com/taptapgo_uy/)
+Follow us on Instagram: [@malthaus_uy](https://www.instagram.com/malthaus_uy/)
