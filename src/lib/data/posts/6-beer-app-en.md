@@ -27,6 +27,6 @@ Payments are seamless, with support for bitcoin.
 
 Interested in joining as a producer or store? Get in touch!
 
-<a rel="nofollow noreferrer noopener" target="_blank" href="https://www.figma.com/design/A9ZpwzFjlfZSZlWIrNfztG/Lightning-Beer?node-id=2-3&t=XKNaVwyAoxWPFXNB-1" class="btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary">Visit project</a>
+<a rel="nofollow noreferrer noopener" target="_blank" href="https://www.malthaus.beer/" class="btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary">Visit project</a>
 
 Follow us on Instagram: [@malthaus_uy](https://www.instagram.com/malthaus_uy/)
