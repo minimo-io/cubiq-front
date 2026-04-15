@@ -158,8 +158,8 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		isBold: true,
 		primary: true,
 		underDevelopment: true,
-		url: localizeHref('/blog/beer-app'),
-		newWindow: false
+		url: 'https://www.malthaus.beer',
+		newWindow: true
 	},
 	{
 		id: LabProduct.BETIZEN,
