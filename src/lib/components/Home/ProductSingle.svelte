@@ -38,7 +38,7 @@
 	target={openInNewWindow ? '_blank' : undefined}
 	rel={openInNewWindow ? 'noopener noreferrer' : undefined}
 	class={[
-		'relative scale-95 rounded-sm transition duration-250 ease-in-out hover:opacity-100 md:scale-90 md:hover:scale-100',
+		'relative scale-95 rounded-sm transition duration-250 ease-in-out hover:opacity-100',
 		minWidth ? minWidth : 'min-w-full md:min-w-[250px]'
 	]}
 >
@@ -56,7 +56,7 @@
 				<Hr bottom={false} class="block md:hidden" />
 			{/if}
 
-			<div class="flex flex-col">
+			<div class="flex flex-col md:my-4">
 				<div class="flex items-center justify-center">
 					<div class={[!brand.logo && 'mr-2']}>
 						{#if brand.logo}
@@ -64,7 +64,7 @@
 								<img
 									src={brand.logo}
 									alt={`${brand.name} logo`}
-									class=" w-[75%] max-w-[75%] scale-90 self-center md:scale-100"
+									class=" w-[75%] max-w-[75%] scale-100 self-center md:scale-110"
 								/>
 							</div>
 						{:else if icon}
@@ -82,10 +82,9 @@
 				</div>
 
 				<!-- Details -->
-
 				<div
 					class={[
-						'flex scale-100 flex-col items-center justify-self-center md:scale-100',
+						'flex scale-100 flex-col items-center justify-self-center md:hidden md:scale-100',
 						align == 'start' && 'justify-start',
 						align == 'end' && 'justify-end',
 						align != 'start' && align != 'end' && 'justify-center'
@@ -97,7 +96,7 @@
 					/> -->
 					{#if hideDetails === false}
 						<div
-							class="text-primary mt-[10px] text-center font-sans text-[16px] leading-tight tracking-wider uppercase opacity-70"
+							class="text-primary mt-[10px] text-center font-sans text-[14px] leading-tight tracking-wider uppercase opacity-70"
 						>
 							{@html brand.details}
 						</div>
@@ -107,7 +106,7 @@
 
 			<!-- Prototyping -->
 			{#if brand.underDevelopment}
-				<div class="absolute top-2 right-2 scale-80 md:-top-5 md:-right-2">
+				<div class="absolute top-2 right-2 scale-80 md:-top-2 md:-right-2">
 					<Pill color="primary-transparent" text={m.prototyping()} customCss="!px-3" />
 				</div>
 			{/if}

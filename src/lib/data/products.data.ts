@@ -158,7 +158,7 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		isBold: true,
 		primary: true,
 		underDevelopment: true,
-		url: 'https://www.malthaus.beer',
+		url: 'https://www.malthaus.beer/es/apps',
 		newWindow: true
 	},
 	{

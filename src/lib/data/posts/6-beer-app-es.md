@@ -27,6 +27,6 @@ Los pagos son sin fricción, con soporte para bitcoin.
 
 ¿Interesado en participar como productor o tienda? ¡Ponete en contacto!
 
-<a rel="nofollow noreferrer noopener" target="_blank" href="https://www.malthaus.beer/" class="btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary">Visitar proyecto</a>
+<a rel="nofollow noreferrer noopener" target="_blank" href="https://www.malthaus.beer/es/apps" class="btn md:btn-lg hover:bg-primary hover:text-white bg-primary/10 border border-primary text-primary">Visitar proyecto</a>
 
 Seguinos en Instagram: [@malthaus_uy](https://www.instagram.com/malthaus_uy/)

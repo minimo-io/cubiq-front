@@ -370,7 +370,7 @@
 	"searchNotes": "Procurar notas...",
 	"notesWarningUnencrypteed": "<strong>Atenção!</strong> Notas não encriptadas estarão disponíveis em texto simples no armazenamento local do navegador mesmo após o logout!",
 	"heroContentLab": "Além da nossa Plataforma de Produtos, no Cubiq Lab <span class='text-base-content opacity-80'>experimentamos com novas tecnologías, ideias e provas-de-conceito</span>. ",
-	"labProductsSlogan": "Os projetos do nosso laboratório de tecnologia vão desde provas de conceito até produtos ativos no mercado... <a href='/lab' class='hover:text-underline text-white'>saiba mais</a>",
+	"labProductsSlogan": "Os projetos do nosso laboratório de tecnologia vão desde provas de conceito até produtos ativos no mercado.",
 	"invoicing": "Faturamento",
 	"forBTCOnlyStores": "<span class='hidden md:flex'>Lojas Que Aceitam</span>Só Bitcoin",
 	"allStores": "Todas as lojas",
