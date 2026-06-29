@@ -7,14 +7,7 @@
 	import DashboardImages from '../DashboardImages.svelte';
 	import { AppConfig } from '$lib/configs';
 
-	// backticks preserve newlines and braces
-	const snippet = `// Get a user’s access token and profile data
-import Cubiq from '@cubiq-lat/finx';
-const cubiq = new Cubiq('sk_example_123456789');
-const profile = await cubiq.getProfileAndToken({
-  code: '01E2RJ4C05B52KKZ8FSRDAP23J',
-  clientID: 'client_123456789',
-});`;
+	let activeLang = $state('Node.js');
 </script>
 
 <section class="max-w-fw relative -top-8 mx-auto my-10 md:-top-1 md:my-10">
@@ -52,56 +45,161 @@ const profile = await cubiq.getProfileAndToken({
 			class="relative mt-8 rounded-md border md:-top-10 md:col-span-2 md:mt-0 md:ml-12"
 			style="border-width:0.5px"
 		>
-			<div class=" mb-4 flex border-b px-3 py-[8px]">
+			<div class="mb-4 flex border-b px-3 py-[8px]">
 				<button
-					class="lang-selected text-primary mr-2 px-3 py-1 text-base font-bold tracking-wider md:text-[18px]"
+					class="mr-2 px-3 py-1 text-base tracking-wider md:text-[18px] {activeLang === 'Node.js'
+						? 'text-primary font-bold'
+						: 'text-white'}"
+					onclick={() => (activeLang = 'Node.js')}
 				>
 					Node.js
 				</button>
-				<button class="mr-2 px-3 py-1 text-base tracking-wider text-white md:text-[18px]"
-					>Python</button
+				<button
+					class="mr-2 px-3 py-1 text-base tracking-wider md:text-[18px] {activeLang === 'Go'
+						? 'text-primary font-bold'
+						: 'text-white'}"
+					onclick={() => (activeLang = 'Go')}
 				>
-				<button class="rounded-t-md px-3 py-1 text-base tracking-wider text-white md:text-[18px]"
-					>Curl</button
+					Go
+				</button>
+				<button
+					class="rounded-t-md px-3 py-1 text-base tracking-wider md:text-[18px] {activeLang ===
+					'Curl'
+						? 'text-primary font-bold'
+						: 'text-white'}"
+					onclick={() => (activeLang = 'Curl')}
 				>
+					Curl
+				</button>
 			</div>
 
 			<code
 				class="block overflow-x-auto rounded-lg p-4 font-mono text-xs whitespace-pre md:text-sm"
 			>
-				<span class="text-[#717AA8]">
-					// Get a user’s access token and
-					<br />// profile data from an Identity Provider
-				</span>
-				<br /><br />
-				<span class="text-[#D272FF]">import</span>
-				<span class="text-[#6B84FF]"> Cubiq </span>
-				<span class="text-[#D272FF]">from</span>
-				<span class="text-[#37F0C3]">'@cubiq-lat/finx'</span>;
-				<br />
-				<span class="text-[#D272FF]">const</span>
-				<span class="text-[#6B84FF]"> cubiq </span> =
-				<span class="text-[#D272FF]">new</span>
-				<span class="text-[#6B84FF]"> Cubiq</span>(
-				<span class="text-[#37F0C3]">'sk_example_123456789'</span>);
-				<br /><br />
-				<span class="text-[#D272FF]">const</span>
-				<span class="text-[#6B84FF]"> profile </span>=
-				<span class="text-[#D272FF]">await</span>
-				<span class="text-[#6B84FF]"> cubiq.finx.payin.pix{'{'}</span>
-				<br />
-				<span class="relative pl-8">
-					<span class="text-[#D272FF]">code</span>:
-					<span class="text-[#37F0C3]">'01E2RJ4C05B52KKZ8FSRDAP23J',</span>
-				</span>
-				<br />
-				<span class="relative pl-8"
-					><span class="text-[#D272FF]">clientID</span>:
-					<span class="text-[#37F0C3]">'client_123456789',</span>
-				</span>
+				{#if activeLang === 'Node.js'}
+					<span class="text-[#717AA8]">
+						// Get a user's access token and
+						<br />// profile data from an Identity Provider
+					</span>
+					<br /><br />
+					<span class="text-[#D272FF]">import</span>
+					<span class="text-[#6B84FF]"> Cubiq </span>
+					<span class="text-[#D272FF]">from</span>
+					<span class="text-[#37F0C3]">'@cubiq-lat/pay'</span>;
+					<br />
+					<span class="text-[#D272FF]">const</span>
+					<span class="text-[#6B84FF]"> cubiq </span> =
+					<span class="text-[#D272FF]">new</span>
+					<span class="text-[#6B84FF]"> Cubiq</span>(
+					<span class="text-[#37F0C3]">'sk_example_123456789'</span>);
+					<br /><br />
+					<span class="text-[#D272FF]">const</span>
+					<span class="text-[#6B84FF]"> profile </span>=
+					<span class="text-[#D272FF]">await</span>
+					<span class="text-[#6B84FF]"> cubiq.pay.pix{'{'}</span>
+					<br />
+					<span class="relative pl-8">
+						<span class="text-[#D272FF]">code</span>:
+						<span class="text-[#37F0C3]">'01E2RJ4C05B52KKZ8FSRDAP23J',</span>
+					</span>
+					<br />
+					<span class="relative pl-8"
+						><span class="text-[#D272FF]">clientID</span>:
+						<span class="text-[#37F0C3]">'client_123456789',</span>
+					</span>
 
-				<br />
-				<span>{'}'});</span>
+					<br />
+					<span>{'}'});</span>
+				{:else if activeLang === 'Go'}
+					<span class="text-[#717AA8]">
+						// Get a user's access token and
+						<br />// profile data from an Identity Provider
+					</span>
+					<br /><br />
+					<span class="text-[#D272FF]">import</span>
+					<span class="text-[#37F0C3]"> "github.com/cubiq-lat/pay"</span>
+					<br /><br />
+					<span class="text-[#D272FF]">func</span>
+					<span class="text-[#6B84FF]"> main</span>() {'{'}
+					<br />
+					<span class="relative pl-8">
+						<span class="text-[#6B84FF]">cubiq</span>
+						<span class="text-[#D272FF]"> := </span>
+						<span class="text-[#6B84FF]">pay.NewClient</span>(
+					</span>
+					<br />
+					<span class="relative pl-14">
+						<span class="text-[#37F0C3]">"sk_example_123456789"</span>,
+					</span>
+					<br />
+					<span class="relative pl-8"> ) </span>
+					<br />
+					<span class="relative pl-8">
+						<span class="text-[#6B84FF]">profile</span>,
+						<span class="text-[#6B84FF]"> _</span>
+						<span class="text-[#D272FF]"> := </span>
+						<span class="text-[#6B84FF]">cubiq.Pay.Pix</span>(
+					</span>
+					<br />
+					<span class="relative pl-14">
+						<span class="text-[#6B84FF]">pay.Request</span>{'{'}
+					</span>
+					<br />
+					<span class="relative pl-20">
+						<span class="text-[#D272FF]">Code</span>:
+						<span class="text-[#37F0C3]">"01E2RJ4C05B52KKZ8FSRDAP23J",</span>
+					</span>
+					<br />
+					<span class="relative pl-20">
+						<span class="text-[#D272FF]">ClientID</span>:
+						<span class="text-[#37F0C3]">"client_123456789",</span>
+					</span>
+					<br />
+					<span class="relative pl-14">
+						{'}'}
+					</span>
+					<br />
+					<span class="relative pl-8"> ) </span>
+					<br />
+					<span>{'}'}</span>
+				{:else if activeLang === 'Curl'}
+					<span class="text-[#717AA8]">
+						# Get a user's access token and
+						<br /># profile data from an Identity Provider
+					</span>
+					<br /><br />
+					<span class="text-[#D272FF]">curl</span>
+					<span class="text-[#D272FF]"> -X POST</span>
+					<span class="text-[#37F0C3]"> \</span>
+					<br />
+					<span class="relative pl-8">
+						https://api.cubiq.lat/v1/auth/token
+						<span class="text-[#D272FF]"> \</span>
+					</span>
+					<br />
+					<span class="relative pl-8">
+						<span class="text-[#D272FF]">-H</span>
+						<span class="text-[#37F0C3]"> "Content-Type: application/json"</span>
+						<span class="text-[#D272FF]"> \</span>
+					</span>
+					<br />
+					<span class="relative pl-8">
+						<span class="text-[#D272FF]">-d</span>
+						<span class="text-[#37F0C3]"> '{'{'}</span>
+					</span>
+					<br />
+					<span class="relative pl-14">
+						<span class="text-[#37F0C3]">"code": "01E2RJ4C05B52KKZ8FSRDAP23J",</span>
+					</span>
+					<br />
+					<span class="relative pl-14">
+						<span class="text-[#37F0C3]">"client_id": "client_123456789"</span>
+					</span>
+					<br />
+					<span class="relative pl-8">
+						<span class="text-[#37F0C3]">{'}'}'</span>
+					</span>
+				{/if}
 			</code>
 		</div>
 		<!-- Editors -->

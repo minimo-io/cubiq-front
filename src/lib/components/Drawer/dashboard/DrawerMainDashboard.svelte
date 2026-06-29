@@ -186,8 +186,8 @@
 		</div>
 	</a>
 
-	<!-- Changelog -->
-	<a
+	<!-- Roadmap -->
+	<!-- <a
 		href={localizeHref('/roadmap')}
 		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
 	>
@@ -195,7 +195,7 @@
 			<FileClock class="text-sun mr-2 h-4 w-4 self-center" />
 			<span class="self-center font-semibold">Roadmap</span>
 		</div>
-	</a>
+	</a> -->
 
 	<!-- Blog -->
 	<a

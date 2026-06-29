@@ -1,3 +1,4 @@
+<!-- src/routes/+page.svelte -->
 <script lang="ts">
 	import Header from '$lib/components/Header/Header.svelte';
 	import Developers from '$lib/components/Home/Developers.svelte';
@@ -13,11 +14,10 @@
 	import { smoothScroll } from '$utils';
 	import { onMount } from 'svelte';
 	import CirclesDecorations from '$lib/components/decorations/CirclesDecorations.svelte';
-	import LabProducts from '$lib/components/LabProducts.svelte';
-	import ProductsNew from '$lib/components/Home/ProductsNew.svelte';
 	import DashboardImagesOnly from '$lib/components/DashboardImagesOnly.svelte';
 	import { type DashboardImageType } from '$types/dashboardImages.types';
 	import TopPosts from '$lib/components/blog/topPosts.svelte';
+	import ProductsCombined from '$lib/components/ProductsCombined.svelte';
 
 	const dashboardImages: DashboardImageType[] = $state([
 		{
@@ -81,9 +81,7 @@
 		<Clients addDesktopPadding={true} />
 	</div>
 
-	<ProductsNew />
-
-	<LabProducts />
+	<ProductsCombined />
 
 	<Developers />
 

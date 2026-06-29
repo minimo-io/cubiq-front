@@ -1,3 +1,4 @@
+<!-- src/lib/components/Home/ProductsNew.svelte -->
 <script lang="ts">
 	import { ChevronRight } from '@lucide/svelte';
 	import Hr from '../Hr.svelte';

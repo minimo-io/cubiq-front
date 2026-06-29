@@ -165,7 +165,7 @@
 		</div>
 	</a> -->
 
-	<!-- API Section -->
+	<!-- API Section
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
 		{m.menuAPIs()}
 	</h2>
@@ -210,6 +210,7 @@
 			</div>
 		</div>
 	</a>
+	-->
 
 	<!-- Fixed Extra Menu -->
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
@@ -249,17 +250,6 @@
 		</div>
 	</a>
 
-	<!-- Changelog -->
-	<a
-		href={localizeHref('/changelog')}
-		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
-	>
-		<div class="flex justify-center self-center text-left align-middle">
-			<FileClock class="text-sun mr-2 h-4 w-4 self-center" />
-			<span class="self-center font-semibold">Changelog</span>
-		</div>
-	</a>
-
 	<!-- Blog -->
 	<a
 		href={localizeHref('/blog')}
@@ -271,27 +261,37 @@
 		</div>
 	</a>
 
+	<!-- Changelog -->
+	<a
+		href={localizeHref('/changelog')}
+		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
+	>
+		<div class="flex justify-center self-center text-left align-middle">
+			<FileClock class="text-sun mr-2 h-4 w-4 self-center" />
+			<span class="self-center font-semibold">Changelog</span>
+		</div>
+	</a>
+
 	<h2 class="font-pixel my-4 px-[30px] text-base font-extrabold tracking-wider uppercase">
 		{m.others()}
 	</h2>
 
-	<!-- Item with submenu -->
-	<a
+	<!-- Lab -->
+	<!-- <a
 		href={localizeHref('/lab')}
-		class="border-base-300 font-roboto text-grey-dark shine-effect flex w-full justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
+		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
 	>
 		<div class="flex justify-center self-center text-left align-middle">
 			<FlaskConical class="mr-2 h-4 w-4 self-center" />
 			<span class="self-center font-semibold">{m.menuLab()}</span>
 		</div>
 		<div class="text-grey-medium flex flex-row self-center align-middle">
-			<!-- <ChevronRight class="aspect-1 text-grey-dark w-4" /> -->
 		</div>
-	</a>
+	</a> -->
 
 	<!-- Item with submenu -->
 	<div
-		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-b px-[30px] py-3 text-left align-middle text-sm"
+		class="border-base-300 font-roboto text-grey-dark shine-effect flex justify-between border-t border-b px-[30px] py-3 text-left align-middle text-sm"
 	>
 		<div class="flex justify-center self-center text-left align-middle">
 			<Headset class="mr-2 h-4 w-4 self-center" />

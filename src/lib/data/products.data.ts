@@ -1,29 +1,79 @@
-import { BrainCircuit, Cable, Key, Zap } from '@lucide/svelte';
-import { LabProduct, Product, type ProductsList } from '$lib/type/products.types';
+// src/lib/data/products.data.ts
+import { BrainCircuit, Cable, Key, Store, Truck, Zap } from '@lucide/svelte';
+import { LabProduct, Product } from '$lib/type/products.types';
 import { localizeHref } from '$paraglide/runtime';
 import { m } from '$paraglide/messages';
 
-export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
+export const getApiBrandPairs = (locale?: 'pt' | 'en' | 'es') => [
+	{
+		id: Product.MARKET,
+		api: {
+			name: m.productMarketName({}, { locale }),
+			details: m.productMarketDetails({}, { locale }),
+			icon: Store,
+			url: localizeHref('/docs', { locale }),
+			underDevelopment: false
+		},
+		brand: {
+			name: LabProduct.LNBEER,
+			logo: '/products/malthaus-logo.png',
+			logoSquare: '/products/taptapgo-logo-round.png',
+			url: 'https://www.malthaus.uy/es/apps',
+			newWindow: true
+		}
+	},
 	{
 		id: Product.PAY,
-		name: Product.PAY,
-		isMain: true,
-		slogan: m.productPaySlogan({}, { locale: locale }),
-		sloganSimple: m.productPaySloganSimple({}, { locale: locale }),
-		details: m.productPayDetails({}, { locale: locale }),
-		icon: Zap,
-		isBold: true,
-		primary: false,
-		underDevelopment: true,
-		unavailable: true,
-		url: 'https://api.cubiq.lat/docs#/Pay'
+		api: {
+			name: Product.PAY,
+			details: m.productPayDetails({}, { locale }),
+			icon: Zap,
+			url: localizeHref('/docs', { locale }),
+			underDevelopment: true,
+			unavailable: false
+		},
+		brand: {
+			name: LabProduct.BQPAY,
+			logo: '/products/bqpay-logo.png',
+			logoSquare: '/products/bqpay-logo-round.png',
+			url: localizeHref('/blog/bqpay-prelaunch'),
+			newWindow: false
+		}
 	},
+	{
+		id: Product.SHIP,
+		api: {
+			name: m.productShippingName({}, { locale }),
+			details: m.productShippingDetails({}, { locale }),
+			icon: Truck,
+			url: localizeHref('/docs', { locale }),
+			underDevelopment: true
+		},
+		brand: {
+			name: LabProduct.ENVIQ
+		}
+	},
+	{
+		id: Product.APIS,
+		api: {
+			name: m.productAPIsName({}, { locale }),
+			details: m.productAPIDetails({}, { locale }),
+			icon: Cable,
+			url: 'https://api.cubiq.lat/docs',
+			underDevelopment: false
+		}
+	}
+];
+
+// AI and Auth are kept here in case /docs or another section still needs them
+// as standalone ProductData entries elsewhere in the app.
+export const getProducts = (locale?: 'pt' | 'en' | 'es') => [
 	{
 		id: Product.AI,
 		name: Product.AI,
 		isMain: true,
-		slogan: m.productAISlogan({}, { locale: locale }),
-		details: m.productAIDetails({}, { locale: locale }),
+		slogan: m.productAISlogan({}, { locale }),
+		details: m.productAIDetails({}, { locale }),
 		icon: BrainCircuit,
 		isBold: true,
 		primary: false,
@@ -34,112 +84,26 @@ export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
 		id: Product.AUTH,
 		name: Product.AUTH,
 		isMain: true,
-		slogan: m.productAuthSlogan({}, { locale: locale }),
-		details: m.productAuthDetails({}, { locale: locale }),
+		slogan: m.productAuthSlogan({}, { locale }),
+		details: m.productAuthDetails({}, { locale }),
 		icon: Key,
 		isBold: true,
 		primary: false,
 		underDevelopment: false,
 		url: 'https://api.cubiq.lat/docs#/Users'
-	},
-
-	{
-		id: Product.APIS,
-		name: m.productAPIsName({}, { locale: locale }),
-		isMain: true,
-		slogan: m.productAPISlogan({}, { locale: locale }),
-		sloganSimple: m.productAPISloganSimple({}, { locale: locale }),
-		details: m.productAPIDetails({}, { locale: locale }),
-		icon: Cable,
-		primary: true,
-		isBold: true,
-		underDevelopment: true,
-		url: localizeHref('/docs', { locale: locale })
 	}
 ];
 
-// export const getProducts = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
-// 	{
-// 		id: Product.PAY,
-// 		name: Product.PAY,
-// 		isMain: true,
-// 		slogan: m.productPaySlogan({}, { locale: locale }),
-// 		sloganSimple: m.productPaySloganSimple({}, { locale: locale }),
-// 		details: m.productPayDetails({}, { locale: locale }),
-// 		icon: Zap,
-// 		isBold: true,
-// 		primary: false,
-// 		underDevelopment: true,
-// 		unavailable: true,
-// 		url: localizeHref('/pay', { locale: locale })
-// 	},
-// 	{
-// 		id: Product.CARE,
-// 		name: Product.CARE,
-// 		isMain: true,
-// 		slogan: m.productCareSlogan({}, { locale: locale }),
-// 		sloganSimple: m.productCareSloganSimple({}, { locale: locale }),
-// 		details: m.productCareDetails({}, { locale: locale }),
-// 		icon: Activity,
-// 		isBold: true,
-// 		primary: false,
-// 		underDevelopment: false,
-// 		url: localizeHref('/care', { locale: locale })
-// 	},
-
-// 	{
-// 		id: Product.STORE,
-// 		name: Product.STORE,
-// 		isMain: true,
-// 		slogan: m.productStoreSlogan({}, { locale: locale }),
-// 		sloganSimple: m.productStoreSloganSimple({}, { locale: locale }),
-// 		details: m.productStoreDetails({}, { locale: locale }),
-// 		icon: ShoppingBag,
-// 		primary: false,
-// 		isBold: true,
-// 		online: true,
-// 		unavailable: false,
-// 		url: localizeHref('/store', { locale: locale })
-// 	},
-
-// 	{
-// 		id: Product.APIS,
-// 		name: 'APIs',
-// 		isMain: true,
-// 		slogan: m.productAPISlogan({}, { locale: locale }),
-// 		sloganSimple: m.productAPISloganSimple({}, { locale: locale }),
-// 		details: m.productAPIDetails({}, { locale: locale }),
-// 		icon: Cable,
-// 		primary: true,
-// 		isBold: true,
-// 		underDevelopment: true,
-// 		url: localizeHref(AppConfig.cubiq.docs, { locale: locale })
-// 	},
-// 	{
-// 		id: Product.NOTES,
-// 		name: Product.NOTES,
-// 		isMain: false,
-// 		slogan: m.productNotesSlogan({}, { locale: locale }),
-// 		sloganSimple: m.productNotesSloganSimple({}, { locale: locale }),
-// 		details: m.productNotesDetails({}, { locale: locale }),
-// 		icon: Cable,
-// 		primary: true,
-// 		isBold: true,
-// 		underDevelopment: true,
-// 		url: localizeHref('/dashboard/notes', { locale: locale })
-// 	}
-// ];
-
-export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList => [
+export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es') => [
 	{
 		id: LabProduct.BQPAY,
 		name: LabProduct.BQPAY,
 		logo: '/products/bqpay-logo.png',
 		logoSquare: '/products/bqpay-logo-round.png',
 		isMain: true,
-		slogan: m.productBqPaySlogan({}, { locale: locale }),
+		slogan: m.productBqPaySlogan({}, { locale }),
 		sloganSimple: '',
-		details: m.productBqPayDetails({}, { locale: locale }),
+		details: m.productBqPayDetails({}, { locale }),
 		isBold: true,
 		primary: true,
 		underDevelopment: true,
@@ -152,13 +116,13 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		logo: '/products/malthaus-logo.png',
 		logoSquare: '/products/taptapgo-logo-round.png',
 		isMain: true,
-		slogan: m.productLnBeerSlogan({}, { locale: locale }),
+		slogan: m.productLnBeerSlogan({}, { locale }),
 		sloganSimple: '',
-		details: m.productLnBeerDetails({}, { locale: locale }),
+		details: m.productLnBeerDetails({}, { locale }),
 		isBold: true,
 		primary: true,
 		underDevelopment: true,
-		url: 'https://www.malthaus.beer/es/apps',
+		url: 'https://www.malthaus.uy/es/apps',
 		newWindow: true
 	},
 	{
@@ -167,27 +131,13 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es'): ProductsList =>
 		logo: '/products/betizen-logo.png',
 		logoSquare: '/products/betizen-logo-round.png',
 		isMain: true,
-		slogan: m.productBetizenSlogan({}, { locale: locale }),
+		slogan: m.productBetizenSlogan({}, { locale }),
 		sloganSimple: '',
-		details: m.productBetizenDetails({}, { locale: locale }),
+		details: m.productBetizenDetails({}, { locale }),
 		isBold: true,
 		primary: true,
 		underDevelopment: false,
 		url: 'https://www.betizen.org',
 		newWindow: true
 	}
-
-	// {
-	// 	id: LabProduct.BIBLIO,
-	// 	name: LabProduct.BIBLIO,
-	// 	logo: '/products/biblio-logo.png',
-	// 	isMain: true,
-	// 	slogan: m.productBilbioSlogan({}, { locale: locale }),
-	// 	sloganSimple: '',
-	// 	details: m.productBilbioSlogan({}, { locale: locale }),
-	// 	isBold: true,
-	// 	primary: true,
-	// 	underDevelopment: true,
-	// 	url: '#'
-	// }
 ];

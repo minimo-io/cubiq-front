@@ -1,3 +1,4 @@
+<!-- src/lib/components/LabProducts.svelte -->
 <script lang="ts">
 	import ProductSingle from '$lib/components/Home/ProductSingle.svelte';
 	// import { getLocale } from '$paraglide/runtime';

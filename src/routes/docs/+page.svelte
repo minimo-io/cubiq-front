@@ -1,11 +1,19 @@
+<!-- src/routes/docs/+page.svelte -->
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { page } from '$app/state';
 	import * as m from '$paraglide/messages';
+	import { getLocale } from '$paraglide/runtime';
 	import { AppConfig } from '$lib/configs';
 	import Header from '$lib/components/Header/Header.svelte';
 	import Meta from '$lib/components/Meta.svelte';
+	import { ChevronRight } from '@lucide/svelte';
+	import { getApiBrandPairs } from '$lib/data/products.data';
+	import { Product } from '$lib/type/products.types';
 
 	const SWAGGER_URL = `${AppConfig.apiUrl}/docs-json`;
+
+	const PAIRS = getApiBrandPairs(getLocale());
 
 	type SchemaObject = {
 		type?: string;
@@ -84,12 +92,31 @@
 			if (!res.ok) throw new Error('Failed to fetch');
 			spec = await res.json();
 			grouped = groupByTag(spec as Record<string, unknown>);
+			applyTagFromUrl();
 		} catch {
 			fetchError = true;
 		} finally {
 			loading = false;
 		}
 	});
+
+	function applyTagFromUrl() {
+		const tag = page.url.searchParams.get('tag');
+		if (!tag) return;
+
+		const matchedTag = Object.keys(grouped).find((t) => t.toLowerCase() === tag.toLowerCase());
+		if (!matchedTag) return;
+
+		activePage = 'reference';
+		openTags = new Set([...openTags, matchedTag]);
+
+		setTimeout(() => {
+			document.getElementById(`tag-${matchedTag}`)?.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}, 150);
+	}
 
 	function resolveRef(ref: string): SchemaObject | undefined {
 		if (!spec?.components?.schemas) return undefined;
@@ -182,6 +209,18 @@
 		}, 100);
 	}
 
+	function goToTag(tag: string) {
+		const matchedTag = Object.keys(grouped).find((t) => t.toLowerCase() === tag.toLowerCase());
+		if (!matchedTag) return;
+		activePage = 'reference';
+		openTags = new Set([...openTags, matchedTag]);
+		setTimeout(() => {
+			document
+				.getElementById(`tag-${matchedTag}`)
+				?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}, 100);
+	}
+
 	function responseClass(code: string) {
 		if (code.startsWith('2')) return 'text-success';
 		if (code.startsWith('4')) return 'text-error';
@@ -226,6 +265,71 @@
 	heroContent={m.docsHeroContent()}
 	buttons={false}
 />
+
+<!-- API Quick Links -->
+<section class="max-w-fw mx-auto my-8 px-4 font-sans">
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+		{#each PAIRS as pair (pair.id)}
+			{@const Icon = pair.api.icon}
+			{#if pair.id === Product.MARKET}
+				<button
+					onclick={() => goToTag('E-commerce')}
+					class="card group hover:border-primary/30 hover:shadow-primary/5 border-primary/30 flex w-full flex-row items-start gap-4 border bg-black p-4 text-left transition-all duration-200 hover:shadow-2xl"
+				>
+					<Icon
+						class="text-primary h-10 w-10 stroke-[0.5] transition-transform duration-500 group-hover:scale-110 shrink-0 relative z-10"
+					/>
+					<div class="flex-1 min-w-0 relative z-10">
+						<div class="flex items-center justify-between gap-2">
+							<h3
+								class="group-hover:text-primary text-lg font-bold tracking-wide text-white uppercase transition-colors duration-300"
+							>
+								{pair.api.name}
+							</h3>
+							<ChevronRight
+								class="h-5 w-5 text-white transition-transform duration-300 group-hover:translate-x-1 shrink-0"
+							/>
+						</div>
+						<p
+							class="font-sans text-sm leading-tight text-gray-400 transition-colors duration-300 group-hover:text-gray-300"
+						>
+							{pair.api.details}
+						</p>
+					</div>
+				</button>
+			{:else if (pair.api.unavailable || pair.api.underDevelopment) && pair.id !== Product.APIS}
+				<div
+					class="card relative flex w-full flex-row items-start gap-4 border border-gray-800 bg-black p-4 opacity-60"
+				>
+					<Icon
+						class="text-primary h-10 w-10 stroke-[0.5] shrink-0 relative z-10"
+					/>
+					<div class="flex-1 min-w-0 relative z-10">
+						<h3 class="text-lg font-bold tracking-wide text-white uppercase">
+							{pair.api.name}
+						</h3>
+						<p class="font-sans text-sm leading-tight text-gray-400">
+							{pair.api.details}
+						</p>
+					</div>
+					{#if pair.api.unavailable}
+						<div
+							class="badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary absolute top-3 right-3 font-sans text-xs!"
+						>
+							{m.unavailable()}
+						</div>
+					{:else if pair.api.underDevelopment}
+						<div
+							class="badge badge-sm badge-soft badge-primary bg-primary/10 hover:bg-primary/20 border-primary/30 text-primary absolute top-3 right-3 font-sans text-xs!"
+						>
+							{m.underDevelopment()}
+						</div>
+					{/if}
+				</div>
+			{/if}
+		{/each}
+	</div>
+</section>
 
 <!-- Mobile Navigation -->
 <nav class="docs-content max-w-fw mx-auto my-4 px-4 font-sans lg:hidden">
@@ -475,22 +579,53 @@
 			<div class="prose prose-sm dark:prose-invert max-w-none">
 				<h1>{m.docsAuthenticationTitle()}</h1>
 				<p class="font-sans">{m.docsAuthenticationDesc()}</p>
-				<h2>{m.docsBearerTokenTitle()}</h2>
-				<pre class="bg-base-300 overflow-x-auto rounded-lg p-4"><code class="text-sm"
-						>Authorization: Bearer YOUR_API_KEY</code
-					></pre>
+
 				<h2>{m.docsLoginJwt()}</h2>
 				<pre class="bg-base-300 overflow-x-auto rounded-lg p-4"><code class="text-sm"
 						>{`POST /auth/login
 Content-Type: application/json
 
 {
-  "email": "you@example.com",
-  "password": "your-password"
+  "app_id": "your-app-uuid",
+  "app_secret": "your-app-secret",
+  "duration": 3600
 }`}</code
 					></pre>
+				<p class="font-sans text-sm text-gray-400">Response 200:</p>
+				<pre class="bg-base-300 overflow-x-auto rounded-lg p-4"><code class="text-sm"
+						>{`{
+  "access_token": "eyJhbG...",
+  "refresh_token": "eyJhbG...",
+  "expires_in": 3600
+}`}</code
+					></pre>
+
+				<h2>{m.docsBearerTokenTitle()}</h2>
+				<pre class="bg-base-300 overflow-x-auto rounded-lg p-4"><code class="text-sm"
+						>Authorization: Bearer &lt;access_token&gt;</code
+					></pre>
+
+				<h2>{m.docsRefreshToken()}</h2>
+				<p class="font-sans">{m.docsRefreshDesc()}</p>
+				<pre class="bg-base-300 overflow-x-auto rounded-lg p-4"><code class="text-sm"
+						>{`POST /auth/refresh
+Content-Type: application/json
+
+{
+  "refresh_token": "eyJhbG..."
+}`}</code
+					></pre>
+				<p class="font-sans text-sm text-gray-400">Response 200:</p>
+				<pre class="bg-base-300 overflow-x-auto rounded-lg p-4"><code class="text-sm"
+						>{`{
+  "access_token": "eyJhbG...",
+  "refresh_token": "eyJhbG...",
+  "expires_in": 3600
+}`}</code
+					></pre>
+
 				<div class="alert alert-warning alert-soft not-prose border">
-					<span>🔒 {m.docsTokenExpiry()}</span>
+					<span>🔒 {m.docsRefreshWarning()}</span>
 				</div>
 			</div>
 		{:else if activePage === 'errors'}
@@ -501,7 +636,7 @@ Content-Type: application/json
 					<table class="table-sm table">
 						<thead><tr><th>Code</th><th>Meaning</th></tr></thead>
 						<tbody>
-							{#each [['200', 'Success'], ['201', 'Created'], ['400', 'Bad request'], ['401', 'Unauthorized — invalid or missing token'], ['403', 'Forbidden — insufficient permissions'], ['404', 'Not found'], ['422', 'Validation error'], ['500', 'Internal server error']] as [code, meaning]}
+							{#each [['200', 'OK (default for GET/PATCH/PUT/DELETE)'], ['201', 'Created (default for POST)'], ['400', 'Bad Request (validation, business logic errors)'], ['401', 'Unauthorized (invalid/missing token, bad credentials)'], ['403', 'Forbidden (insufficient permissions, blacklisted)'], ['404', 'Not Found (resource doesn\'t exist)'], ['409', 'Conflict (duplicate, stock conflict, role exists)'], ['410', 'Gone (expired cart session)'], ['429', 'Too Many Requests (rate limited)'], ['500', 'Internal Server Error (unhandled, database, unknown)'], ['502', 'Bad Gateway (payment provider failure)'], ['503', 'Service Unavailable (exchange rate provider down, DB connection)']] as [code, meaning]}
 								<tr>
 									<td><code>{code}</code></td>
 									<td>{meaning}</td>
@@ -513,9 +648,15 @@ Content-Type: application/json
 				<h2>Error format</h2>
 				<pre class="bg-base-300 overflow-x-auto rounded-lg p-4"><code class="text-sm"
 						>{`{
-  "statusCode": 422,
-  "message": ["email must be an email"],
-  "error": "Unprocessable Entity"
+  "success": false,
+  "code": 40001,
+  "timestamp": 1719000000000,
+  "responseTime": 3,
+  "data": {
+    "type": "ValidationException",
+    "message": "Validation Error",
+    "description": "Validation error"
+  }
 }`}</code
 					></pre>
 			</div>
@@ -555,7 +696,7 @@ Content-Type: application/json
 				</div>
 
 				{#each Object.entries(filteredGrouped) as unknown as [string, Endpoint[]][] as [tag, endpoints]}
-					<h2 class="mt-8 mb-3 flex items-center gap-3 text-xl font-bold">
+					<h2 id="tag-{tag}" class="mt-8 mb-3 flex items-center gap-3 text-xl font-bold">
 						{tag}
 						<span class="bg-base-300 h-px flex-1"></span>
 					</h2>

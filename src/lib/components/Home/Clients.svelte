@@ -27,7 +27,7 @@
 			opacity: 'opacity-100'
 		},
 		{
-			href: 'https://www.malthaus.beer/es/apps',
+			href: 'https://www.malthaus.uy/es/apps',
 			src: '/products/malthaus-logo.png',
 			alt: 'Malthaus',
 			height: 'h-[42px] mt-0',

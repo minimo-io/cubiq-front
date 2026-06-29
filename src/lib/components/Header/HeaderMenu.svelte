@@ -98,7 +98,8 @@
 		</ul>
 	</div>
 
-	<div class="dropdown relative">
+	<!-- APIs dropdown -->
+	<!-- <div class="dropdown relative">
 		<div class="cursor-fw flex items-center uppercase" tabindex="0" role="button">
 			{m.menuAPIs()}
 			<span><ChevronDown class="ml-1 h-5" /></span>
@@ -148,7 +149,7 @@
 				</a>
 			</li>
 		</ul>
-	</div>
+	</div> -->
 
 	<div class="dropdown relative">
 		<div class="cursor-fw flex items-center uppercase" tabindex="0" role="button">
@@ -196,26 +197,13 @@
 			</li>
 			<li>
 				<a
-					href={localizeHref('/changelog')}
-					class={[
-						'flex py-3 align-middle text-[16px] tracking-wider',
-						'border-b-0 border-b-gray-700'
-					]}
-				>
-					<FileClock class="h-4" />
-					Changelog
-				</a>
-			</li>
-
-			<!-- <li>
-				<a
 					href={localizeHref('/blog')}
 					class={['flex py-3 align-middle text-[16px] tracking-wider']}
 				>
 					<PenLine class="h-4" />
 					Blog
 				</a>
-			</li> -->
+			</li>
 		</ul>
 	</div>
 
@@ -223,5 +211,5 @@
 	<!-- <a class="uppercase" href={localizeHref('/blog')}>Blog</a> -->
 	<!-- <a class="uppercase" href={localizeHref('/blog')}>Blog</a> -->
 
-	<a class="uppercase" href={localizeHref('/blog')}>Blog</a>
+	<a class="uppercase" href={localizeHref('/changelog')}>Changelog</a>
 </div>
