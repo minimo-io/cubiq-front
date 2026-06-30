@@ -19,7 +19,7 @@
 <div class="relative">
 	<section
 		bind:this={sectionElement}
-		class="fw-home-about z-10 mx-(--cubiq-app-margin) mb-12 max-w-full pt-10 md:mx-auto md:max-w-[60%]"
+		class="fw-home-about z-10 mx-(--cubiq-app-margin) mb-12 max-w-full pt-2 md:mx-auto md:max-w-[60%] md:pt-10"
 	>
 		<div class="relative">
 			<div

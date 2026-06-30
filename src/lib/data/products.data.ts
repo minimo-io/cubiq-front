@@ -18,7 +18,7 @@ export const getApiBrandPairs = (locale?: 'pt' | 'en' | 'es') => [
 			name: LabProduct.LNBEER,
 			logo: '/products/malthaus-logo.png',
 			logoSquare: '/products/taptapgo-logo-round.png',
-			url: 'https://www.malthaus.uy/es/apps',
+			url: 'https://www.malthaus.uy',
 			newWindow: true
 		}
 	},

@@ -4,7 +4,7 @@
 	import Developers from '$lib/components/Home/Developers.svelte';
 	import Clients from '$lib/components/Home/Clients.svelte';
 	import TitleFullWidth from '$lib/components/TitleFullWidth.svelte';
-	import Quote from '$lib/components/Home/Quote.svelte';
+	// import Quote from '$lib/components/Home/Quote.svelte';
 	import About from '$lib/components/Home/About.svelte';
 	import { m } from '$paraglide/messages';
 	import CtaContact from '$lib/components/CtaContact.svelte';
@@ -99,7 +99,7 @@
 
 <div class="2xl:px-[10%]">
 	<!-- Quote Section -->
-	<Quote />
+	<!-- <Quote /> -->
 
 	<!-- About Section -->
 	<About />

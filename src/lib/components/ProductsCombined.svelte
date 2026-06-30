@@ -115,9 +115,11 @@
 											</span>
 										{/if}
 									</div>
-									<ChevronRight
-										class="h-4 w-4 text-gray-500 transition-transform duration-300 group-hover:translate-x-1"
-									/>
+									<span
+										class="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-medium tracking-wider text-white/70 backdrop-blur-sm transition-all duration-200 hover:border-white/20 hover:bg-white/10 hover:text-white"
+									>
+										{m.visitLabel()}
+									</span>
 								</a>
 							{:else}
 								<div class="border-t border-gray-800 px-6 py-4">
