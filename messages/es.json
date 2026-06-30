@@ -612,7 +612,7 @@
 
 	"productMarketName": "Market",
 	"productMarketSlogan": "E-Commerce & Marketplace",
-	"productMarketDetails": "API de E-Commerce y Marketplace, con gestión de catálogo, pedidos y pagos",
+	"productMarketDetails": "API de E-Commerce y Marketplace, con gestión de catálogo y ventas, pedidos, pagos y envíos",
 	"productShippingName": "Ship",
 	"productShippingSlogan": "Fletes y rastreo de entregas",
 	"productShippingDetails": "API de fletes y rastreo de entregas para integrar logística directamente en tu producto",

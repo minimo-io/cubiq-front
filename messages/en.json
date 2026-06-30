@@ -609,7 +609,7 @@
 
 	"productMarketName": "Market",
 	"productMarketSlogan": "E-Commerce & Marketplace",
-	"productMarketDetails": "E-Commerce and Marketplace API, with catalog, order, and payment management",
+	"productMarketDetails": "E-Commerce and Marketplace API, with catalog and sales, order, payment, and shipping management",
 	"productShippingName": "Ship",
 	"productShippingSlogan": "Freight and delivery tracking",
 	"productShippingDetails": "Freight and delivery tracking API to integrate logistics directly into your product",
