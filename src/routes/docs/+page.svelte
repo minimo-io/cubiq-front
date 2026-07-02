@@ -277,9 +277,9 @@
 					class="card group hover:border-primary/30 hover:shadow-primary/5 border-primary/30 flex w-full flex-row items-start gap-4 border bg-black p-4 text-left transition-all duration-200 hover:shadow-2xl"
 				>
 					<Icon
-						class="text-primary h-10 w-10 stroke-[0.5] transition-transform duration-500 group-hover:scale-110 shrink-0 relative z-10"
+						class="text-primary relative z-10 h-10 w-10 shrink-0 stroke-[0.5] transition-transform duration-500 group-hover:scale-110"
 					/>
-					<div class="flex-1 min-w-0 relative z-10">
+					<div class="relative z-10 min-w-0 flex-1">
 						<div class="flex items-center justify-between gap-2">
 							<h3
 								class="group-hover:text-primary text-lg font-bold tracking-wide text-white uppercase transition-colors duration-300"
@@ -287,7 +287,7 @@
 								{pair.api.name}
 							</h3>
 							<ChevronRight
-								class="h-5 w-5 text-white transition-transform duration-300 group-hover:translate-x-1 shrink-0"
+								class="h-5 w-5 shrink-0 text-white transition-transform duration-300 group-hover:translate-x-1"
 							/>
 						</div>
 						<p
@@ -301,10 +301,8 @@
 				<div
 					class="card relative flex w-full flex-row items-start gap-4 border border-gray-800 bg-black p-4 opacity-60"
 				>
-					<Icon
-						class="text-primary h-10 w-10 stroke-[0.5] shrink-0 relative z-10"
-					/>
-					<div class="flex-1 min-w-0 relative z-10">
+					<Icon class="text-primary relative z-10 h-10 w-10 shrink-0 stroke-[0.5]" />
+					<div class="relative z-10 min-w-0 flex-1">
 						<h3 class="text-lg font-bold tracking-wide text-white uppercase">
 							{pair.api.name}
 						</h3>
@@ -636,7 +634,7 @@ Content-Type: application/json
 					<table class="table-sm table">
 						<thead><tr><th>Code</th><th>Meaning</th></tr></thead>
 						<tbody>
-							{#each [['200', 'OK (default for GET/PATCH/PUT/DELETE)'], ['201', 'Created (default for POST)'], ['400', 'Bad Request (validation, business logic errors)'], ['401', 'Unauthorized (invalid/missing token, bad credentials)'], ['403', 'Forbidden (insufficient permissions, blacklisted)'], ['404', 'Not Found (resource doesn\'t exist)'], ['409', 'Conflict (duplicate, stock conflict, role exists)'], ['410', 'Gone (expired cart session)'], ['429', 'Too Many Requests (rate limited)'], ['500', 'Internal Server Error (unhandled, database, unknown)'], ['502', 'Bad Gateway (payment provider failure)'], ['503', 'Service Unavailable (exchange rate provider down, DB connection)']] as [code, meaning]}
+							{#each [['200', 'OK (default for GET/PATCH/PUT/DELETE)'], ['201', 'Created (default for POST)'], ['400', 'Bad Request (validation, business logic errors)'], ['401', 'Unauthorized (invalid/missing token, bad credentials)'], ['403', 'Forbidden (insufficient permissions, blacklisted)'], ['404', "Not Found (resource doesn't exist)"], ['409', 'Conflict (duplicate, stock conflict, role exists)'], ['410', 'Gone (expired cart session)'], ['429', 'Too Many Requests (rate limited)'], ['500', 'Internal Server Error (unhandled, database, unknown)'], ['502', 'Bad Gateway (payment provider failure)'], ['503', 'Service Unavailable (exchange rate provider down, DB connection)']] as [code, meaning]}
 								<tr>
 									<td><code>{code}</code></td>
 									<td>{meaning}</td>
