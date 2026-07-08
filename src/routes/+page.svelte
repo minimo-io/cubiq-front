@@ -21,18 +21,18 @@
 
 	const dashboardImages: DashboardImageType[] = $state([
 		{
-			src: '/products/home-malthaus.png',
-			alt: 'Home Malthaus',
+			src: '/products/home-malthaus.webp',
+			alt: 'Malthaus',
 			object: 'center'
 		},
 		{
-			src: '/products/home-enviqs.png',
-			alt: 'Enviqs Home',
+			src: '/products/home-enviqs.webp',
+			alt: 'Enviqs',
 			object: 'center'
 		},
 		{
-			src: '/products/home-bqpay.png',
-			alt: 'BQPay Home',
+			src: '/products/home-bqpay.webp',
+			alt: 'BQPay',
 			object: 'center'
 		}
 
