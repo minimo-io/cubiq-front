@@ -95,14 +95,14 @@
 						transition:fade={{ duration: 500 }}
 						alt={image.alt}
 						loading="lazy"
-						width="3024"
-						height="1628"
+						width="1235"
+						height="869"
 						decoding="async"
 						src={image.src}
 						class={[
 							'col-start-1 row-start-1 rounded-2xl!',
 							// Ensure max-width is handled to prevent horizontal overflow
-							'h-[500px] w-full object-cover md:h-auto md:w-full md:object-contain',
+							'h-[500px] w-full object-cover object-left-top md:h-auto md:w-full md:object-contain',
 							image.object === 'center' && 'object-center',
 							image.object === 'right' && 'object-right',
 							image.object === 'left' && 'object-left'
@@ -119,7 +119,7 @@
 		aria-hidden="true"
 	></div>
 	<div
-		class="absolute bottom-3 left-10 z-50 mt-4 flex justify-start gap-2 pb-2 md:bottom-5 md:left-10"
+		class="absolute bottom-3 left-10 z-50 mt-4 flex justify-start gap-2 pb-2 md:bottom-5 md:left-40"
 	>
 		{#each images as _, index}
 			<button

@@ -107,7 +107,9 @@
 											<img
 												src={pair.brand.logo}
 												alt={pair.brand.name}
-												class="h-5 w-auto object-contain"
+												class="w-auto object-contain {pair.brand.name == 'ENVIQS'
+													? 'h-7.5'
+													: 'h-6'}"
 											/>
 										{:else}
 											<span class="text-sm font-bold tracking-wider text-white uppercase">

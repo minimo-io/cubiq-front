@@ -96,7 +96,7 @@
 					<span class="text-[#D272FF]">const</span>
 					<span class="text-[#6B84FF]"> profile </span>=
 					<span class="text-[#D272FF]">await</span>
-					<span class="text-[#6B84FF]"> cubiq.pay.pix{'{'}</span>
+					<span class="text-[#6B84FF]"> cubiq.enviqs.ship{'{'}</span>
 					<br />
 					<span class="relative pl-8">
 						<span class="text-[#D272FF]">code</span>:
@@ -117,7 +117,7 @@
 					</span>
 					<br /><br />
 					<span class="text-[#D272FF]">import</span>
-					<span class="text-[#37F0C3]"> "github.com/cubiq-lat/pay"</span>
+					<span class="text-[#37F0C3]"> "github.com/cubiq-lat/ship"</span>
 					<br /><br />
 					<span class="text-[#D272FF]">func</span>
 					<span class="text-[#6B84FF]"> main</span>() {'{'}

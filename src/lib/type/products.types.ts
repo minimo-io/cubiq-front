@@ -18,7 +18,7 @@ export enum LabProduct {
 	LNBEER = 'MALTHAUS',
 	BIBLIO = 'BIBLIO',
 	BQPAY = 'BQPAY',
-	ENVIQ = 'ENVIQ' // new - placeholder brand for the Shipping API
+	ENVIQS = 'ENVIQS' // new - shipping brand
 }
 
 // new: one card = one API + (optionally) the brand it powers

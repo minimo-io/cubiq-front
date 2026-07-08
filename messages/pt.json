@@ -620,6 +620,8 @@
 	"productShippingName": "Ship",
 	"productShippingSlogan": "Fretes e rastreio de entregas",
 	"productShippingDetails": "API de fretes e rastreio de entregas para integrar logística diretamente no seu produto",
+	"productEnviqsSlogan": "Envios inteligentes e todas as transportadoras",
+	"productEnviqsDetails": "Reserve envios em segundos para todo o país, escolha o pickup, pague e acompanhe seu pacote ao vivo. Prático, econômico e eficiente",
 	"visitLabel": "Visitar",
 	"poweringLabel": "Impulsiona",
 	"exploreMoreLabel": "Explore a documentação"

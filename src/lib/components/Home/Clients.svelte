@@ -12,20 +12,20 @@
 	let marqueeContainer: HTMLDivElement;
 
 	const clients = [
-		{
-			href: 'https://media.toxtren.com/redirect.aspx?pid=101348&bid=2036&redirectURL=https://natregs.com',
-			src: '/clients/national-logo.svg',
-			alt: 'National Casino',
-			height: 'h-[53px] pb-1',
-			opacity: 'opacity-50'
-		},
-		{
-			href: '#',
-			src: '/clients/vientosur-logo.svg',
-			alt: 'VientoSur',
-			height: 'h-[38px] mt-0',
-			opacity: 'opacity-100'
-		},
+		// {
+		// 	href: 'https://media.toxtren.com/redirect.aspx?pid=101348&bid=2036&redirectURL=https://natregs.com',
+		// 	src: '/clients/national-logo.svg',
+		// 	alt: 'National Casino',
+		// 	height: 'h-[53px] pb-1',
+		// 	opacity: 'opacity-50'
+		// },
+		// {
+		// 	href: '#',
+		// 	src: '/clients/vientosur-logo.svg',
+		// 	alt: 'VientoSur',
+		// 	height: 'h-[38px] mt-0',
+		// 	opacity: 'opacity-100'
+		// },
 		{
 			href: 'https://www.malthaus.uy/es/apps',
 			src: '/products/malthaus-logo.png',
@@ -33,49 +33,52 @@
 			height: 'h-[42px] mt-0',
 			opacity: 'opacity-100'
 		},
-		// {
-		// 	href: 'https://agentefaz.net',
-		// 	src: '/clients/agf-color.png',
-		// 	alt: 'AGF',
-		// 	height: 'h-[40px]',
-		// 	opacity: 'opacity-55'
-		// },
-		{
-			href: '#',
-			src: '/clients/whitemedia-logo.png',
-			alt: 'Whitemedia',
-			height: 'h-[25px]',
-			opacity: 'opacity-55'
-		},
-		// {
-		// 	href: 'https://braaay.com',
-		// 	src: '/clients/braaay-logo-new.svg',
-		// 	alt: 'Braaay',
-		// 	height: 'h-[32px] mt-1',
-		// 	opacity: 'opacity-90'
-		// },
 
 		{
-			href: 'https://dribbble.com/shots/19431388-Hops-v2-Craft-Beer-Marketplace',
-			src: '/clients/hops-logo.svg',
-			alt: 'Hops',
-			height: 'h-[32px]',
-			opacity: 'opacity-45'
+			href: 'https://www.enviqs.com',
+			src: '/products/enviqs-logo-2.png',
+			alt: 'Enviqs',
+			height: 'h-[50px] mt-0',
+			opacity: 'opacity-95'
 		},
+
 		{
-			href: 'https://betizen.org',
-			src: '/clients/betizen-logo.svg',
-			alt: 'Betizen',
-			height: 'h-[45px] pb-1',
-			opacity: 'opacity-40'
-		},
-		{
-			href: 'https://www.figma.com/design/3OLTGWFRbMPiQb9Pvv5MgM/Cubiq?node-id=0-1&t=9EVTXyT9tkLx6Rj9-1',
-			src: '/clients/viivpay-logo.png',
-			alt: 'ViivPay',
-			height: 'h-[35px] mt-2',
-			opacity: 'opacity-40'
+			href: '/blog/bqpay-prelaunch',
+			src: '/products/bqpay-logo-3.png',
+			alt: 'BQPay',
+			height: 'h-[55px] mt-0',
+			opacity: 'opacity-75'
 		}
+
+		// {
+		// 	href: '#',
+		// 	src: '/clients/whitemedia-logo.png',
+		// 	alt: 'Whitemedia',
+		// 	height: 'h-[25px]',
+		// 	opacity: 'opacity-55'
+		// }
+
+		// {
+		// 	href: 'https://dribbble.com/shots/19431388-Hops-v2-Craft-Beer-Marketplace',
+		// 	src: '/clients/hops-logo.svg',
+		// 	alt: 'Hops',
+		// 	height: 'h-[32px]',
+		// 	opacity: 'opacity-45'
+		// },
+		// {
+		// 	href: 'https://betizen.org',
+		// 	src: '/clients/betizen-logo.svg',
+		// 	alt: 'Betizen',
+		// 	height: 'h-[45px] pb-1',
+		// 	opacity: 'opacity-40'
+		// },
+		// {
+		// 	href: 'https://www.figma.com/design/3OLTGWFRbMPiQb9Pvv5MgM/Cubiq?node-id=0-1&t=9EVTXyT9tkLx6Rj9-1',
+		// 	src: '/clients/viivpay-logo.png',
+		// 	alt: 'ViivPay',
+		// 	height: 'h-[35px] mt-2',
+		// 	opacity: 'opacity-40'
+		// }
 	];
 
 	let duplicateCount = $state(4); // Start with 2 sets

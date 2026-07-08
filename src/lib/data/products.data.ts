@@ -23,6 +23,23 @@ export const getApiBrandPairs = (locale?: 'pt' | 'en' | 'es') => [
 		}
 	},
 	{
+		id: Product.SHIP,
+		api: {
+			name: m.productShippingName({}, { locale }),
+			details: m.productShippingDetails({}, { locale }),
+			icon: Truck,
+			url: localizeHref('/docs', { locale }),
+			underDevelopment: true
+		},
+		brand: {
+			name: LabProduct.ENVIQS,
+			logo: '/products/enviqs-logo-2.png',
+			logoSquare: '/products/enviqs-logo-2.png',
+			url: 'https://www.enviqs.com',
+			newWindow: true
+		}
+	},
+	{
 		id: Product.PAY,
 		api: {
 			name: Product.PAY,
@@ -40,19 +57,7 @@ export const getApiBrandPairs = (locale?: 'pt' | 'en' | 'es') => [
 			newWindow: false
 		}
 	},
-	{
-		id: Product.SHIP,
-		api: {
-			name: m.productShippingName({}, { locale }),
-			details: m.productShippingDetails({}, { locale }),
-			icon: Truck,
-			url: localizeHref('/docs', { locale }),
-			underDevelopment: true
-		},
-		brand: {
-			name: LabProduct.ENVIQ
-		}
-	},
+
 	{
 		id: Product.APIS,
 		api: {
@@ -138,6 +143,21 @@ export const getProductsFromLab = (locale?: 'pt' | 'en' | 'es') => [
 		primary: true,
 		underDevelopment: false,
 		url: 'https://www.betizen.org',
+		newWindow: true
+	},
+	{
+		id: LabProduct.ENVIQS,
+		name: LabProduct.ENVIQS,
+		logo: '/products/enviqs-logo.png',
+		logoSquare: '/products/enviqs-logo.png',
+		isMain: true,
+		slogan: m.productEnviqsSlogan({}, { locale }),
+		sloganSimple: '',
+		details: m.productEnviqsDetails({}, { locale }),
+		isBold: true,
+		primary: true,
+		underDevelopment: false,
+		url: 'https://www.enviqs.com',
 		newWindow: true
 	}
 ];

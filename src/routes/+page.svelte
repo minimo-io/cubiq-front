@@ -21,37 +21,53 @@
 
 	const dashboardImages: DashboardImageType[] = $state([
 		{
-			src: '/products/store/cubiq-store-dashboard-1.webp',
-			alt: 'Cubiq Store Dashboard',
-			object: 'left'
-		},
-		{
-			src: '/products/care/cubiq-care-dashboard-2.webp',
-			alt: 'A screenshot of the Cubiq Care dashboard',
-			object: 'right'
-		},
-		{
-			src: '/products/pay/cubiq-pay.webp',
-			alt: 'A screenshot of the Cubiq dashboard',
+			src: '/products/home-malthaus.png',
+			alt: 'Home Malthaus',
 			object: 'center'
 		},
-
 		{
-			src: '/products/care/cubiq-care-dashboard-1.webp',
-			alt: 'A screenshot of the Cubiq dashboard',
-			object: 'left'
-		},
-
-		{
-			src: '/products/pay/cubiq-pay-dashboard.webp',
-			alt: 'A screenshot of the Cubiq Pay dashboard',
-			object: 'left'
+			src: '/products/home-enviqs.png',
+			alt: 'Enviqs Home',
+			object: 'center'
 		},
 		{
-			src: '/products/pay/cubiq-pay-dashboard-2.webp',
-			alt: 'A screenshot of the Cubiq Pay dashboard',
-			object: 'right'
+			src: '/products/home-bqpay.png',
+			alt: 'BQPay Home',
+			object: 'center'
 		}
+
+		// {
+		// 	src: '/products/store/cubiq-store-dashboard-1.webp',
+		// 	alt: 'Cubiq Store Dashboard',
+		// 	object: 'left'
+		// }
+		// {
+		// 	src: '/products/care/cubiq-care-dashboard-2.webp',
+		// 	alt: 'A screenshot of the Cubiq Care dashboard',
+		// 	object: 'right'
+		// },
+		// {
+		// 	src: '/products/pay/cubiq-pay.webp',
+		// 	alt: 'A screenshot of the Cubiq dashboard',
+		// 	object: 'center'
+		// },
+
+		// {
+		// 	src: '/products/care/cubiq-care-dashboard-1.webp',
+		// 	alt: 'A screenshot of the Cubiq dashboard',
+		// 	object: 'left'
+		// },
+
+		// {
+		// 	src: '/products/pay/cubiq-pay-dashboard.webp',
+		// 	alt: 'A screenshot of the Cubiq Pay dashboard',
+		// 	object: 'left'
+		// },
+		// {
+		// 	src: '/products/pay/cubiq-pay-dashboard-2.webp',
+		// 	alt: 'A screenshot of the Cubiq Pay dashboard',
+		// 	object: 'right'
+		// }
 	]);
 
 	onMount(async () => {
@@ -87,7 +103,7 @@
 
 	<!-- Dashboards -->
 	<section
-		class="animate-slide-up-fade relative -top-9 mx-auto mt-0 flex h-[500px] max-w-full overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:mt-0 md:h-auto md:w-[100%] md:max-w-[80%]"
+		class="animate-slide-up-fade relative -top-9 mx-auto mt-0 flex h-[500px] max-w-full justify-center justify-self-center overflow-hidden sm:ml-auto sm:w-full sm:px-2 md:-top-8 md:mt-0 md:h-auto md:w-[100%] md:max-w-[80%]"
 	>
 		<!-- Payment image -->
 		<DashboardImagesOnly images={dashboardImages} noMargins={true} />
