@@ -52,6 +52,11 @@
 
 			{#if !drawerState.currentSubmenu}
 				<DrawerMain />
+				<div class="flex-shrink-0 px-[30px] py-2">
+					<span class="font-mono text-xs text-base-content/30">
+						v{process.env.PACKAGE_VERSION}
+					</span>
+				</div>
 			{:else if drawerState.currentSubmenu === 'account'}
 				<div
 					in:fly={{ x: 300, duration: 300, easing: quintOut }}

@@ -9,7 +9,8 @@
 	let mobileSpeed = $state(20);
 	let { addDesktopPadding = false }: { addDesktopPadding?: boolean } = $props();
 
-	let marqueeContainer: HTMLDivElement;
+	let marqueeContainer: HTMLDivElement | undefined = $state();
+	let firstSet: HTMLDivElement | undefined = $state();
 
 	const clients = [
 		// {
@@ -81,30 +82,75 @@
 		// }
 	];
 
-	let duplicateCount = $state(4); // Start with 2 sets
+	// Safe default so there's no flash of too-few copies before measuring
+	let duplicateCount = $state(6);
+
+	// Action: only captures the DOM ref for the first set (setIndex 0)
+	function captureFirst(node: HTMLDivElement, isFirst: boolean) {
+		if (isFirst) {
+			firstSet = node;
+		}
+		return {
+			destroy() {
+				if (firstSet === node) firstSet = undefined;
+			}
+		};
+	}
+
+	function recalcDuplicates() {
+		if (!marqueeContainer || !firstSet) return;
+
+		const setWidth = firstSet.offsetWidth;
+		const viewportWidth = window.innerWidth;
+
+		if (setWidth === 0) return;
+
+		// Need at least 2x viewport width in total content so the loop
+		// never runs out of copies before wrapping. +2 sets as a buffer.
+		const needed = Math.ceil((viewportWidth * 2) / setWidth) + 2;
+
+		duplicateCount = Math.max(2, needed);
+	}
 
 	onMount(() => {
-		if (!marqueeContainer) return;
+		recalcDuplicates();
 
-		// Calculate how many duplicate sets we need based on speed and container width
-		// const containerWidth = marqueeContainer.offsetWidth;
-		const isMobile = window.innerWidth < 768;
-		const currentSpeed = isMobile ? mobileSpeed : desktopSpeed;
+		// Re-measure once all logos have finished loading, in case the
+		// initial measurement happened before images had rendered.
+		const images = marqueeContainer?.querySelectorAll('img') ?? [];
+		let loadedCount = 0;
+		const total = images.length;
 
-		// For faster speeds, we need more duplicate sets to maintain the infinite illusion
-		// The faster the speed, the more sets we need so there's always content entering from the right
-		if (currentSpeed <= 10) {
-			duplicateCount = 6; // Very fast
-		} else if (currentSpeed <= 20) {
-			duplicateCount = 4; // Fast
-		} else if (currentSpeed <= 30) {
-			duplicateCount = 3; // Medium
-		} else {
-			duplicateCount = 2; // Slow
-		}
+		images.forEach((img) => {
+			if (img.complete) {
+				loadedCount++;
+			} else {
+				img.addEventListener(
+					'load',
+					() => {
+						loadedCount++;
+						if (loadedCount === total) recalcDuplicates();
+					},
+					{ once: true }
+				);
+			}
+		});
 
-		// Force reactivity update
-		duplicateCount = duplicateCount;
+		if (loadedCount === total) recalcDuplicates();
+
+		// Recalculate on resize (debounced)
+		let resizeTimeout: ReturnType<typeof setTimeout>;
+		const handleResize = () => {
+			clearTimeout(resizeTimeout);
+			resizeTimeout = setTimeout(recalcDuplicates, 150);
+		};
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			clearTimeout(resizeTimeout);
+			window.removeEventListener('resize', handleResize);
+		};
 	});
 </script>
 
@@ -124,7 +170,7 @@
 				style="--desktop-speed: {desktopSpeed}s; --mobile-speed: {mobileSpeed}s; --duplicate-count: {duplicateCount};"
 			>
 				{#each Array(duplicateCount) as _, setIndex (setIndex)}
-					<div class="marquee-content">
+					<div class="marquee-content" use:captureFirst={setIndex === 0}>
 						{#each clients as client, clientIndex (`${setIndex}-${clientIndex}`)}
 							<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 							<a href={client.href} rel="nofollow noopener" target="_blank" class="marquee-item">
