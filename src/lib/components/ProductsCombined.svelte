@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { ChevronRight } from '@lucide/svelte';
 	import { m } from '$paraglide/messages';
-	import { getLocale } from '$paraglide/runtime';
+	import { getLocale, localizeHref } from '$paraglide/runtime';
 	import { getApiBrandPairs } from '$lib/data/products.data';
 	import { Product } from '$lib/type/products.types';
 	import { toggleLoader } from '$lib/stores/Loader.state.svelte';
@@ -40,9 +40,9 @@
 								: 'group hover:border-primary/30 hover:shadow-primary/5 border-gray-800 transition-all duration-200 hover:shadow-2xl'} flex w-full flex-col border bg-black md:w-65"
 						>
 							<a
-								href={pair.api.url}
+								href={pair.id === Product.APIS ? localizeHref('/docs') : pair.id === Product.SHIP ? localizeHref('/docs?api=shipping') : pair.api.url}
 								onclick={(e) => {
-									if (pair.id === Product.APIS) {
+									if (pair.id !== Product.APIS && pair.id !== Product.SHIP) {
 										e.preventDefault();
 										toggleLoader();
 										window.location.href = pair.api.url;

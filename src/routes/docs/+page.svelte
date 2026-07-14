@@ -105,6 +105,10 @@
 		} finally {
 			loading = false;
 		}
+
+		if (page.url.searchParams.get('api') === 'shipping') {
+			switchApi('shipping');
+		}
 	});
 
 	function applyTagFromUrl() {

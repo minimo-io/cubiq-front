@@ -67,7 +67,8 @@
 		</a>
 
 		<!-- Mobile -->
-		<button
+		<a
+			href="#top"
 			onclick={() => {
 				// alert('Open drawer...');
 				toggleDrawer();
@@ -85,7 +86,7 @@
 			{:else}
 				<Menu class="h-5" />
 			{/if}
-		</button>
+		</a>
 
 		<!-- Desktop & Mobile -->
 		<!-- <a

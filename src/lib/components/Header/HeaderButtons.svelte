@@ -64,7 +64,8 @@
 		<LoginDashboardButton />
 
 		<!-- Mobile Menu Trigger Button -->
-		<button
+		<a
+			href="#top"
 			onclick={() => {
 				// alert('Open drawer...');
 				toggleDrawer();
@@ -95,6 +96,6 @@
 					/>
 				</svg>
 			{/if}
-		</button>
+		</a>
 	</div>
 </div>

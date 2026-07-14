@@ -22,7 +22,8 @@
 		<HelpButton />
 
 		<!-- On mobile -->
-		<button
+		<a
+			href="#top"
 			onclick={() => {
 				toggleDrawer();
 			}}
@@ -39,6 +40,6 @@
 			{:else}
 				<Menu class="h-5" />
 			{/if}
-		</button>
+		</a>
 	</div>
 </div>
