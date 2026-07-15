@@ -8,6 +8,7 @@
 	import { m } from '$paraglide/messages';
 	import { getProductsFromLab } from '$lib/data/products.data';
 	import type { ProductData } from '$types/products.types';
+	import { page } from '$app/state';
 	import { modalState } from '$stores/Modal.state.svelte';
 	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
 
@@ -156,7 +157,7 @@
 				</a>
 			</div>
 			<div class="relative -left-2">
-				<SystemStatus />
+				<SystemStatus allUp={page.data.allUp} />
 			</div>
 			<div class="text-secondary mt-0 mb-4 flex items-center text-sm md:mb-0">
 				<!-- ©  -->

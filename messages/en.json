@@ -192,6 +192,7 @@
 	"ctaScheduleACall": "Schedule a call",
 	"startNow": "Start now",
 	"allSystemsWorking": "All systems operational",
+	"systemsDegraded": "Some services degraded",
 	"careSyncAssetManagment": "Asset Management",
 	"careSyncLearning": "Learning",
 	"careSyncMarketplace": "Integrated Store",
