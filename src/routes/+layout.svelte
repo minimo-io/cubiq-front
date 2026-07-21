@@ -123,6 +123,9 @@
 	<DrawerDashboard products={page.data.permissionList} />
 {/if}
 
+<!-- Global modal -->
+<GlobalModal />
+
 <!-- Global toast -->
 <Toast
 	bind:show={FwToastState.active}
@@ -130,9 +133,6 @@
 	type={FwToastState.type}
 	position={FwToastState.position}
 />
-
-<!-- Global modal -->
-<GlobalModal />
 
 <!-- Footer -->
 {#if !deLocalizeHref(page.route.id || '').startsWith('/dashboard')}

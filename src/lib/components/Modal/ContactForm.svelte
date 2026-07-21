@@ -7,7 +7,7 @@
 	import { page } from '$app/state';
 	import { modalState } from '$stores/Modal.state.svelte';
 	import { FwToast } from '$stores/Toast.state.svelte';
-	import { MessageCircle, Send, Loader2 } from '@lucide/svelte';
+	import { MessageCircle, Send, Loader2, AlertCircle } from '@lucide/svelte';
 
 	const locale = getLocale();
 
@@ -15,6 +15,7 @@
 	let isSubmitting = $state(false);
 	let turnstileToken = $state<string | null>(null);
 	let turnstileContainer = $state<HTMLDivElement>();
+	let formError = $state<string | null>(null);
 
 	onMount(() => {
 		const widgetId = turnstile.render(turnstileContainer!, {
@@ -42,6 +43,7 @@
 	async function handleSubmit(e: Event) {
 		e.preventDefault();
 		isSubmitting = true;
+		formError = null;
 
 		try {
 			const res = await fetch('/api/contact', {
@@ -62,10 +64,10 @@
 				FwToast.launch(m.contactFormSuccess(), 'success', 'top');
 				modalState.close();
 			} else {
-				FwToast.launch(result.message || 'Failed to send message', 'error', 'top');
+				formError = m.contactFormRateLimit();
 			}
 		} catch {
-			FwToast.launch('Failed to send message', 'error', 'top');
+			formError = m.contactFormRateLimit();
 		} finally {
 			isSubmitting = false;
 		}
@@ -153,6 +155,17 @@
 				<!-- Turnstile -->
 				<div class="mb-6" bind:this={turnstileContainer}></div>
 
+				<!-- Error -->
+				{#if formError}
+					<!-- <div class="alert alert-error mb-4">
+						<span>{formError}</span>
+					</div> -->
+					<div class="alert alert-error alert-soft mb-4">
+						<AlertCircle class="h-4 w-4" />
+						<span>{formError}</span>
+					</div>
+				{/if}
+
 				<!-- Submit -->
 				<button
 					type="submit"
@@ -176,14 +189,24 @@
 			<div class="space-y-4">
 				<!-- WhatsApp -->
 				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-				<a href={AppConfig.cubiq.socials.whatsapp[locale]} target="_blank" rel="nofollow noreferrer" class="btn btn-sm bg-base-100 border-base-300 text-base-content hover:border-base-content w-full justify-start transition-opacity hover:opacity-80">
+				<a
+					href={AppConfig.cubiq.socials.whatsapp[locale]}
+					target="_blank"
+					rel="nofollow noreferrer"
+					class="btn btn-sm bg-base-100 border-base-300 text-base-content hover:border-base-content w-full justify-start transition-opacity hover:opacity-80"
+				>
 					<img src="/whatsapp.png" alt="WhatsApp" class="mr-2 h-4 w-4" />
 					{m.contactFormWhatsapp()}
 				</a>
 
 				<!-- Telegram -->
 				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-				<a href={AppConfig.cubiq.socials.telegram} target="_blank" rel="nofollow noreferrer" class="btn btn-sm bg-base-100 border-base-300 text-base-content hover:border-base-content w-full justify-start transition-opacity hover:opacity-80">
+				<a
+					href={AppConfig.cubiq.socials.telegram}
+					target="_blank"
+					rel="nofollow noreferrer"
+					class="btn btn-sm bg-base-100 border-base-300 text-base-content hover:border-base-content w-full justify-start transition-opacity hover:opacity-80"
+				>
 					<MessageCircle class="mr-2 h-4 w-4" />
 					{m.contactFormTelegram()}
 				</a>

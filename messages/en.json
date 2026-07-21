@@ -136,6 +136,7 @@
 	"contactFormTelegram": "Telegram",
 	"contactFormHomepage": "Homepage",
 	"contactFormError": "Failed to send message",
+	"contactFormRateLimit": "Email service is temporarily unavailable. Please reach us via WhatsApp or Telegram.",
 	"menuClients": "Partners / Clients",
 	"menuProducts": "Products",
 	"menuAPIs": "APIs",

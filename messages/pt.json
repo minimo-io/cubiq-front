@@ -139,6 +139,7 @@
 	"contactFormTelegram": "Telegram",
 	"contactFormHomepage": "Início",
 	"contactFormError": "Falha ao enviar mensagem",
+	"contactFormRateLimit": "Serviço de email temporariamente indisponível. Por favor, entre em contato via WhatsApp ou Telegram.",
 	"menuClients": "Parceiros / Clientes",
 	"menuProducts": "Produtos",
 	"menuAPIs": "APIs",

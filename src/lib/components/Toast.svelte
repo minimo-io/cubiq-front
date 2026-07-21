@@ -21,7 +21,7 @@
 	<div
 		transition:fly={{ y: 20, duration: 300 }}
 		class={[
-			'toast toast-center z-50',
+			'toast toast-center z-[9999]',
 			position == 'top' && 'toast-top',
 			position == 'bottom' && 'toast-bottom'
 		]}
