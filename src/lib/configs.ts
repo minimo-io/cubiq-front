@@ -24,7 +24,7 @@ export const AppConfig = {
 				en: '+55 11 96609-0456'
 			},
 			telegram: 'https://t.me/cubiq_lat',
-			email: 'nicolas@cubiq.lat',
+			email: 'cubiqlabs@gmail.com',
 			github: 'https://github.com/minimo-io',
 			huggingface: 'https://huggingface.co/cubiqlabs',
 			npm: 'https://npmjs.com',

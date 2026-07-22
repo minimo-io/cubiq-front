@@ -8,7 +8,8 @@
 	import { localizeHref } from '$paraglide/runtime';
 	import { goto } from '$app/navigation';
 	import CirclesDecorations from '$lib/components/decorations/CirclesDecorations.svelte';
-	import { AppConfig } from '$lib';
+	import { modalState } from '$lib/stores/Modal.state.svelte';
+	import ContactForm from '$lib/components/Modal/ContactForm.svelte';
 
 	// Mensagens específicas por código de erro
 	const errorMessages = {
@@ -17,6 +18,15 @@
 	};
 
 	const errorTitle = $derived(errorMessages[page.status] || 'Erro');
+
+	function openContactModal() {
+		modalState.open({
+			component: ContactForm,
+			size: 'lg',
+			closeOnBackdrop: true,
+			closeOnEscape: true
+		});
+	}
 
 	function goBack() {
 		if (browser && window.history.length > 1) {
@@ -40,13 +50,12 @@
 
 			<!-- Buttons -->
 			<div class="mt-5 flex flex-wrap justify-center gap-4">
-				<a
-					href="mailto:{AppConfig.cubiq.socials.email}"
-					target="_blank"
+				<button
+					onclick={openContactModal}
 					class="btn btn-primary btn-sm md:btn-md rounded-lg px-6 py-3 uppercase transition-all duration-200 hover:-translate-y-0.5"
 				>
 					{m.contactSupport()}
-				</a>
+				</button>
 				<button
 					onclick={goBack}
 					class="btn btn-sm md:btn-md rounded-lg bg-gray-100 px-6 py-3 text-gray-700 uppercase transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-200"

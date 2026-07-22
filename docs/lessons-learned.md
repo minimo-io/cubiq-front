@@ -9,3 +9,10 @@
 - **Widget cleanup**: Remove the widget instance on component destroy using `turnstile.remove(widgetId)` to prevent memory leaks.
 - **Pre-existing type errors**: The codebase has pre-existing TypeScript errors (mostly missing `icon` and `unavailable` properties on `LabProduct` types). These are unrelated to new work.
 - **Verify Cloudflare dashboard config first**: Error 110200 ("Domain not authorized") means the hostname is not in the widget's allowed list. Always check the Turnstile site settings in the Cloudflare dashboard before debugging code. Hostname changes may take time to propagate across Cloudflare's edge.
+
+## Contact Modal Pattern (2026-07-22)
+
+- **Singleton modal store**: Contact modal is opened via `modalState.open({ component: ContactForm, size: 'lg', closeOnBackdrop: true, closeOnEscape: true })` from `$lib/stores/Modal.state.svelte`.
+- **Pattern used by**: CtaContact, HeaderContent, Footer, Tools — all independently import `modalState` and `ContactForm`.
+- **GlobalModal** is mounted once in `+layout.svelte` and renders whatever component `modalState.config.component` holds.
+- **Don't use mailto links** for contact CTAs — the contact form modal is the standard approach in this codebase.

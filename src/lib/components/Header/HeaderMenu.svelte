@@ -203,6 +203,6 @@
 		</ul>
 	</div>
 
-	<a class="uppercase" href={localizeHref('/roadmap')}>Roadmap</a>
+	<a class="uppercase" href={localizeHref('/changelog')}>Changelog</a>
 	<a class="uppercase" href={localizeHref(AppConfig.cubiq.docs)}>Docs</a>
 </div>
