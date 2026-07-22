@@ -4,6 +4,9 @@
 	import { m } from '$paraglide/messages';
 	import { getLocale } from '$paraglide/runtime';
 	import { enhance } from '$app/forms';
+	import { SvelteMap } from 'svelte/reactivity';
+	import MonthCommitsChart from '$lib/components/MonthCommitsChart.svelte';
+	import { untrack } from 'svelte';
 
 	interface Commit {
 		sha: string;
@@ -17,18 +20,31 @@
 	let { data, form } = $props();
 
 	const locale = getLocale();
+	// let local = $state(data as typeof data & { commits: Commit[] });
+	// let local = $state(data as Omit<typeof data, 'commits'> & { commits: Commit[] });
+	let local = $state(untrack(() => data as Omit<typeof data, 'commits'> & { commits: Commit[] }));
 
-	let commits = $state<Commit[]>(data.commits?.filter((c) => c.repo !== 'minimo-io/betizen-ssg') ?? []);
+	let commits = $state<Commit[]>(
+		// data.commits?.filter((c) => c.repo !== 'minimo-io/betizen-ssg') ?? []
+		// (data.commits as Commit[] | undefined)?.filter((c) => c.repo !== 'minimo-io/betizen-ssg') ?? []
+		local.commits?.filter((c) => c.repo !== 'minimo-io/betizen-ssg') ?? []
+	);
+
 	let loading = $state(false);
-	let currentStartDate = $state(data.currentStartDate ?? '');
-	let currentEndDate = $state(data.currentEndDate ?? '');
-	let error = $state<string | null>(data.error ?? null);
+	// let currentStartDate = $state(data.currentStartDate ?? '');
+	// let currentEndDate = $state(data.currentEndDate ?? '');
+	// let error = $state<string | null>(data.error ?? null);
+	let currentStartDate = $state(local.currentStartDate ?? '');
+	let currentEndDate = $state(local.currentEndDate ?? '');
+	let error = $state<string | null>(local.error ?? null);
+
 	let loadMoreRef: HTMLElement | null = $state(null);
 	let hasMore = $state(true);
 	let mounted = $state(false);
 
 	let monthStats = $derived.by(() => {
-		const stats = new Map<string, { agent: number; human: number }>();
+		// const stats = new Map<string, { agent: number; human: number }>();
+		const stats = new SvelteMap<string, { agent: number; human: number }>();
 		for (const commit of commits) {
 			const key = getMonthKey(commit.date);
 			if (!stats.has(key)) stats.set(key, { agent: 0, human: 0 });
@@ -40,6 +56,16 @@
 			}
 		}
 		return stats;
+	});
+
+	let commitsByMonth = $derived.by(() => {
+		const map = new SvelteMap<string, Commit[]>();
+		for (const commit of commits) {
+			const key = getMonthKey(commit.date);
+			if (!map.has(key)) map.set(key, []);
+			map.get(key)!.push(commit);
+		}
+		return map;
 	});
 
 	$effect(() => {
@@ -110,11 +136,11 @@
 		};
 	}
 
-	function updateDateRange() {
-		const newRange = getPreviousMonth(currentStartDate);
-		currentStartDate = newRange.start;
-		currentEndDate = newRange.end;
-	}
+	// function updateDateRange() {
+	// 	const newRange = getPreviousMonth(currentStartDate);
+	// 	currentStartDate = newRange.start;
+	// 	currentEndDate = newRange.end;
+	// }
 
 	function triggerLoadMore() {
 		if (loading || !hasMore) return;
@@ -193,7 +219,9 @@
 
 					// Filter duplicates by SHA
 					const existingShas = new Set(commits.map((c) => c.sha));
-			const uniqueCommits = newCommits.filter((c) => !existingShas.has(c.sha) && c.repo !== 'minimo-io/betizen-ssg');
+					const uniqueCommits = newCommits.filter(
+						(c) => !existingShas.has(c.sha) && c.repo !== 'minimo-io/betizen-ssg'
+					);
 
 					if (uniqueCommits.length !== newCommits.length) {
 						console.warn(
@@ -245,7 +273,7 @@
 				{@const monthKey = getMonthKey(commit.date)}
 				{@const prevMonthKey = i > 0 ? getMonthKey(commits[i - 1].date) : null}
 				{#if prevMonthKey !== monthKey}
-					<h2 class="font-pixel text-[#F44018] mt-8 mb-4 text-lg font-black">
+					<h2 class="font-pixel mt-8 mb-4 text-lg font-black text-[#F44018]">
 						{formatMonthHeader(monthKey)}
 					</h2>
 					{@const stat = monthStats.get(monthKey)}
@@ -254,7 +282,12 @@
 							{m.changelogCommitStats({ human: stat.human, agent: stat.agent })}
 						</p>
 					{/if}
+					{@const monthCommits = commitsByMonth.get(monthKey) ?? []}
+					<div class="mb-6">
+						<MonthCommitsChart commits={monthCommits} {monthKey} />
+					</div>
 				{/if}
+
 				<div class="border-base-content/20 border-l-2 py-2 pl-4">
 					<div class="text-base-content/50 font-mono text-xs">{commit.sha.slice(0, 7)}</div>
 					<div class="text-base-content/70 mt-1 font-mono text-xs">

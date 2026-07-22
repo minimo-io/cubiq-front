@@ -1,12 +1,23 @@
+// src/routes/changelog/+page.server.ts
 import apiClient from '$lib/api';
 import { CUBIQ_API_APP_TOKEN } from '$env/static/private';
 import type { PageServerLoad, Actions } from './$types';
+
+interface Commit {
+	sha: string;
+	repo: string;
+	date: string;
+	message?: string;
+	authorName?: string;
+	authorAvatar?: string;
+}
 
 export const load: PageServerLoad = async () => {
 	const now = new Date();
 	let year = now.getFullYear();
 	let month = now.getMonth() + 1;
-	let commits: unknown[] = [];
+	// let commits: unknown[] = [];
+	let commits: Commit[] = [];
 	let startDate = '';
 	let endDate = '';
 	let attempts = 0;
