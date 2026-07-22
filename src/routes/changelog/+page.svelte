@@ -194,7 +194,7 @@
 
 <Header
 	titleLeft={m.the()}
-	titleRight="Roadmap"
+	titleRight="Changelog"
 	background="rocket"
 	heroContent={m.heroContentChangelog()}
 	buttons={false}

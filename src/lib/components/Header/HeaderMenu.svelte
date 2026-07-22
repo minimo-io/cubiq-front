@@ -191,15 +191,15 @@
 					Blog
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a
 					href={localizeHref('/changelog')}
 					class="flex py-3 align-middle text-[16px] tracking-wider whitespace-nowrap"
 				>
 					<FileClock class="h-4" />
-					Roadmap
+					Changelog
 				</a>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 
